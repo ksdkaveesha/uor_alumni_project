@@ -1,45 +1,52 @@
+<!DOCTYPE html>
 <html>
-<head></head>
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Smooch+Sans%3A700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C600%2C700"/>
+  <link rel="stylesheet" href="{{asset('css/login.css')}}"/>
+</head>
 <body>
+<div class="loginpage-5XP">
+  <div class="auto-group-rkat-48R">
+    <img class="rectangle-4-3Pf" src="./assets/rectangle-4.png"/>
+    <img class="vector-qKX" src="./assets/vector-joo.png"/>
+  </div>
+  <div class="auto-group-c7rm-A6u">
+	<p class="login-G9w">Login</p>
 
-    <div style={{width: 1366, height: 768, position: 'relative', background: '#FCF3D2', borderRadius: 54, overflow: 'hidden'}}>
-        <img style={{width: 683, height: 700, left: 649, top: 34, position: 'absolute', borderRadius: 40}} src="https://via.placeholder.com/683x700" />
-        <div style={{left: 241, top: 66, position: 'absolute', color: '#1C1C1C', fontSize: 120, fontFamily: 'Smooch Sans', fontWeight: '700', wordWrap: 'break-word'}}>Login</div>
-        <div style={{width: 364, height: 24, left: 159, top: 555, position: 'absolute'}}>
-          <div style={{left: 160, top: 4, position: 'absolute', color: '#1C1C1C', fontSize: 16, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>OR</div>
-          <img style={{width: 364, height: 1, left: 0, top: 15, position: 'absolute'}} src="https://via.placeholder.com/364x1" />
-        </div>
-        <div style={{width: 364, height: 52, left: 159.50, top: 326.50, position: 'absolute'}}>
-          <div style={{width: 364, height: 52, left: 0, top: 0, position: 'absolute', background: '#FCF3D2', borderRadius: 13, border: '1px #762EA3 solid'}} />
-          <div style={{left: 48, top: 17, position: 'absolute', color: '#1C1C1C', fontSize: 12, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>Password</div>
-          <div style={{width: 24, height: 24, left: 18, top: 14, position: 'absolute'}}>
-            <div style={{width: 18, height: 21, left: 3, top: 1, position: 'absolute', background: '#1C1C1C'}}></div>
-          </div>
-        </div>
-        <div style={{width: 364, height: 52, left: 159.50, top: 250.50, position: 'absolute'}}>
-          <div style={{width: 364, height: 52, left: 0, top: 0, position: 'absolute', background: '#FCF3D2', borderRadius: 13, border: '1px #762EA3 solid'}} />
-          <div style={{left: 48, top: 17, position: 'absolute', color: '#1C1C1C', fontSize: 12, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>Email</div>
-        </div>
-        <div style={{width: 24, height: 24, left: 174, top: 264, position: 'absolute'}}>
-          <div style={{width: 24, height: 24, left: 0, top: 0, position: 'absolute'}}>
-            <div style={{width: 20, height: 17, left: 2, top: 3.50, position: 'absolute', border: '1.50px black solid'}}></div>
-            <div style={{width: 10, height: 3.12, left: 7, top: 9, position: 'absolute', border: '1.50px black solid'}}></div>
-            <div style={{width: 24, height: 24, left: 0, top: 0, position: 'absolute', opacity: 0}}></div>
-          </div>
-        </div>
-        <div style={{width: 364, height: 52, left: 159.50, top: 402.50, position: 'absolute'}}>
-          <div style={{width: 364, height: 52, left: 0, top: 0, position: 'absolute', background: '#762EA3', borderRadius: 13}} />
-          <div style={{left: 139.50, top: 11.50, position: 'absolute', color: 'white', fontSize: 20, fontFamily: 'Poppins', fontWeight: '700', wordWrap: 'break-word'}}>Log in</div>
-        </div>
-        <div style={{width: 364, height: 52, left: 159, top: 603, position: 'absolute', borderRadius: 13, border: '1px #762EA3 solid'}} />
-        <div style={{width: 136.67, height: 136.67, left: -68.34, top: 567.16, position: 'absolute', background: '#762EA3'}}></div>
-        <div style={{width: 136.67, height: 136.67, left: 1298, top: 98, position: 'absolute', background: '#762EA3'}}></div>
-        <div style={{left: 333, top: 478, position: 'absolute', color: 'rgba(0, 0, 0, 0.73)', fontSize: 16, fontFamily: 'Poppins', fontWeight: '600', wordWrap: 'break-word'}}>Forgot  your password?</div>
-        <div style={{left: 367, top: 521, position: 'absolute', color: '#454545', fontSize: 16, fontFamily: 'Poppins', fontWeight: '700', wordWrap: 'break-word'}}>Remember me</div>
-        <div style={{width: 20, height: 20, left: 503, top: 521, position: 'absolute', background: '#FCF3D2', border: '1px #762EA3 solid'}} />
-        <div style={{left: 284, top: 613, position: 'absolute', color: 'black', fontSize: 20, fontFamily: 'Poppins', fontWeight: '400', wordWrap: 'break-word'}}>Sign up</div>
+	<div class="group-1-8hw">
+      <img class="vuesax-linear-sms-1Fw" src="./assets/vuesax-linear-sms.png"/>
+	  <input type="text" placeholder="Email" name="email" class="input">
+    </div>
+    <div class="group-2-zdf">
+      <img class="frame-tyw" src="./assets/frame.png"/>
+      <input type="password" placeholder="Password" name="password" class="input">
+    </div>
+
+	<div class="group-10-wBX">
+		<button class="button">	Log In </button>
+	</div>
+
+	<p class="forgot-your-password-C7T"><a href="">Forgot your password?</a></p>
+    <div class="auto-group-vmb1-uGm">
+      <p class="remember-me-qAR">Remember me</p>
+      <div class="rectangle-10-VVs">
       </div>
+    </div>
 
+	<div class="group-9-pY9">
+      <div class="group-7-a1X">Sign up</div>
+    </div>
+  </div>
+  <div class="group-4-2u7">
+    <p class="or-B1K">OR</p>
+    <img class="subtract-Ha9" src="./assets/subtract.png"/>
+  </div>
+  <img class="vector-ppy" src="./assets/vector.png"/>
+</div>
 </body>
-
-</html>
