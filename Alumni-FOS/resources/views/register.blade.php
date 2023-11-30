@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{asset('css/register.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/register.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/index.css')}}" />
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
@@ -17,19 +17,24 @@
   </head>
   <body style="background-color: #fcf3d2;">
 
-    <div class="auto-group-gybt-ZHB">
-        <div class="top-nav-bar-background-f5K">
-        </div>
-        <img class="rectangle-4-NVX" src="{{asset('./image/index/rectangle-4-GRF.png')}}"/>
-        <div class="fos-logo-qnR">
-          <img class="rectangle-5-Ygq" src="{{asset('./image/index/rectangle-5-zEu.png')}}"/>
-          <p class="faculty-of-science-E3s">
-          Faculty of Science
-          <br/>
 
-          </p>
+    <div class="frame-1-xHP">
+        <div class="auto-group-y2u1-6Pb">
+          <div class="auto-group-gybt-ZHB">
+            <div class="top-nav-bar-background-f5K">
+            </div>
+            <img class="rectangle-4-NVX" src="{{asset('./image/index/rectangle-4-GRF.png')}}"/>
+            <div class="fos-logo-qnR">
+              <img class="rectangle-5-Ygq" src="{{asset('./image/index/rectangle-5-zEu.png')}}"/>
+              <p class="faculty-of-science-E3s">
+              Faculty of Science
+              <br/>
+
+              </p>
+            </div>
+          </div>
         </div>
-    </div>
+
 
     <div class="container2">
 
