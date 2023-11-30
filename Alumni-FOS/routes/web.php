@@ -24,3 +24,7 @@ Route::get('/register', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
+Route::get('/forgot', function () {
+    return view('forgot_pwd');
+});
