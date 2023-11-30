@@ -12,105 +12,126 @@
 
 <body style="background-color: #F9F2D8">
 
-    <div style="width: 100%; height: 100%; position: relative; background: #F9F2D8">
-        <div style="left: 0px; top: 0px; position:relative; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: inline-flex">
-            <div style="width: 1451px; height: 94px; background: #390A40"></div>
-            <img style="width: 500px; left: 83px; top:13px; position: absolute" src="{{asset('image/uni-logo2.png')}}" />
-        </div>
-        <div style="width: 489px; height: 167px; left: 886px; top: -40px; position: absolute; flex-direction: column; justify-content: center; align-items: center; gap: 10px; display: inline-flex">
-            <div style="width: 577px; height: 167px; background: rgba(41.66, 21.86, 44.61, 0)"></div>
-            <img style="width: 55px;  left: 123px; top: 53px; position: absolute; border-radius: 48px" src="{{asset('image/faculty-logo.png')}}" />
-            <div style="width: 324px; height: 61px; left: 154px; top: 70px; position: absolute; text-align: center; color: #FFC235; font-size: 28px; font-family: Istok Web; font-weight: 700; line-height: 33.60px; word-wrap: break-word">Faculty of Science<br/></div>
-        </div>
-        <div style="width: 1453px; height: 72px; left: 0px; top: 94px; position: absolute">
-            <div style="width: 1453px; height: 72px; left: 0px; top: 0px; position: absolute; background: #D89AEE"></div>
-            <div style="width: 828.74px; height: 29px; left: 114px; top: 31px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 63px; display: inline-flex">
-                <div style="width: 99px; text-align: center; color: #010002; font-size: 24px; font-family: Ibarra Real Nova; font-weight: 700; line-height: 28.80px; word-wrap: break-word">Home</div>
-                <div style="text-align: center; color: #010002; font-size: 24px; font-family: Ibarra Real Nova; font-weight: 700; line-height: 28.80px; word-wrap: break-word">News and Events</div>
-                <div style="text-align: center; color: #010002; font-size: 24px; font-family: Ibarra Real Nova; font-weight: 700; line-height: 28.80px; word-wrap: break-word">Services</div>
-                <div style="text-align: center; color: #010002; font-size: 24px; font-family: Ibarra Real Nova; font-weight: 700; line-height: 28.80px; word-wrap: break-word">About</div>
+    <div class="frame-1-xHP">
+        <div class="auto-group-y2u1-6Pb">
+          <div class="auto-group-gybt-ZHB">
+            <div class="top-nav-bar-background-f5K">
             </div>
-            <div style="width: 624px; height: 29px; left: 756px; top: 31px; position: absolute">
-                <div style="width: 274.72px; left: 0px; top: 0px; position: absolute; text-align: center; color: #0D0D0D; font-size: 24px; font-family: IBM Plex Sans Condensed; font-weight: 600; line-height: 28.80px; word-wrap: break-word">Alumni Directory</div>
-                <div style="width: 226.64px; height: 29px; left: 197.21px; top: 0px; position: absolute; text-align: center; color: #0D0D0D; font-size: 24px; font-family: IBM Plex Sans Condensed; font-weight: 600; line-height: 28.80px; word-wrap: break-word">Contact Us</div>
-                <div style="width: 274.72px; left: 349.28px; top: 0px; position: absolute; text-align: center; color: black; font-size: 24px; font-family: IBM Plex Sans Condensed; font-weight: 600; line-height: 28.80px; word-wrap: break-word">Log In | Sign Up</div>
+            <img class="rectangle-4-NVX" src="{{asset('./image/index/rectangle-4-GRF.png')}}"/>
+            <div class="fos-logo-qnR">
+              <img class="rectangle-5-Ygq" src="{{asset('./image/index/rectangle-5-zEu.png')}}"/>
+              <p class="faculty-of-science-E3s">
+              Faculty of Science
+              <br/>
+
+              </p>
             </div>
+          </div>
+          <div class="auto-group-tfbf-uQu">
+            <div class="mid-nav-bar-RPF">
+              <p class="home-YTs">Home</p>
+              <p class="news-and-events-3Qd">News and Events</p>
+              <p class="services-Nho">Services</p>
+              <p class="about-W3K">About</p>
+            </div>
+            <div class="top-nav-bar-qrH">
+              <p class="alumni-directory-b4m">Alumni Directory</p>
+              <p class="contact-us-Vvq">Contact Us</p>
+              <p class="log-in-sign-up-y5K">Log In | Sign Up</p>
+            </div>
+          </div>
         </div>
-        <img style="width: 1453px; height: 535px; left: 0px; top: 166px; position: absolute" src="https://via.placeholder.com/1453x535" />
-        <div style="width: 1442px; height: 448px; left: 0px; top: 1576px; position: absolute; background: #390A40; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
-            <div style="width: 143px; height: 156px; left: 106px; top: 114px; position: absolute; border: 1px dotted;">
-            <img style="width: 150px;  left: 0px; top: 43px; position: absolute; border-radius: 48px" src="{{asset('image/uni-logo.png')}}" />
-                <div style="left: 140px; top: 40px; position: absolute; text-align: center"><span style="color: rgba(0, 0, 0, 0.20); font-size: 50px; font-family: Baskerville Old Face; font-weight: 400; text-transform: uppercase; word-wrap: break-word">FOS Alumni<br/></span><span style="color: rgba(0, 0, 0, 0.20); font-size: 24px; font-family: Battambang; font-weight: 400; text-transform: uppercase; word-wrap: break-word">UNIVERSITY OF RUHUNA</span></div>
+        <div class="auto-group-ssff-VZT">
+          <img class="main-image-F2q" src="{{asset('./image/index/main-image-GGZ.')}}'"/>
+          <p class="science-alumni-welcome-Bx5">
+            <span class="science-alumni-welcome-Bx5-sub-0">
+            Science Alumni
+            <br/>
+
+            </span>
+            <span class="science-alumni-welcome-Bx5-sub-1">Welcome</span>
+          </p>
+          <div class="hero-section-aMw">
+            <div class="group-2-TAq">Welcome to the Alumni Association of Faculty of Science</div>
+            <div class="group-3-Mn1">Learn More</div>
+          </div>
+        </div>
+        <div class="below-hero-section-3Pw">
+          <div class="group-5-MvR">
+            <div class="auto-group-mqkh-Jam">
+              <div class="auto-group-cajs-Sws">
+                <p class="this-isnt-a-good-bye-its-a-welcome-BPf">
+                This isn&#39;t a Good Bye.
+                <br/>
+                It&#39;s a Welcome
+                </p>
+              </div>
+              <div class="group-6-5jw">Join with us</div>
             </div>
-            <div style="width: 637px; height: 240px; left: 736px; top: 90px; position: absolute">
-                <div style="width: 635px; height: 198px; left: 2px; top: 0px; position: absolute; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
-                    <div style="width: 368px; height: 90px; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex">
-                        <div style="justify-content: flex-start; align-items: center; gap: 16px; display: inline-flex">
-                            <div style="width: 24px; height: 24px; position: relative">
-                                <div style="width: 24px; height: 24px; left: 0px; top: 0px; position: absolute"></div>
-                                <img style="width: 14px; height: 19.47px; left: 5px; top: 2px; position: absolute" src="https://via.placeholder.com/14x19" />
-                            </div>
-                            <div style="color: white; font-size: 20px; font-family: DM Sans; font-weight: 400; line-height: 22px; word-wrap: break-word">Faculty of Science, University of Ruhuna, Matara, Sri Lanka</div>
-                        </div>
-                        <div style="justify-content: flex-start; align-items: flex-start; gap: 120px; display: inline-flex">
-                            <div style="justify-content: flex-start; align-items: center; gap: 16px; display: flex">
-                                <div style="width: 24px; height: 24px; position: relative">
-                                    <div style="width: 24px; height: 24px; left: 0px; top: 0px; position: absolute"></div>
-                                    <div style="width: 17.96px; height: 17.96px; left: 3.03px; top: 3.01px; position: absolute; background: #188CFF"></div>
-                                </div>
-                                <div style="width: 159px; height: 36px; color: #D0DAF5; font-size: 20px; font-family: Assistant; font-weight: 400; word-wrap: break-word">(123) 456-7890</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div style="justify-content: flex-start; align-items: center; gap: 16px; display: inline-flex">
-                        <div style="width: 24px; height: 24px; position: relative">
-                            <div style="width: 24px; height: 24px; left: 0px; top: 0px; position: absolute"></div>
-                            <img style="width: 20px; height: 18px; left: 2px; top: 3px; position: absolute" src="https://via.placeholder.com/20x18" />
-                        </div>
-                        <div style="color: #D0DAF5; font-size: 20px; font-family: Assistant; font-weight: 400; word-wrap: break-word">(123) 456-7890</div>
-                    </div>
-                    <div style="width: 199px; height: 36px; left: 0px; top: 134px; position: absolute">
-                        <img style="width: 24px; height: 24px; left: 0px; top: 2px; position: absolute" src="https://via.placeholder.com/24x24" />
-                        <div style="width: 159px; height: 36px; left: 40px; top: 0px; position: absolute; color: #D0DAF5; font-size: 20px; font-family: Assistant; font-weight: 400; word-wrap: break-word">(123) 456-7890</div>
-                    </div>
+            <div class="rectangle-13-Z9K">
+            </div>
+          </div>
+        </div>
+        <div class="footer-EmF">
+          <div class="auto-group-dvpm-a4R">
+            <div class="logo-vPB">
+              <div class="fos-alumni-university-of-ruhuna-SsK">
+                <span class="fos-alumni-university-of-ruhuna-SsK-sub-0">
+                FOS Alumni
+                <br/>
+
+                </span>
+                <span class="fos-alumni-university-of-ruhuna-SsK-sub-1">UNIVERSITY OF RUHUNA</span>
+              </div>
+            </div>
+            <div class="information-k9F">
+              <div class="frame-38-h4V">
+                <div class="frame-37-BVT">
+                  <div class="office-address-jms">
+                    <img class="round-place-24px-hCu" src="./assets/round-place-24px-tc9.png"/>
+                    <p class="faculty-of-science-university-of-ruhuna-matara-sri-lanka-p2d">Faculty of Science, University of Ruhuna, Matara, Sri Lanka</p>
+                  </div>
+                  <div class="phone-number-hs7">
+                    <img class="round-phone-24px-rk1" src="./assets/round-phone-24px-2rM.png"/>
+                    <p class="item-123-456-7890-tgh">(123) 456-7890</p>
+                  </div>
                 </div>
-                <div style="width: 399px; height: 53px; left: 0px; top: 187px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 24px; display: inline-flex">
-                    <div style="width: 30px; height: 30px; position: relative">
-                        <div style="width: 30px; height: 30px; left: 0px; top: 0px; position: absolute"></div>
-                        <div style="width: 22.50px; height: 22.50px; left: 3.75px; top: 3.75px; position: absolute; background: #188CFF"></div>
+                <div class="auto-group-lb77-CxH">
+                  <div class="fax-XzZ">
+                    <img class="round-local-printshop-24px-fqs" src="./assets/round-local-printshop-24px-Vus.png"/>
+                    <p class="item-123-456-7890-C57">(123) 456-7890</p>
+                  </div>
+                  <div class="phone-number-KvR">
+                    <div class="path-gW5">
                     </div>
-                    <div style="width: 30px; height: 30px; position: relative; opacity: 0.30">
-                        <div style="width: 30px; height: 30px; left: 0px; top: 0px; position: absolute"></div>
-                        <div style="width: 22.50px; height: 18.75px; left: 3.75px; top: 6.25px; position: absolute; background: #2D96E2"></div>
-                    </div>
-                    <div style="width: 30px; height: 30px; position: relative">
-                        <div style="width: 30px; height: 30px; left: 0px; top: 0px; position: absolute"></div>
-                        <img style="width: 22.50px; height: 20px; left: 3.75px; top: 5px; position: absolute" src="https://via.placeholder.com/22x20" />
-                    </div>
-                    <div style="width: 30px; height: 30px; position: relative">
-                        <div style="width: 30px; height: 30px; left: 0px; top: 0px; position: absolute"></div>
-                        <img style="width: 22.50px; height: 16.25px; left: 3.75px; top: 7.50px; position: absolute" src="https://via.placeholder.com/22x16" />
-                    </div>
-                    <div style="width: 30px; height: 30px; position: relative">
-                        <div style="width: 30px; height: 30px; left: 0px; top: 0px; position: absolute"></div>
-                        <img style="width: 22.50px; height: 22.50px; left: 3.75px; top: 3.75px; position: absolute" src="https://via.placeholder.com/22x22" />
-                    </div>
-                    <div style="width: 30px; height: 30px; position: relative">
-                        <div style="width: 30px; height: 30px; left: 0px; top: 0px; position: absolute"></div>
-                        <img style="width: 22.50px; height: 13.75px; left: 3.75px; top: 8.75px; position: absolute" src="https://via.placeholder.com/22x14" />
-                    </div>
+                    <p class="item-123-456-7890-PQV">(123) 456-7890</p>
+                  </div>
                 </div>
+              </div>
+              <div class="frame-34-hRB">
+                <img class="facebook-black1-bFf" src="./assets/facebook-black1-AeD.png"/>
+                <img class="twitter-black1-92H" src="./assets/twitter-black1-MA9.png"/>
+                <img class="linkedin-black1-HPP" src="./assets/linkedin-black1-znV.png"/>
+                <img class="youtube-color1-osX" src="./assets/youtube-color1-Bjf.png"/>
+                <img class="instagram-black1-9Ah" src="./assets/instagram-black1-UMF.png"/>
+                <img class="googleplus-black1-6Lq" src="./assets/googleplus-black1-PKo.png"/>
+              </div>
             </div>
-            <div style="left: 200px; top: 349px; position: absolute"></div>
-            <div style="left: 132px; top: 338px; position: absolute; justify-content: flex-start; align-items: flex-start; gap: 41px; display: inline-flex">
-                <div style="color: #D0DAF5; font-size: 20px; font-family: DM Sans; font-weight: 500; text-transform: uppercase; word-wrap: break-word">About us</div>
-                <div style="color: #D0DAF5; font-size: 20px; font-family: DM Sans; font-weight: 500; text-transform: uppercase; word-wrap: break-word">Contact us</div>
-                <div style="color: #D0DAF5; font-size: 20px; font-family: DM Sans; font-weight: 500; text-transform: uppercase; word-wrap: break-word">Help</div>
-                <div style="color: #D0DAF5; font-size: 20px; font-family: DM Sans; font-weight: 500; text-transform: uppercase; word-wrap: break-word">Privacy Policy</div>
+          </div>
+          <div class="auto-group-tjqq-R8D">
+            <div class="frame-33-jeh">
+              <p class="about-us-39b">About us</p>
+              <p class="contact-us-yow">Contact us</p>
+              <p class="help-L8h">Help</p>
+              <p class="privacy-policy-tAD">Privacy Policy</p>
             </div>
-            <div style="width: 375px; left: 972px; top: 342px; position: absolute"><span style="color: #D0DAF5; font-size: 20px; font-family: Assistant; font-weight: 400; word-wrap: break-word">Copyright © 2023• University of Ruhuna</span><span style="color: #D0DAF5; font-size: 14px; font-family: Assistant; font-weight: 400; word-wrap: break-word">.</span></div>
+            <p class="copyright-2023-university-of-ruhuna-1Eq">
+              <span class="copyright-2023-university-of-ruhuna-1Eq-sub-0">Copyright © 2023• University of Ruhuna</span>
+              <span class="copyright-2023-university-of-ruhuna-1Eq-sub-1">.</span>
+            </p>
+          </div>
         </div>
-    </div>
+      </div>
 
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
