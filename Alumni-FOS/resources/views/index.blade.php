@@ -1,111 +1,99 @@
-<html>
-<head>
-    <link rel="shortcut icon" type="x-icon" href="{{asset('image/faculty-logo.png')}}">
-    <title>University of Ruhuna FOS-Alumni</title>
+<!DOCTYPE html>
+<html lang="en">
 
-    <!--boostrap-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <head>
+        <meta charset="UTF-8">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Welcome</title>
+        <link rel="stylesheet" href="{{asset('css/index.css')}}"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Baskervville&family=DM+Sans:opsz,wght@9..40,300&family=Ibarra+Real+Nova:wght@600&family=Inter:wght@800&display=swap"
+            rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    </head>
 
-    <!--css-->
-    <link rel="stylesheet" href="{{asset('css/index.css')}}"/>
-</head>
+    <body>
+        <!--Wrapper is the 12-grid system we used-->
 
-<body style="background-color: #F9F2D8">
+        <!--University logos-->
+        <header>
+            <div class="wrapper">
+                <a href="#">
+                    <img src="{{asset('image/indexpage/logo_copy.png')}}" alt="UOR main logo" width="544px" height="72px" style="position: absolute;               
+                    top: 15px;contain: no-repeat;" />
+                </a>
+                <a href="#">
+                    <img src="{{asset('image/indexpage/FOS logo.png')}}" alt="FOS logo" width="489px" height="167px" style="position: absolute; right: 100px;top: -6px; display: 
+                    flex;flex-direction: column" />
+                </a>
 
-    <div class="frame-1-xHP">
-        <div class="auto-group-y2u1-6Pb">
-          <div class="auto-group-gybt-ZHB">
-            <div class="top-nav-bar-background-f5K">
             </div>
-            <img class="rectangle-4-NVX" src="{{asset('./image/index/rectangle-4-GRF.png')}}"/>
-            <div class="fos-logo-qnR">
-              <img class="rectangle-5-Ygq" src="{{asset('./image/index/rectangle-5-zEu.png')}}"/>
-              <p class="faculty-of-science-E3s">
-              Faculty of Science
-              <br/>
 
-              </p>
-            </div>
-          </div>
-          <div class="auto-group-tfbf-uQu">
-            <div class="mid-nav-bar-RPF">
-              <p class="home-YTs">Home</p>
-              <p class="news-and-events-3Qd">News and Events</p>
-              <p class="services-Nho">Services</p>
-              <p class="about-W3K">About</p>
-            </div>
-            <div class="top-nav-bar-qrH">
-              <p class="alumni-directory-b4m">Alumni Directory</p>
-              <p class="contact-us-Vvq">Contact Us</p>
-              <p class="log-in-sign-up-y5K">Log In | Sign Up</p>
-            </div>
-          </div>
-        </div>
-        <div class="auto-group-ssff-VZT">
-          <img class="main-image-F2q" src="{{asset('./image/index/main-image-GGZ.')}}'"/>
-          <p class="science-alumni-welcome-Bx5">
-            <span class="science-alumni-welcome-Bx5-sub-0">
-            Science Alumni
-            <br/>
-
-            </span>
-            <span class="science-alumni-welcome-Bx5-sub-1">Welcome</span>
-          </p>
-          <div class="hero-section-aMw">
-            <div class="group-2-TAq">Welcome to the Alumni Association of Faculty of Science</div>
-            <div class="group-3-Mn1">Learn More</div>
-          </div>
-        </div>
-        <div class="below-hero-section-3Pw">
-          <div class="group-5-MvR">
-            <div class="auto-group-mqkh-Jam">
-              <div class="auto-group-cajs-Sws">
-                <p class="this-isnt-a-good-bye-its-a-welcome-BPf">
-                This isn&#39;t a Good Bye.
-                <br/>
-                It&#39;s a Welcome
-                </p>
-              </div>
-              <div class="group-6-5jw">Join with us</div>
-            </div>
-            <div class="rectangle-13-Z9K">
-            </div>
-          </div>
-        </div>
-        <div class="footer-EmF">
-          <div class="auto-group-dvpm-a4R">
-            <div class="logo-vPB">
-              <div class="fos-alumni-university-of-ruhuna-SsK">
-                <span class="fos-alumni-university-of-ruhuna-SsK-sub-0">
-                FOS Alumni
-                <br/>
-
-                </span>
-                <span class="fos-alumni-university-of-ruhuna-SsK-sub-1">UNIVERSITY OF RUHUNA</span>
-              </div>
-            </div>
-            <div class="information-k9F">
-              <div class="frame-38-h4V">
-                <div class="frame-37-BVT">
-                  <div class="office-address-jms">
-                    <img class="round-place-24px-hCu" src="./assets/round-place-24px-tc9.png"/>
-                    <p class="faculty-of-science-university-of-ruhuna-matara-sri-lanka-p2d">Faculty of Science, University of Ruhuna, Matara, Sri Lanka</p>
-                  </div>
-                  <div class="phone-number-hs7">
-                    <img class="round-phone-24px-rk1" src="./assets/round-phone-24px-2rM.png"/>
-                    <p class="item-123-456-7890-tgh">(123) 456-7890</p>
-                  </div>
-                </div>
-                <div class="auto-group-lb77-CxH">
-                  <div class="fax-XzZ">
-                    <img class="round-local-printshop-24px-fqs" src="./assets/round-local-printshop-24px-Vus.png"/>
-                    <p class="item-123-456-7890-C57">(123) 456-7890</p>
-                  </div>
-                  <div class="phone-number-KvR">
-                    <div class="path-gW5">
+        </header>
+        <!--Navigation bar-->
+        <nav>
+            <div class="wrapper">
+                <div class="navbar">
+                    <div class="menu-item">
+                        <a href="#">Home</a>
+                        <a href="#">News and Events</a>
+                        <a href="#">Sevices</a>
+                        <a href="#">About</a>
+                        <a href="#">Alumni Dirctory</a>
+                        <a href="#">Contact us</a>
+                        <a href="#">Login</a>
+                        <a href="#">Signup</a>
                     </div>
-                    <p class="item-123-456-7890-PQV">(123) 456-7890</p>
-                  </div>
+                </div>
+
+            </div>
+        </nav>
+
+        <main class="hero-section">
+            <div class="wrapper">
+                <!--Main images with slidshows-->
+                <div class="mainimage" style="position: absolute;top: 166px;">
+                    <img src="{{asset('image/indexpage/Main Image.png')}}" class="img-fluid" alt="Slide show">
+                    <h2>Science ALumni<br>Welcome</h2>
+                </div>
+                     
+            </div>
+        </main>
+
+        <!--Learn more part with about us-->
+        <div class="about">
+            <div class="wrapper">
+                <div class="aboutustext">
+                    <p>Welcome to the Alumni Association of Faculty of Science</p>               
+                </div>
+                <div class="btnbox1">
+                    <a class="btn btn-primary" href="#" role="button">Learn More</a>
+                </div>
+            </div>
+      
+        </div>
+
+        <!--Join with us part-->
+        <div class="join">
+            <div class="wrapper">
+                <div class="join_left">
+                    <div class="parabox">
+                        <p>This isn't a good bye.<br>Its a welcome</p>
+                    </div>
+                    <div class="btnbox">
+                        <a class="btn btn-primary" href="#" role="button">Join with us</a>
+                    </div>
+                </div>
+
+                <div class="join_right">
+                    <!--add imagge here-->
+                    <div class="img_box">
+                        <img src="{{asset('image/indexpage/graduwation photo.png')}}" class="img-fluid" alt="graduwationphoto" />
+                    </div>
+
                 </div>
               </div>
               <div class="frame-34-hRB">
@@ -117,26 +105,18 @@
                 <img class="googleplus-black1-6Lq" src="./assets/googleplus-black1-PKo.png"/>
               </div>
             </div>
-          </div>
-          <div class="auto-group-tjqq-R8D">
-            <div class="frame-33-jeh">
-              <p class="about-us-39b">About us</p>
-              <p class="contact-us-yow">Contact us</p>
-              <p class="help-L8h">Help</p>
-              <p class="privacy-policy-tAD">Privacy Policy</p>
+
+
+        <footer class="footstyle">
+            <div class="wrapper">
+                <p>Hello world</p>
+
             </div>
-            <p class="copyright-2023-university-of-ruhuna-1Eq">
-              <span class="copyright-2023-university-of-ruhuna-1Eq-sub-0">Copyright © 2023• University of Ruhuna</span>
-              <span class="copyright-2023-university-of-ruhuna-1Eq-sub-1">.</span>
-            </p>
-          </div>
-        </div>
-      </div>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        </footer>
 
-</body>
+        <script type="module" src="welcome.js"></script>
+
+    </body>
 
 </html>

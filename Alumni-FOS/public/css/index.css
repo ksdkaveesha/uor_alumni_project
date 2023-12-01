@@ -1,12 +1,219 @@
-.nev{
-    width: 70%;
-    height:100%;
-    position: absolute;
-    left: 25%;
-    background:#BD6FD8;
-    color: aliceblue;
+:root {
+    --darkpurple: #390A40;
+    --lightpurple: #E7B3F9;
+    --mediumyellow: #F9F2D8;
+    --lightyellow: #FFFAE9;
 }
 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter";
+    margin: 0;
+    background-color: var(--mediumyellow);
+
+}
+
+.wrapper {
+    width: 1216px;
+    margin: 0 auto;
+    /*background-color: red;*/
+}
+
+/*header*/
+header {
+    height: 99px;
+    background: var(--darkpurple);
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+/*Nav bar */
+nav {
+    height: 72px;
+    background: var(--lightpurple);
+    position: absolute;
+    top: 94px;
+    left: 0;
+    right: 0;
+
+}
+
+a {
+
+    text-decoration: none;
+}
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav .menu-item {
+    display: flex;
+    gap: 35px;
+    margin-left: 60px;
+
+
+}
+
+nav .menu-item a {
+    left: 50px;
+    color: #010002;
+    text-align: center;
+    font-family: Ibarra Real Nova;
+    font-size: 24px;
+    /*font-style: normal;*/
+    font-weight: 700;
+    line-height: 120%;
+    text-decoration: none;
+}
+
+/*Hero Section */
+
+.hero-section {
+    background: var(--mediumyellow);
+    height: 100vh;
+}
+
+.hero-section .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh-171px);
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;    
+}
+/*about us and learn more*/
+
+.aboutus{
+    position: relative;
+    top: 500px;
+    left: 0;
+    right: 0;
+    background-color: var(--lightyellow);
+    height: 80vh;
+}
+.aboutus .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh-538px);
+    margin-top: 72px;
+}
+
+.aboutustext{
+    margin-top: 30px;
+}
+.aboutustext p {
+    color: #000;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+}
+
+.about .btnbox1{
+    position: relative;
+    top: 200px;
+    left: 500px;
+}
+.about .btn {   
+    color: #f5f5f5;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-color: var(--darkpurple);
+    padding: 20px 29px;
+}
+
+/*Join now section*/
+
+.join{
+    position: relative;    
+    left: 0;
+    right: 0;
+    top: 500px;
+    background-color: var(--lightyellow);
+    height: 80vh;
+}
+
+.join .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh-538px);
+    margin-top: 72px;
+}
+.join .join_left{
+    margin-top: 30px;
+}
+.join .join_left p {
+    color: #000;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.join .btn {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-color: var(--darkpurple);
+    padding: 20px 29px;
+}
+
+.join .btnbox{
+    position: relative;
+    margin-top: 300px;
+}
+
+.join .join_right .img_box{
+    height: 350.26px;
+    width: 482px;   
+    
+}
+
+.join .join_right .img_box .img{
+    height:150.26px;
+}
+.footstyle{
+    position: relative;    
+    left: 0;
+    right: 0;
+    top: 500px;
+    background-color: var(--darkpurple);
+    height: 50vh;
+}
+
+.footstyle .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
 
 html {
 	font-size:62.5%;
