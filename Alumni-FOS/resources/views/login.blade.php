@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
+
   <link rel="icon" href="/favicon.ico" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#000000" />
@@ -16,7 +17,7 @@
     <div class="loginpage-5XP">
     <div class="auto-group-rkat-48R">
         <img class="rectangle-4-3Pf" src="{{asset('image/rectangle-4.png')}}"/>
-        <img class="vector-qKX" src="./assets/vector-joo.png"/>
+        <img class="vector-qKX" src="{{asset('image/vector.png')}}"/>
     </div>
 
     <!--user name password form-->
@@ -33,19 +34,22 @@
         </div>
 
         <div class="group-10-wBX">
-            <button class="button">	Log In </button>
+            <button type="submit" class="button">	Log In </button>
         </div>
 
         <p class="forgot-your-password-C7T"><a href="">Forgot your password?</a></p>
-        <div class="auto-group-vmb1-uGm">
-        <p class="remember-me-qAR">Remember me</p>
-        <div class="rectangle-10-VVs">
-        </div>
+        <div class="auto-group-vmb1-uGm" >
+            <label>
+                <input type="checkbox" checked="checked" name="remember" > <span style="font-size:18px"> Remember me </span>
+            </label>
+
         </div>
 
-        <div class="group-9-pY9">
-        <div class="group-7-a1X">Sign up</div>
+
+        <div class="group-7-a1X">
+            <button type="button" class="button2"> Sign up</button>
         </div>
+
     </div>
     <div class="group-4-2u7">
         <p class="or-B1K">OR</p>
@@ -55,3 +59,5 @@
     </div>
 
 </body>
+
+</html>
