@@ -81,7 +81,7 @@
             <div class="wrapper">
                 <div class="join_left">
                     <div class="parabox">
-                        <p>This isn't a good bye.<br>Its a welcome</p>
+                         <p>This isn't a good bye.<br>Its a welcome</p>
                     </div>
                     <div class="btnbox">
                         <a class="btn btn-primary" href="#" role="button">Join with us</a>
@@ -95,17 +95,9 @@
                     </div>
 
                 </div>
-              </div>
-              <div class="frame-34-hRB">
-                <img class="facebook-black1-bFf" src="./assets/facebook-black1-AeD.png"/>
-                <img class="twitter-black1-92H" src="./assets/twitter-black1-MA9.png"/>
-                <img class="linkedin-black1-HPP" src="./assets/linkedin-black1-znV.png"/>
-                <img class="youtube-color1-osX" src="./assets/youtube-color1-Bjf.png"/>
-                <img class="instagram-black1-9Ah" src="./assets/instagram-black1-UMF.png"/>
-                <img class="googleplus-black1-6Lq" src="./assets/googleplus-black1-PKo.png"/>
-              </div>
             </div>
 
+        </div>
 
         <footer class="footstyle">
             <div class="wrapper">
