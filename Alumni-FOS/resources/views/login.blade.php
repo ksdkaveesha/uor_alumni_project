@@ -37,7 +37,7 @@
             <button type="submit" class="button">	Log In </button>
         </div>
 
-        <p class="forgot-your-password-C7T"><a href="">Forgot your password?</a></p>
+        <p class="forgot-your-password-C7T"><a href="<?php echo url('./forgot_pwd.blade.php') ?>">Forgot your password?</a></p>
         <div class="auto-group-vmb1-uGm" >
             <label>
                 <input type="checkbox" checked="checked" name="remember" > <span style="font-size:18px"> Remember me </span>
