@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html >
 
     <head>
         <meta charset="UTF-8">
@@ -167,27 +167,28 @@
                         <a>&nbsp&nbsp&nbsp&nbsp CONTACT US</a>
                         <a>&nbsp&nbsp&nbsp&nbsp HELP</a>
                         <a>&nbsp&nbsp&nbsp&nbsp PRIVANCY POLICY </a>
-                </div>
+                    </div>
 
-                <div class="img-fluid2">
-                    <br><br>
-                    <img src="{{asset('image\index\location.png')}}" class="iconf"/><span>&nbsp Faculty of Science, University of Ruhuna, Matara</span><br><br>
-                    <img src="{{asset('image\index\phone.png')}}" class="iconf"/><span>&nbsp 041-1111111</span><br><br>
-                    <img src="{{asset('image\index\fax.png')}}" class="iconf"/><span>&nbsp 041-1111111</span><br><br>
-                    <img src="{{asset('image\indexpage\gmail.png')}}" class="iconf"/><span>&nbsp a@gmail.com</span><br><br>
-                    <img src="{{asset('image\index\facebook.png')}}" class="iconf"/><span>&nbsp</span>
-                    <img src="{{asset('image\index\twitter.png')}}" class="iconf"/><span>&nbsp</span>
-                    <img src="{{asset('image\index\linkedin.png')}}" class="iconf"/><span>&nbsp</span>
-                    <img src="{{asset('image\index\google.png')}}" class="iconf"/><span>&nbsp</span>
-                    <img src="{{asset('image\index\youtube.png')}}" class="iconf"/><span>&nbsp</span>
-                    <img src="{{asset('image\index\instagram.png')}}" class="iconf"/><span>&nbsp</span>
-                    <br><br>
-                <div class="copy-right">
-                    <span> Copy right &copy 2023.University of Ruhuna </span>
-                    <br><br>
-                </div>
-                </div>
+                    <div class="img-fluid2">
+                        <br><br>
+                        <img src="{{asset('image\index\location.png')}}" class="iconf"/><span>&nbsp Faculty of Science, University of Ruhuna, Matara</span><br><br>
+                        <img src="{{asset('image\index\phone.png')}}" class="iconf"/><span>&nbsp 041-1111111</span><br><br>
+                        <img src="{{asset('image\index\fax.png')}}" class="iconf"/><span>&nbsp 041-1111111</span><br><br>
+                        <img src="{{asset('image\indexpage\gmail.png')}}" class="iconf"/><span>&nbsp a@gmail.com</span><br><br>
+                        <img src="{{asset('image\index\facebook.png')}}" class="iconf"/><span>&nbsp</span>
+                        <img src="{{asset('image\index\twitter.png')}}" class="iconf"/><span>&nbsp</span>
+                        <img src="{{asset('image\index\linkedin.png')}}" class="iconf"/><span>&nbsp</span>
+                        <img src="{{asset('image\index\google.png')}}" class="iconf"/><span>&nbsp</span>
+                        <img src="{{asset('image\index\youtube.png')}}" class="iconf"/><span>&nbsp</span>
+                        <img src="{{asset('image\index\instagram.png')}}" class="iconf"/><span>&nbsp</span>
+                        <br><br>
+                    <div class="copy-right">
+                        <span> Copy right &copy 2023.University of Ruhuna </span>
+                        <br><br>
+                    </div>
+                    </div>
 
+                </div>
             </div>
 
         </footer>
