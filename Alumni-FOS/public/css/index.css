@@ -94,7 +94,7 @@ nav .menu-item a {
 
 .img-fluid {
     max-width: 100%;
-    height: auto;    
+    height: auto;
 }
 /*about us and learn more*/
 
@@ -132,7 +132,7 @@ nav .menu-item a {
     top: 200px;
     left: 500px;
 }
-.about .btn {   
+.about .btn {
     color: #f5f5f5;
     font-family: Inter;
     font-size: 25px;
@@ -146,7 +146,7 @@ nav .menu-item a {
 /*Join now section*/
 
 .join{
-    position: relative;    
+    position: relative;
     left: 0;
     right: 0;
     top: 500px;
@@ -191,15 +191,15 @@ nav .menu-item a {
 
 .join .join_right .img_box{
     height: 350.26px;
-    width: 482px;   
-    
+    width: 482px;
+
 }
 
 .join .join_right .img_box .img{
     height:150.26px;
 }
 .footstyle{
-    position: relative;    
+    position: relative;
     left: 0;
     right: 0;
     top: 500px;
@@ -211,7 +211,40 @@ nav .menu-item a {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
-    
+
+
 }
 
+.column {
+    float: left;
+  }
+
+  .left {
+    width: 25%;
+  }
+
+  .right {
+    width: 75%;
+  }
+
+.set_left{
+
+    height: 70%;
+    width: 50%;
+
+}
+
+.set_right{
+    text-align: left;
+    font-size: 30px;
+    color: #f5f5f5;
+}
+
+.image-fluid {
+
+    align-items: right;
+    max-width: 100%;
+    height: auto;
+}
+
+.f-nav
