@@ -16,10 +16,17 @@
 		<div class="form-group">
 			<input type="email" name="user_email" id="user_email">
 			<p><label for="username">Email</label></p>
-			<button onclick="showSpinner()">Reset Password</button>
+			<button onclick="con_msg()" >Reset Password</button>
 		</div>
+        <div ><p id="msg" style="color: red"> </p></div>
 
 	</div>
+
+    <script>
+        function con_msg() {
+          document.getElementById("msg").innerHTML = "*Check your email";
+        }
+        </script>
 </body>
 
 </html>

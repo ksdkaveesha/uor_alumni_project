@@ -17,10 +17,14 @@ html {
     -moz-font-feature-settings: "liga" on; }
 
   .row {
-    background-color: rgba(126, 186, 236, 0.6);
+    background-color: rgba(252, 0, 197, 0.6);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
-    padding: 2em 2em 0.5em;
+    padding: 2em 2em 2em;
     width: 90%;
     margin: 2em	auto;
     border-radius: 5px; }
