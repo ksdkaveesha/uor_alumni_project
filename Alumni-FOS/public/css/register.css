@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
 .container2{
     margin: auto;
     width: 100%;
@@ -8,19 +10,60 @@
 }
 
 .mb-3{
-    font-size:15px;
+    font-size:18px;
+    font-family:  'Source Sans Pro',sans-serif;
 }
 
-button{
+.btn-primary{
     height:30px;
     width: 80px;
-    font-size: 20px;
+    font-size: 15px;
+    margin-right: 20px;
+    font-family:  'Source Sans Pro',sans-serif;
+    background-color: #663398;
+    border-color:#663398 ;
+    border-radius: 10%;
+
 }
 
+.btn-primary:hover{
+    background-color: #663398;
+    border-color:#663398 ;
+}
 .form-select{
-    font-size:14px;
+    font-size:15px;
+    font-family:  'Source Sans Pro',sans-serif;
 }
 
 .form-control{
-    font-size:14px;
+    font-size:15px;
+    font-family:  'Source Sans Pro',sans-serif;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh-538px);
+    margin-top: 72px;
+}
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+}
+.back-to-home {
+    text-decoration: none;
+    color: var(--darkpurple);
+    font-weight: bold;
+    font-family:  'Source Sans Pro',sans-serif;
+}
+.alumni-regi-form{
+    text-align: center;
+    color: #111;
+    font-family:  'Source Sans Pro',sans-serif;
+
 }
