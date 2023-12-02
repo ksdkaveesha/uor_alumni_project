@@ -4,41 +4,49 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
     <link rel="stylesheet" href="{{asset('css/register.css')}}" />
-    <link rel="stylesheet" href="{{asset('css/index.css')}}" />
+    <link rel="stylesheet" href="{{asset('css/index.css')}}"/>
 
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+
     <title>Registration | Alumni-FOS</title>
+
   </head>
   <body style="background-color: #fcf3d2;">
-
-
-    <div class="frame-1-xHP">
-        <div class="auto-group-y2u1-6Pb">
-          <div class="auto-group-gybt-ZHB">
-            <div class="top-nav-bar-background-f5K">
+    <header>
+        <header>
+            <div class="wrapper">
+                <a href="#">
+                    <img src="{{asset('image/indexpage/logo_copy.png')}}" alt="UOR main logo" width="544px" height="72px" style="position: absolute;
+                    top: 15px;contain: no-repeat;" />
+                </a>
+                <a href="#">
+                    <img src="{{asset('image/indexpage/FOS logo.png')}}" alt="FOS logo" width="489px" height="167px" style="position: absolute; right: 100px;top: -6px; display:
+                    flex;flex-direction: column" />
+                </a>
             </div>
-            <img class="rectangle-4-NVX" src="{{asset('./image/index/rectangle-4-GRF.png')}}"/>
-            <div class="fos-logo-qnR">
-              <img class="rectangle-5-Ygq" src="{{asset('./image/index/rectangle-5-zEu.png')}}"/>
-              <p class="faculty-of-science-E3s">
-              Faculty of Science
-              <br/>
-
-              </p>
-            </div>
+    </header>
+        <br>
+        <div class="frame-1-xHP">
+            <div class="auto-group-y2u1-6Pb">
+                <div class="auto-group-gybt-ZHB">
+                    <div class="top-nav-bar-background-f5K">
+                    </div>
+                <div class="alumni-regi-form">
+                    <h2><b>Alumni Registration Form</b></h2>
+                </div>
+                </div>
           </div>
         </div>
 
 
     <div class="container2">
 
-        <form>
+        <form id="regi_form" onsubmit="return validateForm()">
             <div class="mb-3">
             <label for="name" class="form-label">Name with Initials</label>
             <input type="text" class="form-control" id="name" name="name">
@@ -52,7 +60,9 @@
             <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control" id="email" name="email">
+                <span id="emailError" style="color: red;"></span>
             </div>
+
 
             <div class="mb-3">
                 <label for="address" class="form-label">Residential Address</label>
@@ -61,7 +71,7 @@
 
             <div class="mb-3">
                 <label for="country" class="form-label">Country</label>
-                <select class="form-select" name="country">
+                <select class="form-select" id="country" name="country">
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
                         <option value="Algeria">Algeria</option>
@@ -306,8 +316,8 @@
 
             <div class="mb-3">
                 <label class="form-label">Mobile Number</label>
-                <div style="display:flex; ">
-                    <select class="form-select" name="m_code" style="width:10%;">
+                <div style="display:flex;">
+                    <select class="form-select" id="m_code" name="m_code" style="width:10%">
                             <option value="" disabled selected>Country</option>
                             <option value="93">Afghanistan +93</option>
                             <option value="358">Aland Islands +358</option>
@@ -520,7 +530,7 @@
                             <option value="500">South Georgia and the South Sandwich Islands +500</option>
                             <option value="211">South Sudan +211</option>
                             <option value="34">Spain +34</option>
-                            <option value="94" >Sri Lanka +94</option>
+                            <option value="94">Sri Lanka +94</option>
                             <option value="249">Sudan +249</option>
                             <option value="597">Suriname +597</option>
                             <option value="47">Svalbard and Jan Mayen +47</option>
@@ -563,14 +573,15 @@
 
                     </select>
 
-                    <input type="text" class="form-control" placeholder="Enter number without leading 0" name="mobile" id="mobile">
+                    <input type="text" class="form-control"  name="mobile" id="mobile">
+                    <span id="mobileError" style="color: red;"></span>
                 </div>
             </div>
 
             <!--
             <div class="mb-3">
                 <label for="department" class="form-label">Department</label>
-                <select class="form-select" name="department">
+                <select class="form-select" id="department" name="department">
                     <option value="" selected disabled>Select</option>
                     <option value="Botany">Botany</option>
                     <option value="Chemistry">Chemistry</option>
@@ -605,23 +616,80 @@
                 </select>
             </div>
 
-            <script>
-                $(document).ready(function(){
-                    // When the value of the first select changes
-                    $("#degree_type").change(function(){
-                        // If "Special" is selected, show the second select; otherwise, hide it
-                        if($(this).val() === "Special"){
-                            $("#special_degree_div").show();
-                        } else {
-                            $("#special_degree_div").hide();
-                        }
-                    });
-                });
-            </script>
-            <br>
-            <button type="submit" class="btn btn-primary">Register</button>
+
+        <br>
+            <button type="button" onclick="resetForm()" class="btn-primary">Reset</button>
+            <button type="submit" class="btn-primary">Register</button>
         </form>
+
+        <br>
+        <a href="index.html" class="back-to-home">&lt; Back to Home</a>
     </div>
+
+    <script>
+        $(document).ready(function(){
+            // When the value of the first select changes
+            $("#degree_type").change(function(){
+                // If "Special" is selected, show the second select; otherwise, hide it
+                if($(this).val() === "Special"){
+                    $("#special_degree_div").show();
+                } else {
+                    $("#special_degree_div").hide();
+                }
+            });
+        });
+
+    function validateForm() {
+    // Get values of all form fields
+
+    var name = document.getElementById("name").value;
+    var scNumber = document.getElementById("sc_number").value;
+    var email = document.getElementById("email").value;
+    var address = document.getElementById("address").value;
+    var country = document.getElementById("country").value;
+    var mobileCode = document.getElementById("m_code").value;
+    var phoneNumber = document.getElementById("mobile").value;
+    var degreeType = document.getElementById("degree_type").value;
+
+    // Check if any field is empty
+    if (!name || !scNumber || !email || !address || !country || !mobileCode || !phoneNumber || !degreeType) {
+        alert("Please fill in all sections of the form.");
+        return false;
+    }
+
+    // Validate email
+    var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        document.getElementById("emailError").innerHTML = "Please enter a valid email address";
+        return false;
+    } else {
+        document.getElementById("emailError").innerHTML = "";
+    }
+
+    // Validate phone number
+    var phoneRegex = /^\d{10}$/;
+    if (!phoneRegex.test(phoneNumber)) {
+        document.getElementById("mobileError").innerHTML = "Please enter a valid phone number";
+        return false;
+    }
+    else {
+        document.getElementById("mobileError").innerHTML = "";
+    }
+
+    // Additional validation logic can be added for other fields if needed
+
+    return true;
+    }
+
+    function resetForm() {
+
+        document.getElementById("regi_form").reset();
+    }
+
+    </script>
+
+
+
 
 
     <!-- Optional JavaScript; choose one of the two! -->
