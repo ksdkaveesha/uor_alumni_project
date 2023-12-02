@@ -36,14 +36,14 @@
             <div class="wrapper">
                 <div class="navbar">
                     <div class="menu-item">
-                        <a href="#">Home</a>
+                        <a href="/">Home</a>
                         <a href="#">News and Events</a>
                         <a href="#">Sevices</a>
                         <a href="#">About</a>
                         <a href="#">Alumni Dirctory</a>
                         <a href="#">Contact us</a>
-                        <a href="#">Login</a>
-                        <a href="#">Signup</a>
+                        <a href="/login">Login</a>
+                        <a href="/register">Signup</a>
                     </div>
                 </div>
 
@@ -125,7 +125,7 @@
                          <p>This isn't a good bye.<br>Its a welcome</p>
                     </div>
                     <div class="btnbox">
-                        <a class="btn btn-primary" href="#" role="button">Join with us</a>
+                        <a class="btn btn-primary" href="/register" role="button">Join with us</a>
                     </div>
                 </div>
 

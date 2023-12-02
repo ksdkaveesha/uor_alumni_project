@@ -18,6 +18,7 @@
 			<input type="email" name="user_email" id="user_email">
 			<p><label for="username">Email</label></p>
 			<button onclick="con_msg()" >Reset Password</button>
+            <button onclick="con_msg()" >Go Back</button>
 		</div>
         <div ><p id="msg" style="color: red"> </p></div>
 
@@ -27,7 +28,13 @@
         function con_msg() {
           document.getElementById("msg").innerHTML = "*Check your email";
         }
-        </script>
+    </script>
+
+    <script>
+        function con_msg() {
+            location.href = "/login";
+        }
+    </script>
 </body>
 
 </html>
