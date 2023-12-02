@@ -22,11 +22,11 @@
         <header>
             <div class="wrapper">
                 <a href="#">
-                    <img src="{{asset('image/indexpage/logo_copy.png')}}" alt="UOR main logo" width="544px" height="72px" style="position: absolute;               
+                    <img src="{{asset('image/indexpage/logo_copy.png')}}" alt="UOR main logo" width="544px" height="72px" style="position: absolute;
                     top: 15px;contain: no-repeat;" />
                 </a>
                 <a href="#">
-                    <img src="{{asset('image/indexpage/FOS logo.png')}}" alt="FOS logo" width="489px" height="167px" style="position: absolute; right: 100px;top: -6px; display: 
+                    <img src="{{asset('image/indexpage/FOS logo.png')}}" alt="FOS logo" width="489px" height="167px" style="position: absolute; right: 100px;top: -6px; display:
                     flex;flex-direction: column" />
                 </a>
 
@@ -55,11 +55,63 @@
         <main class="hero-section">
             <div class="wrapper">
                 <!--Main images with slidshows-->
+                <div class="w3-content w3-section" style="max-width:100%; padding: 0px;">
+                    <img class="mySlides " src="main Image.png" style="width:100%">
+                    <img class="mySlides " src="b2.jpg" style="width:100%">
+                    <img class="mySlides " src="b3.jpg" style="width:100%">
+
+
+
+                <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+              </div>
+
+                <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+              <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.3/dist/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+              <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+              <script>
+                  var myIndex = 0;
+                  carousel();
+
+                  var slideIndex = 1;
+                  showDivs(slideIndex);
+
+                  function carousel() {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";
+                    }
+                    myIndex++;
+                    if (myIndex > x.length) {myIndex = 1}
+                    x[myIndex-1].style.display = "block";
+                    setTimeout(carousel, 3000); // Change image every 2 seconds
+                  }
+
+                  function plusDivs(n) {
+                    showDivs(slideIndex += n);
+                  }
+
+                  function showDivs(n) {
+                    var i;
+                    var x = document.getElementsByClassName("mySlides");
+                    if (n > x.length) {slideIndex = 1}
+                    if (n < 1) {slideIndex = x.length}
+                    for (i = 0; i < x.length; i++) {
+                      x[i].style.display = "none";
+                    }
+                    x[slideIndex-1].style.display = "block";
+                  }
+
+                  $(".flexnav").flexNav(); /*nevigation bar*/
+                </script>
+                <!--
                 <div class="mainimage" style="position: absolute;top: 166px;">
                     <img src="{{asset('image/indexpage/Main Image.png')}}" class="img-fluid" alt="Slide show">
                     <h2>Science ALumni<br>Welcome</h2>
                 </div>
-                     
+            -->
             </div>
         </main>
 
@@ -67,13 +119,13 @@
         <div class="about">
             <div class="wrapper">
                 <div class="aboutustext">
-                    <p>Welcome to the Alumni Association of Faculty of Science</p>               
+                    <p>Welcome to the Alumni Association of Faculty of Science</p>
                 </div>
                 <div class="btnbox1">
                     <a class="btn btn-primary" href="#" role="button">Learn More</a>
                 </div>
             </div>
-      
+
         </div>
 
         <!--Join with us part-->
@@ -101,9 +153,65 @@
 
         <footer class="footstyle">
             <div class="wrapper">
-                <p>Hello world</p>
-
             </div>
+            <div class="set_left">
+                <!--add imagge here-->
+                <div class="img_box">
+                    <img src="{{asset('image\indexpage\FOSalumni.png')}}" class="img-fluid" alt="FOSalumni" />
+                </div>
+                <!--text-->
+                <div class="set_right">
+                    <div class="parabox">
+                        <div class="img_box">
+                            <img src="{{asset('image\indexpage\location.png')}}" class="img-fluid" alt="location" />
+                            <span>Faculty of science, University of Ruhuna, Matara</span>
+                        </div>
+
+                        <div class="img_box">
+                            <img src="{{asset('image\indexpage\phone.png')}}" class="img-fluid" alt="phone" />
+                            <span>041-595189286</span>
+                        </div>
+
+                        <div class="img_box">
+                            <img src="{{asset('image\indexpage\fax.png')}}" class="img-fluid" alt="fax" />
+                            <span>0000000000</span>
+                        </div>
+
+                        <div class="img_box">
+                            <img src="{{asset('image\indexpage\gmail.png')}}" class="img-fluid" alt="gmail" />
+                            <span>abc@gmail.com</span>
+                        </div>
+
+                        <div class="column.right">
+                            <img src="{{asset('image\indexpage\facebook.png')}}" class="img-fluid" alt="facebook" />
+                            <img src="{{asset('image\indexpage\twitter.png')}}" class="img-fluid" alt="twitter" />
+                            <img src="{{asset('image\indexpage\linkedin.png')}}" class="img-fluid" alt="linkedin" />
+                            <img src="{{asset('image\indexpage\youtube.png')}}" class="img-fluid" alt="youtube" />
+                            <img src="{{asset('image\indexpage\instagram.png')}}" class="img-fluid" alt="instagram" />
+                            <img src="{{asset('image\indexpage\google.png')}}" class="img-fluid" alt="google" />
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+            </div>
+
+            <!--nav>
+
+                    <div class="navbar">
+                        <div class="menu-item">
+                            <a href="#">ABOUT US</a>
+                            <a href="#">CONTACT US</a>
+                            <a href="#">HELP</a>
+                            <a href="#">PRIVANCY POLICY</a>
+                        </div>
+                    </div>
+
+
+            </nav-->
 
         </footer>
 
