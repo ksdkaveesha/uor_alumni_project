@@ -618,8 +618,8 @@
                     });
                 });
             </script>
-
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <br>
+            <button type="submit" class="btn btn-primary">Register</button>
         </form>
     </div>
 
