@@ -98,11 +98,14 @@ nav .menu-item a {
 }
 
 .img-fluid2 {
-    max-width: 20%;
+    max-width: 100%;
     height: 100%;
     position: absolute;
-    right: 30px;
+    right: 100px;
     top: 0px;
+    text-align: left;
+    font-size: 20px;
+    color: #f5f5f5;
 }
 /*about us and learn more*/
 
@@ -212,7 +215,7 @@ nav .menu-item a {
     right: 0;
     top: 500px;
     background-color: var(--darkpurple);
-    height: 50vh;
+    height: 60vh;
 }
 
 .footstyle .wrapper{
@@ -237,8 +240,10 @@ nav .menu-item a {
 
 .set_left{
 
-    height: 70%;
-    width: 50%;
+    top: 10%;
+
+    width: 60%;
+    height: auto;
 
 }
 
@@ -248,11 +253,18 @@ nav .menu-item a {
     color: #f5f5f5;
 }
 
-.image-fluid {
+.text-fluid {
+    font-weight: 500;
+    text-align: left;
+    font-size: 20px;
+    color: #f5f5f5;
+}
 
-    align-items: right;
-    max-width: 100%;
-    height: auto;
+.copy-right{
+    font-weight: 100;
+    text-align: right;
+    font-size: 15px;
+    color: #f5f5f5;
 }
 
 .iconf{
