@@ -153,65 +153,22 @@
 
         <footer class="footstyle">
             <div class="wrapper">
-            </div>
-            <div class="set_left">
-                <!--add imagge here-->
-                <div class="img_box">
-                    <img src="{{asset('image\indexpage\FOSalumni.png')}}" class="img-fluid" alt="FOSalumni" />
-                </div>
-                <!--text-->
-                <div class="set_right">
-                    <div class="parabox">
-                        <div class="img_box">
-                            <img src="{{asset('image\indexpage\location.png')}}" class="img-fluid" alt="location" />
-                            <span>Faculty of science, University of Ruhuna, Matara</span>
-                        </div>
 
-                        <div class="img_box">
-                            <img src="{{asset('image\indexpage\phone.png')}}" class="img-fluid" alt="phone" />
-                            <span>041-595189286</span>
-                        </div>
-
-                        <div class="img_box">
-                            <img src="{{asset('image\indexpage\fax.png')}}" class="img-fluid" alt="fax" />
-                            <span>0000000000</span>
-                        </div>
-
-                        <div class="img_box">
-                            <img src="{{asset('image\indexpage\gmail.png')}}" class="img-fluid" alt="gmail" />
-                            <span>abc@gmail.com</span>
-                        </div>
-
-                        <div class="column.right">
-                            <img src="{{asset('image\indexpage\facebook.png')}}" class="img-fluid" alt="facebook" />
-                            <img src="{{asset('image\indexpage\twitter.png')}}" class="img-fluid" alt="twitter" />
-                            <img src="{{asset('image\indexpage\linkedin.png')}}" class="img-fluid" alt="linkedin" />
-                            <img src="{{asset('image\indexpage\youtube.png')}}" class="img-fluid" alt="youtube" />
-                            <img src="{{asset('image\indexpage\instagram.png')}}" class="img-fluid" alt="instagram" />
-                            <img src="{{asset('image\indexpage\google.png')}}" class="img-fluid" alt="google" />
-
-                        </div>
-
+                <div class="set_left">
+                    <!--add imagge here-->
+                    <div class="img_box">
+                        <img src="{{asset('image\indexpage\FOSalumni.png')}}" class="img-fluid" alt="FOSalumni" />
                     </div>
-
-
-
                 </div>
+
+                <div class="img-fluid2">
+                    <br><br>
+                    <img src="{{asset('image\index\facebook.png')}}" class="iconf"/><br><br>
+                    <img src="{{asset('image\index\phone.png')}}" class="iconf"/><br><br>
+                    <br><br>
+                </div>
+
             </div>
-
-            <!--nav>
-
-                    <div class="navbar">
-                        <div class="menu-item">
-                            <a href="#">ABOUT US</a>
-                            <a href="#">CONTACT US</a>
-                            <a href="#">HELP</a>
-                            <a href="#">PRIVANCY POLICY</a>
-                        </div>
-                    </div>
-
-
-            </nav-->
 
         </footer>
 

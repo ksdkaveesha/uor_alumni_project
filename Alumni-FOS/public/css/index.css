@@ -96,6 +96,14 @@ nav .menu-item a {
     max-width: 100%;
     height: auto;
 }
+
+.img-fluid2 {
+    max-width: 20%;
+    height: 100%;
+    position: absolute;
+    right: 30px;
+    top: 0px;
+}
 /*about us and learn more*/
 
 .aboutus{
@@ -247,4 +255,6 @@ nav .menu-item a {
     height: auto;
 }
 
-.f-nav
+.iconf{
+    width: 30px;
+}
