@@ -17,7 +17,7 @@ html {
     -moz-font-feature-settings: "liga" on; }
 
   .row {
-    background-color: rgba(252, 0, 197, 0.6);
+    background-color: rgba(66, 59, 65, 0.6);
     position: absolute;
     top: 45%;
     left: 50%;
@@ -58,13 +58,14 @@ html {
         outline: none;
         -moz-user-select: none;
         user-select: none;
-        color: #333;
+        color: #ffffff;
         font-weight: 800;
         cursor: pointer;
         margin-top: 2em;
         padding: 1em; }
         .row .form-group button:hover, .row .form-group button:focus {
-          background-color: #fff; }
+          background-color: #fff;
+          color: #333; }
         .row .form-group button.is-loading::after {
           animation: spinner 500ms infinite linear;
           content: "";

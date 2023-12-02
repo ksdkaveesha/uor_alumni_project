@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="{{asset('css/forgot_pwd.css')}}"/>
 	<title>Forgot Password Page</title>
 </head>
-<body>
+<body style="background-image: url('{{asset('image/forgot_pw/bgimg.png')}}" class="image1">
 	<div class="row">
+        <img src="{{asset('image/forgot_pw/uni-logo2.png')}}" width="50%" >
 		<h1>Forgot Password</h1>
 		<h6 class="information-text">Enter your registered email to reset your password.</h6>
 		<div class="form-group">
