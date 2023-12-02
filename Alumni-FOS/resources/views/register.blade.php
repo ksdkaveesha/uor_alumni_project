@@ -623,7 +623,7 @@
         </form>
 
         <br>
-        <a href="index.html" class="back-to-home">&lt; Back to Home</a>
+        <a href="/" class="back-to-home">&lt; Back to Home</a>
     </div>
 
     <script>
