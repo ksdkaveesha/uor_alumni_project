@@ -1,652 +1,217 @@
-.nev{
-    width: 70%;
-    height:100%;
-    position: absolute;
-    left: 25%;
-    background:#BD6FD8;
-    color: aliceblue;
+:root {
+    --darkpurple: #390A40;
+    --lightpurple: #E7B3F9;
+    --mediumyellow: #F9F2D8;
+    --lightyellow: #FFFAE9;
 }
 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
 
-html {
-	font-size:62.5%;
-}
-* {
-	margin: 0;
-	padding: 0;
-}
-ul, li {
-	list-style: none;
-}
-input {
-	border: none;
-}
 body {
-  width: 160rem;
-}.frame-1-xHP {
-  width: 100%;
-  overflow: hidden;
-  position: relative;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  background-color: #f8f1d8;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb {
-  box-sizing: border-box;
-  padding-bottom: 4.2rem;
-  width: 100%;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  background-color: #e7b2f9;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-gybt-ZHB {
-  width: 100%;
-  height: 16.7rem;
-  position: relative;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-gybt-ZHB .top-nav-bar-background-f5K {
-  width: 160rem;
-  height: 9.9rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  background-color: #380a40;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-gybt-ZHB .rectangle-4-NVX {
-  width: 54.4rem;
-  height: 7.2rem;
-  position: absolute;
-  left: 13.9rem;
-  top: 0.9rem;
-  object-fit: contain;
-  vertical-align: top;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-gybt-ZHB .fos-logo-qnR {
-  width: 57.7rem;
-  height: 16.7rem;
-  position: absolute;
-  left: 91.9rem;
-  top: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-gybt-ZHB .fos-logo-qnR .rectangle-5-Ygq {
-  width: 13.7rem;
-  height: 9rem;
-  position: absolute;
-  left: 9rem;
-  top: 0;
-  object-fit: contain;
-  vertical-align: top;
-  border-radius: 4.8rem;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-gybt-ZHB .fos-logo-qnR .faculty-of-science-E3s {
-  width: 27.8rem;
-  height: 3.9rem;
-  position: absolute;
-  left: 19.9rem;
-  top: 2.4rem;
-  text-align: center;
-  font-size: 3.2rem;
-  font-weight: 700;
-  line-height: 1.2000000477;
-  color: #ffc235;
-  font-family: Istok Web, 'Source Sans Pro';
-  white-space: nowrap;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-tfbf-uQu {
-  margin: 0rem 20.25rem 0rem 20.4rem;
-  width: calc(100% - 40.65rem);
-  height: 3.7rem;
-  display: flex;
-  align-items: flex-start;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-tfbf-uQu .mid-nav-bar-RPF {
-  margin: 0rem 7.6rem 0.3rem 0rem;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-tfbf-uQu .mid-nav-bar-RPF .home-YTs {
-  margin-right: 3.7rem;
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 700;
-  line-height: 1.2000000817;
-  color: #000002;
-  font-family: Ibarra Real Nova, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-tfbf-uQu .mid-nav-bar-RPF .news-and-events-3Qd {
-  margin-right: 2.5rem;
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 700;
-  line-height: 1.2000000817;
-  color: #000002;
-  font-family: Ibarra Real Nova, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-tfbf-uQu .mid-nav-bar-RPF .services-Nho {
-  margin-right: 2.5rem;
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 700;
-  line-height: 1.2000000817;
-  color: #000002;
-  font-family: Ibarra Real Nova, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-tfbf-uQu .mid-nav-bar-RPF .about-W3K {
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 700;
-  line-height: 1.2000000817;
-  color: #000002;
-  font-family: Ibarra Real Nova, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-tfbf-uQu .top-nav-bar-qrH {
-  margin-top: 0.05rem;
-  height: calc(100% - 0.05rem);
-  display: flex;
-  align-items: flex-start;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-tfbf-uQu .top-nav-bar-qrH .alumni-directory-b4m {
-  margin-right: 2.3rem;
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 600;
-  line-height: 1.2000000817;
-  color: #180e1c;
-  font-family: IBM Plex Sans Condensed, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-tfbf-uQu .top-nav-bar-qrH .contact-us-Vvq {
-  margin: 0.25rem 3.05rem 0rem 0rem;
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 600;
-  line-height: 1.2000000817;
-  color: #180e1c;
-  font-family: IBM Plex Sans Condensed, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-y2u1-6Pb .auto-group-tfbf-uQu .top-nav-bar-qrH .log-in-sign-up-y5K {
-  text-align: center;
-  font-size: 2.8rem;
-  font-weight: 600;
-  line-height: 1.2000000817;
-  color: #180e1c;
-  font-family: IBM Plex Sans Condensed, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-ssff-VZT {
-  width: 100%;
-  height: 104.6rem;
-  position: relative;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-ssff-VZT .main-image-F2q {
-  width: 160rem;
-  height: 68rem;
-  position: absolute;
-  left: 0;
-  top: 0;
-  object-fit: cover;
-  vertical-align: top;
-}
-.frame-1-xHP .auto-group-ssff-VZT .science-alumni-welcome-Bx5 {
-  width: 61.2rem;
-  height: 23.1rem;
-  position: absolute;
-  left: 49.4rem;
-  top: 20.4rem;
-  text-align: center;
-  font-size: 9.6rem;
-  font-weight: 700;
-  line-height: 1.2000000477;
-  color: #ffffff;
-  font-family: Ibarra Real Nova, 'Source Sans Pro';
-}
-.frame-1-xHP .auto-group-ssff-VZT .science-alumni-welcome-Bx5 .science-alumni-welcome-Bx5-sub-0 {
-  font-size: 9.6rem;
-  font-weight: 400;
-  line-height: 1.2000000477;
-  color: #ffffff;
-  font-family: Chenla, 'Source Sans Pro';
-}
-.frame-1-xHP .auto-group-ssff-VZT .science-alumni-welcome-Bx5 .science-alumni-welcome-Bx5-sub-1 {
-  font-size: 12.8rem;
-  font-weight: 700;
-  line-height: 0.9000000358;
-  color: #ffffff;
-  font-family: Ibarra Real Nova, 'Source Sans Pro';
-}
-.frame-1-xHP .auto-group-ssff-VZT .hero-section-aMw {
-  box-sizing: border-box;
-  padding: 0rem 11.8rem 3.8rem 11.8rem;
-  width: 160rem;
-  height: 36.7rem;
-  position: absolute;
-  left: 0;
-  top: 67.9rem;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  background-color: #f9f2d8;
-}
-.frame-1-xHP .auto-group-ssff-VZT .hero-section-aMw .group-2-TAq {
-  margin-bottom: 15rem;
-  width: 100%;
-  height: 11.1rem;
-  font-size: 3.6rem;
-  font-weight: 800;
-  line-height: 1.2125;
-  color: #000000;
-  font-family: Inter, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.frame-1-xHP .auto-group-ssff-VZT .hero-section-aMw .group-3-Mn1 {
-  margin: 0 52.6rem;
-  width: calc(100% - 105.2rem);
-  height: 6.8rem;
-  font-size: 3.2rem;
-  font-weight: 800;
-  line-height: 1.2125;
-  color: #f9f2d8;
-  font-family: Inter, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #390a40;
-  flex-shrink: 0;
-}
-.frame-1-xHP .below-hero-section-3Pw {
-  margin-bottom: 0.4rem;
-  box-sizing: border-box;
-  padding: 2.34rem 4.1rem 2.34rem 20rem;
-  width: 100%;
-  height: 67.3rem;
-  background-color: #fffae8;
-  flex-shrink: 0;
-}
-.frame-1-xHP .below-hero-section-3Pw .group-5-MvR {
-  width: 100%;
-  height: 59.1661rem;
-  display: flex;
-  align-items: flex-start;
-}
-.frame-1-xHP .below-hero-section-3Pw .group-5-MvR .auto-group-mqkh-Jam {
-  margin-right: 29.7rem;
-  width: 48rem;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-}
-.frame-1-xHP .below-hero-section-3Pw .group-5-MvR .auto-group-mqkh-Jam .auto-group-cajs-Sws {
-  margin-bottom: 31.9786rem;
-  box-sizing: border-box;
-  padding: 2.34rem 0rem 3.337rem 0rem;
-  width: 100%;
-  background-color: #fffae8;
-  flex-shrink: 0;
-}
-.frame-1-xHP .below-hero-section-3Pw .group-5-MvR .auto-group-mqkh-Jam .auto-group-cajs-Sws .this-isnt-a-good-bye-its-a-welcome-BPf {
-  max-width: 42.1rem;
-  font-size: 4rem;
-  font-weight: 800;
-  line-height: 1.2125;
-  color: #000000;
-  font-family: Inter, 'Source Sans Pro';
-}
-.frame-1-xHP .below-hero-section-3Pw .group-5-MvR .auto-group-mqkh-Jam .group-6-5jw {
-  margin: 0rem 6rem 0rem 9.6rem;
-  width: calc(100% - 15.6rem);
-  height: 8.9139rem;
-  font-size: 3.2rem;
-  font-weight: 800;
-  line-height: 1.2125;
-  color: #ffffff;
-  font-family: Inter, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #390a40;
-  flex-shrink: 0;
-}
-.frame-1-xHP .below-hero-section-3Pw .group-5-MvR .rectangle-13-Z9K {
-  margin-top: 2.3399rem;
-  width: 58.2rem;
-  height: 56.8262rem;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('../assets/rectangle-13-bg-feh.png');
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF {
-  box-sizing: border-box;
-  padding: 8.3rem 15.2rem 5.1rem 17.8rem;
-  width: 100%;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
-  background-color: #380a40;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R {
-  margin-bottom: 4.6rem;
-  width: 100%;
-  display: flex;
-  align-items: flex-end;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .logo-vPB {
-  margin: 0rem 9.5rem 1.7rem 0rem;
-  box-sizing: border-box;
-  padding: 7.55rem 0rem 8.25rem 27.8rem;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('../assets/logo-bg-i1f.png');
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .logo-vPB .fos-alumni-university-of-ruhuna-SsK {
-  max-width: 26rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 4.8rem;
-  font-weight: 700;
-  line-height: 1.3079999288;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-family: Assistant, 'Source Sans Pro';
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .logo-vPB .fos-alumni-university-of-ruhuna-SsK .fos-alumni-university-of-ruhuna-SsK-sub-0 {
-  font-size: 5rem;
-  font-weight: 400;
-  line-height: 1.2575;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-family: Baskerville Old Face, 'Source Sans Pro';
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .logo-vPB .fos-alumni-university-of-ruhuna-SsK .fos-alumni-university-of-ruhuna-SsK-sub-1 {
-  font-size: 2.4rem;
-  font-weight: 400;
-  line-height: 1.2575;
-  text-transform: uppercase;
-  color: #ffffff;
-  font-family: Battambang, 'Source Sans Pro';
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F {
-  box-sizing: border-box;
-  padding-bottom: 2.3rem;
-  width: 63.7rem;
-  box-shadow: 0 0.4rem 0.4rem rgba(0, 0, 0, 0.25);
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V {
-  margin: 0rem 0rem 2.6rem 0.2rem;
-  width: 57.5rem;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .frame-37-BVT {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .frame-37-BVT .office-address-jms {
-  margin-bottom: 1.6rem;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .frame-37-BVT .office-address-jms .round-place-24px-hCu {
-  margin-right: 1.6rem;
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .frame-37-BVT .office-address-jms .faculty-of-science-university-of-ruhuna-matara-sri-lanka-p2d {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.1;
-  color: #ffffff;
-  font-family: DM Sans, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .frame-37-BVT .phone-number-hs7 {
-  margin-right: 41.5rem;
-  width: calc(100% - 41.5rem);
-  display: flex;
-  align-items: flex-end;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .frame-37-BVT .phone-number-hs7 .round-phone-24px-rk1 {
-  margin-right: 1.6rem;
-  width: 2.4rem;
-  height: 2.4rem;
-  position: relative;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .frame-37-BVT .phone-number-hs7 .item-123-456-7890-tgh {
-  margin-bottom: 0.3rem;
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.3075;
-  color: #d0daf5;
-  font-family: Assistant, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .auto-group-lb77-CxH {
-  box-sizing: border-box;
-  padding-top: 2rem;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .auto-group-lb77-CxH .fax-XzZ {
-  margin: 0rem 41.5rem 1.7rem 0rem;
-  width: calc(100% - 41.5rem);
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .auto-group-lb77-CxH .fax-XzZ .round-local-printshop-24px-fqs {
-  margin: 0rem 1.6rem 0.1rem 0rem;
-  width: 2.4rem;
-  height: 2.4rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .auto-group-lb77-CxH .fax-XzZ .item-123-456-7890-C57 {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.3075;
-  color: #d0daf5;
-  font-family: Assistant, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .auto-group-lb77-CxH .phone-number-KvR {
-  margin-right: 41.5rem;
-  width: calc(100% - 41.5rem);
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .auto-group-lb77-CxH .phone-number-KvR .path-gW5 {
-  margin: 0.1rem 1.6rem 0rem 0rem;
-  width: 2.4rem;
-  height: 2.4rem;
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-image: url('../assets/path-bg.png');
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-38-h4V .auto-group-lb77-CxH .phone-number-KvR .item-123-456-7890-PQV {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.3075;
-  color: #d0daf5;
-  font-family: Assistant, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-34-hRB {
-  display: flex;
-  column-gap: 2.4rem;
-  align-items: center;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-34-hRB .facebook-black1-bFf {
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-34-hRB .twitter-black1-92H {
-  opacity: 0.3;
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-34-hRB .linkedin-black1-HPP {
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-34-hRB .youtube-color1-osX {
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-34-hRB .instagram-black1-9Ah {
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-dvpm-a4R .information-k9F .frame-34-hRB .googleplus-black1-6Lq {
-  width: 3rem;
-  height: 3rem;
-  object-fit: contain;
-  vertical-align: top;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-tjqq-R8D {
-  margin: 0rem 7.9rem 0rem 2.2rem;
-  width: calc(100% - 10.1rem);
-  display: flex;
-  align-items: center;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-tjqq-R8D .frame-33-jeh {
-  margin: 0.3rem 13.7rem 0rem 0rem;
-  box-sizing: border-box;
-  padding-right: 15.5rem;
-  display: flex;
-  column-gap: 4.1rem;
-  align-items: center;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-tjqq-R8D .frame-33-jeh .about-us-39b {
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.3025;
-  text-transform: uppercase;
-  color: #d0daf5;
-  font-family: DM Sans, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-tjqq-R8D .frame-33-jeh .contact-us-yow {
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.3025;
-  text-transform: uppercase;
-  color: #d0daf5;
-  font-family: DM Sans, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-tjqq-R8D .frame-33-jeh .help-L8h {
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.3025;
-  text-transform: uppercase;
-  color: #d0daf5;
-  font-family: DM Sans, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-tjqq-R8D .frame-33-jeh .privacy-policy-tAD {
-  font-size: 2rem;
-  font-weight: 500;
-  line-height: 1.3025;
-  text-transform: uppercase;
-  color: #d0daf5;
-  font-family: DM Sans, 'Source Sans Pro';
-  white-space: nowrap;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-tjqq-R8D .copyright-2023-university-of-ruhuna-1Eq {
-  margin-bottom: 0.3rem;
-  font-size: 1.4rem;
-  font-weight: 400;
-  line-height: 1.3075;
-  color: #d0daf5;
-  font-family: Assistant, 'Source Sans Pro';
-  white-space: nowrap;
-  display: flex;
-  align-items: baseline;
-  flex-shrink: 0;
-}
-.frame-1-xHP .footer-EmF .auto-group-tjqq-R8D .copyright-2023-university-of-ruhuna-1Eq .copyright-2023-university-of-ruhuna-1Eq-sub-0 {
-  font-size: 2rem;
-  font-weight: 400;
-  line-height: 1.3075;
-  color: #d0daf5;
-  font-family: Assistant, 'Source Sans Pro';
-}
+    font-family: "Inter";
+    margin: 0;
+    background-color: var(--mediumyellow);
+
+}
+
+.wrapper {
+    width: 1216px;
+    margin: 0 auto;
+    /*background-color: red;*/
+}
+
+/*header*/
+header {
+    height: 99px;
+    background: var(--darkpurple);
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+
+}
+
+/*Nav bar */
+nav {
+    height: 72px;
+    background: var(--lightpurple);
+    position: absolute;
+    top: 94px;
+    left: 0;
+    right: 0;
+
+}
+
+a {
+
+    text-decoration: none;
+}
+
+nav .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+nav .menu-item {
+    display: flex;
+    gap: 35px;
+    margin-left: 60px;
+
+
+}
+
+nav .menu-item a {
+    left: 50px;
+    color: #010002;
+    text-align: center;
+    font-family: Ibarra Real Nova;
+    font-size: 24px;
+    /*font-style: normal;*/
+    font-weight: 700;
+    line-height: 120%;
+    text-decoration: none;
+}
+
+/*Hero Section */
+
+.hero-section {
+    background: var(--mediumyellow);
+    height: 100vh;
+}
+
+.hero-section .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh-171px);
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;    
+}
+/*about us and learn more*/
+
+.aboutus{
+    position: relative;
+    top: 500px;
+    left: 0;
+    right: 0;
+    background-color: var(--lightyellow);
+    height: 80vh;
+}
+.aboutus .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh-538px);
+    margin-top: 72px;
+}
+
+.aboutustext{
+    margin-top: 30px;
+}
+.aboutustext p {
+    color: #000;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    text-align: center;
+}
+
+.about .btnbox1{
+    position: relative;
+    top: 200px;
+    left: 500px;
+}
+.about .btn {   
+    color: #f5f5f5;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-color: var(--darkpurple);
+    padding: 20px 29px;
+}
+
+/*Join now section*/
+
+.join{
+    position: relative;    
+    left: 0;
+    right: 0;
+    top: 500px;
+    background-color: var(--lightyellow);
+    height: 80vh;
+}
+
+.join .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: calc(100vh-538px);
+    margin-top: 72px;
+}
+.join .join_left{
+    margin-top: 30px;
+}
+.join .join_left p {
+    color: #000;
+    font-family: Inter;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+}
+
+.join .btn {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    background-color: var(--darkpurple);
+    padding: 20px 29px;
+}
+
+.join .btnbox{
+    position: relative;
+    margin-top: 300px;
+}
+
+.join .join_right .img_box{
+    height: 350.26px;
+    width: 482px;   
+    
+}
+
+.join .join_right .img_box .img{
+    height:150.26px;
+}
+.footstyle{
+    position: relative;    
+    left: 0;
+    right: 0;
+    top: 500px;
+    background-color: var(--darkpurple);
+    height: 50vh;
+}
+
+.footstyle .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    
+}
+

@@ -306,8 +306,8 @@
 
             <div class="mb-3">
                 <label class="form-label">Mobile Number</label>
-                <div style="display:flex;">
-                    <select class="form-select" name="m_code" style="width:10%">
+                <div style="display:flex; ">
+                    <select class="form-select" name="m_code" style="width:10%;">
                             <option value="" disabled selected>Country</option>
                             <option value="93">Afghanistan +93</option>
                             <option value="358">Aland Islands +358</option>
@@ -520,7 +520,7 @@
                             <option value="500">South Georgia and the South Sandwich Islands +500</option>
                             <option value="211">South Sudan +211</option>
                             <option value="34">Spain +34</option>
-                            <option value="94">Sri Lanka +94</option>
+                            <option value="94" >Sri Lanka +94</option>
                             <option value="249">Sudan +249</option>
                             <option value="597">Suriname +597</option>
                             <option value="47">Svalbard and Jan Mayen +47</option>

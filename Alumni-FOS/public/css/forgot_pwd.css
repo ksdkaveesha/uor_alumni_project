@@ -1,0 +1,483 @@
+html {
+	font-size:62.5%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "segoe ui", verdana, helvetica, arial, sans-serif;
+    font-size: 16px;
+    transition: all 500ms ease; }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -moz-font-feature-settings: "liga" on; }
+
+  .row {
+    background-color: rgba(66, 59, 65, 0.6);
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+    text-align: center;
+    padding: 2em 2em 2em;
+    width: 90%;
+    margin: 2em	auto;
+    border-radius: 5px; }
+    .row h1 {
+      font-size: 2.5em; }
+    .row .form-group {
+      margin: 0.5em 0; }
+      .row .form-group label {
+        display: block;
+        color: #fff;
+        text-align: left;
+        font-weight: 600; }
+      .row .form-group input, .row .form-group button {
+        display: block;
+        padding: 0.5em 0;
+        width: 100%;
+        margin-top: 1em;
+        margin-bottom: 0.5em;
+        background-color: inherit;
+        border: none;
+        border-bottom: 1px solid #555;
+        color: #eee; }
+        .row .form-group input:focus, .row .form-group button:focus {
+          background-color: #fff;
+          color: #000;
+          border: none;
+          padding: 1em 0.5em; animation: pulse 1s infinite ease;}
+      .row .form-group button {
+        border: 1px solid #fff;
+        border-radius: 5px;
+        outline: none;
+        -moz-user-select: none;
+        user-select: none;
+        color: #ffffff;
+        font-weight: 800;
+        cursor: pointer;
+        margin-top: 2em;
+        padding: 1em; }
+        .row .form-group button:hover, .row .form-group button:focus {
+          background-color: #fff;
+          color: #333; }
+        .row .form-group button.is-loading::after {
+          animation: spinner 500ms infinite linear;
+          content: "";
+          position: absolute;
+          margin-left: 2em;
+          border: 2px solid #000;
+          border-radius: 100%;
+          border-right-color: transparent;
+          border-left-color: transparent;
+          height: 1em;
+          width: 4%; }
+    .row .footer h5 {
+      margin-top: 1em; }
+    .row .footer p {
+      margin-top: 2em; }
+      .row .footer p .symbols {
+        color: #444; }
+    .row .footer a {
+      color: inherit;
+      text-decoration: none; }
+
+  .information-text {
+    color: #ddd; }
+
+  @media screen and (max-width: 320px) {
+    .row {
+      padding-left: 1em;
+      padding-right: 1em; }
+      .row h1 {
+        font-size: 1.5em !important; } }
+  @media screen and (min-width: 900px) {
+    .row {
+      width: 50%; } }
+
+
+
+      * {
+        margin: 0;
+        padding: 0;
+    }
+    ul, li {
+        list-style: none;
+    }
+    .input {
+        border: solid 0.1rem #762da2;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.35rem 12.3rem 1.45rem 1.45rem;
+        background-color: #fcf3d2;
+        border-radius: 1.3rem;
+    }
+
+    .button{
+        /*border: solid 0.1rem #762da2;;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.46rem 17.3rem 3.5rem 17.3rem;
+        background-color: black;
+        border-radius: 1.3rem;
+        color: #ffffff;
+        background-color:#762da2;*/
+
+        position:absolute;
+        left:47px;
+        margin-bottom: 1.35rem;
+          width: 20.4rem;
+          height: 5.2rem;
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 1.5;
+          color: #ffffff;
+          font-family: Poppins, 'Source Sans Pro';
+          white-space: nowrap;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #762da2;
+          border-radius: 1.3rem;
+          flex-shrink: 0;
+          padding: 1.46rem 15.3rem 1.46rem 15.3rem;
+        text-align: center;
+    }
+
+    .button:active{
+        /*border: solid 0.1rem #762da2;;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.46rem 17.3rem 3.5rem 17.3rem;
+        background-color: black;
+        border-radius: 1.3rem;
+        color: #ffffff;
+        background-color:#762da2;*/
+
+        position:absolute;
+        left:47px;
+        margin-bottom: 1.35rem;
+          width: 20.4rem;
+          height: 5.2rem;
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 1.5;
+          color: #000000;
+          font-family: Poppins, 'Source Sans Pro';
+          white-space: nowrap;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #7c2ead;
+          border-radius: 1.3rem;
+          flex-shrink: 0;
+          padding: 1.46rem 15.3rem 1.46rem 15.3rem;
+        text-align: center;
+    }
+
+    .button2{
+        /*border: solid 0.1rem #762da2;;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.46rem 17.3rem 3.5rem 17.3rem;
+        background-color: black;
+        border-radius: 1.3rem;
+        color: #ffffff;
+        background-color:#762da2;*/
+
+        position:absolute;
+        left:47px;
+        margin-bottom: 1.35rem;
+          width: 20.4rem;
+          height: 5.2rem;
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 1.5;
+          color: #000000;
+          font-family: Poppins, 'Source Sans Pro';
+          white-space: nowrap;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #fcf3d2;
+          border-radius: 1.3rem;
+          flex-shrink: 0;
+          padding: 1.46rem 15.3rem 1.46rem 15.3rem;
+         text-align: center;
+         border: solid 0.1rem #762da2;
+    }
+
+    .button2:active{
+        /*border: solid 0.1rem #762da2;;
+        margin: 0rem 0rem 0rem 0rem;
+        padding: 1.46rem 17.3rem 3.5rem 17.3rem;
+        background-color: black;
+        border-radius: 1.3rem;
+        color: #ffffff;
+        background-color:#762da2;*/
+
+        position:absolute;
+        left:47px;
+        margin-bottom: 1.35rem;
+          width: 20.4rem;
+          height: 5.2rem;
+          font-size: 2rem;
+          font-weight: 700;
+          line-height: 1.5;
+          color: #000000;
+          font-family: Poppins, 'Source Sans Pro';
+          white-space: nowrap;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #f2e0a1;
+          border-radius: 1.3rem;
+          flex-shrink: 0;
+          padding: 1.46rem 15.3rem 1.46rem 15.3rem;
+         text-align: center;
+         border: solid 0.1rem #762da2;
+    }
+    body {
+      width: 136.6rem;
+    }
+    .loginpage-5XP {
+      width: 100%;
+      height: 76.8rem;
+      position: relative;
+      overflow: hidden;
+      background-color: #fcf3d2;
+      border-radius: 5.4rem;
+    }
+    .loginpage-5XP .auto-group-rkat-48R {
+      width: 78.5671rem;
+      height: 70rem;
+      position: absolute;
+      left: 64.9rem;
+      top: 3.4rem;
+    }
+    .loginpage-5XP .auto-group-rkat-48R .rectangle-4-3Pf {
+      width: 68.3rem;
+      height: 70rem;
+      position: absolute;
+      left: 0;
+      top: 0;
+      object-fit: cover;
+      vertical-align: top;
+      border-radius: 4rem;
+    }
+    .loginpage-5XP .auto-group-rkat-48R .vector-qKX {
+      width: 13.6671rem;
+      height: 13.6671rem;
+      position: absolute;
+      left: 64.9rem;
+      top: 6.4rem;
+      object-fit: contain;
+      vertical-align: top;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u {
+      width: 36.45rem;
+      height: 58.9rem;
+      position: absolute;
+      left: 15.9rem;
+      top: 6.6rem;
+      align-items: flex-end;
+      display: flex;
+      flex-direction: column;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .login-G9w {
+      margin: 0rem 7.95rem 4.05rem 0rem;
+      font-size: 12rem;
+      font-weight: 700;
+      line-height: 1.2;
+      color: #1c1c1c;
+      font-family: Smooch Sans, 'Source Sans Pro';
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .group-1-8hw {
+      margin: 0rem 0rem 2.4rem 0.05rem;
+      box-sizing: border-box;
+      padding: 0rem 28.3rem 0rem 1.45rem;
+      width: calc(100% - 0.05rem);
+      display: flex;
+      align-items: center;
+      /*border: solid 0.1rem #762da2;*/
+      background-color: #fcf3d2;
+      border-radius: 1.3rem;
+      flex-shrink: 0;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .group-1-8hw .vuesax-linear-sms-1Fw {
+      margin-right: 0.95rem;
+      width: 2.4rem;
+      height: 2.4rem;
+      object-fit: contain;
+      vertical-align: top;
+      flex-shrink: 0;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .group-1-8hw .email-iw3 {
+      margin-top: 0.1rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #1c1c1c;
+      font-family: Poppins, 'Source Sans Pro';
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .group-2-zdf {
+      margin: 0rem 0rem 2.4rem 0.05rem;
+      box-sizing: border-box;
+      padding: 1.5rem 25.8rem 1.6rem 2.1rem;
+      width: calc(100% - 0.05rem);
+      display: flex;
+      align-items: center;
+      /*border: solid 0.1rem #762da2;*/
+      background-color: #fcf3d2;
+      border-radius: 1.3rem;
+      flex-shrink: 0;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .group-2-zdf .frame-tyw {
+      margin-right: 0.9rem;
+      width: 1.8rem;
+      height: 2.1rem;
+      object-fit: contain;
+      vertical-align: top;
+      flex-shrink: 0;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .group-2-zdf .password-SEm {
+      margin-top: 0.1rem;
+      font-size: 1.2rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #1c1c1c;
+      font-family: Poppins, 'Source Sans Pro';
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .button:hover,
+    .button:focus {
+
+      cursor: pointer;
+    }
+
+    .button2:hover,
+    .button2:focus {
+
+      cursor: pointer;
+    }
+
+    .loginpage-5XP .auto-group-c7rm-A6u .group-10-wBX {
+      margin-bottom: 2.35rem;
+      width: 50.4rem;
+      height: 5.2rem;
+      /*font-size: 2rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #ffffff;
+      font-family: Poppins, 'Source Sans Pro';
+      white-space: nowrap;*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      /*background-color: #762da2;
+      border-radius: 1.3rem;
+      flex-shrink: 0;*/
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .forgot-your-password-C7T {
+      margin: 0rem 0.05rem 1.9rem 0rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.5;
+      color: rgba(0, 0, 0, 0.7300000191);
+      font-family: Poppins, 'Source Sans Pro';
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .auto-group-vmb1-uGm {
+      margin: 0rem 0rem 5.8rem 20.8rem;
+     /* width: calc(100% - 18.85rem);*/
+      display: flex;
+      align-items:self-end;
+      flex-shrink: 0;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .auto-group-vmb1-uGm .remember-me-qAR {
+      margin-right: 1.4rem;
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.5;
+      color: #454545;
+      font-family: Poppins, 'Source Sans Pro';
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .auto-group-vmb1-uGm .rectangle-10-VVs {
+      width: 2rem;
+      height: 2rem;
+      border: solid 0.1rem #762da2;
+      box-sizing: border-box;
+      background-color: #fcf3d2;
+      flex-shrink: 0;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .group-9-pY9 {
+      margin-right: 0.05rem;
+      width: 36.4rem;
+      height: 5.2rem;
+      border-radius: 1.3rem;
+      flex-shrink: 0;
+    }
+    .loginpage-5XP .auto-group-c7rm-A6u .group-9-pY9 .group-7-a1X {
+      width: 100%;
+      height: 100%;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #000000;
+      font-family: Poppins, 'Source Sans Pro';
+      white-space: nowrap;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: solid 0.1rem #762da2;
+      box-sizing: border-box;
+      border-radius: 1.3rem;
+    }
+    .loginpage-5XP .group-4-2u7 {
+      width: 36.4rem;
+      height: 2.4rem;
+      position: absolute;
+      left: 20rem;
+      top: 55.5rem;
+    }
+    .loginpage-5XP .group-4-2u7 .or-B1K {
+      width: 2.3rem;
+      height: 2.4rem;
+      position: absolute;
+      left: 15rem;
+      top: 1.5rem;
+      font-size: 1.6rem;
+      font-weight: 400;
+      line-height: 1.5;
+      color: #1c1c1c;
+      font-family: Poppins, 'Source Sans Pro';
+      white-space: nowrap;
+    }
+    .loginpage-5XP .group-4-2u7 .subtract-Ha9 {
+      width: 32rem;
+      height: 0.1rem;
+      position: absolute;
+      left: 10;
+      top: 2.5rem;
+      object-fit: contain;
+      vertical-align: top;
+    }
+    .loginpage-5XP .vector-ppy {
+      width: 13.6671rem;
+      height: 13.6671rem;
+      position: absolute;
+      left: -70px;
+      top: 56.7165rem;
+      object-fit: contain;
+      vertical-align: top;
+    }
