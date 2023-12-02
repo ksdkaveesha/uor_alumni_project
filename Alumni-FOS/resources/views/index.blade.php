@@ -134,7 +134,8 @@
                 <div class="join_left">
                     <div class="parabox">
                          <p>This isn't a good bye.<br>Its a welcome</p>
-                    </div>
+                     </div>
+
                     <div class="btnbox">
                         <a class="btn btn-primary" href="#" role="button">Join with us</a>
                     </div>
@@ -157,15 +158,34 @@
                 <div class="set_left">
                     <!--add imagge here-->
                     <div class="img_box">
+                        <br><br><br>
                         <img src="{{asset('image\indexpage\FOSalumni.png')}}" class="img-fluid" alt="FOSalumni" />
                     </div>
+                    <div class="text-fluid">
+                        <br><br>
+                        <a>&nbsp&nbsp&nbsp&nbsp ABOUT US </a>
+                        <a>&nbsp&nbsp&nbsp&nbsp CONTACT US</a>
+                        <a>&nbsp&nbsp&nbsp&nbsp HELP</a>
+                        <a>&nbsp&nbsp&nbsp&nbsp PRIVANCY POLICY </a>
                 </div>
 
                 <div class="img-fluid2">
                     <br><br>
-                    <img src="{{asset('image\index\facebook.png')}}" class="iconf"/><br><br>
-                    <img src="{{asset('image\index\phone.png')}}" class="iconf"/><br><br>
+                    <img src="{{asset('image\index\location.png')}}" class="iconf"/><span>&nbsp Faculty of Science, University of Ruhuna, Matara</span><br><br>
+                    <img src="{{asset('image\index\phone.png')}}" class="iconf"/><span>&nbsp 041-1111111</span><br><br>
+                    <img src="{{asset('image\index\fax.png')}}" class="iconf"/><span>&nbsp 041-1111111</span><br><br>
+                    <img src="{{asset('image\indexpage\gmail.png')}}" class="iconf"/><span>&nbsp a@gmail.com</span><br><br>
+                    <img src="{{asset('image\index\facebook.png')}}" class="iconf"/><span>&nbsp</span>
+                    <img src="{{asset('image\index\twitter.png')}}" class="iconf"/><span>&nbsp</span>
+                    <img src="{{asset('image\index\linkedin.png')}}" class="iconf"/><span>&nbsp</span>
+                    <img src="{{asset('image\index\google.png')}}" class="iconf"/><span>&nbsp</span>
+                    <img src="{{asset('image\index\youtube.png')}}" class="iconf"/><span>&nbsp</span>
+                    <img src="{{asset('image\index\instagram.png')}}" class="iconf"/><span>&nbsp</span>
                     <br><br>
+                <div class="copy-right">
+                    <span> Copy right &copy 2023.University of Ruhuna </span>
+                    <br><br>
+                </div>
                 </div>
 
             </div>
