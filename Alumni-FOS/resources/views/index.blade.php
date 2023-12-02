@@ -51,15 +51,15 @@
         </nav>
 
         <!--Main images with slidshows-->
-        <div class="w3-content w3-section" style="max-width:100%; padding: 0px;">
+        <div class="w3-content w3-section" style="max-width:100%; padding: 0px; position:relative; top:50px;">
             <img class="mySlides " src="{{asset('./image/indexpage/Main Image.png')}}" style="width:100%">
             <img class="mySlides " src="./image/indexpage/Main Image.png" style="width:100%">
             <img class="mySlides " src="./image/indexpage/Main Image.png" style="width:100%">
 
 
 
-        <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
-        <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+            <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)" style="position: absolute; top:270px;">&#10094;</button>
+            <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)" style="position: absolute; top:270px;">&#10095;</button>
         </div>
 
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
@@ -103,11 +103,6 @@
           $(".flexnav").flexNav(); /*nevigation bar*/
         </script>
 
-
-        <main class="hero-section">
-            <div class="wrapper"></div>
-
-        </main>
 
         <!--Learn more part with about us-->
         <div class="about">
