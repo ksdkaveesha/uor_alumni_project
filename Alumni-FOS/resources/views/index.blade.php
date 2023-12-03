@@ -38,7 +38,7 @@
                     <div class="menu-item">
                         <a href="/">Home</a>
                         <a href="#">News and Events</a>
-                        <a href="#">Sevices</a>
+                        <a href="#">Services</a>
                         <a href="#">About</a>
                         <a href="#">Alumni Dirctory</a>
                         <a href="#">Contact us</a>
@@ -122,7 +122,7 @@
             <div class="wrapper">
                 <div class="join_left">
                     <div class="parabox">
-                         <p>This isn't a good bye.<br>Its a welcome</p>
+                         <p>This isn't a good bye.<br>It's a welcome</p>
                     </div>
                     <div class="btnbox">
                         <a class="btn btn-primary" href="/register" role="button">Join with us</a>

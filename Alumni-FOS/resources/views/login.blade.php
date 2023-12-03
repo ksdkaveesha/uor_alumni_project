@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="{{asset('css/login.css')}}"/>
 </head>
 
-<body>
+<body style="background-color: #a872c9 ">
 
     <div class="loginpage-5XP">
     <div class="auto-group-rkat-48R">
