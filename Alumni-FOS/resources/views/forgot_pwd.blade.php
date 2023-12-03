@@ -9,10 +9,10 @@
     <link rel="stylesheet" href="{{asset('css/forgot_pwd.css')}}"/>
     <!--Bootstrap css link-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-	
+
     <title>Forgot Password Page</title>
 </head>
-<body style="background-image: url('{{asset('image/forgot_pw/bgimg.png')}}" class="img-fluid">
+<body style="background-color: #fcf3d2" class="img-fluid">
 	<div class="row">
         <img src="{{asset('image/forgot_pw/uni-logo2.png')}}" width="50%" >
 		<h1>Forgot Password</h1>
@@ -21,7 +21,7 @@
 			<input type="email" name="user_email" id="user_email">
 			<p><label for="username">Email</label></p>
 			<button onclick="con_msg()" >Reset Password</button>
-            <button onclick="con_msg()" >Go Back</button>
+            <button onclick="back()" >Go Back</button>
 		</div>
         <div ><p id="msg" style="color: red"> </p></div>
 
@@ -34,7 +34,7 @@
     </script>
 
     <script>
-        function con_msg() {
+        function back() {
             location.href = "/login";
         }
     </script>

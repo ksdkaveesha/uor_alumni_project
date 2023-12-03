@@ -20,7 +20,7 @@ body {
   -moz-font-feature-settings: "liga" on;
   margin: 0;
   width: auto;
-  
+
 }
 
 .img-fluid{
@@ -33,7 +33,7 @@ body {
 .row {
   background-color: rgba(66, 59, 65, 0.6);
   position: absolute;
-  top: 45%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: #fff;
