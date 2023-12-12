@@ -53,8 +53,8 @@
         <!--Main images with slidshows-->
         <div class="w3-content w3-section" style="max-width:100%; padding: 0px; position:relative; top:50px;">
             <img class="mySlides " src="{{asset('./image/indexpage/Main Image.png')}}" style="width:100%">
-            <img class="mySlides " src="./image/indexpage/Main Image.png" style="width:100%">
-            <img class="mySlides " src="./image/indexpage/Main Image.png" style="width:100%">
+            <img class="mySlides " src="{{asset('./image/indexpage/Main Image2.png')}}" style="width:100%">
+            <img class="mySlides " src="{{asset('./image/indexpage/Main Image3.png')}}" style="width:100%">
 
 
 
@@ -146,6 +146,7 @@
                 <div class="set_left">
                     <!--add imagge here-->
                     <div class="img_box">
+                        <br><br>
                         <img src="{{asset('image\indexpage\FOSalumni.png')}}" class="img-fluid" alt="FOSalumni" />
                     </div>
 
