@@ -606,13 +606,23 @@
                 <label for="sp_degree" class="form-label">Special Degree</label>
                 <select class="form-select" name="sp_degree" id="sp_degree">
                     <option value="" selected disabled>Select</option>
-                    <option value="Botany">Botany</option>
-                    <option value="Chemistry">Chemistry</option>
-                    <option value="Computer Science">Computer Science</option>
-                    <option value="Statistics">Statistics</option>
-                    <option value="Applied Mathematics">Applied Mathematics</option>
-                    <option value="Physics">Physics</option>
-                    <option value="Zoology">Zoology</option>
+                    <option value="bcs_cs_s">BCS Special in Computer Science </option>
+                    <option value="bsc_statistics_s">BSc Special in Statistics </option>
+                    <option value="bsc_appmaths_s">BSc Special in Applied Mathematics</option>
+                    <option value="bsc_chemistry_s">BSc Special in Chemistry</option>
+                    <option value="bsc_physics_s">BSc Special in Physics</option>
+                    <option value="bsc_zoology_s">BSc Special in Zoology</option>
+                    <option value="bsc_botany_s">BSc Special in Botany</option>
+                </select>
+            </div>
+
+            <div class="mb-3" style="display: none" id="General_degree_div">
+                <label for="sp_degree" class="form-label">General Degree</label>
+                <select class="form-select" name="g_degree" id="g_degree" >
+                    <option value="" selected disabled>Select</option>
+                    <option value="ps_bsc_g">BSc in physical sciences </option>
+                    <option value="bio_bsc_g">BSc in Bio Sciences </option>
+                    <option value="cs_bcs_g">BCS in Computer Science</option>
                 </select>
             </div>
 
@@ -633,8 +643,10 @@
                 // If "Special" is selected, show the second select; otherwise, hide it
                 if($(this).val() === "Special"){
                     $("#special_degree_div").show();
-                } else {
+                    $("#General_degree_div").hide();
+                } else if($(this).val() === "General") {
                     $("#special_degree_div").hide();
+                    $("#General_degree_div").show();
                 }
             });
         });
