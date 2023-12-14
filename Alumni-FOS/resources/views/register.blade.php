@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="{{asset('css/register.css')}}" />
     <link rel="stylesheet" href="{{asset('css/index.css')}}"/>
 
+
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
 
@@ -46,9 +47,15 @@
 
     <div class="container2">
 
+            <!--
+        <div class="loginpage-5XP">
+            <div class="auto-group-rkat-48R">
+                <img class="vector-qKX" src="{{asset('image/vector.png')}}"/>
+            </div>
+        -->
         <form id="regi_form" onsubmit="return validateForm()">
             <div class="mb-3">
-            <label for="name" class="form-label">Name with Initials</label>
+            <label for="name" class="form-label">Full Name</label>
             <input type="text" class="form-control" id="name" name="name">
             </div>
 
@@ -63,11 +70,12 @@
                 <span id="emailError" style="color: red;"></span>
             </div>
 
-
+             <!--
             <div class="mb-3">
                 <label for="address" class="form-label">Residential Address</label>
                 <input type="address" class="form-control" id="address" name="address">
             </div>
+
 
             <div class="mb-3">
                 <label for="country" class="form-label">Country</label>
@@ -313,7 +321,7 @@
                         <option value="Zimbabwe">Zimbabwe</option>
                 </select>
             </div>
-
+        -->
             <div class="mb-3">
                 <label class="form-label">Mobile Number</label>
                 <div style="display:flex;">
@@ -578,20 +586,7 @@
                 </div>
             </div>
 
-            <!--
-            <div class="mb-3">
-                <label for="department" class="form-label">Department</label>
-                <select class="form-select" id="department" name="department">
-                    <option value="" selected disabled>Select</option>
-                    <option value="Botany">Botany</option>
-                    <option value="Chemistry">Chemistry</option>
-                    <option value="Computer Science">Computer Science</option>
-                    <option value="Mathematics">Mathematics</option>
-                    <option value="Physics">Physics</option>
-                    <option value="Zoology">Zoology</option>
-                </select>
-            </div>
-            -->
+
 
             <div class="mb-3">
                 <label for="degree_type" class="form-label">Degree Type</label>
