@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('d_type');
             $table->string('degree');
             $table->unsignedBigInteger('dep_id');
-            $table->foreign('dep_id')->references('id')->on('department');
+            $table->foreign('dep_id')->references('id')->on('departments');
             $table->timestamps();
         });
     }
