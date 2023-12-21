@@ -62,4 +62,13 @@ class DepartmentController extends Controller
     {
         //
     }
+
+    function register_alumini_member(Request $request){
+        $department = new department();
+
+
+        $department->save();
+
+        return redirect()->back();
+    }
 }

@@ -53,7 +53,9 @@
                 <img class="vector-qKX" src="{{asset('image/vector.png')}}"/>
             </div>
         -->
-        <form id="regi_form" onsubmit="return validateForm()">
+
+        <form id="regi_form" action="<?=url('/admin_form')?>" method="POST" >
+            @csrf
             <div class="mb-3">
             <label for="name" class="form-label">Full Name</label>
             <input type="text" class="form-control" id="name" name="name">
@@ -599,7 +601,7 @@
 
             <div class="mb-3" style="display: none" id="special_degree_div">
                 <label for="sp_degree" class="form-label">Special Degree</label>
-                <select class="form-select" name="sp_degree" id="sp_degree">
+                <select class="form-select" name="degree" id="sp_degree">
                     <option value="" selected disabled>Select</option>
                     <option value="bcs_cs_s">BCS Special in Computer Science </option>
                     <option value="bsc_statistics_s">BSc Special in Statistics </option>
@@ -613,7 +615,7 @@
 
             <div class="mb-3" style="display: none" id="General_degree_div">
                 <label for="sp_degree" class="form-label">General Degree</label>
-                <select class="form-select" name="g_degree" id="g_degree" >
+                <select class="form-select" name="degree" id="g_degree" >
                     <option value="" selected disabled>Select</option>
                     <option value="ps_bsc_g">BSc in physical sciences </option>
                     <option value="bio_bsc_g">BSc in Bio Sciences </option>

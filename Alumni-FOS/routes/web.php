@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AluminiMemberController;
+use App\Http\Controllers\DepartmentController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -28,3 +31,6 @@ Route::get('/login', function () {
 Route::get('/forgot', function () {
     return view('forgot_pwd');
 });
+
+Route::post('/admin_form', [AluminiMemberController::class,'register_alumini_member']);
+//Route::post('/admin_form', [DepartmentController::class,'register_alumini_member']);
