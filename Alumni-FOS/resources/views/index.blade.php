@@ -160,14 +160,14 @@
 
                     <div class="img-fluid2">
                         <br><br>
-                        <img src="{{asset('image\index\location.png')}}" class="iconf"/><span>&nbsp Faculty of Science, University of Ruhuna, Matara</span><br><br>
+                        <a href="https://www.google.com/maps/search/University+of+Ruhuna,+faculty+of+Science/@5.939526,80.576713,15z?hl=en-US&entry=ttu"><img src="{{asset('image\index\location.png')}}" class="iconf"/></a><span>&nbsp Faculty of Science, University of Ruhuna, Matara</span><br><br>
                         <img src="{{asset('image\index\phone.png')}}" class="iconf"/><span>&nbsp 041-1111111</span><br><br>
                         <img src="{{asset('image\index\fax.png')}}" class="iconf"/><span>&nbsp 041-1111111</span><br><br>
                         <img src="{{asset('image\indexpage\gmail.png')}}" class="iconf"/><span>&nbsp a@gmail.com</span><br><br>
-                        <img src="{{asset('image\index\facebook.png')}}" class="iconf"/><span>&nbsp</span>
+                        <a href=""><img src="{{asset('image\index\facebook.png')}}" class="iconf"/></a><span>&nbsp</span>
                         <img src="{{asset('image\index\twitter.png')}}" class="iconf"/><span>&nbsp</span>
                         <img src="{{asset('image\index\linkedin.png')}}" class="iconf"/><span>&nbsp</span>
-                        <img src="{{asset('image\index\google.png')}}" class="iconf"/><span>&nbsp</span>
+                        <a href="https://www.sci.ruh.ac.lk/FacultyofScience/"><img src="{{asset('image\index\google.png')}}" class="iconf"/></a><span>&nbsp</span>
                         <img src="{{asset('image\index\youtube.png')}}" class="iconf"/><span>&nbsp</span>
                         <img src="{{asset('image\index\instagram.png')}}" class="iconf"/><span>&nbsp</span>
                         <br><br>
