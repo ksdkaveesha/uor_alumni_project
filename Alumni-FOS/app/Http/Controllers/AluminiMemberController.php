@@ -72,6 +72,13 @@ class AluminiMemberController extends Controller
         $alumini_member->mobile = $request->input('mobile');
         $alumini_member->d_type = $request->input('degree_type');
         $alumini_member->degree = $request->input('degree');
+
+        $degree = $request->input('degree');
+
+        if($degree=='BCS Special in Computer Science'){
+            $alumini_member->dep_id = '1';
+        }
+
         $alumini_member->save();
 
         return redirect()->back();

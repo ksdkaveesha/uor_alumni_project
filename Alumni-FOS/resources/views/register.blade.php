@@ -72,7 +72,7 @@
                 <span id="emailError" style="color: red;"></span>
             </div>
 
-             <!--
+        <!--
             <div class="mb-3">
                 <label for="address" class="form-label">Residential Address</label>
                 <input type="address" class="form-control" id="address" name="address">

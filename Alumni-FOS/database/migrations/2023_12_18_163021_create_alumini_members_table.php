@@ -20,8 +20,8 @@ return new class extends Migration
             $table->integer('mobile');
             $table->string('d_type');
             $table->string('degree');
-            //$table->unsignedBigInteger('dep_id');
-           // $table->foreign('dep_id')->references('id')->on('departments');
+            $table->unsignedBigInteger('dep_id');
+           $table->foreign('dep_id')->references('id')->on('departments');
             $table->timestamps();
         });
     }
