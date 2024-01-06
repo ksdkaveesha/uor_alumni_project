@@ -17,7 +17,7 @@ use App\Http\Controllers\DepartmentController;
 */
 
 Route::get('/', function () {
-    return view('index');
+    return view('template/index');
 });
 
 Route::get('/register', function () {
