@@ -20,6 +20,10 @@ Route::get('/', function () {
     return view('template/index');
 });
 
+Route::get('/index', function () {
+    return view('index');
+});
+
 Route::get('/register', function () {
     return view('register');
 });

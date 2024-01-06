@@ -136,7 +136,7 @@
          </div>
       </div>
       <!-- about section end -->
-      <!-- gallery section start -->
+      <!-- gallery section start
       <div class="gallery_section layout_padding">
          <div class="container">
             <div class="row">
@@ -238,7 +238,8 @@
             <div class="seemore_bt"><a href="#">See More</a></div>
          </div>
       </div>
-      <!-- gallery section end -->
+      gallery section end -->
+
       <!-- services section start -->
       <div class="services_section layout_padding">
          <div class="container">
@@ -288,6 +289,7 @@
          </div>
       </div>
       <!-- services section end -->
+
       <!-- testimonial section start -->
       <div class="client_section layout_padding">
          <div class="container">
@@ -303,7 +305,9 @@
           <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+          <br><br>
         </ol>
+
         <div class="carousel-inner">
           <div class="carousel-item active">
             <div class="client_section_2">
@@ -350,8 +354,9 @@
         </div>
       </div>
      </div>
+     <br>
       <!-- testimonial section end -->
-      <!-- contact section start -->
+      <!-- contact section start
       <div class="contact_section layout_padding">
          <div class="container">
             <h1 class="contact_text">Contact Us</h1>
@@ -389,7 +394,9 @@
             </div>
          </div>
       </div>
-      <!-- contact section end -->
+      contact section end -->
+
+
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
@@ -439,14 +446,15 @@
             </div>
          </div>
       </div>
+
       <!-- footer section end -->
-      <!-- copyright section start -->
+      <!-- copyright section start
       <div class="copyright_section">
          <div class="container">
             <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
          </div>
       </div>
-      <!-- copyright section end -->
+      copyright section end -->
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>
