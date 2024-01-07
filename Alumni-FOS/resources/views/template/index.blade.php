@@ -445,8 +445,8 @@
                   <h1 class="useful_text">Useful Link</h1>
                   <div class="dummy_text">
                     <ul>
-                        <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
-                        <li><a href="https://www.ruh.ac.lk/index.php/en/">University of Ruhuna</a></li>
+                        <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/"><span style="color:white">Faculty of Science</a></span></li>
+                        <li><a href="https://www.ruh.ac.lk/index.php/en/"><span style="color:white">University of Ruhuna</a></span></li>
                     </ul>
                   </div>
                </div>
