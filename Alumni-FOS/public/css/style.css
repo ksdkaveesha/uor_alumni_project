@@ -268,7 +268,7 @@ button {
 .banner_section {
     width: 100%;
     float: left;
-    background-image: url(../images/banner-bg.png);
+    background-image: url(../images/b1.png);
     height: auto;
     background-size: 100%;
     padding: 10px 0px 25px 0px;
@@ -664,7 +664,7 @@ a:hover {
 
 .readmore_bt a:hover {
     color: #ffffff;
-    background-color: #f76d37;
+    background-color:  #3f78bd;
 }
 
 /* services section end */
@@ -867,7 +867,7 @@ a:hover {
 }
 
 .main_bt a:hover {
-    color: #323131;
+    color:  #3f78bd;
     background-color: #ffffff;
 }
 
@@ -882,7 +882,7 @@ a:hover {
 .footer_section {
     width: 100%;
     float: left;
-    background-color: #252525;
+    background-color: #390A40;
     height: auto;
     padding: 95px 0px;
 }
@@ -923,7 +923,7 @@ a:hover {
 }
 
 .footer_menu li a:hover {
-    color: #f76d37;
+    color: #3f78bd;
 }
 
 .dummy_text {
@@ -955,7 +955,7 @@ a:hover {
 }
 
 .location_text li a:hover {
-    color: #f76d37;
+    color: #3f78bd;
 }
 
 .padding_left_10 {
@@ -988,7 +988,7 @@ a:hover {
 }
 
 .copyright_text a:hover {
-    color: #f76d37;
+    color: #fdfcfb;
 }
 
 
