@@ -25,7 +25,7 @@ Route::get('/index', function () {
 });
 
 Route::get('/register', function () {
-    return view('register');
+    return view('template/register');
 });
 
 Route::get('/login', function () {
