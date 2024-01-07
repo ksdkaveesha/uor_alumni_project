@@ -834,6 +834,17 @@ a:hover {
     border-radius: 30px;
 }
 
+.select-bt {
+    color: #757575;
+    width: 100%;
+    font-weight:400;
+    height: 55px;
+    padding: 4px 40px;
+    font-size: 20px;
+    border: 0px;
+    border-radius: 30px;
+}
+
 .massage-bt {
     color: #080707;
     width: 100%;
