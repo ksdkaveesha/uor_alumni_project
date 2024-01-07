@@ -429,7 +429,7 @@
                   <h3 class="useful_text">About</h3>
                   <p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
                </div>
-               <div class="col-lg-3 col-sm-6">
+               <div class="col-lg-2 col-sm-6">
                   <h3 class="useful_text">Menu</h3>
                   <div class="footer_menu">
                      <ul>
@@ -443,15 +443,20 @@
                </div>
                <div class="col-lg-3 col-sm-6">
                   <h1 class="useful_text">Useful Link</h1>
-                  <p class="dummy_text">Adipiscing Elit, sed do Eiusmod Tempor incididunt </p>
+                  <div class="dummy_text">
+                    <ul>
+                        <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
+                        <li><a href="https://www.ruh.ac.lk/index.php/en/">University of Ruhuna</a></li>
+                    </ul>
+                  </div>
                </div>
-               <div class="col-lg-3 col-sm-6">
+               <div class="col-lg-4 col-sm-6">
                   <h1 class="useful_text">Contact Us</h1>
                   <div class="location_text">
                      <ul>
                         <li>
                            <a href="#">
-                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Loram Ipusm</span>
+                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Faculty of Science,University of Ruhuna, Matara, Sri Lanka</span>
                            </a>
                         </li>
                         <li>
@@ -461,7 +466,7 @@
                         </li>
                         <li>
                            <a href="#">
-                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : demo@gmail.com</span>
+                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : ruhuna@gmail.com</span>
                            </a>
                         </li>
                      </ul>
@@ -475,7 +480,7 @@
       <!-- copyright section start
       <div class="copyright_section">
          <div class="container">
-            <p class="copyright_text">2020 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
+            <p class="copyright_text">2023 All Rights Reserved. Design by <a href="https://html.design">Free html  Templates</a></p>
          </div>
       </div>
       copyright section end -->
