@@ -126,7 +126,7 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="about_taital_main">
-                     <div class="about_taital">About Us</div>
+                     <div class="about_taital"><span style="color:black">About Us</span></div>
                      <p class="about_text">Full cleaning and housekeeping services for companies and households.</p>
                      <p class="about_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply</p>
                      <div class="learnmore_bt"><a href="#">Read More</a></div>
@@ -145,7 +145,7 @@
             <div class="row">
                <div class="col-md-6">
                   <div class="about_taital_main">
-                     <div class="about_taital">This isn't a Good Bye.<br>It's a Welcome.</div>
+                     <div class="about_taital"><span style="color:black">This isn't a Good Bye.<br>It's a Welcome.</span></div>
                      <p class="about_text">Full cleaning and housekeeping services for companies and households.</p>
                      <p class="about_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply</p>
                      <div class="learnmore_bt"><a href="#">Join us</a></div>
