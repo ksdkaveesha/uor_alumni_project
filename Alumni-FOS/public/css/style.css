@@ -800,7 +800,8 @@ a:hover {
 .mail_section {
     width: 100%;
     float: left;
-    background-image: url(../images/img-9.png);
+    /*background-image: url(../images/img-9.png);*/
+    background-color: #E7B3F9;
     height: auto;
     padding: 23px 70px;
     background-repeat: no-repeat;
@@ -829,6 +830,17 @@ a:hover {
     height: 55px;
     font-size: 20px;
     padding: 20px 40px;
+    border: 0px;
+    border-radius: 30px;
+}
+
+.select-bt {
+    color: #757575;
+    width: 100%;
+    font-weight:400;
+    height: 55px;
+    padding: 4px 40px;
+    font-size: 20px;
     border: 0px;
     border-radius: 30px;
 }
@@ -926,11 +938,19 @@ a:hover {
     color: #3f78bd;
 }
 
-.dummy_text {
-    width: 30%;
+.dummy_text li a{
+    width: 60%;
     float: left;
     font-size: 14px;
     color: #ffffff;
+    margin: 0px;
+}
+
+.dummy_text li a:hover{
+    width: 60%;
+    float: left;
+    font-size: 14px;
+    color: #3f78bd;
     margin: 0px;
 }
 

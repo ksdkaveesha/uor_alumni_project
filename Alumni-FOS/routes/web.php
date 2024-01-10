@@ -20,8 +20,12 @@ Route::get('/', function () {
     return view('template/index');
 });
 
+Route::get('/index', function () {
+    return view('index');
+});
+
 Route::get('/register', function () {
-    return view('register');
+    return view('template/register');
 });
 
 Route::get('/login', function () {
@@ -30,6 +34,10 @@ Route::get('/login', function () {
 
 Route::get('/forgot', function () {
     return view('forgot_pwd');
+});
+
+Route::get('/update', function () {
+    return view('template/update');
 });
 
 Route::post('/admin_form', [AluminiMemberController::class,'register_alumini_member']);
