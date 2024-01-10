@@ -938,11 +938,19 @@ a:hover {
     color: #3f78bd;
 }
 
-.dummy_text {
-    width: 30%;
+.dummy_text li a{
+    width: 60%;
     float: left;
     font-size: 14px;
     color: #ffffff;
+    margin: 0px;
+}
+
+.dummy_text li a:hover{
+    width: 60%;
+    float: left;
+    font-size: 14px;
+    color: #3f78bd;
     margin: 0px;
 }
 
