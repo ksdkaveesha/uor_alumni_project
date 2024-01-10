@@ -29,6 +29,7 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
    </head>
    <body style="background-color: #E7B3F9">
       <!--header section start -->
@@ -119,25 +120,41 @@
 
               <div class="form-row">
                 <div class="form-group col">
-                    <select name="" id="" class="select-bt">
-                      <option value="">Select Service</option>
-                      <option value="">Service 1</option>
-                      <option value="">Service 2</option>
-                      <option value="">Service 3</option>
+                    <select name="degree_type" id="degree_type" class="select-bt">
+                        <option value="none" selected disabled>Degree Programe</option>
+                        <option value="General">General</option>
+                        <option value="Special">Special</option>
                     </select>
                 </div>
               </div>
 
-              <div class="form-row">
+              <div class="form-row" id="special_degree_div" >
                 <div class="form-group col">
-                    <select name="" id="" class="select-bt">
-                      <option value="">Select Service</option>
-                      <option value="">Service 1</option>
-                      <option value="">Service 2</option>
-                      <option value="">Service 3</option>
+                    <select name="degree" id="sp_degree" class="select-bt">
+                        <option value="" selected disabled>Select your Degree</option>
+                        <option value="bcs_cs_s">BCS Special in Computer Science </option>
+                        <option value="bsc_statistics_s">BSc Special in Statistics </option>
+                        <option value="bsc_appmaths_s">BSc Special in Applied Mathematics</option>
+                        <option value="bsc_chemistry_s">BSc Special in Chemistry</option>
+                        <option value="bsc_physics_s">BSc Special in Physics</option>
+                        <option value="bsc_zoology_s">BSc Special in Zoology</option>
+                        <option value="bsc_botany_s">BSc Special in Botany</option>
                     </select>
                 </div>
               </div>
+
+              <div class="form-row" id="General_degree_div">
+                <div class="form-group col">
+                    <select name="degree" id="g_degree" class="select-bt">
+                        <option value="" selected disabled>Select your Degree</option>
+                        <option value="ps_bsc_g">BSc in physical sciences </option>
+                        <option value="bio_bsc_g">BSc in Bio Sciences </option>
+                        <option value="cs_bcs_g">BCS in Computer Science</option>
+                    </select>
+                </div>
+              </div>
+
+
 
               <div class="form-row">
                 <div class="form-group col">
@@ -167,7 +184,7 @@
         <div class="col-md-6 px-0">
           <div class="map_container">
             <div class="map">
-              <div id="googleMap"></div>
+
             </div>
           </div>
         </div>
@@ -234,6 +251,9 @@
      </div>
      copyright section end -->
      <!-- Javascript files-->
+
+
+
      <script src="js/jquery.min.js"></script>
      <script src="js/popper.min.js"></script>
      <script src="js/bootstrap.bundle.min.js"></script>
@@ -241,6 +261,28 @@
      <script src="js/plugin.js"></script>
      <!-- sidebar -->
      <script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
      <script src="js/custom.js"></script>
+
+     <script>
+        $(document).ready(function(){
+            // When the value of the first select changes
+            $("#degree_type").change(function(){
+                // If "Have a Job" is selected, show the second select; otherwise, hide it
+                if($(this).val() == "General"){
+                    $("#special_degree_div").hide();
+                    $("#General_degree_div").show();
+                } else if($(this).val() == "Special"){
+                    $("#General_degree_div").hide();
+                    $("#special_degree_div").show();
+                } else if($(this).val() == "none"){
+                    $("#General_degree_div").hide();
+                    $("#special_degree_div").hide();
+                }
+            });
+        });
+      </script>
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </body>
 </html>
