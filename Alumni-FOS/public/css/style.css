@@ -259,7 +259,9 @@ button {
     color: #fff;
 }
 
-.logo {}
+.logo {
+    background-image: url(../images/index/FOSalumni.png);
+}
 
 /* header section end */
 
@@ -285,7 +287,7 @@ button {
     width: 100%;
     float: left;
     font-size: 60px;
-    color: #252525;
+    color: #ffffff;
     padding-bottom: 0px;
 }
 
