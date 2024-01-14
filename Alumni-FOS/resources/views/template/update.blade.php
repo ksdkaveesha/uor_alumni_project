@@ -31,61 +31,62 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://www.bootdey.com/snippets/view/bs4-crud-users">
+      <link rel="stylesheet" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page">
     </head>
 
-    <body style="background-color: #E7B3F9">
-
-        <!--header section start -->
-      <div class="header_section">
-        <div class="container-fluid">
-           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="logo"><a href="/"><img src="images/logo.png"></a></div>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="/">Home</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#testimonial">News & Events</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="about">About Us</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="directory">Alumni Directory</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="register">Register</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="contact">Contact Us</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="login">Log In</a>
-                     </li>
-                     <!--<li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                     </li>-->
-                 </ul>
-              </div>
-           </nav>
-        </div>
-     </div>
-     <!--header section end -->
-
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <div class="container">
+            
+    <body>
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <div class="container">
         <div class="row flex-lg-nowrap">
-            <!--<div class="col-12 col-lg-auto mb-3" style="width: 200px;">
-                <div class="card p-3">
-                <div class="e-navlist e-navlist--active-bg">
-                    <ul class="nav">
-                    <li class="nav-item"><a class="nav-link px-2 active" href="#"><i class="fa fa-fw fa-bar-chart mr-1"></i><span>Overview</span></a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-crud-users" target="__blank"><i class="fa fa-fw fa-th mr-1"></i><span>CRUD</span></a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page" target="__blank"><i class="fa fa-fw fa-cog mr-1"></i><span>Settings</span></a></li>
+        <!--<div class="col-12 col-lg-auto mb-3" style="width: 200px;">
+        <div class="card p-3">
+            <div class="e-navlist e-navlist--active-bg">
+                <ul class="nav">
+                <li class="nav-item"><a class="nav-link px-2 active" href="#"><i class="fa fa-fw fa-bar-chart mr-1"></i><span>Overview</span></a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-crud-users" target="__blank"><i class="fa fa-fw fa-th mr-1"></i><span>CRUD</span></a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page" target="__blank"><i class="fa fa-fw fa-cog mr-1"></i><span>Settings</span></a></li>
+                </ul>
+            </div>
+            </div>
+        </div>-->
+
+        <div class="col">
+            <div class="row">
+            <div class="col mb-3">
+                <div class="card" style="background-color:#fcf3d2">
+                <div class="card-body" >
+                    <div class="e-profile">
+                    <div class="row">
+                        <div class="col-12 col-sm-auto mb-3">
+                        <div class="mx-auto" style="width: 140px;">
+                            <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                            <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3">
+                        <div class="text-center text-sm-left mb-2 mb-sm-0">
+                            <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">John Smith</h4>
+                            <p class="mb-0">@johnny.s</p>
+                            <div class="text-muted"><small>Last seen 2 hours ago</small></div>
+                            <div class="mt-2">
+                            <button class="btn btn-primary" type="button" style="background-color:#762da2">
+                                <i class="fa fa-fw fa-camera"></i>
+                                <span>Change Photo</span>
+                            </button>
+                            </div>
+                        </div>
+                        <div class="text-center text-sm-right">
+                            <span class="badge badge-secondary">administrator</span>
+                            <div class="text-muted"><small>Joined 09 Dec 2017</small></div>
+                        </div>
+                        </div>
+                    </div>
+                    <ul class="nav nav-tabs" style="background-color:#fcf3d2">
+                        <li class="nav-item" ><a href="" class="active nav-link">Settings</a></li>
+
                     </ul>
                 </div>
                 </div>
@@ -197,12 +198,24 @@
                                     </form>
                                 </div>
                             </div>
+
+                            </div>
+                            <div class="row">
+                            <div class="col d-flex justify-content-end">
+                                <button class="btn btn-primary" type="submit" style="background-color:#762da2">Save Changes</button>
+                            </div>
+                            </div>
+                        </form>
+
+
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!--<div class="col-12 col-md-3 mb-3">
+
+           <!-- <div class="col-12 col-md-3 mb-3">
+
                 <div class="card mb-3">
                 <div class="card-body">
                     <div class="px-xl-3">
