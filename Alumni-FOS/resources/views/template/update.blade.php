@@ -31,6 +31,8 @@
       <link rel="stylesheet" href="css/owl.carousel.min.css">
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+      <link rel="stylesheet" href="https://www.bootdey.com/snippets/view/bs4-crud-users">
+      <link rel="stylesheet" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page">
     </head>
 
     <body style="background-color: #E7B3F9">
@@ -46,29 +48,29 @@
               <div class="collapse navbar-collapse" id="navbarNav">
                  <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="/">Home</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="#testimonial">News & Events</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="about">About Us</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="directory">Alumni Directory</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="register">Register</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="contact">Contact Us</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="login">Log In</a>
-                     </li>
-                     <!--<li class="nav-item">
-                        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                     </li>-->
+                       <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="#testimonial">News & Events</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="directory">Alumni Directory</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="register">Register</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="contact">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link" href="login">Log In</a>
+                    </li>
+                    <!--<li class="nav-item">
+                       <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
+                    </li>-->
                  </ul>
               </div>
            </nav>
@@ -76,20 +78,20 @@
      </div>
      <!--header section end -->
 
-        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <div class="container">
+            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+        <div class="container">
         <div class="row flex-lg-nowrap">
-            <!--<div class="col-12 col-lg-auto mb-3" style="width: 200px;">
-                <div class="card p-3">
-                <div class="e-navlist e-navlist--active-bg">
-                    <ul class="nav">
-                    <li class="nav-item"><a class="nav-link px-2 active" href="#"><i class="fa fa-fw fa-bar-chart mr-1"></i><span>Overview</span></a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-crud-users" target="__blank"><i class="fa fa-fw fa-th mr-1"></i><span>CRUD</span></a></li>
-                    <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page" target="__blank"><i class="fa fa-fw fa-cog mr-1"></i><span>Settings</span></a></li>
-                    </ul>
-                </div>
-                </div>
-            </div>-->
+        <!--<div class="col-12 col-lg-auto mb-3" style="width: 200px;">
+        <div class="card p-3">
+            <div class="e-navlist e-navlist--active-bg">
+                <ul class="nav">
+                <li class="nav-item"><a class="nav-link px-2 active" href="#"><i class="fa fa-fw fa-bar-chart mr-1"></i><span>Overview</span></a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-crud-users" target="__blank"><i class="fa fa-fw fa-th mr-1"></i><span>CRUD</span></a></li>
+                <li class="nav-item"><a class="nav-link px-2" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page" target="__blank"><i class="fa fa-fw fa-cog mr-1"></i><span>Settings</span></a></li>
+                </ul>
+            </div>
+            </div>
+        </div>-->
             <div class="col" >
                 <div class="row">
                 <div class="col mb-3" >
@@ -197,12 +199,22 @@
                                     </form>
                                 </div>
                             </div>
+
+                            </div>
+                        </form>
                         </div>
+                    </div>
                     </div>
                 </div>
             </div>
+            </div>
+            </div>
+        </div>
+        </div>
 
-            <!--<div class="col-12 col-md-3 mb-3">
+
+           <!-- <div class="col-12 col-md-3 mb-3">
+
                 <div class="card mb-3">
                 <div class="card-body">
                     <div class="px-xl-3">
