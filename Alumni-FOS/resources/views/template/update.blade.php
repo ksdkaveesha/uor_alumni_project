@@ -34,6 +34,7 @@
       <link rel="stylesheet" href="https://www.bootdey.com/snippets/view/bs4-crud-users">
       <link rel="stylesheet" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page">
     </head>
+
             
     <body>
             <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
@@ -85,93 +86,119 @@
                     </div>
                     <ul class="nav nav-tabs" style="background-color:#fcf3d2">
                         <li class="nav-item" ><a href="" class="active nav-link">Settings</a></li>
+
                     </ul>
-                    <div class="tab-content pt-3">
-                        <div class="tab-pane active">
-                        <form class="form" novalidate="">
-                            <div class="row">
-                            <div class="col">
-                                <div class="row">
-                                <div class="col">
-                                    <div class="form-group">
-                                    <label>Full Name</label>
-                                    <input class="form-control" type="text" name="name" placeholder="John Smith" value="John Smith">
-                                    </div>
-                                </div>
-                                <div class="col">
-                                    <div class="form-group">
-                                    <label>Username</label>
-                                    <input class="form-control" type="text" name="username" placeholder="johnny.s" value="johnny.s">
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="row">
-                                <div class="col">
-                                    <div class="form-group">
-                                    <label>Email</label>
-                                    <input class="form-control" type="text" placeholder="user@example.com">
+                </div>
+                </div>
+            </div>-->
+            <div class="col" >
+                <div class="row">
+                <div class="col mb-3" >
+                    <div class="card" style="background-color: #E7B3F9; border:none">
+                    <div class="card-body" style="background-color: #E7B3F9; border:none">
+                        <div class="e-profile">
+                            <div class="row" style="background-color: #E7B3F9">
+                                <div class="col-12 col-sm-auto mb-3" >
+                                <div class="mx-auto" style="width: 140px;">
+                                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
+                                    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
                                     </div>
                                 </div>
                                 </div>
-                                <div class="row">
-                                <div class="col mb-3">
-                                    <div class="form-group">
-                                    <label>About</label>
-                                    <textarea class="form-control" rows="5" placeholder="My Bio"></textarea>
+                                <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3" >
+                                <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                    <h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">John Smith</h4>
+                                    <p class="mb-0">@johnny.s</p>
+                                    <div class="text-muted"><small>Last seen 2 hours ago</small></div>
+                                    <div class="mt-2">
+                                    <button class="btn btn-primary" type="button">
+                                        <i class="fa fa-fw fa-camera"></i>
+                                        <span>Change Photo</span>
+                                    </button>
                                     </div>
+                                </div>
+                                <div class="text-center text-sm-right">
+                                    <span class="badge badge-secondary">administrator</span>
+                                    <div class="text-muted"><small>Joined 09 Dec 2017</small></div>
                                 </div>
                                 </div>
                             </div>
+
+                            <div class="tab-content pt-3">
+                                <div class="tab-pane active">
+                                    <form class="form" novalidate="">
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                    <label>Full Name</label>
+                                                    <input class="form-control" type="text" name="name" placeholder="John Smith" >
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                    <label>Username</label>
+                                                    <input class="form-control" type="text" name="username" placeholder="johnny.s" >
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                    <label>Email</label>
+                                                    <input class="form-control" type="text" placeholder="user@example.com">
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <div class="row">
+                                                <div class="col mb-3">
+                                                    <div class="form-group">
+                                                    <label>About</label>
+                                                    <textarea class="form-control" rows="5" placeholder="My Bio"></textarea>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-12 col-sm-6 mb-3">
+                                                <div class="mb-2"><b>Change Password</b></div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                        <label>Current Password</label>
+                                                        <input class="form-control" type="password" placeholder="••••••">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                        <label>New Password</label>
+                                                        <input class="form-control" type="password" placeholder="••••••">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                        <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
+                                                        <input class="form-control" type="password" placeholder="••••••"></div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col d-flex justify-content-end">
+                                                        <button class="btn btn-primary" type="submit">Save Changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="row">
-                            <div class="col-12 col-sm-6 mb-3">
-                                <div class="mb-2"><b>Change Password</b></div>
-                                <div class="row">
-                                <div class="col">
-                                    <div class="form-group">
-                                    <label>Current Password</label>
-                                    <input class="form-control" type="password" placeholder="••••••">
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="row">
-                                <div class="col">
-                                    <div class="form-group">
-                                    <label>New Password</label>
-                                    <input class="form-control" type="password" placeholder="••••••">
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="row">
-                                <div class="col">
-                                    <div class="form-group">
-                                    <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                                    <input class="form-control" type="password" placeholder="••••••"></div>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="col-12 col-sm-5 offset-sm-1 mb-3">
-                                <div class="mb-2"><b>Keeping in Touch</b></div>
-                                <div class="row">
-                                <div class="col">
-                                    <label>Email Notifications</label>
-                                    <div class="custom-controls-stacked px-2">
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="notifications-blog" checked="">
-                                        <label class="custom-control-label" for="notifications-blog">Blog posts</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="notifications-news" checked="">
-                                        <label class="custom-control-label" for="notifications-news">Newsletter</label>
-                                    </div>
-                                    <div class="custom-control custom-checkbox">
-                                        <input type="checkbox" class="custom-control-input" id="notifications-offers" checked="">
-                                        <label class="custom-control-label" for="notifications-offers">Personal Offers</label>
-                                    </div>
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
+
                             </div>
                             <div class="row">
                             <div class="col d-flex justify-content-end">
@@ -180,14 +207,15 @@
                             </div>
                         </form>
 
+
                         </div>
                     </div>
-                    </div>
-                </div>
                 </div>
             </div>
 
+
            <!-- <div class="col-12 col-md-3 mb-3">
+
                 <div class="card mb-3">
                 <div class="card-body">
                     <div class="px-xl-3">
@@ -208,8 +236,75 @@
             </div>
             </div>-->
 
+            </div>
+            </div>
         </div>
+    </div>
+
+
+        <!-- footer section start -->
+      <div class="footer_section layout_padding">
+        <div class="container">
+           <div class="row">
+              <div class="col-lg-3 col-sm-6">
+                 <h3 class="useful_text">About</h3>
+                 <p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
+              </div>
+              <div class="col-lg-2 col-sm-6">
+                 <h3 class="useful_text">Menu</h3>
+                 <div class="footer_menu">
+                    <ul>
+                       <li><a href="index.html">Home</a></li>
+                       <li><a href="about.html">About Us</a></li>
+                       <li><a href="gallery.html">Gallery</a></li>
+                       <li><a href="services.html">Services</a></li>
+                       <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                 </div>
+              </div>
+              <div class="col-lg-3 col-sm-6">
+                 <h1 class="useful_text">Useful Link</h1>
+                 <div class="dummy_text">
+                   <ul>
+                       <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
+                       <li><a href="https://www.ruh.ac.lk/index.php/en/">University of Ruhuna</a></li>
+                   </ul>
+                 </div>
+              </div>
+              <div class="col-lg-4 col-sm-6">
+                 <h1 class="useful_text">Contact Us</h1>
+                 <div class="location_text">
+                    <ul>
+                       <li>
+                          <a href="#">
+                          <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Faculty of Science,University of Ruhuna, Matara, Sri Lanka</span>
+                          </a>
+                       </li>
+                       <li>
+                          <a href="#">
+                          <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +01 1234567890</span>
+                          </a>
+                       </li>
+                       <li>
+                          <a href="#">
+                          <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : ruhuna@gmail.com</span>
+                          </a>
+                       </li>
+                    </ul>
+                 </div>
+              </div>
+           </div>
         </div>
+     </div>
+
+     <!-- footer section end -->
+     <!-- copyright section start-->
+     <div class="copyright_section">
+        <div class="container">
+           <p class="copyright_text"><span style="color: white"> All Rights Reserved. Design by</span> <a href="https://html.design"><span style="color: white"> html  Templates</span></a></p>
         </div>
+     </div>
+     <!--copyright section end -->
+
     </body>
 </html>

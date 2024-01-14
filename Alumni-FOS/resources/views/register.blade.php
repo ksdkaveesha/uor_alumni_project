@@ -635,9 +635,9 @@
 
     <script>
         $(document).ready(function(){
-            // When the value of the first select changes
+
             $("#degree_type").change(function(){
-                // If "Special" is selected, show the second select; otherwise, hide it
+
                 if($(this).val() === "Special"){
                     $("#special_degree_div").show();
                     $("#General_degree_div").hide();
