@@ -29,7 +29,7 @@ Route::get('/register', function () {
 });
 
 Route::get('/login', function () {
-    return view('login');
+    return view('template/login');
 });
 
 Route::get('/forgot', function () {

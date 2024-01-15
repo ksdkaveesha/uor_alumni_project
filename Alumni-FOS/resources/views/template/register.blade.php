@@ -93,35 +93,35 @@
             <br><br>
             <div class="col-md-6 px-5">
                 <div class="form_container">
-                    <form action="">
-
+                    <form action="<?=url('/admin_form')?>" method="POST">
+                        @csrf
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="text" class="email-bt" placeholder="Full Name" name="name" id="name" />
+                            <input type="text" class="email-bt" placeholder="Full Name" name="name" id="name" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="text" id="sc_number" name="sc_number" class="email-bt" placeholder="Student Number" />
+                            <input type="text" id="sc_number" name="sc_number" class="email-bt" placeholder="Student Number" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="password" id="c_sc_number" name="c_sc_number" class="email-bt" placeholder="Comfirm Student Number" />
+                            <input type="password" id="c_sc_number" name="c_sc_number" class="email-bt" placeholder="Comfirm Student Number" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="email" class="email-bt" id="email" name="email" placeholder="Email" />
+                            <input type="email" class="email-bt" id="email" name="email" placeholder="Email" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col-lg-5">
-                              <select class="select-bt" id="m_code" name="m_code" >
+                              <select class="select-bt" id="m_code" name="m_code" required>
                                   <option value="" disabled selected>Country</option>
                                   <option value="93">Afghanistan +93</option>
                                   <option value="358">Aland Islands +358</option>
@@ -379,13 +379,13 @@
                           </div>
 
                           <div class="form-group col-lg-7">
-                            <input type="text" class="email-bt" placeholder="Phone Number" id="mobile" name="mobile"/>
+                            <input type="text" class="email-bt" placeholder="Phone Number" id="mobile" name="mobile" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                              <select name="degree_type" id="degree_type" class="select-bt">
+                              <select name="degree_type" id="degree_type" class="select-bt" required>
                                   <option value="none" selected disabled>Degree Programe</option>
                                   <option value="General">General</option>
                                   <option value="Special">Special</option>
@@ -395,7 +395,7 @@
 
                         <div class="form-row" id="special_degree_div" >
                           <div class="form-group col">
-                              <select name="degree" id="sp_degree" class="select-bt">
+                              <select name="degree" id="sp_degree" class="select-bt" required>
                                   <option value="" selected disabled>Select your Degree</option>
                                   <option value="bcs_cs_s">BCS Special in Computer Science </option>
                                   <option value="bsc_statistics_s">BSc Special in Statistics </option>
@@ -410,7 +410,7 @@
 
                         <div class="form-row" id="General_degree_div">
                           <div class="form-group col">
-                              <select name="degree" id="g_degree" class="select-bt">
+                              <select name="degree" id="g_degree" class="select-bt" required>
                                   <option value="" selected disabled>Select your Degree</option>
                                   <option value="ps_bsc_g">BSc in physical sciences </option>
                                   <option value="bio_bsc_g">BSc in Bio Sciences </option>
@@ -423,19 +423,19 @@
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="text" class="email-bt" placeholder="User Name" id="username" name="username"/>
+                            <input type="text" class="email-bt" placeholder="User Name" id="username" name="username" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="password" class="email-bt" placeholder="Password" id="password" name="password"/>
+                            <input type="password" class="email-bt" placeholder="Password" id="password" name="password" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="password" class="email-bt" placeholder="Comfirm Password" id="c_password" name="password"/>
+                            <input type="password" class="email-bt" placeholder="Comfirm Password" id="c_password" name="password" required/>
                           </div>
                         </div>
 
@@ -444,7 +444,7 @@
                        </div>
                        <hr>
                        <div class="send_btn">
-                        <div type="text" class="main_bt"><button type="submit">SIGN IN</button></div>
+                        <div type="text" class="main_bt"><a href="">SIGN IN</a></div>
                         </div>
                        <br><br>
                       </form>

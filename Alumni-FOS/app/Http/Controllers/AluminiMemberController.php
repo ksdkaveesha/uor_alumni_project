@@ -75,10 +75,6 @@ class AluminiMemberController extends Controller
 
         $degree = $request->input('degree');
 
-        /*if($degree=='BCS Special in Computer Science'){
-            $alumini_member->dep_id = '1';
-        }*/
-
         $alumini_member->save();
 
         return redirect()->back();
