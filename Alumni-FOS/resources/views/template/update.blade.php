@@ -116,7 +116,7 @@
                                     </button>
                                     </div>
                                 </div>
-                               
+
                                 </div>
                             </div>
 
@@ -173,7 +173,7 @@
                                                 </div>
                                                 <div class="row">
                                                 <div class="col">
-                                                    
+
                                                 </div>
                                                 </div>
                                                 <div class="row">
@@ -187,7 +187,7 @@
 
             <div class="mb-3">
                 <label for="country" class="form-label">Country</label>
-                <select class="form-select" id="country" name="country">
+                <select class="form-control" id="country" name="country">
                         <option value="Afghanistan">Afghanistan</option>
                         <option value="Albania">Albania</option>
                         <option value="Algeria">Algeria</option>
@@ -450,7 +450,7 @@
                                                         <div class="form-group">
                                                          <div class="mb-3">
                                                             <label for="sector" class="form-label">Sector</label>
-                                                            <select class="form-select" id="sector" name="sector">
+                                                            <select class="form-control" id="sector" name="sector">
                                                                     <option value="Public">Public</option>
                                                                     <option value="Private">Private</option>
                                                                     <option value="Algeria">Own Business</option></div>
