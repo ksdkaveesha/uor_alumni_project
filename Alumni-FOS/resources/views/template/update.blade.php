@@ -112,6 +112,7 @@
                                     <div class="mt-2">
                                     <button class="btn btn-primary" type="file" style="background-color:#390A40">
                                         <i class="fa fa-fw fa-camera"></i>
+                                        <span>Change Photo</span>
                                         <input type="file" id="photoUpload" name="photoUpload" accept="image/*" onchange="previewImage(event)">
                                     </button>
         <br>
