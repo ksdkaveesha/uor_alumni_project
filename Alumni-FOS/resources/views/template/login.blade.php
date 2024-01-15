@@ -106,14 +106,14 @@
 
 	<div class="limiter" style="background-color: #E7B3F9">
 		<div class="container-login100"  style="background-color: #E7B3F9">
-			<div class="wrap-login100">
-				<form class="login100-form validate-form">
+			<div class="wrap-login100" >
+				<form class="login100-form validate-form" >
 					<span class="login100-form-title p-b-26">
 						Log In
 					</span>
-					<span class="login100-form-title p-b-48">
+					<!--<span class="login100-form-title p-b-48">
 						<i class="zmdi zmdi-font"></i>
-					</span>
+					</span>-->
 
 					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
 						<input class="input100" type="text" name="email">
@@ -124,7 +124,7 @@
 						<span class="btn-show-pass">
 							<i class="zmdi zmdi-eye"></i>
 						</span>
-						<input class="input100" type="password" name="pass">
+						<input class="input100" type="password" name="password">
 						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
@@ -142,7 +142,7 @@
 							Don’t have an account?
 						</span>
 
-						<a class="txt2" href="#">
+						<a class="txt2" href="register">
 							Sign Up
 						</a>
 					</div>

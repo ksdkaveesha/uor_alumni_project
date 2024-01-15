@@ -444,7 +444,7 @@
                        </div>
                        <hr>
                        <div class="send_btn">
-                        <div type="text" class="main_bt"><a href="">SIGN IN</a></div>
+                        <div type="text" class="main_bt"><a href="login">SIGN IN</a></div>
                         </div>
                        <br><br>
                       </form>
