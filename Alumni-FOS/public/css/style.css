@@ -344,6 +344,15 @@ button {
     top: 440px;
 }
 
+#photoUpload {
+    font-size: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
 #main_slider .carousel-control-next,
 #main_slider .carousel-control-prev {
     width: 45px;

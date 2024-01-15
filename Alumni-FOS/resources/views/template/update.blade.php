@@ -100,7 +100,7 @@
                                 <div class="col-12 col-sm-auto mb-3" >
                                 <div class="mx-auto" style="width: 140px;">
                                     <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
-                                    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;">140x140</span>
+                                    <span style="color: rgb(166, 168, 170); font: bold 8pt Arial;"><div id="imagePreview"></div></span>
                                     </div>
                                 </div>
                                 </div>
@@ -112,8 +112,9 @@
                                     <div class="mt-2">
                                     <button class="btn btn-primary" type="file" style="background-color:#390A40">
                                         <i class="fa fa-fw fa-camera"></i>
-                                        <span>Change Photo</span>
+                                        <input type="file" id="photoUpload" name="photoUpload" accept="image/*" onchange="previewImage(event)">
                                     </button>
+        <br>
                                     </div>
                                 </div>
 
@@ -488,6 +489,27 @@
 
                             </div>
                         </form>
+
+                        <script>
+                            function previewImage(event) {
+                                var input = event.target;
+                                var preview = document.getElementById('imagePreview');
+
+                                // Check if a file is selected
+                                if (input.files && input.files[0]) {
+                                    var reader = new FileReader();
+
+                                    reader.onload = function (e) {
+                                        preview.innerHTML = '<img src="' + e.target.result + '" alt="Preview">';
+                                    };
+
+                                    reader.readAsDataURL(input.files[0]);
+                                } else {
+                                    preview.innerHTML = '';
+                                }
+                            }
+                        </script>
+
                         </div>
                     </div>
                     </div>
