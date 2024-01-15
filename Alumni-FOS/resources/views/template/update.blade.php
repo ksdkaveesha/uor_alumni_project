@@ -115,7 +115,6 @@
                                         <span>Change Photo</span>
                                         <input type="file" id="photoUpload" name="photoUpload" accept="image/*" onchange="previewImage(event)">
                                     </button>
-        <br>
                                     </div>
                                 </div>
 
