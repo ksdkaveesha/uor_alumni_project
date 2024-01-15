@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
+
         <link rel="stylesheet" type="text/css" href="{{asset('css/update.css')}}">
 
        <!-- basic -->
@@ -64,9 +65,6 @@
                     </li>
                     <li class="nav-item">
                        <a class="nav-link" href="contact">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="login">Log In</a>
                     </li>
                     <!--<li class="nav-item">
                        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>

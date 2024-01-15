@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
    <head>
+
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
       <!-- basic -->
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -62,7 +70,7 @@
                         <a class="nav-link" href="contact">Contact Us</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="login">Log In</a>
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Log In</a>
                      </li>
                      <!--<li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
@@ -450,11 +458,61 @@
                       </form>
                   </div>
             </div>
-          </div>
-
-
-
+        </div>
       <!--contact section end -->
+
+      <!-- popup -->
+      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="display:flex; align-items:center; justify-content: center;">
+            <div class="modal-body">
+                <div class="wrap-login100" style="display:flex; align-items:center; justify-content: center; width:100%">
+                    <form class="login100-form validate-form" >
+                        <span class="login100-form-title p-b-26">
+                            Log In
+                        </span>
+
+                        <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c" >
+                            <input class="input100" type="text" name="email">
+                            <span class="focus-input100" data-placeholder="Email"></span>
+                        </div>
+
+                        <div class="wrap-input100 validate-input" data-validate="Enter password">
+                            <span class="btn-show-pass">
+                                <i class="zmdi zmdi-eye"></i>
+                            </span>
+                            <input class="input100" type="password" name="password">
+                            <span class="focus-input100" data-placeholder="Password"></span>
+                        </div>
+
+                        <div class="container-login100-form-btn">
+                            <div class="wrap-login100-form-btn">
+                                <div class="login100-form-bgbtn"></div>
+                                <button class="login100-form-btn">
+                                    Login
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="text-center p-t-115">
+                            <span class="txt1">
+                                Don’t have an account?
+                            </span>
+
+                            <a class="txt2" href="register">
+                                Sign Up
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <!-- popup end -->
 
       <!-- footer section start -->
       <div class="footer_section layout_padding">
