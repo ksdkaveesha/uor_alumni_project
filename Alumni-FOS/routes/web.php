@@ -32,6 +32,10 @@ Route::get('/login', function () {
     return view('template/login');
 });
 
+Route::get('/login2', function () {
+    return view('login');
+});
+
 Route::get('/forgot', function () {
     return view('forgot_pwd');
 });

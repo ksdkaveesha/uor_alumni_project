@@ -36,7 +36,7 @@
       <link rel="stylesheet" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page">
     </head>
 
-    <body style="background-color: #E7B3F9">
+    <body style="background-color: #fcf3d2">
 
         <!--header section start -->
       <div class="header_section">
@@ -93,10 +93,10 @@
             <div class="col" >
                 <div class="row">
                 <div class="col mb-3" >
-                    <div class="card" style="background-color: #E7B3F9; border:none">
-                    <div class="card-body" style="background-color: #E7B3F9; border:none">
+                    <div class="card" style="background-color: #fcf3d2; border:none">
+                    <div class="card-body" style="background-color: #fcf3d2; border:none">
                         <div class="e-profile">
-                            <div class="row" style="background-color: #E7B3F9">
+                            <div class="row" style="background-color: #fcf3d2">
                                 <div class="col-12 col-sm-auto mb-3" >
                                 <div class="mx-auto" style="width: 140px;">
                                     <div class="d-flex justify-content-center align-items-center rounded" style="height: 140px; background-color: rgb(233, 236, 239);">
@@ -110,7 +110,7 @@
                                     <p class="mb-0">@johnny.s</p>
                                     <div class="text-muted"><small>Last seen 2 hours ago</small></div>-->
                                     <div class="mt-2">
-                                    <button class="btn btn-primary" type="button" style="background-color:#390A40">
+                                    <button class="btn btn-primary" type="file" style="background-color:#390A40">
                                         <i class="fa fa-fw fa-camera"></i>
                                         <span>Change Photo</span>
                                     </button>

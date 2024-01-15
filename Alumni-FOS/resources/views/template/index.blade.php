@@ -40,7 +40,7 @@
 
 
    </head>
-   <body style="background-color: #E7B3F9">
+   <body style="background-color: #fcf3d2">
       <!--header section start -->
       <div class="header_section">
          <div class="container-fluid">
@@ -128,45 +128,54 @@
             <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content" style="display:flex; align-items:center; justify-content: center;">
                 <div class="modal-body">
-                    <div class="wrap-login100" style="display:flex; align-items:center; justify-content: center; width:100%">
-                        <form class="login100-form validate-form" >
-                            <span class="login100-form-title p-b-26">
-                                Log In
-                            </span>
+                    <!--login-->
+                                <div class="wrap-login100" style="display:flex; align-items:center; justify-content: center; width:100%">
 
-                            <div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c" >
-                                <input class="input100" type="text" name="email">
-                                <span class="focus-input100" data-placeholder="Email"></span>
-                            </div>
+                                    <form class="login100-form validate-form" style="width: 100%">
+                                        <span class="login100-form-title">
+                                            Member Login
+                                        </span>
 
-                            <div class="wrap-input100 validate-input" data-validate="Enter password">
-                                <span class="btn-show-pass">
-                                    <i class="zmdi zmdi-eye"></i>
-                                </span>
-                                <input class="input100" type="password" name="password">
-                                <span class="focus-input100" data-placeholder="Password"></span>
-                            </div>
+                                        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+                                            <input class="input100" type="text" name="email" placeholder="Email">
+                                            <span class="focus-input100"></span>
+                                            <span class="symbol-input100">
+                                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
 
-                            <div class="container-login100-form-btn">
-                                <div class="wrap-login100-form-btn">
-                                    <div class="login100-form-bgbtn"></div>
-                                    <button class="login100-form-btn">
-                                        Login
-                                    </button>
+                                        <div class="wrap-input100 validate-input" data-validate = "Password is required">
+                                            <input class="input100" type="password" name="pass" placeholder="Password">
+                                            <span class="focus-input100"></span>
+                                            <span class="symbol-input100">
+                                                <i class="fa fa-lock" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+
+                                        <div class="container-login100-form-btn">
+                                            <button class="login100-form-btn">
+                                                Login
+                                            </button>
+                                        </div>
+
+                                        <div class="text-center p-t-12">
+                                            <span class="txt1">
+                                                Forgot
+                                            </span>
+                                            <a class="txt2" href="#">
+                                                Password?
+                                            </a>
+                                        </div>
+
+                                        <div class="text-center p-t-136">
+                                            <a class="txt2" href="#">
+                                                Create your Account
+                                                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+                                            </a>
+                                        </div>
+                                    </form>
                                 </div>
-                            </div>
-
-                            <div class="text-center p-t-115">
-                                <span class="txt1">
-                                    Don’t have an account?
-                                </span>
-
-                                <a class="txt2" href="register">
-                                    Sign Up
-                                </a>
-                            </div>
-                        </form>
-                    </div>
+                        <!--end login-->
                 </div>
                 <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>

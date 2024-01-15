@@ -59,9 +59,16 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Smooch+Sans%3A700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro%3A400%2C600%2C700"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C600%2C700"/>
+  <link rel="stylesheet" href="{{asset('css/login.css')}}"/>
+
 </head>
 
-<body style="background-color: #E7B3F9">
+<body style="background-color: #fcf3d2">
 
     <!--header section start -->
     <div class="header_section">
@@ -104,46 +111,52 @@
      </div>
      <!--header section end -->
 
-	<div class="limiter" style="background-color: #E7B3F9">
-		<div class="container-login100"  style="background-color: #E7B3F9">
-			<div class="wrap-login100" >
-				<form class="login100-form validate-form" >
-					<span class="login100-form-title p-b-26">
-						Log In
-					</span>
-					<!--<span class="login100-form-title p-b-48">
-						<i class="zmdi zmdi-font"></i>
-					</span>-->
+     <!--login-->
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is: a@b.c">
-						<input class="input100" type="text" name="email">
-						<span class="focus-input100" data-placeholder="Email"></span>
+     <div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100" >
+
+				<form class="login100-form validate-form" style="width: 100%">
+					<span class="login100-form-title">
+						Member Login
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+						<input class="input100" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate="Enter password">
-						<span class="btn-show-pass">
-							<i class="zmdi zmdi-eye"></i>
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100" type="password" name="pass" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
 						</span>
-						<input class="input100" type="password" name="password">
-						<span class="focus-input100" data-placeholder="Password"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
-						<div class="wrap-login100-form-btn">
-							<div class="login100-form-bgbtn"></div>
-							<button class="login100-form-btn">
-								Login
-							</button>
-						</div>
+						<button class="login100-form-btn">
+							Login
+						</button>
 					</div>
 
-					<div class="text-center p-t-115">
+					<div class="text-center p-t-12">
 						<span class="txt1">
-							Don’t have an account?
+							Forgot
 						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>
 
-						<a class="txt2" href="register">
-							Sign Up
+					<div class="text-center p-t-136">
+						<a class="txt2" href="#">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
 					</div>
 				</form>
@@ -151,8 +164,7 @@
 		</div>
 	</div>
 
-
-	<div id="dropDownSelect1"></div>
+    <!--end login-->
 
     <!-- footer section start -->
     <div class="footer_section layout_padding">
