@@ -24,6 +24,10 @@ Route::get('/index', function () {
     return view('index');
 });
 
+Route::get('/register2', function () {
+    return view('template/reg');
+});
+
 Route::get('/register', function () {
     return view('template/register');
 });
