@@ -131,7 +131,7 @@
                     <!--login-->
                                 <div class="wrap-login100" style="display:flex; align-items:center; justify-content: center; width:100%">
 
-                                    <form class="login100-form validate-form" style="width: 100%">
+                                    <form class="login100-form validate-form" style="width: 100%; ">
                                         <span class="login100-form-title">
                                             Member Login
                                         </span>
@@ -167,7 +167,7 @@
                                             </a>
                                         </div>
 
-                                        <div class="text-center p-t-136">
+                                        <div class="text-center p-t-13">
                                             <a class="txt2" href="#">
                                                 Create your Account
                                                 <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
