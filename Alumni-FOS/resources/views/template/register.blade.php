@@ -101,35 +101,36 @@
             <br><br>
             <div class="col-md-6 px-5">
                 <div class="form_container">
-                    <form action="<?=url('/admin_form')?>" method="POST">
+                    <form action="<?=url('/register_form')?>" method="POST" id="registrationForm">
                         @csrf
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="text" class="email-bt" placeholder="Full Name" name="name" id="name" required/>
+                            <input type="text" class="email-bt" placeholder="Full Name" name="name" id="name" value="{{old('name')}}" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="text" id="sc_number" name="sc_number" class="email-bt" placeholder="Student Number" required/>
+                            <input type="text" id="sc_number" name="sc_number" class="email-bt" placeholder="Student Number" value="{{old('sc_number')}}" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="password" id="c_sc_number" name="c_sc_number" class="email-bt" placeholder="Comfirm Student Number" required/>
+                            <input type="password" id="c_sc_number" oninput="validateConfirmPassword()" name="c_sc_number" value="{{old('c_sc_number')}}" class="email-bt" placeholder="Comfirm Student Number" required/>
+                            <p style="color: red" id="matchsc"></p>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="email" class="email-bt" id="email" name="email" placeholder="Email" required/>
+                            <input type="email" class="email-bt" id="email" name="email" value="{{old('email')}}" placeholder="Email" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col-lg-5">
-                              <select class="select-bt" id="m_code" name="m_code" required>
+                              <select class="select-bt" id="m_code" name="m_code" value="{{old('m_code')}}" required>
                                   <option value="" disabled selected>Country</option>
                                   <option value="93">Afghanistan +93</option>
                                   <option value="358">Aland Islands +358</option>
@@ -387,7 +388,7 @@
                           </div>
 
                           <div class="form-group col-lg-7">
-                            <input type="text" class="email-bt" placeholder="Phone Number" id="mobile" name="mobile" required/>
+                            <input type="text" class="email-bt" placeholder="Phone Number" id="mobile" name="mobile" value="{{old('mobile')}}" required/>
                           </div>
                         </div>
 
@@ -431,24 +432,27 @@
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="text" class="email-bt" placeholder="User Name" id="username" name="username" required/>
+                            <input type="text" class="email-bt" placeholder="User Name" id="username" name="username" value="{{old('username')}}" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="password" class="email-bt" placeholder="Password" id="password" name="password" required/>
+                            <input type="password" class="email-bt" placeholder="Password" id="password" name="password" value="{{old('password')}}" required/>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="password" class="email-bt" placeholder="Comfirm Password" id="c_password" name="password" required/>
+                            <input type="password" class="email-bt" placeholder="Comfirm Password" id="confirmPassword" oninput="validateConfirmPassword()" name="password" value="{{old('c_password')}}" required/>
+
+                                <p style="color: red" id="matchp"></p>
+
                           </div>
                         </div>
 
                         <div class="send_btn">
-                          <div type="text" class="main_bt"><button type="submit">REGISTER</button></div>
+                          <div type="text" class="main_bt"><button type="submit" id="submitButton" onclick="validateForm()">REGISTER</button></div>
                        </div>
                        <hr>
                        <div class="send_btn">
@@ -623,6 +627,103 @@
             });
         });
       </script>
+
+        <!--password and scnum comfirm-->
+        <script>
+            function validateConfirmPassword() {
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
+                var confirmPasswordField = document.getElementById("confirmPassword");
+
+                var sc_number = document.getElementById("sc_number").value;
+                var c_sc_number = document.getElementById("c_sc_number").value;
+                var c_sc_numberField = document.getElementById("c_sc_number");
+
+                var submitButton = document.getElementById("submitButton");
+
+                if(sc_number == c_sc_number){
+                    c_sc_numberField.classList.remove("password-mismatch");
+                    document.getElementById("matchsc").innerHTML = "";
+                    if(password == confirmPassword){
+                        confirmPasswordField.classList.remove("password-mismatch");
+                        document.getElementById("matchp").innerHTML = "";
+                        submitButton.disabled = false;
+                    } else{
+                        confirmPasswordField.classList.add("password-mismatch");
+                        document.getElementById("matchp").innerHTML = "*password mismatch";
+                        submitButton.disabled = true;
+                    }
+                } else if(sc_number !== c_sc_number){
+                    c_sc_numberField.classList.add("password-mismatch");
+                    document.getElementById("matchsc").innerHTML = "*SC Number mismatch";
+                    if(password !== confirmPassword){
+                        confirmPasswordField.classList.add("password-mismatch");
+                        document.getElementById("matchp").innerHTML = "*password mismatch";
+                        submitButton.disabled = true;
+                    } else{
+                        confirmPasswordField.classList.remove("password-mismatch");
+                        document.getElementById("matchp").innerHTML = "";
+                        submitButton.disabled = true;
+                    }
+                } else{
+                    submitButton.disabled = false;
+                }
+
+                /*if (password !== confirmPassword) {
+                    confirmPasswordField.classList.add("password-mismatch");
+                    document.getElementById("matchp").innerHTML = "*password mismatch";
+                    submitButton.disabled = true;
+                }
+                else {
+                    confirmPasswordField.classList.remove("password-mismatch");
+                    document.getElementById("matchp").innerHTML = "";
+                    submitButton.disabled = false;
+                }*/
+            }
+
+            /*function validateConfirmscnumber() {
+                var sc_number = document.getElementById("sc_number").value;
+                var c_sc_number = document.getElementById("c_sc_number").value;
+
+                var c_sc_numberField = document.getElementById("c_sc_number");
+                var submitButton = document.getElementById("submitButton");
+
+                if (sc_number !== c_sc_number) {
+                    c_sc_numberField.classList.add("password-mismatch");
+                    document.getElementById("matchsc").innerHTML = "*SC Number mismatch";
+                    submitButton.disabled = true;
+                } else {
+                    c_sc_numberField.classList.remove("password-mismatch");
+                    document.getElementById("matchsc").innerHTML = "";
+                    submitButton.disabled = false;
+                }
+            }*/
+
+            /*function validateForm() {
+                function validateForm() {
+                var password = document.getElementById("password").value;
+                var confirmPassword = document.getElementById("confirmPassword").value;
+
+                var passwordField = document.getElementById("password");
+                var confirmPasswordField = document.getElementById("confirmPassword");
+
+                if (password !== confirmPassword) {
+                    alert("Passwords do not match. Please try again.");
+                    var selectElement = document.getElementById('c_password');
+                    selectElement.selectedIndex = -1;
+                    //passwordField.classList.add("password-mismatch");
+                    //confirmPasswordField.classList.add("password-mismatch");
+                } else {
+                    alert("Account created successfully!");
+                    //passwordField.classList.remove("password-mismatch");
+                    //confirmPasswordField.classList.remove("password-mismatch");
+                    // You can choose to submit the form or perform other actions.
+                }
+            }
+            }*/
+        </script>
+        <!--password and scnum comfirm end-->
+
      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </body>
 </html>

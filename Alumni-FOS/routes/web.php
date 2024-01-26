@@ -48,5 +48,4 @@ Route::get('/update', function () {
     return view('template/update');
 });
 
-Route::post('/admin_form', [AluminiMemberController::class,'register_alumini_member']);
-//Route::post('/admin_form', [DepartmentController::class,'register_alumini_member']);
+Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
