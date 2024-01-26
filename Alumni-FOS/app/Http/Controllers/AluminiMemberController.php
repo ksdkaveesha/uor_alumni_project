@@ -64,6 +64,22 @@ class AluminiMemberController extends Controller
     }
 
     function register_alumini_member(Request $request){
+
+        Validator::extend('scnumber',function($attribute, $value, $parameters, $validator){
+            $pattern = '/^SC\/\d(4)\/\d(4,5)$/';
+
+            return preg_match($pattern, $value) === 1;
+        });
+
+        Validator::replacer('scnumber',function($message, $attribute, $rule, $parameters){
+            return str_replace(':attribute',$attribute,'Invalid Format SC/YYYY/NNNNNN');
+        });
+
+        $request->validate([
+            'sc_num'=>'scnumber',
+        ]);
+
+
         $alumini_member = new alumini_member();
         $alumini_member->name = $request->input('name');
         $alumini_member->sc_num = $request->input('sc_number');
@@ -76,5 +92,6 @@ class AluminiMemberController extends Controller
         $alumini_member->save();
 
         return redirect()->back();
+
     }
 }
