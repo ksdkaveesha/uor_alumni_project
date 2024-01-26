@@ -403,7 +403,7 @@
 
                         <div class="form-row" id="special_degree_div" >
                           <div class="form-group col">
-                              <select name="degree" id="sp_degree" class="select-bt" required>
+                              <select name="degree" id="sp_degree" class="select-bt">
                                   <option value="" selected disabled>Select your Degree</option>
                                   <option value="bcs_cs_s">BCS Special in Computer Science </option>
                                   <option value="bsc_statistics_s">BSc Special in Statistics </option>
@@ -418,7 +418,7 @@
 
                         <div class="form-row" id="General_degree_div">
                           <div class="form-group col">
-                              <select name="degree" id="g_degree" class="select-bt" required>
+                              <select name="degree" id="g_degree" class="select-bt">
                                   <option value="" selected disabled>Select your Degree</option>
                                   <option value="ps_bsc_g">BSc in physical sciences </option>
                                   <option value="bio_bsc_g">BSc in Bio Sciences </option>
@@ -612,9 +612,13 @@
                 if($(this).val() === "General"){
                     $("#special_degree_div").hide();
                     $("#General_degree_div").show();
+                    var selectElement = document.getElementById('sp_degree');
+                    selectElement.selectedIndex = -1;
                 } else if($(this).val() === "Special"){
                     $("#General_degree_div").hide();
                     $("#special_degree_div").show();
+                    var selectElement = document.getElementById('g_degree');
+                    selectElement.selectedIndex = -1;
                 }
             });
         });

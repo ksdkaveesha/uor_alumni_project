@@ -13,15 +13,20 @@ return new class extends Migration
     {
         Schema::create('alumini_members', function (Blueprint $table) {
             $table->id();
+
             $table->string('sc_num');
             $table->string('email');
             $table->string('name');
             $table->integer('m_code');
             $table->integer('mobile');
-            $table->string('d_type');
+            $table->string('degree_type');
             $table->string('degree');
-            $table->unsignedBigInteger('dep_id');
-           $table->foreign('dep_id')->references('id')->on('departments');
+            $table->string('id_num')->nullable();
+            $table->string('enroll_year')->nullable();
+            $table->string('address')->nullable();
+            $table->string('agreement')->nullable();
+            $table->string('graduation_year')->nullable();
+
             $table->timestamps();
         });
     }

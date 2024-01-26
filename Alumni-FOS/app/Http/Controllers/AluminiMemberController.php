@@ -70,10 +70,8 @@ class AluminiMemberController extends Controller
         $alumini_member->email = $request->input('email');
         $alumini_member->m_code = $request->input('m_code');
         $alumini_member->mobile = $request->input('mobile');
-        $alumini_member->d_type = $request->input('degree_type');
+        $alumini_member->degree_type = $request->input('degree_type');
         $alumini_member->degree = $request->input('degree');
-
-        $degree = $request->input('degree');
 
         $alumini_member->save();
 
