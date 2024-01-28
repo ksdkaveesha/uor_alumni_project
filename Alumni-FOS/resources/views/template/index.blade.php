@@ -404,7 +404,7 @@
                    <div class="row">
                       <div class="col-md-12">
                          <div class="testimonial_section_2">
-                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="images/quick-icon.png"></span></h4>
+                            <h4 class="client_name_text">Monila <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
                             <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
                          </div>
                       </div>
@@ -432,7 +432,7 @@
                    <div class="row">
                       <div class="col-md-12">
                          <div class="testimonial_section_2">
-                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="images/quick-icon.png"></span></h4>
+                            <h4 class="client_name_text">Monila <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
                             <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
                          </div>
                       </div>

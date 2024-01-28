@@ -691,7 +691,7 @@ a:hover {
     width: 100%;
     float: left;
     font-size: 40px;
-    color: #f76d37;
+    color: #000000;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
 }
@@ -745,7 +745,7 @@ a:hover {
     width: 100%;
     float: left;
     font-size: 24px;
-    color: #f76d37;
+    color: #390A40;
     text-transform: uppercase;
     padding-left: 100px;
     font-weight: bold;
@@ -782,7 +782,7 @@ a:hover {
 }
 
 .carousel-indicators .active {
-    background-color: #f76d37;
+    background-color: #520e5d;
 }
 
 /* client section end */
@@ -799,7 +799,7 @@ a:hover {
     float: left;
     font-size: 40px;
     text-align: center;
-    color: #f76d37;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -878,7 +878,7 @@ a:hover {
     text-align: center;
     font-size: 16px;
     color: #ffffff;
-    background-color: #d33a11;
+    background-color: #390A40;
     padding: 15px 50px 12px 50px;
     border-radius: 30px;
     display: block;
@@ -886,7 +886,7 @@ a:hover {
 
 .main_bt a {
     color: #ffffff;
-    background-color: #d33a11;
+    background-color: #390A40;
 }
 
 .main_bt a:hover {
@@ -1037,7 +1037,7 @@ a:hover {
     text-align: center;
     font-size: 16px;
     color: #ffffff;
-    background-color: #d33a11;
+    background-color: #390A40;
     padding: 15px 50px 12px 50px;
     border-radius: 30px;
     display: block;
@@ -1045,7 +1045,7 @@ a:hover {
 
 .main_bt button {
     color: #ffffff;
-    background-color: #d33a11;
+    background-color: #390A40;
 }
 
 .main_bt button:hover {

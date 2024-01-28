@@ -96,6 +96,8 @@
                     <div class="card" style="background-color: #fcf3d2; border:none">
                     <div class="card-body" style="background-color: #fcf3d2; border:none">
                         <div class="e-profile">
+
+                        <div class="column">
                             <div class="row" style="background-color: #fcf3d2">
                                 <div class="col-12 col-sm-auto mb-3" >
                                 <div class="mx-auto" style="width: 140px;">
@@ -120,7 +122,59 @@
 
                                 </div>
                             </div>
+                        </div>             <div class="column">
+                                        <div class="row">
+                                            <div class="col">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div class="form-group">
+                                                    <label>Year of Graduation</label>
+                                                    <input class="form-control" type="text" placeholder="06/10/1988">
+                                                    </div>
+                                                </div>
+                                                </div>
 
+                                                <div class="mb-2"><b>Occupation Details</b></div>
+                                                <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                         <div class="mb-3">
+                                                            <label for="sector" class="form-label">Sector</label>
+                                                            <select class="form-control" id="sector" name="sector">
+                                                                    <option value="Public">Public</option>
+                                                                    <option value="Private">Private</option>
+                                                                    <option value="Algeria">Own Business</option></div>
+                                                            </select>
+                                                        </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                               <div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                        <label>Designation</label>
+                                                        <input class="form-control" type="text" placeholder="">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                 <!--<div class="row">
+                                                    <div class="col">
+                                                        <div class="form-group">
+                                                        <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
+                                                        <input class="form-control" type="password" placeholder="••••••"></div>
+                                                    </div>
+                                                </div>-->
+
+                                                <div class="row">
+                                                    <div class="col d-flex justify-content-end">
+                                                        <button class="btn btn-primary" type="submit" style="background-color:#390A40">Save Changes</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
                             <div class="tab-content pt-3">
                                 <div class="tab-pane active">
                                     <form class="form" novalidate="">
@@ -156,14 +210,7 @@
                                                     </div>
                                                 </div>
                                                 </div>
-                                                <div class="row">
-                                                <div class="col">
-                                                    <div class="form-group">
-                                                    <label>Year of Graduation</label>
-                                                    <input class="form-control" type="text" placeholder="06/10/1988">
-                                                    </div>
-                                                </div>
-                                                </div>
+                                                
                                                 <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
@@ -181,9 +228,10 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                     <div class="mb-3">
-                <label for="address" class="form-label">Residential Address</label>
-                <input type="address" class="form-control" id="address" name="address">
-            </div>
+                                                    <label for="address" class="form-label">Residential Address</label>
+                                                    <input type="address" class="form-control" id="address" name="address">
+                                                </div>
+                                            </div>
 
 
             <div class="mb-3">
@@ -443,48 +491,9 @@
                                                 </div>-->
                                             </div>
                                         </div>
-                                        <div class="row">
-                                            <div class="col-12 col-sm-6 mb-3">
-                                                <div class="mb-2"><b>Occupation Details</b></div>
-                                                <div class="row">
-                                                    <div class="col">
-                                                        <div class="form-group">
-                                                         <div class="mb-3">
-                                                            <label for="sector" class="form-label">Sector</label>
-                                                            <select class="form-control" id="sector" name="sector">
-                                                                    <option value="Public">Public</option>
-                                                                    <option value="Private">Private</option>
-                                                                    <option value="Algeria">Own Business</option></div>
-                                                            </select>
-                                                        </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                               <div class="row">
-                                                    <div class="col">
-                                                        <div class="form-group">
-                                                        <label>Designation</label>
-                                                        <input class="form-control" type="text" placeholder="">
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                 <!--<div class="row">
-                                                    <div class="col">
-                                                        <div class="form-group">
-                                                        <label>Confirm <span class="d-none d-xl-inline">Password</span></label>
-                                                        <input class="form-control" type="password" placeholder="••••••"></div>
-                                                    </div>
-                                                </div>-->
 
-                                                <div class="row">
-                                                    <div class="col d-flex justify-content-end">
-                                                        <button class="btn btn-primary" type="submit" style="background-color:#390A40">Save Changes</button>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </form>
-                                </div>
+                           
+                            </div>
                             </div>
 
                             </div>
