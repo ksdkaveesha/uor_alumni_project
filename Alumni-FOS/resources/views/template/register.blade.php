@@ -113,6 +113,9 @@
                           <div class="form-group col">
                             <input type="text" id="sc_number" name="sc_number" class="email-bt" placeholder="Student Number" value="{{old('sc_number')}}" required/>
                           </div>
+                            @error('sc_num')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
 
                         <div class="form-row">

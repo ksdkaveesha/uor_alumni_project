@@ -2,10 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\alumini_member;
+use App\Models\alumini_member as Authenticatable;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
+use App\Rules\scnum;
 
-class AluminiMemberController extends Controller
+class AluminiMemberController extends Authenticatable
 {
     /**
      * Display a listing of the resource.
@@ -65,18 +67,22 @@ class AluminiMemberController extends Controller
 
     function register_alumini_member(Request $request){
 
-        Validator::extend('scnumber',function($attribute, $value, $parameters, $validator){
-            $pattern = '/^SC\/\d(4)\/\d(4,5)$/';
+        /*    // Custom validation rule for sc_num
+        Validator::extend('scnumber', function ($attribute, $value, $parameters, $validator) {
+            $pattern = '/^SC\/\d{4}\/\d{4,5}$/';
 
             return preg_match($pattern, $value) === 1;
         });
 
-        Validator::replacer('scnumber',function($message, $attribute, $rule, $parameters){
-            return str_replace(':attribute',$attribute,'Invalid Format SC/YYYY/NNNNNN');
-        });
+        // Custom error message for the scnumber rule
+        Validator::replacer('scnumber', function ($message, $attribute, $rule, $parameters) {
+            return str_replace(':attribute', $attribute, 'Invalid Format SC/YYYY/NNNNNN');
+        });*/
 
+        // Validate the request data
         $request->validate([
-            'sc_num'=>'scnumber',
+            'sc_num' => [ new scnum], // Using the custom scnumber rule
+            // Add other validation rules for your other fields here
         ]);
 
 
