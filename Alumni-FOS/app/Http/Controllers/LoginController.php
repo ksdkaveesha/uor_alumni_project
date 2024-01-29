@@ -4,7 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\login;
 use Illuminate\Http\Request;
-
+use App\Models\alumini_member;
+use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
     /**

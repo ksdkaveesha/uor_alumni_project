@@ -84,6 +84,11 @@
 
       <!-- contact section start-->
       <div class="contact_section layout_padding">
+        @if (session('success'))
+            <div class="alert alert-success">
+                {{ session('success') }}
+            </div>
+        @endif
          <div class="container">
             <h1 class="contact_text">Register Now</h1>
             <br><br><br><br>
@@ -112,22 +117,26 @@
                         <div class="form-row">
                           <div class="form-group col">
                             <input type="text" id="sc_number" name="sc_number" class="email-bt" placeholder="Student Number" value="{{old('sc_number')}}" required/>
-                          </div>
-                            @error('sc_num')
+                            @error('sc_number')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
 
+                        </div>
+
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="password" id="c_sc_number" oninput="validateConfirmPassword()" name="c_sc_number" value="{{old('c_sc_number')}}" class="email-bt" placeholder="Comfirm Student Number" required/>
+                            <input type="password" id="c_sc_number" name="sc_number_confirmation" class="email-bt" placeholder="Comfirm Student Number" required/>
                             <p style="color: red" id="matchsc"></p>
                           </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="email" class="email-bt" id="email" name="email" value="{{old('email')}}" placeholder="Email" required/>
+                            <input type="text" class="email-bt" id="email" name="email" value="{{old('email')}}" placeholder="Email" required/>
+                            @error('email')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                           </div>
                         </div>
 
@@ -397,7 +406,7 @@
 
                         <div class="form-row">
                           <div class="form-group col">
-                              <select name="degree_type" id="degree_type" class="select-bt" required>
+                              <select name="degree_type" id="degree_type" class="select-bt">
                                   <option value="none" selected disabled>Degree Programe</option>
                                   <option value="General">General</option>
                                   <option value="Special">Special</option>
@@ -433,21 +442,24 @@
 
 
 
-                        <div class="form-row">
+                        {{--  <div class="form-row">
                           <div class="form-group col">
                             <input type="text" class="email-bt" placeholder="User Name" id="username" name="username" value="{{old('username')}}" required/>
                           </div>
-                        </div>
+                        </div>  --}}
 
                         <div class="form-row">
                           <div class="form-group col">
                             <input type="password" class="email-bt" placeholder="Password" id="password" name="password" value="{{old('password')}}" required/>
-                          </div>
+                            @error('password')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
+                        </div>
                         </div>
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="password" class="email-bt" placeholder="Comfirm Password" id="confirmPassword" oninput="validateConfirmPassword()" name="password" value="{{old('c_password')}}" required/>
+                            <input type="password" class="email-bt" placeholder="Comfirm Password" id="confirmPassword" name="password_confirmation" required/>
 
                                 <p style="color: red" id="matchp"></p>
 
@@ -455,7 +467,7 @@
                         </div>
 
                         <div class="send_btn">
-                          <div type="text" class="main_bt"><button type="submit" id="submitButton" onclick="validateForm()">REGISTER</button></div>
+                          <div type="text" class="main_bt"><input type="submit" id="submitButton" value="Register"></div>
                        </div>
                        <hr>
                        <div class="send_btn">
@@ -632,7 +644,7 @@
       </script>
 
         <!--password and scnum comfirm-->
-        <script>
+        {{--  <script>
             function validateConfirmPassword() {
                 var password = document.getElementById("password").value;
                 var confirmPassword = document.getElementById("confirmPassword").value;
@@ -724,7 +736,7 @@
                 }
             }
             }*/
-        </script>
+        </script>  --}}
         <!--password and scnum comfirm end-->
 
      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>

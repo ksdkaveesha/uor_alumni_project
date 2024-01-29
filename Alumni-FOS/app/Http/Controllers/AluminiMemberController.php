@@ -2,12 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\alumini_member as Authenticatable;
+use App\Models\alumini_member;
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Rules\scnum;
+use Illuminate\Support\Facades\Hash;
 
-class AluminiMemberController extends Authenticatable
+class AluminiMemberController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -66,8 +68,8 @@ class AluminiMemberController extends Authenticatable
     }
 
     function register_alumini_member(Request $request){
-
-        /*    // Custom validation rule for sc_num
+        //dd("test");
+           // Custom validation rule for sc_num
         Validator::extend('scnumber', function ($attribute, $value, $parameters, $validator) {
             $pattern = '/^SC\/\d{4}\/\d{4,5}$/';
 
@@ -77,11 +79,15 @@ class AluminiMemberController extends Authenticatable
         // Custom error message for the scnumber rule
         Validator::replacer('scnumber', function ($message, $attribute, $rule, $parameters) {
             return str_replace(':attribute', $attribute, 'Invalid Format SC/YYYY/NNNNNN');
-        });*/
+        });
 
         // Validate the request data
         $request->validate([
-            'sc_num' => [ new scnum], // Using the custom scnumber rule
+            'sc_number' => 'scnumber|confirmed',
+            'email' => 'email|unique:users|unique:alumini_members',
+            'password' => 'confirmed',
+
+             // Using the custom scnumber rule
             // Add other validation rules for your other fields here
         ]);
 
@@ -95,9 +101,14 @@ class AluminiMemberController extends Authenticatable
         $alumini_member->degree_type = $request->input('degree_type');
         $alumini_member->degree = $request->input('degree');
 
-        $alumini_member->save();
+        $user = new User();
+        $user->email = $request->input('email');
+        $user->password = Hash::make($request->input('password'));
+        $user->role = "alumni";
 
-        return redirect()->back();
+        $alumini_member->save();
+        $user->save();
+        return redirect()->back()->with('success', 'Registered successfully!');
 
     }
 }
