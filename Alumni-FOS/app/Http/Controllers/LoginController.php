@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\login;
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\alumini_member;
 use Illuminate\Support\Facades\Auth;
@@ -65,13 +66,22 @@ class LoginController extends Controller
     }
 
     function authenticate(Request $request){
+        $request->validate([
+            'email' => 'required|email',
+            'password' => 'required'// Add other validation rules for your other fields here
+        ]);
         $email = $request->input('email');
-        $pass = $request->input('pass');
+        $password = $request->input('password');
 
-        if(Auth::attempt(['email'=>$email, 'pass'=>$pass])){
-            $alumini_member = alumini_member::where('email',$email)->first();
-            Auth::login($alumini_member);
-            return redirect('\update');
+        if(Auth::attempt(['email'=>$email, 'password'=>$password])){
+            $user = User::where('email',$email)->first();
+
+            if($user->role=="alumni"){
+                $alumini_member = alumini_member::where('email',$email)->first();
+                Auth::login($alumini_member);
+                return redirect('/update');
+            }
+
         } else{
             return redirect()->back()->with('error','invalid username or Password');
         }

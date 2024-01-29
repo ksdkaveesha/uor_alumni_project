@@ -183,7 +183,7 @@
                                               <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
-                                                    <label>Full Name</label>
+                                                    <label>Full Name </label>
                                                     <input class="form-control" type="text" name="name" placeholder="" >
                                                     </div>
                                                 </div>
@@ -206,11 +206,11 @@
                                                 <div class="col">
                                                     <div class="form-group">
                                                     <label>Email</label>
-                                                    <input class="form-control" type="text" placeholder="user@example.com">
+                                                    <input class="form-control" type="text" placeholder="user@example.com" value="{{ auth()->user()->email }}">
                                                     </div>
                                                 </div>
                                                 </div>
-                                                
+
                                                 <div class="row">
                                                 <div class="col">
                                                     <div class="form-group">
@@ -492,7 +492,7 @@
                                             </div>
                                         </div>
 
-                           
+
                             </div>
                             </div>
 

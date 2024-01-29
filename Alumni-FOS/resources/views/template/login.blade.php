@@ -109,29 +109,45 @@
            </nav>
         </div>
      </div>
+
      <!--header section end -->
 
      <!--login-->
 
      <div class="limiter">
+
 		<div class="container-login100">
 			<div class="wrap-login100" >
 
-				<form class="login100-form validate-form" style="width: 100%">
-					<span class="login100-form-title">
+				<form action="<?=url('/login')?>" method="POST" class="login100-form validate-form" style="width: 100%">
+					@csrf
+
+                    <span class="login100-form-title">
 						Member Login
+                        @if (session('error'))
+                        <div class="alert alert-danger">
+                            {{ session('success') }}
+                        </div>
+                    @endif
 					</span>
 
-					<div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
+					<div class="wrap-input100 validate-input">
+
 						<input class="input100" type="text" name="email" placeholder="Email">
+                        @error('email')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-envelope" aria-hidden="true"></i>
 						</span>
 					</div>
 
-					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+					<div class="wrap-input100 validate-input">
+						<input class="input100" type="password" name="password" placeholder="Password">
+                        @error('password')
+                            <div class="alert alert-danger">{{ $message }}</div>
+                        @enderror
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -139,9 +155,7 @@
 					</div>
 
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
-							Login
-						</button>
+						<input type="submit" value="Login" class="login100-form-btn">
 					</div>
 
 					<div class="text-center p-t-12">

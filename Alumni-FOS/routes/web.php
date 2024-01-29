@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AluminiMemberController;
 use App\Http\Controllers\DepartmentController;
@@ -49,3 +50,4 @@ Route::get('/update', function () {
 });
 
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
+Route::post('/login', [LoginController::class,'authenticate']);
