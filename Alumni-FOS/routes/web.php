@@ -53,5 +53,10 @@ Route::get('/test', function () {
     return view('test');
 });
 
+Route::get('/user', function () {
+    return view('template/user');
+});
+
+
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
 Route::post('/login', [LoginController::class,'authenticate']);
