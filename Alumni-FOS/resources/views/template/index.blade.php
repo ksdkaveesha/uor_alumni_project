@@ -234,12 +234,12 @@
      <!-- gallery section start-->
       <div class="gallery_section layout_padding">
          <div class="container">
-            <div class="row">
+            <!--<div class="row">
                <div class="col-sm-12">
                   <h1 class="gallery_taital">Our Gallery</h1>
                   <p class="gallery_text">Lorem Ipsum is simply dummy text of printing typesetting ststry lorem Ipsum the industry'ndard dummy text ever since of the 1500s, when an unknown printer took a galley of type and scra make a type specimen book. It has</p>
                </div>
-            </div>
+            </div>-->
             <div class="">
                <div class="gallery_section_2">
                   <div class="row">
@@ -294,29 +294,29 @@
                        </div>
                        <h3 class="decorate_text">1st notice</h3>
                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                       <div class="readmore_bt"><a href="#">Read More</a></div>
+
                     </div>
                  </div>
                  <div class="col-lg-4 col-sm-12 col-md-4">
                     <div class="box_main">
                        <div class="house_icon">
-                          <img src="images/icon2.png" class="image_1">
-                          <img src="images/icon2.png" class="image_2">
+                          <img src="images/icon1.png" class="image_1">
+                          <img src="images/icon1.png" class="image_2">
                        </div>
                        <h3 class="decorate_text">2nd notice</h3>
                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                       <div class="readmore_bt"><a href="#">Read More</a></div>
+
                     </div>
                  </div>
                  <div class="col-lg-4 col-sm-12 col-md-4">
                     <div class="box_main">
                        <div class="house_icon">
-                          <img src="images/icon3.png" class="image_1">
-                          <img src="images/icon3.png" class="image_2">
+                          <img src="images/icon1.png" class="image_1">
+                          <img src="images/icon1.png" class="image_2">
                        </div>
                        <h3 class="decorate_text">3rd notice</h3>
                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                       <div class="readmore_bt"><a href="#">Read More</a></div>
+
                     </div>
                  </div>
               </div>
@@ -405,7 +405,7 @@
       <div class="contact_section_1 layout_padding">
          <div class="container-fluid">
             <div class="row">
-               <div class="col-md-6 padding_0">
+               <div class="col-md-5 padding_0">
                   <div class="mail_section">
                      <div class="email_text">
                         <div class="form-group">
@@ -426,7 +426,7 @@
                      </div>
                   </div>
                </div>
-               <div class="col-md-6 padding_0">
+               <div class="col-md-7 padding_0">
                   <div class="map-responsive">
                      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.409982521399!2d80.57355947387634!3d5.93809209404631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae1391b4a29e707%3A0xd54277175e326bc2!2sUniversity%20of%20Ruhuna!5e0!3m2!1sen!2slk!4v1706937224326!5m2!1sen!2slk" width="600" height="508" frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
                   </div>

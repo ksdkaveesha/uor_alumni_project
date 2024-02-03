@@ -587,7 +587,7 @@ a:hover {
 }
 
 .house_icon img {
-    width: 45px;
+    width: 60px;
     min-height: 50px;
 }
 
@@ -609,7 +609,7 @@ a:hover {
 
 .box_main {
     width: 100%;
-    background-color: #767676;
+    background-color: #272029;
     padding: 40px 30px;
     box-shadow: 0px 0px 18px -6px;
 }
