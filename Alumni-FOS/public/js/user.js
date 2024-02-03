@@ -7,7 +7,7 @@
 */
 (function() {
     "use strict";
-  
+
     /**
      * Easy selector helper function
      */
@@ -19,7 +19,7 @@
         return document.querySelector(el)
       }
     }
-  
+
     /**
      * Easy event listener function
      */
@@ -33,14 +33,14 @@
         }
       }
     }
-  
+
     /**
-     * Easy on scroll event listener 
+     * Easy on scroll event listener
      */
     const onscroll = (el, listener) => {
       el.addEventListener('scroll', listener)
     }
-  
+
     /**
      * Navbar links active state on scroll
      */
@@ -60,7 +60,7 @@
     }
     window.addEventListener('load', navbarlinksActive)
     onscroll(document, navbarlinksActive)
-  
+
     /**
      * Scrolls to an element with header offset
      */
@@ -71,7 +71,7 @@
         behavior: 'smooth'
       })
     }
-  
+
     /**
      * Back to top button
      */
@@ -87,7 +87,7 @@
       window.addEventListener('load', toggleBacktotop)
       onscroll(document, toggleBacktotop)
     }
-  
+
     /**
      * Mobile nav toggle
      */
@@ -96,14 +96,14 @@
       this.classList.toggle('bi-list')
       this.classList.toggle('bi-x')
     })
-  
+
     /**
      * Scrool with ofset on links with a class name .scrollto
      */
     on('click', '.scrollto', function(e) {
       if (select(this.hash)) {
         e.preventDefault()
-  
+
         let body = select('body')
         if (body.classList.contains('mobile-nav-active')) {
           body.classList.remove('mobile-nav-active')
@@ -114,7 +114,7 @@
         scrollto(this.hash)
       }
     }, true)
-  
+
     /**
      * Scroll with ofset on page load with hash links in the url
      */
@@ -125,7 +125,7 @@
         }
       }
     });
-  
+
     /**
      * Hero type effect
      */
@@ -141,7 +141,7 @@
         backDelay: 2000
       });
     }
-  
+
     /**
      * Skills animation
      */
@@ -158,7 +158,7 @@
         }
       })
     }
-  
+
     /**
      * Porfolio isotope and filter
      */
@@ -168,16 +168,16 @@
         let portfolioIsotope = new Isotope(portfolioContainer, {
           itemSelector: '.portfolio-item'
         });
-  
+
         let portfolioFilters = select('#portfolio-flters li', true);
-  
+
         on('click', '#portfolio-flters li', function(e) {
           e.preventDefault();
           portfolioFilters.forEach(function(el) {
             el.classList.remove('filter-active');
           });
           this.classList.add('filter-active');
-  
+
           portfolioIsotope.arrange({
             filter: this.getAttribute('data-filter')
           });
@@ -186,16 +186,16 @@
           });
         }, true);
       }
-  
+
     });
-  
+
     /**
-     * Initiate portfolio lightbox 
+     * Initiate portfolio lightbox
      */
     const portfolioLightbox = GLightbox({
       selector: '.portfolio-lightbox'
     });
-  
+
     /**
      * Portfolio details slider
      */
@@ -212,7 +212,7 @@
         clickable: true
       }
     });
-  
+
     /**
      * Testimonials slider
      */
@@ -234,14 +234,14 @@
           slidesPerView: 1,
           spaceBetween: 20
         },
-  
+
         1200: {
           slidesPerView: 3,
           spaceBetween: 20
         }
       }
     });
-  
+
     /**
      * Animation on scroll
      */
@@ -253,10 +253,10 @@
         mirror: false
       })
     });
-  
+
     /**
-     * Initiate Pure Counter 
+     * Initiate Pure Counter
      */
     new PureCounter();
-  
+
   })()

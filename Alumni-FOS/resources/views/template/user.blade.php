@@ -40,7 +40,6 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
-
    </head>
    <body style="background-color: #fcf3d2">
       <!--header section start -->
@@ -82,12 +81,13 @@
             </nav>
          </div>
       </div>
+
       <!--header section end -->
 
-      <body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">
+      <!--<body data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-delay="0">-->
 
   <!-- ======= Mobile nav toggle button ======= -->
-  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+  <!--<i class="bi bi-list mobile-nav-toggle d-xl-none"></i>-->
 
   <!-- ======= Header ======= -->
   <!--<header id="header">
@@ -114,15 +114,16 @@
           <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
         </ul>
-      </nav> .nav-menu 
-    </div>-->
-  </header><!-- End Header -->
+      </nav> .nav-menu
+    </div>
+</header>-->
+  <!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
     <div class="hero-container aos-init aos-animate" data-aos="fade-in">
       <h1>Alex Smith</h1>
-      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Designer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true">|</span></p>
+      <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, Photographer">Designer</span></p>
     </div>
   </section><!-- End Hero -->
 
@@ -695,7 +696,7 @@
 
   </main><!-- End #main -->
 
-  
+
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center active"><i class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
@@ -732,7 +733,7 @@
 
 
 
-    
+
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
