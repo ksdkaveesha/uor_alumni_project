@@ -116,7 +116,7 @@
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="text" id="sc_number" name="sc_number" class="email-bt" placeholder="Student Number" value="{{old('sc_number')}}" required/>
+                            <input type="text" id="sc_number" name="sc_number" class="email-bt" placeholder="Student Number" value="{{old('sc_number')}}" onfocus="showsc_number()" onblur="masksc_number()" required/>
                             @error('sc_number')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -126,7 +126,7 @@
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="password" id="c_sc_number" name="sc_number_confirmation" class="email-bt" placeholder="Comfirm Student Number" required/>
+                            <input type="password" id="c_sc_number" name="sc_number_confirmation" class="email-bt" placeholder="Comfirm Student Number" onfocus="showc_sc_number()" onblur="maskc_sc_number()" required/>
                             <p style="color: red" id="matchsc"></p>
                           </div>
                         </div>
@@ -450,7 +450,7 @@
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="password" class="email-bt" placeholder="Password" id="password" name="password" value="{{old('password')}}" required/>
+                            <input type="text" class="email-bt" placeholder="Password" id="password" name="password" value="{{old('password')}}" onfocus="showPassword()" onblur="maskPassword()" required/>
                             @error('password')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -459,7 +459,7 @@
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="password" class="email-bt" placeholder="Comfirm Password" id="confirmPassword" name="password_confirmation" required/>
+                            <input type="text" class="email-bt" placeholder="Comfirm Password" id="confirmPassword" name="password_confirmation" onfocus="showConfirmPassword()" onblur="maskConfirmPassword()" required/>
 
                                 <p style="color: red" id="matchp"></p>
 
@@ -641,103 +641,49 @@
                 }
             });
         });
+
+        function showPassword() {
+            const passwordInput = document.getElementById('password');
+            passwordInput.type = 'text';
+        }
+
+        function maskPassword() {
+            const passwordInput = document.getElementById('password');
+            passwordInput.type = 'password';
+        }
+
+        function showConfirmPassword() {
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+            confirmPasswordInput.type = 'text';
+        }
+
+        function maskConfirmPassword() {
+            const confirmPasswordInput = document.getElementById('confirmPassword');
+            confirmPasswordInput.type = 'password';
+        }
+
+        function showsc_number() {
+            const sc_numberInput = document.getElementById('sc_number');
+            sc_numberInput.type = 'text';
+        }
+
+        function masksc_number() {
+            const sc_numberInput = document.getElementById('sc_number');
+            sc_numberInput.type = 'password';
+        }
+
+        function showc_sc_number() {
+            const c_sc_numberInput = document.getElementById('c_sc_number');
+            c_sc_numberInput.type = 'text';
+        }
+
+        function maskc_sc_number() {
+            const c_sc_numberInput = document.getElementById('c_sc_number');
+            c_sc_numberInput.type = 'password';
+        }
+
       </script>
 
-        <!--password and scnum comfirm-->
-        {{--  <script>
-            function validateConfirmPassword() {
-                var password = document.getElementById("password").value;
-                var confirmPassword = document.getElementById("confirmPassword").value;
-                var confirmPasswordField = document.getElementById("confirmPassword");
-
-                var sc_number = document.getElementById("sc_number").value;
-                var c_sc_number = document.getElementById("c_sc_number").value;
-                var c_sc_numberField = document.getElementById("c_sc_number");
-
-                var submitButton = document.getElementById("submitButton");
-
-                if(sc_number == c_sc_number){
-                    c_sc_numberField.classList.remove("password-mismatch");
-                    document.getElementById("matchsc").innerHTML = "";
-                    if(password == confirmPassword){
-                        confirmPasswordField.classList.remove("password-mismatch");
-                        document.getElementById("matchp").innerHTML = "";
-                        submitButton.disabled = false;
-                    } else{
-                        confirmPasswordField.classList.add("password-mismatch");
-                        document.getElementById("matchp").innerHTML = "*password mismatch";
-                        submitButton.disabled = true;
-                    }
-                } else if(sc_number !== c_sc_number){
-                    c_sc_numberField.classList.add("password-mismatch");
-                    document.getElementById("matchsc").innerHTML = "*SC Number mismatch";
-                    if(password !== confirmPassword){
-                        confirmPasswordField.classList.add("password-mismatch");
-                        document.getElementById("matchp").innerHTML = "*password mismatch";
-                        submitButton.disabled = true;
-                    } else{
-                        confirmPasswordField.classList.remove("password-mismatch");
-                        document.getElementById("matchp").innerHTML = "";
-                        submitButton.disabled = true;
-                    }
-                } else{
-                    submitButton.disabled = false;
-                }
-
-                /*if (password !== confirmPassword) {
-                    confirmPasswordField.classList.add("password-mismatch");
-                    document.getElementById("matchp").innerHTML = "*password mismatch";
-                    submitButton.disabled = true;
-                }
-                else {
-                    confirmPasswordField.classList.remove("password-mismatch");
-                    document.getElementById("matchp").innerHTML = "";
-                    submitButton.disabled = false;
-                }*/
-            }
-
-            /*function validateConfirmscnumber() {
-                var sc_number = document.getElementById("sc_number").value;
-                var c_sc_number = document.getElementById("c_sc_number").value;
-
-                var c_sc_numberField = document.getElementById("c_sc_number");
-                var submitButton = document.getElementById("submitButton");
-
-                if (sc_number !== c_sc_number) {
-                    c_sc_numberField.classList.add("password-mismatch");
-                    document.getElementById("matchsc").innerHTML = "*SC Number mismatch";
-                    submitButton.disabled = true;
-                } else {
-                    c_sc_numberField.classList.remove("password-mismatch");
-                    document.getElementById("matchsc").innerHTML = "";
-                    submitButton.disabled = false;
-                }
-            }*/
-
-            /*function validateForm() {
-                function validateForm() {
-                var password = document.getElementById("password").value;
-                var confirmPassword = document.getElementById("confirmPassword").value;
-
-                var passwordField = document.getElementById("password");
-                var confirmPasswordField = document.getElementById("confirmPassword");
-
-                if (password !== confirmPassword) {
-                    alert("Passwords do not match. Please try again.");
-                    var selectElement = document.getElementById('c_password');
-                    selectElement.selectedIndex = -1;
-                    //passwordField.classList.add("password-mismatch");
-                    //confirmPasswordField.classList.add("password-mismatch");
-                } else {
-                    alert("Account created successfully!");
-                    //passwordField.classList.remove("password-mismatch");
-                    //confirmPasswordField.classList.remove("password-mismatch");
-                    // You can choose to submit the form or perform other actions.
-                }
-            }
-            }*/
-        </script>  --}}
-        <!--password and scnum comfirm end-->
 
      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </body>
