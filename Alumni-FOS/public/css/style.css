@@ -894,6 +894,29 @@ a:hover {
     background-color: #ffffff;
 }
 
+.main_bt input {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #390A40;
+    padding: 15px 50px 12px 50px;
+    border-radius: 30px;
+    display: block;
+}
+
+.main_bt input {
+    color: #ffffff;
+    background-color: #390A40;
+}
+
+.main_bt input:hover {
+    color:  #3f78bd;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
 .padding_0 {
     padding: 0px;
 }
