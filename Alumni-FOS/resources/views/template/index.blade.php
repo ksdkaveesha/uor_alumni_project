@@ -194,16 +194,18 @@
          <div class="container">
             <div class="row">
                <div class="col-md-6">
+                  <div class="about_img"><img src="images/about.png"></div>
+               </div>
+               <div class="col-md-6">
                   <div class="about_taital_main">
                      <div class="about_taital"><span style="color:black">About Us</span></div>
-                     <p class="about_text">Full cleaning and housekeeping services for companies and households.</p>
-                     <p class="about_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply</p>
+                     <p class="about_text">University of Ruhuna.</p>
+                     <p class="about_text">The University of Ruhuna is a public university in Matara, Sri Lanka. It is the only university in the southern region of Sri Lanka. It was established by a special presidential decree on 1 September 1978 as Ruhuna University College and upgraded to a full-fledged university on 1 February 1984 by a university order. <br><br><br> </p>
+                     <br>
                      <div class="learnmore_bt"><a href="#">Read More</a></div>
                   </div>
                </div>
-               <div class="col-md-6">
-                  <div class="about_img"><img src="images/about-img.png"></div>
-               </div>
+
             </div>
          </div>
       </div>
@@ -212,9 +214,7 @@
         <div class="about_section layout_padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="about_img"><img src="images/about-img.png"></div>
-                    </div>
+
                 <div class="col-md-6">
                     <div class="about_taital_main">
                         <div class="about_taital"><span style="color:black">This isn't a Good Bye.<br>It's a Welcome.</span></div>
@@ -224,7 +224,9 @@
                         <div class="learnmore_bt"><a href="#">Join us</a></div>
                     </div>
                 </div>
-
+                <div class="col-md-6">
+                  <div class="about_img"><img src="images/join.png"></div>
+              </div>
                 </div>
             </div>
         </div>
@@ -245,7 +247,7 @@
                   <div class="row">
                      <div class="col-md-4">
                         <div class="container_main">
-                           <img src="images/img-7.png" alt="Avatar" class="image">
+                           <img src="images/img-7.jpg" alt="Avatar" class="image">
                            <div class="overlay">
                               <div class="text"><a href="#"><i class="fa fa-searcha" aria-hidden="true"></i></a></div>
                            </div>

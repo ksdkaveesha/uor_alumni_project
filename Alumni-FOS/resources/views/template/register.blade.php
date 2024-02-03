@@ -99,7 +99,7 @@
         <div class="col-md-6 px-5">
             <div class="map_container">
               <div class="map">
-                  <img src="images/reg-img.png" style="size: 100%;vertical-align:middle">
+                  <img src="images/reg.png" style="size: 100%;vertical-align:middle">
               </div>
             </div>
           </div>
