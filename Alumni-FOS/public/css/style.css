@@ -211,7 +211,7 @@ button {
 }
 
 .layout_padding {
-    padding-top: 90px;
+    padding-top: 30px;
     padding-bottom: 0px;
 }
 
@@ -271,10 +271,10 @@ button {
     width: 100%;
     float: left;
     background-image: url(../images/b1.png);
-    height: auto;
+    height: 80%;
     background-size: 100%;
     padding: 10px 0px 25px 0px;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
 }
 
 .banner_taital {
@@ -329,7 +329,7 @@ button {
 
 .learnmore_bt a:hover {
     background-color: #ffffff;
-    color: #000000;
+    color: #3f78bd;
 }
 
 #main_slider a.carousel-control-next {
@@ -387,7 +387,7 @@ button {
 .about_taital_main {
     width: 100%;
     float: left;
-    padding: 120px 0px;
+    padding: 10px 0px;
 }
 
 .about_taital {
@@ -453,7 +453,7 @@ button {
     float: left;
     text-align: center;
     font-size: 40px;
-    color: #f76d37;
+    color: #000000;
     font-weight: bold;
 }
 
@@ -554,7 +554,7 @@ a:hover {
     float: left;
     background-image: url(../images/services-bg.png);
     height: auto;
-    padding-bottom: 100px;
+    padding-bottom: 50px;
     background-attachment: fixed;
 }
 
@@ -811,7 +811,7 @@ a:hover {
 .mail_section {
     width: 100%;
     float: left;
-    /*background-image: url(../images/img-9.png);*/
+    background-image: url(../images/img-9.png);
     background-color: #E7B3F9;
     height: auto;
     padding: 23px 70px;

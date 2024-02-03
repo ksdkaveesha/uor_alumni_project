@@ -38,6 +38,8 @@
       <link rel="stylesheet" href="css/owl.theme.default.min.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
 
+      <link rel="stylesheet" href="popup.css">
+
 
    </head>
    <body style="background-color: #fcf3d2">
@@ -70,7 +72,7 @@
                         <a class="nav-link" href="contact">Contact Us</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="login" data-toggle="modal" data-target="#exampleModalCenter">Log In</a>
+                        <a class="nav-link" href="#" id="openPopupLink">Log In</a>
                      </li>
                      <!--<li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
@@ -91,10 +93,10 @@
                      <div class="row">
                         <div class="col-sm-12">
                            <div class="banner_taital">
-                              <!--<h2 class="outstanding_text">Welcome to</h2>
+                              <h2 class="outstanding_text">Welcome to</h2>
                               <h1 class="coffee_text">University of Ruhuna</h1>
                               <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, </p>
-                              <div class="learnmore_bt"><a href="#">Learn More</a></div>-->
+                              <div class="learnmore_bt"><a href="#">Learn More</a></div>
                            </div>
                         </div>
                      </div>
@@ -103,90 +105,41 @@
                      <div class="row">
                         <div class="col-sm-12">
                            <div class="banner_taital">
-                              <!--<h2 class="outstanding_text">Alumni Association </h2>
+                              <h2 class="outstanding_text">Alumni Association </h2>
                               <h1 class="coffee_text">Faculty of Science</h1>
                               <p class="there_text">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, </p>
-                              <div class="learnmore_bt"><a href="#">Learn More</a></div>-->
+                              <div class="learnmore_bt"><a href="#">Learn More</a></div>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
-               <!--<a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
+               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev">
                <i class="fa fa-angle-left"></i>
                </a>
                <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next">
                <i class="fa fa-angle-right"></i>
-               </a>-->
+               </a>
             </div>
          </div>
       </div>
       <!-- banner section end -->
 
     <!-- popup -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content" style="display:flex; align-items:center; justify-content: center;">
-                <div class="modal-body">
-                    <!--login-->
-                                <div class="wrap-login100" style="display:flex; align-items:center; justify-content: center; width:100%">
-
-                                    <form action="<?=url('/login')?>" method="POST" class="login100-form validate-form" style="width: 100%; ">
-                                        @csrf
-                                        <span class="login100-form-title">
-                                            Member Login
-                                        </span>
-                                        @if (session('error'))
-                                            <div class="alert alert-danger">
-                                                {{ session('success') }}
-                                            </div>
-                                        @endif
-
-                                        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                                            <input class="input100" type="text" name="email" placeholder="Email">
-                                            <span class="focus-input100"></span>
-                                            <span class="symbol-input100">
-                                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
-
-                                        <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                                            <input class="input100" type="password" name="pass" placeholder="Password">
-                                            <span class="focus-input100"></span>
-                                            <span class="symbol-input100">
-                                                <i class="fa fa-lock" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
-
-                                        <div class="container-login100-form-btn">
-                                            <input type="submit" value="Login" class="login100-form-btn">
-                                        </div>
-
-                                        <div class="text-center p-t-12">
-                                            <span class="txt1">
-                                                Forgot
-                                            </span>
-                                            <a class="txt2" href="#">
-                                                Password?
-                                            </a>
-                                        </div>
-
-                                        <div class="text-center p-t-13">
-                                            <a class="txt2" href="#">
-                                                Create your Account
-                                                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                    </form>
-                                </div>
-                        <!--end login-->
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-            </div>
-        </div>
+    <div id="popupForm" class="popup">
+        <form id="myForm" class="popup-content">
+            <span class="close" id="closePopupBtn">&times;</span>
+            <h2>Popup Form</h2>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <script src="popup.js"></script>
     <!-- popup end -->
 
       <!-- about section start -->
@@ -212,26 +165,24 @@
         <div class="about_section layout_padding">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
-                        <div class="about_img"><img src="images/about-img.png"></div>
-                    </div>
                 <div class="col-md-6">
                     <div class="about_taital_main">
                         <div class="about_taital"><span style="color:black">This isn't a Good Bye.<br>It's a Welcome.</span></div>
                         <p class="about_text">Full cleaning and housekeeping services for companies and households.</p>
                         <p class="about_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply</p>
-
                         <div class="learnmore_bt"><a href="#">Join us</a></div>
                     </div>
                 </div>
-
+                <div class="col-md-6">
+                    <div class="about_img"><img src="images/about-img.png"></div>
+                </div>
                 </div>
             </div>
         </div>
         <!--join us end>-->
       <!-- about section end -->
 
-     <!-- gallery section start-->
+     <!-- gallery section start
       <div class="gallery_section layout_padding">
          <div class="container">
             <div class="row">
@@ -245,9 +196,69 @@
                   <div class="row">
                      <div class="col-md-4">
                         <div class="container_main">
+                           <img src="images/img-1.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-2.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-3.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="gallery_section_2">
+                  <div class="row">
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-4.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-5.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="overlay">
+                                 <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-md-4">
+                        <div class="container_main">
+                           <img src="images/img-6.png" alt="Avatar" class="image">
+                           <div class="overlay">
+                              <div class="overlay">
+                                 <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="gallery_section_2">
+                  <div class="row">
+                     <div class="col-md-4">
+                        <div class="container_main">
                            <img src="images/img-7.png" alt="Avatar" class="image">
                            <div class="overlay">
-                              <div class="text"><a href="#"><i class="fa fa-searcha" aria-hidden="true"></i></a></div>
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                            </div>
                         </div>
                      </div>
@@ -255,7 +266,7 @@
                         <div class="container_main">
                            <img src="images/img-8.png" alt="Avatar" class="image">
                            <div class="overlay">
-                              <div class="text"><a href="#"><i class="fa fa-searcha" aria-hidden="true"></i></a></div>
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                            </div>
                         </div>
                      </div>
@@ -263,71 +274,67 @@
                         <div class="container_main">
                            <img src="images/img-9.png" alt="Avatar" class="image">
                            <div class="overlay">
-                              <div class="text"><a href="#"><i class="fa fa-searcha" aria-hidden="true"></i></a></div>
+                              <div class="text"><a href="#"><i class="fa fa-search" aria-hidden="true"></i></a></div>
                            </div>
                         </div>
                      </div>
                   </div>
                </div>
             </div>
-            <!--<div class="seemore_bt"><a href="#">See More</a></div>-->
+            <div class="seemore_bt"><a href="#">See More</a></div>
          </div>
       </div>
-      <!--gallery section end -->
+      gallery section end -->
 
-      <!-- services section start -->
+      <!-- services section start
       <div class="services_section layout_padding">
-        <div class="container">
-           <div class="row">
-              <div class="col-sm-12">
-                 <h1 class="services_taital">Notices</h1>
-                 <p class="services_text">Typesetting industry lorem Ipsum is simply dummy text of the </p>
-              </div>
-           </div>
-           <div class="services_section_2">
-              <div class="row">
-                 <div class="col-lg-4 col-sm-12 col-md-4">
-                    <div class="box_main active">
-                       <div class="house_icon">
-                          <img src="images/icon1.png" class="image_1">
-                          <img src="images/icon1.png" class="image_2">
-                       </div>
-                       <h3 class="decorate_text">1st notice</h3>
-                       <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                       <div class="readmore_bt"><a href="#">Read More</a></div>
-                    </div>
-                 </div>
-                 <div class="col-lg-4 col-sm-12 col-md-4">
-                    <div class="box_main">
-                       <div class="house_icon">
-                          <img src="images/icon2.png" class="image_1">
-                          <img src="images/icon2.png" class="image_2">
-                       </div>
-                       <h3 class="decorate_text">2nd notice</h3>
-                       <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                       <div class="readmore_bt"><a href="#">Read More</a></div>
-                    </div>
-                 </div>
-                 <div class="col-lg-4 col-sm-12 col-md-4">
-                    <div class="box_main">
-                       <div class="house_icon">
-                          <img src="images/icon3.png" class="image_1">
-                          <img src="images/icon3.png" class="image_2">
-                       </div>
-                       <h3 class="decorate_text">3rd notice</h3>
-                       <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
-                       <div class="readmore_bt"><a href="#">Read More</a></div>
-                    </div>
-                 </div>
-              </div>
-              <br>
-              <div class="row" style="display:flex; align-items:center; justify-content: center; width:100%">
-                <div class="learnmore_bt"><a href="#">Read More</a></div>
-             </div>
-           </div>
-        </div>
-     </div>
-    <!-- services section end -->
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="services_taital">Services</h1>
+                  <p class="services_text">Typesetting industry lorem Ipsum is simply dummy text of the </p>
+               </div>
+            </div>
+            <div class="services_section_2">
+               <div class="row">
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                     <div class="box_main active">
+                        <div class="house_icon">
+                           <img src="images/icon1.png" class="image_1">
+                           <img src="images/icon1.png" class="image_2">
+                        </div>
+                        <h3 class="decorate_text">Original Coffee</h3>
+                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                        <div class="readmore_bt"><a href="#">Read More</a></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                     <div class="box_main">
+                        <div class="house_icon">
+                           <img src="images/icon2.png" class="image_1">
+                           <img src="images/icon2.png" class="image_2">
+                        </div>
+                        <h3 class="decorate_text">20 Coffee Flavors</h3>
+                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                        <div class="readmore_bt"><a href="#">Read More</a></div>
+                     </div>
+                  </div>
+                  <div class="col-lg-4 col-sm-12 col-md-4">
+                     <div class="box_main">
+                        <div class="house_icon">
+                           <img src="images/icon3.png" class="image_1">
+                           <img src="images/icon3.png" class="image_2">
+                        </div>
+                        <h3 class="decorate_text">Pleasant Abient</h3>
+                        <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                        <div class="readmore_bt"><a href="#">Read More</a></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+       services section end -->
 
       <!-- testimonial section start -->
       <div class="client_section layout_padding" id="testimonial">
@@ -396,13 +403,13 @@
      <br>
       <!-- testimonial section end -->
 
-      <!-- contact section start-->
+      <!-- contact section start
       <div class="contact_section layout_padding">
          <div class="container">
-            <h1 class="contact_text">Comment</h1>
+            <h1 class="contact_text">Contact Us</h1>
          </div>
       </div>
-      <div class="contact_section_1 layout_padding">
+      <div class="contact_section_2 layout_padding">
          <div class="container-fluid">
             <div class="row">
                <div class="col-md-6 padding_0">
@@ -428,13 +435,13 @@
                </div>
                <div class="col-md-6 padding_0">
                   <div class="map-responsive">
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.409982521399!2d80.57355947387634!3d5.93809209404631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae1391b4a29e707%3A0xd54277175e326bc2!2sUniversity%20of%20Ruhuna!5e0!3m2!1sen!2slk!4v1706937224326!5m2!1sen!2slk" width="600" height="508" frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
+                     <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="508" frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
                   </div>
                </div>
             </div>
          </div>
       </div>
-      <!--contact section end -->
+      contact section end -->
 
 
       <!-- footer section start -->

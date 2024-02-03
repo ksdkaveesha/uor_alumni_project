@@ -49,5 +49,9 @@ Route::get('/update', function () {
     return view('template/update');
 });
 
+Route::get('/test', function () {
+    return view('test');
+});
+
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
 Route::post('/login', [LoginController::class,'authenticate']);
