@@ -70,7 +70,7 @@
                         <a class="nav-link" href="contact">Contact Us</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#" data-toggle="modal" data-target="#exampleModalCenter">Log In</a>
+                        <a class="nav-link" href="login">Log In</a>
                      </li>
                      <!--<li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
