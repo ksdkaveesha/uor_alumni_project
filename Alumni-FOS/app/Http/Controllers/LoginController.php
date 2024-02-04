@@ -78,7 +78,7 @@ class LoginController extends Controller
 
             if($user->role=="alumni"){
                 $alumini_member = alumini_member::where('email',$email)->first();
-                Auth::login($alumini_member);
+                Auth::guard('webalumni')->login($alumini_member);
                 return redirect('/user');
             }
 
