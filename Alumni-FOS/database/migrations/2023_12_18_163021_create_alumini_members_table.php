@@ -26,7 +26,6 @@ return new class extends Migration
             $table->string('address')->nullable();
             $table->string('agreement')->nullable();
             $table->string('graduation_year')->nullable();
-
             $table->timestamps();
         });
     }

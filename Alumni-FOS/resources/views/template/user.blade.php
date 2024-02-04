@@ -111,7 +111,7 @@
         </div>
       <div class="profile">
         <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light"><a href="index.html">Alex Smith</a></h1>
+        <h1 class="text-light"><a href="index.html">{{ auth()->user()->name }}</a></h1>
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
@@ -127,10 +127,10 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background-image: {{asset('assets/img/profile-img.jpg')}}">
     <div class="hero-container" data-aos="fade-in">
-      <h1>Alex Smith</h1>
-      <p>Hi, Welcome to <span class="typed" data-typed-items="University of Ruhuna, Faculty of Science"></span></p>
+      <h1>Hi {{ auth()->user()->role }}</h1>
+      <p>Welcome to <span class="typed" data-typed-items="University of Ruhuna, Faculty of Science"></span></p>
     </div>
   </section><!-- End Hero -->
 

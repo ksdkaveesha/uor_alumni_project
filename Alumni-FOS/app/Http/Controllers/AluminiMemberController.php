@@ -105,6 +105,7 @@ class AluminiMemberController extends Controller
         $user->email = $request->input('email');
         $user->password = Hash::make($request->input('password'));
         $user->role = "alumni";
+        $user->alumini_member_id = $alumini_member->id;
 
         $alumini_member->save();
         $user->save();

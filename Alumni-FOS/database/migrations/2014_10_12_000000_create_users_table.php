@@ -17,7 +17,8 @@ return new class extends Migration
             $table->string('email');
             $table->string('password');
             $table->string('role');
-
+            $table->unsignedBigInteger('alumini_member_id')->nullable();
+            $table->foreign('alumini_member_id')->references('id')->on('alumini_member');
             $table->timestamps();
         });
     }
