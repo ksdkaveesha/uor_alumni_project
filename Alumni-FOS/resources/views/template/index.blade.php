@@ -201,7 +201,7 @@
                      <div class="about_taital"><span style="color:black">About Us</span></div>
                      <p class="about_text">University of Ruhuna.</p>
                      <p class="about_text">The University of Ruhuna is a public university in Matara, Sri Lanka. It is the only university in the southern region of Sri Lanka. It was established by a special presidential decree on 1 September 1978 as Ruhuna University College and upgraded to a full-fledged university on 1 February 1984 by a university order. <br><br></p>
-                     <div class="learnmore_bt"><a href="#">Read More</a></div>
+                     <div class="learnmore_bt"><a href="about">Read More</a></div>
                   </div>
                </div>
 
@@ -219,7 +219,7 @@
                         <div class="about_taital"><span style="color:black">This isn't a Good Bye.<br>It's a Welcome.</span></div>
                         <p class="about_text">Full cleaning and housekeeping services for companies and households.</p>
                         <p class="about_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply <br><br></p>
-                        <div class="learnmore_bt"><a href="#">Join us</a></div>
+                        <div class="learnmore_bt"><a href="register">Join us</a></div>
                     </div>
                 </div>
                 <div class="col-md-6">
