@@ -1,82 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
 
-        <link rel="stylesheet" type="text/css" href="{{asset('css/update.css')}}">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-       <!-- basic -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <!-- mobile metas -->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- site metas -->
-      <title>Update Form</title>
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- bootstrap css -->
-      <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-      <!-- style css -->
-      <link rel="stylesheet" type="text/css" href="css/style.css">
-      <!-- Responsive-->
-      <link rel="stylesheet" href="css/responsive.css">
-      <!-- fevicon -->
-      <link rel="icon" href="images/fevicon.png" type="image/gif" />
-      <!-- Scrollbar Custom CSS -->
-      <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
-      <!-- Tweaks for older IEs-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <!-- owl stylesheets -->
-      <link rel="stylesheet" href="css/owl.carousel.min.css">
-      <link rel="stylesheet" href="css/owl.theme.default.min.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <link rel="stylesheet" href="https://www.bootdey.com/snippets/view/bs4-crud-users">
-      <link rel="stylesheet" href="https://www.bootdey.com/snippets/view/bs4-edit-profile-page">
-    </head>
+  <title>Update Profile</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
-    <body style="background-color: #fcf3d2">
+  <!-- Favicons -->
+  <link href="{{asset('img/favicon.png')}}" rel="icon">
+  <link href="{{asset('img/apple-touch-icon.png')}}" rel="apple-touch-icon">
 
-        <!--header section start -->
-      <div class="header_section">
-        <div class="container-fluid">
-           <nav class="navbar navbar-expand-lg navbar-light bg-light">
-              <div class="logo"><a href="/"><img src="images/logo.png"></a></div>
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav"aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active">
-                       <a class="nav-link" href="/">Home</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="#testimonial">News & Events</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="directory">Alumni Directory</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="register">Register</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="contact">Contact Us</a>
-                    </li>
-                    <!--<li class="nav-item">
-                       <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
-                    </li>-->
-                 </ul>
-              </div>
-           </nav>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{{asset('vendor/aos/aos.css')}}" rel="stylesheet">
+  <link href="{{asset('vendor/bootstrap/css/bootstrap.min.css')}}" rel="stylesheet">
+  <link href="{{asset('vendor/bootstrap-icons/bootstrap-icons.css')}}" rel="stylesheet">
+  <link href="{{asset('vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
+  <link href="{{asset('vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
+  <link href="{{asset('vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link rel="stylesheet" type="text/css" href="{{asset('css/user.css')}}">
+
+  <!-- =======================================================
+  * Template Name: iPortfolio
+  * Updated: Jan 29 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/iportfolio-bootstrap-portfolio-websites-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+
+  <!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="css/util.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--===============================================================================================-->
+
+
+    <!-- basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- mobile metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <!-- site metas -->
+    <title>Register Form</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- bootstrap css -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <!-- style css -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- Responsive-->
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- fevicon -->
+    <link rel="icon" href="images/fevicon.png" type="image/gif" />
+    <!-- Scrollbar Custom CSS -->
+    <link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+    <!-- Tweaks for older IEs-->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+    <!-- owl stylesheets -->
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+
+<body>
+
+
+  <!-- ======= Mobile nav toggle button ======= -->
+  <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
+    <div style="position: absolute">
+        <img src="images/logo.png">
+    </div>
+
+
+
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="d-flex flex-column">
+        <div class="profile2">
+            <img src="images/logo.png">
         </div>
-     </div>
-     <!--header section end -->
+      <div class="profile">
+        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <h1 class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h1>
+      </div>
 
-            <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#portfolio" class="nav-link scrollto"><i class="bx bx-book-content"></i> <span>Portfolio</span></a></li>
+          <li><a href="#services" class="nav-link scrollto"><i class="bx bx-server"></i> <span>Services</span></a></li>
+          <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+          <li><a href="/update" class="nav-link scrollto"><i class="bx bx-user"></i> <span>Profile Update</span></a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main" style="background-color:#fcf3d2">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
         <div class="container">
         <div class="row flex-lg-nowrap">
         <!--<div class="col-12 col-lg-auto mb-3" style="width: 200px;">
@@ -122,8 +174,9 @@
 
                                 </div>
                             </div>
-                        </div>      
-                               <div class="column">
+                        </div>    
+                        
+                        <div class="column">
                                         <div class="row">
                                             <div class="col">
                                             <div class="row">
@@ -557,71 +610,25 @@
             </div>
         </div>
     </div>
+                        </main>
 
 
-        <!-- footer section start -->
-      <div class="footer_section layout_padding">
-        <div class="container">
-           <div class="row">
-              <div class="col-lg-3 col-sm-6">
-                 <h3 class="useful_text">About</h3>
-                 <p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
-              </div>
-              <div class="col-lg-2 col-sm-6">
-                 <h3 class="useful_text">Menu</h3>
-                 <div class="footer_menu">
-                    <ul>
-                       <li><a href="index.html">Home</a></li>
-                       <li><a href="about.html">About Us</a></li>
-                       <li><a href="gallery.html">Gallery</a></li>
-                       <li><a href="services.html">Services</a></li>
-                       <li><a href="contact.html">Contact Us</a></li>
-                    </ul>
-                 </div>
-              </div>
-              <div class="col-lg-3 col-sm-6">
-                 <h1 class="useful_text">Useful Link</h1>
-                 <div class="dummy_text">
-                   <ul>
-                       <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
-                       <li><a href="https://www.ruh.ac.lk/index.php/en/">University of Ruhuna</a></li>
-                   </ul>
-                 </div>
-              </div>
-              <div class="col-lg-4 col-sm-6">
-                 <h1 class="useful_text">Contact Us</h1>
-                 <div class="location_text">
-                    <ul>
-                       <li>
-                          <a href="#">
-                          <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Faculty of Science,University of Ruhuna, Matara, Sri Lanka</span>
-                          </a>
-                       </li>
-                       <li>
-                          <a href="#">
-                          <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +01 1234567890</span>
-                          </a>
-                       </li>
-                       <li>
-                          <a href="#">
-                          <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : ruhuna@gmail.com</span>
-                          </a>
-                       </li>
-                    </ul>
-                 </div>
-              </div>
-           </div>
-        </div>
-     </div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-     <!-- footer section end -->
-     <!-- copyright section start-->
-     <div class="copyright_section">
-        <div class="container">
-           <p class="copyright_text"><span style="color: white"> All Rights Reserved. Design by</span> <a href="https://html.design"><span style="color: white"> html  Templates</span></a></p>
-        </div>
-     </div>
-     <!--copyright section end -->
+  <!-- Vendor JS Files -->
+  <script src="{{asset('vendor/purecounter/purecounter_vanilla.js')}}"></script>
+  <script src="{{asset('vendor/aos/aos.js')}}"></script>
+  <script src="{{asset('vendor/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+  <script src="{{asset('vendor/glightbox/js/glightbox.min.js')}}"></script>
+  <script src="{{asset('vendor/isotope-layout/isotope.pkgd.min.js')}}"></script>
+  <script src="{{asset('vendor/swiper/swiper-bundle.min.js')}}"></script>
+  <script src="{{asset('vendor/typed.js/typed.umd.js')}}"></script>
+  <script src="{{asset('vendor/waypoints/noframework.waypoints.js')}}"></script>
+  <script src="{{asset('vendor/php-email-form/validate.js')}}"></script>
 
-    </body>
+  <!-- Template Main JS File -->
+  <script src="{{asset('js/user.js')}}"></script>
+
+</body>
+
 </html>

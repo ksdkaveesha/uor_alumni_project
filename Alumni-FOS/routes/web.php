@@ -70,5 +70,9 @@ Route::get('/contact', function () {
 });
 
 
+Route::get('/update2', function () {
+    return view('template/update2');
+});
+
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
 Route::post('/login', [LoginController::class,'authenticate']);
