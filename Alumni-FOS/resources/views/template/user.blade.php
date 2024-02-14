@@ -111,7 +111,7 @@
         </div>
       <div class="profile">
         <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-        <h1 class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h1>
+        <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4>
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
