@@ -197,7 +197,35 @@
             <div class="col-lg-5 d-flex align-items-stretch">
                 <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                     <div class="col-lg-12" data-aos="fade-right">
-                        <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+                        <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
+
+                                <div class="form-group">
+                                    <label for="address"><h4><b>Edit Your Photo</b></h4></label>
+                                </div>
+                                <div class="col-12 col-sm-auto mb-3" >
+                                <div class="mx-auto">
+                                    <div class="d-flex justify-content-center align-items-center rounded" style="height: 240px; background-color: rgb(255, 255, 255);;">
+                                    <span style="color: rgb(255, 255, 255); font: bold 8pt Arial;"><div id="imagePreview"></div></span>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="col d-flex flex-column flex-sm-row justify-content-between mb-3" >
+                                <div class="text-center text-sm-left mb-2 mb-sm-0">
+                                    <!--<h4 class="pt-sm-2 pb-1 mb-0 text-nowrap">John Smith</h4>
+                                    <p class="mb-0">@johnny.s</p>
+                                    <div class="text-muted"><small>Last seen 2 hours ago</small></div>-->
+                                    <div class="mt-2">
+                                    <button class="btn btn-primary" type="file" style="background-color:#390A40">
+                                        <i class="fa fa-fw fa-camera"></i>
+                                        <span>Edit Photo</span>
+                                        <input type="file" id="photoUpload" name="photoUpload" accept="image/*" onchange="previewImage(event)">
+                                    </button>
+                                    </div>
+                                </div>
+
+                                </div>
+
+
                     </div>
                     <br>
                     <div class="text-center"><button type="submit">Add photo</button></div>
@@ -226,7 +254,7 @@
                 <div class="form-group">
                   <label for="name">Country</label>
                   <select class="form-control" name="subject" id="subject" required>
-                    <option value="" disabled selected>Country</option>
+                    <option value="" disabled selected>Select Country</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -484,6 +512,7 @@
                 <div class="form-group">
                     <label for="address">Designation</label>
                     <select class="form-control" name="subject" id="subject" required>
+                        <option value="" disabled selected>Select Designation</option>
                         <option value="public">Public</option>
                         <option value="private">Private</option>
                         <option value="own">Own Business</option>
@@ -826,6 +855,26 @@
     </section><!-- End Contact Section -->
 
   </main><!-- End #main -->
+
+    <script>
+        function previewImage(event) {
+            var input = event.target;
+            var preview = document.getElementById('imagePreview');
+
+            // Check if a file is selected
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    preview.innerHTML = '<img src="' + e.target.result + '" alt="Preview">';
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                preview.innerHTML = '';
+            }
+        }
+    </script>
 
 
 
