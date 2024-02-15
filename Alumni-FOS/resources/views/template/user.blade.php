@@ -195,8 +195,13 @@
           <div class="row" data-aos="fade-in">
 
             <div class="col-lg-5 d-flex align-items-stretch">
-
-
+                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                    <div class="col-lg-12" data-aos="fade-right">
+                        <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+                    </div>
+                    <br>
+                    <div class="text-center"><button type="submit">Add photo</button></div>
+                </form>
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
@@ -493,7 +498,7 @@
                   <div class="error-message"></div>
                   <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
+                <div class="text-center"><button type="submit">Submit</button></div>
               </form>
             </div>
 
