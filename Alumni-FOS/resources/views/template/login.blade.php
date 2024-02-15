@@ -121,14 +121,14 @@
 
 				<form action="<?=url('/login')?>" method="POST" class="login100-form validate-form" style="width: 100%">
 					@csrf
-
+                    @if (session('error'))
+                            <div class="alert alert-danger">
+                                {{ session('success') }}
+                            </div>
+                    @endif
                     <span class="login100-form-title">
 						Member Login
-                        @if (session('error'))
-                        <div class="alert alert-danger">
-                            {{ session('success') }}
-                        </div>
-                    @endif
+
 					</span>
 
 					<div class="wrap-input100 validate-input">
