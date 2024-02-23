@@ -86,4 +86,15 @@ class LoginController extends Controller
             return redirect()->back()->with('error','invalid username or Password');
         }
     }
+
+    public function logout(Request $request)
+    {
+        Auth::logout();
+
+        // Invalidate the session
+        $request->session()->invalidate();
+
+        // Redirect to a desired route after logout
+        return redirect('/');
+    }
 }

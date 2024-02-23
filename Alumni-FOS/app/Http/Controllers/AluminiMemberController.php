@@ -112,4 +112,6 @@ class AluminiMemberController extends Controller
         return redirect()->back()->with('success', 'Registered successfully!');
 
     }
+
+
 }
