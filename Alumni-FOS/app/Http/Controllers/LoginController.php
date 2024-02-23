@@ -89,7 +89,7 @@ class LoginController extends Controller
 
     public function logout(Request $request)
     {
-        Auth::logout();
+        Auth::guard('webalumni')->logout();
 
         // Invalidate the session
         $request->session()->invalidate();
