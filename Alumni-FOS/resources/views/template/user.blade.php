@@ -166,21 +166,21 @@
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>{{ auth()->guard('webalumni')->user()->name }}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Student No:</strong> <span>{{ auth()->guard('webalumni')->user()->sc_num }}</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Country:</strong> <span>{{ auth()->guard('webalumni')->user()->country }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{ auth()->guard('webalumni')->user()->email }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span>+{{ auth()->guard('webalumni')->user()->m_code }}-{{ auth()->guard('webalumni')->user()->mobile }}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree Type:</strong> <span>{{ auth()->guard('webalumni')->user()->degree_type }}</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Graduation Year:</strong> <span>{{ auth()->guard('webalumni')->user()->graduation_year }}</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Designation:</strong> <span>{{ auth()->guard('webalumni')->user()->designation }}</span></li>
-
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{{ auth()->guard('webalumni')->user()->degree }}</span></li>
+                 
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Id Number: </strong> <span>{{ auth()->guard('webalumni')->user()->id_num }}</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{ auth()->guard('webalumni')->user()->email }}</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span>+{{ auth()->guard('webalumni')->user()->m_code }}-{{ auth()->guard('webalumni')->user()->mobile }}</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{{ auth()->guard('webalumni')->user()->degree }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Graduation Year:</strong> <span>{{ auth()->guard('webalumni')->user()->graduation_year }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Country:</strong> <span>{{ auth()->guard('webalumni')->user()->country }}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span>{{ auth()->guard('webalumni')->user()->address }}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Sector:</strong> <span>{{ auth()->guard('webalumni')->user()->sector }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Designation:</strong> <span>{{ auth()->guard('webalumni')->user()->designation }}</span></li>
                 </ul>
               </div>
             </div>
@@ -513,16 +513,16 @@
                     <label for="address"><h4><b>Occupation Details</b></h4></label>
                 </div>
                 <div class="form-group">
-                    <label for="address">Designation</label>
+                    <label for="address">Sector</label>
                     <select class="form-control" name="subject" id="subject" required>
-                        <option value="" disabled selected>Select Designation</option>
+                        <option value="" disabled selected>Select Sector</option>
                         <option value="public">Public</option>
                         <option value="private">Private</option>
                         <option value="own">Own Business</option>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="address">Sector</label>
+                    <label for="address">Designation</label>
                     <input type="text" class="form-control" name="subject" id="subject" required>
                 </div>
                 <div class="my-3">
