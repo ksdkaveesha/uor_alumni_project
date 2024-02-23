@@ -22,10 +22,13 @@ return new class extends Migration
             $table->string('degree_type');
             $table->string('degree');
             $table->string('id_num')->nullable();
-            $table->string('enroll_year')->nullable();
+            $table->string('country')->nullable();
             $table->string('address')->nullable();
             $table->string('agreement')->nullable();
             $table->string('graduation_year')->nullable();
+            $table->string('designation')->nullable();
+            $table->string('sector')->nullable();
+            $table->string('about')->nullable();
             $table->timestamps();
         });
     }

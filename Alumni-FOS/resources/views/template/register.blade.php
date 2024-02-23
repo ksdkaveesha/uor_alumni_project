@@ -418,13 +418,13 @@
                           <div class="form-group col">
                               <select name="degree" id="sp_degree" class="select-bt">
                                   <option value="" selected disabled>Select your Degree</option>
-                                  <option value="bcs_cs_s">BCS Special in Computer Science </option>
-                                  <option value="bsc_statistics_s">BSc Special in Statistics </option>
-                                  <option value="bsc_appmaths_s">BSc Special in Applied Mathematics</option>
-                                  <option value="bsc_chemistry_s">BSc Special in Chemistry</option>
-                                  <option value="bsc_physics_s">BSc Special in Physics</option>
-                                  <option value="bsc_zoology_s">BSc Special in Zoology</option>
-                                  <option value="bsc_botany_s">BSc Special in Botany</option>
+                                  <option value="BCS Special in Computer Science">BCS Special in Computer Science </option>
+                                  <option value="BSc Special in Statistics">BSc Special in Statistics </option>
+                                  <option value="BSc Special in Applied Mathematics">BSc Special in Applied Mathematics</option>
+                                  <option value="BSc Special in Chemistry">BSc Special in Chemistry</option>
+                                  <option value="BSc Special in Physics">BSc Special in Physics</option>
+                                  <option value="BSc Special in Zoology">BSc Special in Zoology</option>
+                                  <option value="BSc Special in Botany">BSc Special in Botany</option>
                               </select>
                           </div>
                         </div>
@@ -433,9 +433,9 @@
                           <div class="form-group col">
                               <select name="degree" id="g_degree" class="select-bt">
                                   <option value="" selected disabled>Select your Degree</option>
-                                  <option value="ps_bsc_g">BSc in physical sciences </option>
-                                  <option value="bio_bsc_g">BSc in Bio Sciences </option>
-                                  <option value="cs_bcs_g">BCS in Computer Science</option>
+                                  <option value="BSc in physical sciences">BSc in physical sciences </option>
+                                  <option value="BSc in Bio Sciences">BSc in Bio Sciences </option>
+                                  <option value="BCS in Computer Science">BCS in Computer Science</option>
                               </select>
                           </div>
                         </div>

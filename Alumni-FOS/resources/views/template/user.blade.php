@@ -149,9 +149,11 @@
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
             <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <!--<br><br>
+            <h3 style="text-align: center"><b> {{ auth()->guard('webalumni')->user()->name }} </b></h3>-->
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>UI/UX Designer &amp; Web Developer.</h3>
+            <h3>{{ auth()->guard('webalumni')->user()->name }}'s Profile</h3>
             <p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
@@ -159,19 +161,23 @@
             <div class="row">
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>1 May 1995</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>+123 456 7890</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>New York, USA</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>{{ auth()->guard('webalumni')->user()->name }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Student No:</strong> <span>{{ auth()->guard('webalumni')->user()->sc_num }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Country:</strong> <span>{{ auth()->guard('webalumni')->user()->country }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree Type:</strong> <span>{{ auth()->guard('webalumni')->user()->degree_type }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Graduation Year:</strong> <span>{{ auth()->guard('webalumni')->user()->graduation_year }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Designation:</strong> <span>{{ auth()->guard('webalumni')->user()->designation }}</span></li>
+
                 </ul>
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>30</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>Master</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>email@example.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Freelance:</strong> <span>Available</span></li>
-
+                  <li><i class="bi bi-chevron-right"></i> <strong>Id Number: </strong> <span>{{ auth()->guard('webalumni')->user()->id_num }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{ auth()->guard('webalumni')->user()->email }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span>+{{ auth()->guard('webalumni')->user()->m_code }}-{{ auth()->guard('webalumni')->user()->mobile }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{{ auth()->guard('webalumni')->user()->degree }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span>{{ auth()->guard('webalumni')->user()->address }}</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Sector:</strong> <span>{{ auth()->guard('webalumni')->user()->sector }}</span></li>
                 </ul>
               </div>
             </div>
