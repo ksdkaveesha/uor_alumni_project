@@ -76,6 +76,12 @@ class AluminiMemberController extends Controller
         $alumini_member = alumini_member::find($id);
         $alumini_member->name = $request->input('name');
         $alumini_member->mobile = $request->input('mobile');
+        $alumini_member->graduation_year = $request->input('id_num');
+        $alumini_member->id_num = $request->input('mobile');
+        $alumini_member->country = $request->input('country');
+        $alumini_member->address = $request->input('address');
+        $alumini_member->sector = $request->input('sector');
+        $alumini_member->designation = $request->input('designation');
 
         $student->update();
         return redirect()->back()->with('status','User Updated Successfully');
