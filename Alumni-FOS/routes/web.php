@@ -21,28 +21,12 @@ Route::get('/', function () {
     return view('template/index');
 });
 
-Route::get('/index', function () {
-    return view('index');
-});
-
-Route::get('/register2', function () {
-    return view('template/reg');
-});
-
 Route::get('/register', function () {
     return view('template/register');
 });
 
 Route::get('/login', function () {
     return view('template/login');
-});
-
-Route::get('/login2', function () {
-    return view('login');
-});
-
-Route::get('/forgot', function () {
-    return view('forgot_pwd');
 });
 
 Route::get('/update', function () {
