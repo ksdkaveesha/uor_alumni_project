@@ -237,7 +237,7 @@
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="{{ url('update/'.auth()->guard('webalumni')->user()->id) }}" method="post" role="form" class="php-email-form">
+              <form action="<?=url('/update')?>" method="post" role="form" class="php-email-form">
                 <div class="form-group">
                     <label for="address"><h4><b>Personal Details</b></h4></label>
                 </div>
@@ -529,11 +529,6 @@
                 <div class="form-group">
                     <label for="designation">Designation</label>
                     <input type="text" class="form-control" name="designation" id="designation" value="{{ auth()->guard('webalumni')->user()->designation}}" required>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
                 </div>
                 <div class="text-center"><button type="submit">Submit</button></div>
               </form>

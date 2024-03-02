@@ -29,10 +29,6 @@ Route::get('/login', function () {
     return view('template/login');
 });
 
-Route::get('/update3', function () {
-    return view('template/update');
-});
-
 Route::get('/test', function () {
     return view('test');
 });
@@ -52,13 +48,6 @@ Route::get('/directory', function () {
 Route::get('/contact', function () {
     return view('template/contact');
 });
-
-
-Route::get('/update2', function () {
-    return view('template/update2');
-});
-
-
 
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
 Route::post('/login', [LoginController::class,'authenticate']);
