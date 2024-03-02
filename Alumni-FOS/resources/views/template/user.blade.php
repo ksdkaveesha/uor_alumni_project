@@ -170,7 +170,7 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span>+{{ auth()->guard('webalumni')->user()->m_code }}-{{ auth()->guard('webalumni')->user()->mobile }}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree Type:</strong> <span>{{ auth()->guard('webalumni')->user()->degree_type }}</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>{{ auth()->guard('webalumni')->user()->degree }}</span></li>
-                 
+
                 </ul>
               </div>
               <div class="col-lg-6">
@@ -207,6 +207,7 @@
 
             <div class="col-lg-5 d-flex align-items-stretch">
                 <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                    @csrf
                     <div class="col-lg-12" data-aos="fade-right">
                         <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
 
@@ -236,27 +237,31 @@
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form action="{{ url('update/'.auth()->guard('webalumni')->user()->id) }}" method="post" role="form" class="php-email-form">
                 <div class="form-group">
                     <label for="address"><h4><b>Personal Details</b></h4></label>
                 </div>
                 <div class="form-group">
                     <label for="name">Your Name</label>
-                    <input type="text" class="form-control" name="subject" id="subject" required>
+                    <input type="text" class="form-control" name="subject" id="subject" value="{{ auth()->guard('webalumni')->user()->name }}" required>
+                </div>
+                <div class="form-group">
+                    <label for="id_num">ID Number</label>
+                    <input type="text" class="form-control" name="id_num" id="id_num" value="{{ auth()->guard('webalumni')->user()->id_num}}" required>
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
-                    <label for="name">Year of Graduation</label>
-                    <input type="text" name="name" class="form-control" id="name" required>
+                    <label for="graduation_year">Year of Graduation</label>
+                    <input type="text" name="graduation_year" class="form-control" id="graduation_year" value="{{ auth()->guard('webalumni')->user()->graduation_year}}" required>
                   </div>
                   <div class="form-group col-md-6">
-                    <label for="name">Phone Number</label>
-                    <input type="email" class="form-control" name="email" id="email" required>
+                    <label for="mobile">Phone Number</label>
+                    <input type="text" class="form-control" name="mobile" id="mobile" value="{{ auth()->guard('webalumni')->user()->mobile}}" required>
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="name">Country</label>
-                  <select class="form-control" name="subject" id="subject" required>
+                  <label for="country">Country</label>
+                  <select class="form-control" name="country" id="country" value="{{ auth()->guard('webalumni')->user()->country}}" required>
                     <option value="" disabled selected>Select Country</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
@@ -506,15 +511,15 @@
                 </div>
                 <div class="form-group">
                     <label for="address">Residential Address</label>
-                    <input type="text" class="form-control" name="subject" id="subject" required>
+                    <input type="text" class="form-control" name="address" id="address" value="{{ auth()->guard('webalumni')->user()->address}}" required>
                 </div>
                 <br><br>
                 <div class="form-group">
                     <label for="address"><h4><b>Occupation Details</b></h4></label>
                 </div>
                 <div class="form-group">
-                    <label for="address">Sector</label>
-                    <select class="form-control" name="subject" id="subject" required>
+                    <label for="sector">Sector</label>
+                    <select class="form-control" name="sector" id="sector" value="{{ auth()->guard('webalumni')->user()->sector}}" required>
                         <option value="" disabled selected>Select Sector</option>
                         <option value="public">Public</option>
                         <option value="private">Private</option>
@@ -522,8 +527,8 @@
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="address">Designation</label>
-                    <input type="text" class="form-control" name="subject" id="subject" required>
+                    <label for="designation">Designation</label>
+                    <input type="text" class="form-control" name="designation" id="designation" value="{{ auth()->guard('webalumni')->user()->designation}}" required>
                 </div>
                 <div class="my-3">
                   <div class="loading">Loading</div>

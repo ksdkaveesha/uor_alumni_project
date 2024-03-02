@@ -29,7 +29,7 @@ Route::get('/login', function () {
     return view('template/login');
 });
 
-Route::get('/update', function () {
+Route::get('/update3', function () {
     return view('template/update');
 });
 
@@ -63,4 +63,4 @@ Route::get('/update2', function () {
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
 Route::post('/login', [LoginController::class,'authenticate']);
 Route::post('logout', [LoginController::class,'logout'])->name('logout');
-
+Route::post('/update', [AluminiMemberController::class,'update']);

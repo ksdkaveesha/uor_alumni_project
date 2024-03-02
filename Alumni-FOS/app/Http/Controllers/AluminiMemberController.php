@@ -11,53 +11,11 @@ use Illuminate\Support\Facades\Hash;
 
 class AluminiMemberController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     */
-    public function show(alumini_member $alumini_member)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(alumini_member $alumini_member)
-    {
-        //
-    }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, alumini_member $alumini_member)
-    {
-        //
-    }
+
 
     /**
      * Remove the specified resource from storage.
@@ -111,6 +69,16 @@ class AluminiMemberController extends Controller
         $user->save();
         return redirect()->back()->with('success', 'Registered successfully!');
 
+    }
+
+    public function update(Request $request, $id)
+    {
+        $alumini_member = alumini_member::find($id);
+        $alumini_member->name = $request->input('name');
+        $alumini_member->mobile = $request->input('mobile');
+
+        $student->update();
+        return redirect()->back()->with('status','User Updated Successfully');
     }
 
 
