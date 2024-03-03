@@ -71,19 +71,20 @@ class AluminiMemberController extends Controller
 
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        $alumini_member = alumini_member::find($id);
+
+        $alumini_member = alumini_member::find(auth()->guard('webalumni')->user()->id);
         $alumini_member->name = $request->input('name');
         $alumini_member->mobile = $request->input('mobile');
-        $alumini_member->graduation_year = $request->input('id_num');
-        $alumini_member->id_num = $request->input('mobile');
+        $alumini_member->graduation_year = $request->input('graduation_year');
+        $alumini_member->id_num = $request->input('id_num');
         $alumini_member->country = $request->input('country');
         $alumini_member->address = $request->input('address');
         $alumini_member->sector = $request->input('sector');
         $alumini_member->designation = $request->input('designation');
 
-        $student->update();
+        $alumini_member->update();
         return redirect()->back()->with('status','User Updated Successfully');
     }
 

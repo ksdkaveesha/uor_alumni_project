@@ -98,6 +98,7 @@
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
     <div style="position: absolute">
+
         <img src="images/logo.png">
     </div>
 
@@ -105,10 +106,16 @@
 
   <!-- ======= Header ======= -->
   <header id="header">
+
     <div class="d-flex flex-column">
         <div class="profile2">
             <img src="images/logo.png">
         </div>
+        @if (session('status'))
+            <div class="alert alert-success">
+                {{ session('status') }}
+            </div>
+        @endif
       <div class="profile">
         <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
         <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4>
@@ -133,6 +140,7 @@
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background-image: {{asset('assets/img/profile-img.jpg')}}">
     <div class="hero-container" data-aos="fade-in">
+
       <h1>Hi {{ auth()->guard('webalumni')->user()->name }}</h1>
       <p>Welcome to <span class="typed" data-typed-items="University of Ruhuna, Faculty of Science"></span></p>
     </div>
@@ -156,7 +164,7 @@
             <h3 style="text-align: center"><b> {{ auth()->guard('webalumni')->user()->name }} </b></h3>-->
           </div>
           <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>{{ auth()->guard('webalumni')->user()->name }}'s Profile</h3>
+            <h3>{{ auth()->guard('webalumni')->user()->name."'s Profile" }}</h3>
             <p class="fst-italic">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
               magna aliqua.
@@ -237,31 +245,32 @@
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="<?=url('/update')?>" method="post" role="form" class="php-email-form">
+              <form action="<?=url('/update')?>" method="post">
+                @csrf
                 <div class="form-group">
                     <label for="address"><h4><b>Personal Details</b></h4></label>
                 </div>
                 <div class="form-group">
                     <label for="name">Your Name</label>
-                    <input type="text" class="form-control" name="subject" id="subject" value="{{ auth()->guard('webalumni')->user()->name }}" required>
+                    <input type="text" class="form-control" name="name" id="name" value="{{ auth()->guard('webalumni')->user()->name }}">
                 </div>
                 <div class="form-group">
                     <label for="id_num">ID Number</label>
-                    <input type="text" class="form-control" name="id_num" id="id_num" value="{{ auth()->guard('webalumni')->user()->id_num}}" required>
+                    <input type="text" class="form-control" name="id_num" id="id_num" value="{{ auth()->guard('webalumni')->user()->id_num}}">
                 </div>
                 <div class="row">
                   <div class="form-group col-md-6">
                     <label for="graduation_year">Year of Graduation</label>
-                    <input type="text" name="graduation_year" class="form-control" id="graduation_year" value="{{ auth()->guard('webalumni')->user()->graduation_year}}" required>
+                    <input type="text" name="graduation_year" class="form-control" id="graduation_year" value="{{ auth()->guard('webalumni')->user()->graduation_year}}">
                   </div>
                   <div class="form-group col-md-6">
                     <label for="mobile">Phone Number</label>
-                    <input type="text" class="form-control" name="mobile" id="mobile" value="{{ auth()->guard('webalumni')->user()->mobile}}" required>
+                    <input type="text" class="form-control" name="mobile" id="mobile" value="{{ auth()->guard('webalumni')->user()->mobile}}">
                   </div>
                 </div>
                 <div class="form-group">
                   <label for="country">Country</label>
-                  <select class="form-control" name="country" id="country" value="{{ auth()->guard('webalumni')->user()->country}}" required>
+                  <select class="form-control" name="country" id="country" value="{{ auth()->guard('webalumni')->user()->country}}">
                     <option value="" disabled selected>Select Country</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
@@ -467,7 +476,7 @@
                     <option value="South Africa">South Africa</option>
                     <option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
                     <option value="Spain">Spain</option>
-                    <option value="Sri Lanka">Sri Lanka</option>
+                    <option value="Sri Lanka" {{ auth()->guard('webalumni')->user()->country === 'Sri Lanka' ? 'selected' : '' }}>Sri Lanka</option>
                     <option value="Sudan">Sudan</option>
                     <option value="Suriname">Suriname</option>
                     <option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
@@ -511,7 +520,7 @@
                 </div>
                 <div class="form-group">
                     <label for="address">Residential Address</label>
-                    <input type="text" class="form-control" name="address" id="address" value="{{ auth()->guard('webalumni')->user()->address}}" required>
+                    <input type="text" class="form-control" name="address" id="address" value="{{ auth()->guard('webalumni')->user()->address}}">
                 </div>
                 <br><br>
                 <div class="form-group">
@@ -519,18 +528,33 @@
                 </div>
                 <div class="form-group">
                     <label for="sector">Sector</label>
-                    <select class="form-control" name="sector" id="sector" value="{{ auth()->guard('webalumni')->user()->sector}}" required>
+                    <select class="form-control" name="sector" id="sector" value="{{ auth()->guard('webalumni')->user()->sector}}">
                         <option value="" disabled selected>Select Sector</option>
-                        <option value="public">Public</option>
-                        <option value="private">Private</option>
-                        <option value="own">Own Business</option>
+                        <option value="public" {{ auth()->guard('webalumni')->user()->sector === 'public' ? 'selected' : '' }}>Public</option>
+                        <option value="private" {{ auth()->guard('webalumni')->user()->sector === 'privete' ? 'selected' : '' }}>Private</option>
+                        <option value="own" {{ auth()->guard('webalumni')->user()->sector === 'own' ? 'selected' : '' }}>Own Business</option>
                     </select>
                 </div>
                 <div class="form-group">
                     <label for="designation">Designation</label>
-                    <input type="text" class="form-control" name="designation" id="designation" value="{{ auth()->guard('webalumni')->user()->designation}}" required>
+                    <input type="text" class="form-control" name="designation" id="designation" value="{{ auth()->guard('webalumni')->user()->designation}}">
                 </div>
-                <div class="text-center"><button type="submit">Submit</button></div>
+                <style>
+                    .custom-button {
+                        background-color: #211046; /* Dark purple color */
+                        color: #ffffff; /* White text color */
+                        border: none;
+                        padding: 10px 20px;
+                        cursor: pointer;
+                        border-radius: 4px;
+                        transition: background-color 0.3s ease;
+                    }
+
+                    .custom-button:hover {
+                        background-color: #007bff; /* Blue color on hover */
+                    }
+                </style>
+                <div class="text-center"><button type="submit" class="custom-button">Submit</button></div>
               </form>
             </div>
 
