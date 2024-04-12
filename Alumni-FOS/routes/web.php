@@ -49,6 +49,10 @@ Route::get('/contact', function () {
     return view('template/contact');
 });
 
+Route::get('/admin', function () {
+    return view('template/admin');
+});
+
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
 Route::post('/login', [LoginController::class,'authenticate']);
 Route::post('logout', [LoginController::class,'logout'])->name('logout');

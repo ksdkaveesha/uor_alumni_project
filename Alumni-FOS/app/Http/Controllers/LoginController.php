@@ -81,6 +81,11 @@ class LoginController extends Controller
                 Auth::guard('webalumni')->login($alumini_member);
                 return redirect('/user');
             }
+            elseif($user->role=="admin"){
+                $alumini_member = alumini_member::where('email',$email)->first();
+                Auth::guard('webalumni')->login($alumini_member);
+                return redirect('/admin');
+            }
 
         } else{
             return redirect()->back()->with('error','invalid username or Password');

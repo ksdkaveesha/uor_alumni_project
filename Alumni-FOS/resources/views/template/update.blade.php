@@ -122,7 +122,7 @@
 
                                 </div>
                             </div>
-                        </div>      
+                        </div>
                                <div class="column">
                                         <div class="row">
                                             <div class="col">
