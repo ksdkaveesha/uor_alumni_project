@@ -57,3 +57,4 @@ Route::post('/register_form', [AluminiMemberController::class,'register_alumini_
 Route::post('/login', [LoginController::class,'authenticate']);
 Route::post('logout', [LoginController::class,'logout'])->name('logout');
 Route::post('/update', [AluminiMemberController::class,'update']);
+Route::post('/add_photo', [AluminiMemberController::class,'add_photo']);

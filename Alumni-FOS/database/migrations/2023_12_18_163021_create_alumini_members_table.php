@@ -29,6 +29,7 @@ return new class extends Migration
             $table->string('designation')->nullable();
             $table->string('sector')->nullable();
             $table->string('about')->nullable();
+            $table->string('path')->nullable();
             $table->timestamps();
         });
     }

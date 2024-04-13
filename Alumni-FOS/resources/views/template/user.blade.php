@@ -214,7 +214,7 @@
           <div class="row" data-aos="fade-in">
 
             <div class="col-lg-5 d-flex align-items-stretch">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                <form action="<?=url('/add_photo')?>" method="post" class="php-email-form">
                     @csrf
                     <div class="col-lg-12" data-aos="fade-right">
                         <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
@@ -223,7 +223,7 @@
                             <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAgvAAAAJDMzMWI1NzdiLTg1NjAtNGZhNS04MWRlLTRmNjY2NDY0M2Y3Zg.jpg" class="expert-img">
                         </div>
                           <div class="upload-button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
-                            <input class="file-upload" type="file" accept="image/*"></input>
+                        <input class="file-upload" type="file" name="photo" id="photo"></input>
                         <script>
                                     $(function(){
                                         $('.file-upload').change( function(e) {
@@ -241,6 +241,7 @@
                     </div>
                     <br>
                     <div class="text-center"><button type="submit">Add photo</button></div>
+                    <input type="submit">
                 </form>
             </div>
 

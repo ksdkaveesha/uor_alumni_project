@@ -88,5 +88,21 @@ class AluminiMemberController extends Controller
         return redirect()->back()->with('status','User Updated Successfully');
     }
 
+    function add_photo(Request $request)
+    {
+        $name = $request->file('photo')->getClientOriginalName();
+        $size = $request->file('photo')->getSize();
+        $path = $request->file('photo')->storeAs('photo',$name,'public');
+
+        $request->file('photo')->store($path);
+
+        $photo = alumini_member::find(auth()->guard('webalumni')->user()->id);
+        $photo->name = $name;
+        $photo->size = $size;
+        $photo->path = $path;
+        $photo->update();
+        return redirect()->back()->with('status','Photo Updated Successfully');
+    }
+
 
 }
