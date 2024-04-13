@@ -213,37 +213,31 @@
 
           <div class="row" data-aos="fade-in">
 
+
             <div class="col-lg-5 d-flex align-items-stretch">
+                <div>
                 <form action="<?=url('/add_photo')?>" method="POST">
                     @csrf
-
-                        <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
-
-                        <div>
-                            <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAgvAAAAJDMzMWI1NzdiLTg1NjAtNGZhNS04MWRlLTRmNjY2NDY0M2Y3Zg.jpg" class="expert-img">
-                        </div>
-                          <div class="upload-button"><i class="fa fa-pencil-square-o" aria-hidden="true"></i></div>
-                        <input class="file-upload" type="file" name="photo" id="photo"></input>
-                        <script>
-                                    $(function(){
-                                        $('.file-upload').change( function(e) {
-
-                                            var img = URL.createObjectURL(e.target.files[0]);
-                                            $('.expert-img').attr('src', img);
-                                        });
-                                        $(".upload-button").on('click', function() {
-                                                    $(".file-upload").click();
-                                                    });
-                                    });
-                        </script>-->
-
                         <div class="mb-3">
-                          <label for="formFile" class="form-label">Update Photo</label>
-                          <input class="form-control" type="file" id="formFile" required>
+                            <div>
+                                @if (isset($photo) && $photo->count() > 0)
+                                    @foreach ($photo as $photo)
+                                            <img src="{{asset('storage/'.$photo->path)}}" style="width: 100%"/>
+                                    @endforeach
+                                @else
+                                    <img src="assets/img/profile-img.jpg" style="width: 100%">
+                                @endif
+                            </div>
+                            <br><br><br>
+                            <h4>Update a photo</h4>
+                          <input class="form-control" type="file" id="photo" name="photo" required>
                         </div>
                     <br>
-                    <div class="photo"><input type="submit" value="Add Photo"></div>
+                    <div class="photo_upload"><input type="submit" value="Add Photo"></div>
                 </form>
+                </div>
+                <br>
+
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
