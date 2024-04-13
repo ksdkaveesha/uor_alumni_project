@@ -214,10 +214,10 @@
           <div class="row" data-aos="fade-in">
 
             <div class="col-lg-5 d-flex align-items-stretch">
-                <form action="<?=url('/add_photo')?>" method="post" class="php-email-form">
+                <form action="<?=url('/add_photo')?>" method="POST">
                     @csrf
-                    <div class="col-lg-12" data-aos="fade-right">
-                        <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
+
+                        <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
 
                         <div>
                             <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAgvAAAAJDMzMWI1NzdiLTg1NjAtNGZhNS04MWRlLTRmNjY2NDY0M2Y3Zg.jpg" class="expert-img">
@@ -235,13 +235,14 @@
                                                     $(".file-upload").click();
                                                     });
                                     });
-                        </script>
+                        </script>-->
 
-
-                    </div>
+                        <div class="mb-3">
+                          <label for="formFile" class="form-label">Update Photo</label>
+                          <input class="form-control" type="file" id="formFile" required>
+                        </div>
                     <br>
-                    <div class="text-center"><button type="submit">Add photo</button></div>
-                    <input type="submit">
+                    <div class="photo"><input type="submit" value="Add Photo"></div>
                 </form>
             </div>
 
