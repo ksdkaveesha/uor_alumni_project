@@ -216,14 +216,12 @@
 
             <div class="col-lg-5 d-flex align-items-stretch">
                 <div>
-                <form action="<?=url('/add_photo')?>" method="POST">
+                <form action="<?=url('/add_photo')?>" method="POST" enctype="multipart/form-data">
                     @csrf
                         <div class="mb-3">
                             <div>
-                                @if (isset($photo) && $photo->count() > 0)
-                                    @foreach ($photo as $photo)
-                                            <img src="{{asset('storage/'.$photo->path)}}" style="width: 100%"/>
-                                    @endforeach
+                                @if (isset(auth()->guard('webalumni')->user()->path))
+                                    <img src="{{asset('storage/'.auth()->guard('webalumni')->user()->path)}}" style="width: 100%"/>
                                 @else
                                     <img src="assets/img/profile-img.jpg" style="width: 100%">
                                 @endif

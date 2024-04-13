@@ -8,6 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Rules\scnum;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\File;
 
 class AluminiMemberController extends Controller
 {
@@ -90,19 +92,36 @@ class AluminiMemberController extends Controller
 
     function add_photo(Request $request)
     {
-        $name = $request->file('photo')->getClientOriginalName();
-        $size = $request->file('photo')->getSize();
-        $path = $request->file('photo')->storeAs('photo',$name,'public');
+        if ($request->hasFile('photo')){
+            $alumni = alumini_member::find(auth()->guard('webalumni')->user()->id);
+            if ($alumni->path !== NULL) {
+                File::delete('storage/'.$alumni->path);
+            }
 
-        $request->file('photo')->store($path);
+            $image = $request->file('photo');
+            $originalName = $image->getClientOriginalName();
+            $extension = $image->getClientOriginalExtension();
+            $filename = $this->generateUniqueFilename($originalName, $extension);
 
-        $photo = alumini_member::find(auth()->guard('webalumni')->user()->id);
-        $photo->name = $name;
-        $photo->size = $size;
-        $photo->path = $path;
-        $photo->update();
+            // Store the file in the 'public' disk
+            $imgpath = $image->storeAs('images',$filename,'public');
+
+            $alumni = alumini_member::find(auth()->guard('webalumni')->user()->id);
+            $alumni->path = $imgpath;
+            $alumni->update();
+        }
         return redirect()->back()->with('status','Photo Updated Successfully');
     }
 
+    private function generateUniqueFilename($originalName, $extension)
+    {
+        // You can use various strategies here to generate a unique filename
+        // For example, appending a timestamp or a random string to the original name.
+        $filename = pathinfo($originalName, PATHINFO_FILENAME);
+        $filename = Str::slug($filename); // Convert to a URL-friendly slug
+        $filename = $filename . '_' . time() . '.' . $extension;
+
+        return $filename;
+    }
 
 }
