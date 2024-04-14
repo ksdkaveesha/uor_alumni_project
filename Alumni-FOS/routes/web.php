@@ -3,6 +3,7 @@
 use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AluminiMemberController;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\DepartmentController;
 
 
@@ -58,3 +59,4 @@ Route::post('/login', [LoginController::class,'authenticate']);
 Route::post('logout', [LoginController::class,'logout'])->name('logout');
 Route::post('/update', [AluminiMemberController::class,'update']);
 Route::post('/add_photo', [AluminiMemberController::class,'add_photo']);
+Route::post('/add_notice', [AdminController::class,'add_notice']);

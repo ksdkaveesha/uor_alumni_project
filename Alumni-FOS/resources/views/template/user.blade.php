@@ -223,7 +223,7 @@
 
             <div class="col-lg-5 d-flex align-items-stretch">
                 <div>
-                <form action="<?=url('/add_photo')?>" method="POST" enctype="multipart/form-data">
+                <form action="<?=url('/add_photo')?>" method="POST" enctype="multipart/form-data" >
                     @csrf
                         <div class="mb-3">
                             <div>
