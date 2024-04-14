@@ -117,7 +117,7 @@
             </div>
         @endif
       <div class="profile">
-        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+        <img src="{{asset('storage/'.auth()->guard('webalumni')->user()->path)}}" alt="" class="img-fluid rounded-circle">
         <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4>
       </div>
 
@@ -138,7 +138,7 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background-image: {{asset('assets/img/profile-img.jpg')}}">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background-image: {{asset('storage/'.auth()->guard('webalumni')->user()->path)}}">
     <div class="hero-container" data-aos="fade-in">
 
       <h1>Hi {{ auth()->guard('webalumni')->user()->name }}</h1>
@@ -159,7 +159,14 @@
 
         <div class="row">
           <div class="col-lg-4" data-aos="fade-right">
-            <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+            <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
+            <div>
+                @if (isset(auth()->guard('webalumni')->user()->path))
+                    <img src="{{asset('storage/'.auth()->guard('webalumni')->user()->path)}}" class="img-fluid" alt=""/>
+                @else
+                    <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
+                @endif
+            </div>
             <!--<br><br>
             <h3 style="text-align: center"><b> {{ auth()->guard('webalumni')->user()->name }} </b></h3>-->
           </div>
