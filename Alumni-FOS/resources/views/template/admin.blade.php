@@ -619,7 +619,7 @@
                     </div>
                 </div>
 
-              <div class="text-center"><input type="submit"></input></div>
+              <div class="text-center"><input type="submit" value="Add Notice"></input></div>
             </form>
           </div>
 

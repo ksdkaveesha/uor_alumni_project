@@ -74,4 +74,36 @@ class AdminController extends Controller
         return redirect()->back()->with('success', 'Notice submitted successfully!');
 
     }
+
+    public function display_notice()
+    {
+        // Retrieve the last three records from the database
+        $lastThreeRecords = Admin::latest()->take(3)->get();
+
+        return view('template/index', compact('lastThreeRecords'));
+
+        // Get each record individually
+        /*$record1 = $lastThreeRecords->get(0);
+        $record2 = $lastThreeRecords->get(1);
+        $record3 = $lastThreeRecords->get(2);
+
+        if($record1){
+            return view('template/index', compact('record1'));
+        }else{
+            return view('template/index');
+        }
+
+        if($record2){
+            return view('template/index', compact('record2'));
+        }else{
+            return view('template/index');
+        }
+
+        if($record3){
+            return view('template/index', compact('record3'));
+        }else{
+            return view('template/index');
+        }*/
+
+    }
 }

@@ -209,7 +209,7 @@
       </div>
       <!--gallery section end -->
 
-      <!-- services section start -->
+      <!-- Notices section start -->
       <div class="services_section layout_padding">
         <div class="container">
            <div class="row">
@@ -226,8 +226,13 @@
                           <img src="images/icon1.png" class="image_1">
                           <img src="images/icon1.png" class="image_2">
                        </div>
-                       <h3 class="decorate_text">1st notice</h3>
-                       <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                        @if($lastThreeRecords->count() >= 1)
+                            <h3 class="decorate_text">{{ $lastThreeRecords[0]->topic }}</h3>
+                            <p class="tation_text">{{ $lastThreeRecords[0]->notice}}</p>
+                        @else
+                            <h3 class="decorate_text">1st Notice</h3>
+                            <p class="tation_text">No any notices at this moment</p>
+                        @endif
 
                     </div>
                  </div>
@@ -237,8 +242,13 @@
                           <img src="images/icon1.png" class="image_1">
                           <img src="images/icon1.png" class="image_2">
                        </div>
-                       <h3 class="decorate_text">2nd notice</h3>
-                       <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                        @if($lastThreeRecords->count() >= 2)
+                            <h3 class="decorate_text">{{ $lastThreeRecords[1]->topic }}</h3>
+                            <p class="tation_text">{{ $lastThreeRecords[1]->notice}}</p>
+                        @else
+                            <h3 class="decorate_text">2nd Notice</h3>
+                            <p class="tation_text">No any notices at this moment</p>
+                        @endif
 
                     </div>
                  </div>
@@ -248,8 +258,13 @@
                           <img src="images/icon1.png" class="image_1">
                           <img src="images/icon1.png" class="image_2">
                        </div>
-                       <h3 class="decorate_text">3rd notice</h3>
-                       <p class="tation_text">Exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea </p>
+                        @if($lastThreeRecords->count() >= 3)
+                            <h3 class="decorate_text">{{ $lastThreeRecords[2]->topic }}</h3>
+                            <p class="tation_text">{{ $lastThreeRecords[2]->notice}}</p>
+                        @else
+                            <h3 class="decorate_text">3rd Notice</h3>
+                            <p class="tation_text">No any notices at this moment</p>
+                        @endif
 
                     </div>
                  </div>
@@ -261,7 +276,7 @@
            </div>
         </div>
      </div>
-    <!-- services section end -->
+    <!-- Notices section end -->
 
       <!-- testimonial section start -->
       <div class="client_section layout_padding" id="testimonial">

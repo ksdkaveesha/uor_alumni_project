@@ -1039,6 +1039,19 @@ body {
     background: #37b3ed;
   }
 
+  .text-center input[type=submit] {
+    background: #390A40;
+    border: 0;
+    padding: 10px 24px;
+    color: #fff;
+    transition: 0.4s;
+    border-radius: 4px;
+  }
+
+  .text-center input[type=submit]:hover {
+    background: #37b3ed;
+  }
+
   @keyframes animate-loading {
     0% {
       transform: rotate(0deg);

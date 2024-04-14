@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->String('name');
             $table->String('topic');
-            $table->String('Notice');
+            $table->String('notice');
             $table->timestamps();
         });
     }

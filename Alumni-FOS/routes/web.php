@@ -18,9 +18,9 @@ use App\Http\Controllers\DepartmentController;
 |
 */
 
-Route::get('/', function () {
-    return view('template/index');
-});
+
+
+Route::get('/', [AdminController::class,'display_notice']);
 
 Route::get('/register', function () {
     return view('template/register');
