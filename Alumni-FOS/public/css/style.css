@@ -558,6 +558,15 @@ a:hover {
     background-attachment: fixed;
 }
 
+.services_section_news {
+    width: 100%;
+    float: left;
+    background-color: #fcf3d2;
+    height: auto;
+
+    background-attachment: fixed;
+}
+
 .services_taital {
     width: 100%;
     float: left;

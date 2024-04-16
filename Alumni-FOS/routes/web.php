@@ -22,6 +22,8 @@ use App\Http\Controllers\DepartmentController;
 
 Route::get('/', [AdminController::class,'display_notice']);
 
+Route::get('/news', [AdminController::class,'display_notice_testamonials']);
+
 Route::get('/register', function () {
     return view('template/register');
 });

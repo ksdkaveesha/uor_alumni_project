@@ -55,7 +55,7 @@
                         <a class="nav-link" href="/">Home</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#testimonial">News & Events</a>
+                        <a class="nav-link" href="/news">News & Events</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="about">About Us</a>
@@ -82,7 +82,7 @@
       </div>
       <!--header section end -->
 
-     
+
     <!-- popup -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -149,7 +149,7 @@
         </div>
     <!-- popup end -->
 
-    
+
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">

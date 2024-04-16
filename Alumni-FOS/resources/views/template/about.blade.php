@@ -55,7 +55,7 @@
                         <a class="nav-link" href="/">Home</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="#testimonial">News & Events</a>
+                        <a class="nav-link" href="/news">News & Events</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="about">About Us</a>
@@ -82,7 +82,7 @@
       </div>
       <!--header section end -->
 
-     
+
     <!-- popup -->
         <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -173,8 +173,8 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&display=swap"></noscript>
   <link rel="preload" as="style" href="assets/mobirise/css/additional.css"><link rel="stylesheet" href="assets/mobirise/css/additional.css" type="text/css">
-  
-  
+
+
 
   <style>:root{ --background: #FFF8EB; --dominant-color: #FDB833; --primary-color: #296EB4; --secondary-color: #B1740F; --success-color: #20AC6B; --danger-color: #AE1E2C; --warning-color: #CC9900; --info-color: #0AA3C2; --background-text: #000000; --dominant-text: #000000; --primary-text: #FFFFFF; --secondary-text: #FFFFFF; --success-text: #FFFFFF; --danger-text: #FFFFFF; --warning-text: #000000; --info-text: #FFFFFF;}</style>
 </head>
@@ -802,7 +802,7 @@
 </style>
 <section class="banner_section layout_padding"" id="hero-15-u56wDcjjj0">
   <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0);"></div>
-  
+
   </div>
 </section>
     <style>
@@ -1036,7 +1036,7 @@
   }
 </style>
 <section
- 
+
   class="slider4 mbr-embla cid-u56wDclXPB"
   id="gallery-5-u56wDclXPB"
 >
@@ -1073,7 +1073,7 @@
                     <div class="item-wrapper">
                       <img
                         src="assets/images/photo-1507413245164-6160d8298b31.jpeg"
-                       
+
                       />
                     </div>
                   </div>
@@ -1088,7 +1088,7 @@
                     <div class="item-wrapper">
                       <img
                         src="assets/images/photo-1575468130797-aa950b68aeec.jpeg"
-                       
+
                       />
                     </div>
                   </div>
@@ -1103,7 +1103,7 @@
                     <div class="item-wrapper">
                       <img
                         src="assets/images/photo-1613563696477-85af63b3b602.jpeg"
-                       
+
                       />
                     </div>
                   </div>
@@ -1118,7 +1118,7 @@
                     <div class="item-wrapper">
                       <img
                         src="assets/images/photo-1706161865043-cec7f9783ea0.jpeg"
-                       
+
                       />
                     </div>
                   </div>
@@ -1133,7 +1133,7 @@
                     <div class="item-wrapper">
                       <img
                         src="assets/images/photo-1528838059403-95f01420989b.jpeg"
-                       
+
                       />
                     </div>
                   </div>
@@ -1349,7 +1349,7 @@
 							<strong></strong>
 						</h4>
 						<h5 class="card-text mbr-fonts-style mt-2 display-7">
-							
+
 						</h5>
 					</div>
 				</div>
@@ -1364,7 +1364,7 @@
 							<strong></strong>
 						</h4>
 						<h5 class="card-text mbr-fonts-style mt-2 display-7">
-							
+
 						</h5>
 					</div>
 				</div>
@@ -1379,7 +1379,7 @@
 							<strong></strong>
 						</h4>
 						<h5 class="card-text mbr-fonts-style mt-2 display-7">
-							
+
 						</h5>
 					</div>
 				</div>
@@ -1394,7 +1394,7 @@
 							<strong></strong>
 						</h4>
 						<h5 class="card-text mbr-fonts-style mt-2 display-7">
-							
+
 						</h5>
 					</div>
 				</div>
@@ -1409,7 +1409,7 @@
 							<strong></strong>
 						</h4>
 						<h5 class="card-text mbr-fonts-style mt-2 display-7">
-							
+
 						</h5>
 					</div>
 				</div>
@@ -1451,15 +1451,15 @@
       <div class="loop-container">
         <div class="item display-1" data-linewords="
           Discover the Magic of Science *
-          Where Curiosity Meets Innovation *" 
+          Where Curiosity Meets Innovation *"
         data-direction="-1" data-speed="0.05">
         </div>
         <div class="item display-1" data-linewords="
           Discover the Magic of Science *
-          Where Curiosity Meets Innovation *" 
+          Where Curiosity Meets Innovation *"
         data-direction="-1" data-speed="0.05">
         </div>
-      </div>   
+      </div>
   </div>
 </section>
     <style>
@@ -1583,7 +1583,7 @@
 							<strong></strong>
 						</h4>
 						<h5 class="card-text mbr-fonts-style mt-2 display-7">
-							
+
 						</h5>
 					</div>
 				</div>
@@ -1598,7 +1598,7 @@
 							<strong></strong>
 						</h4>
 						<h5 class="card-text mbr-fonts-style mt-2 display-7">
-							
+
 						</h5>
 					</div>
 				</div>
@@ -2136,7 +2136,7 @@
   }
 </style>
 <section
- 
+
   class="slider4 mbr-embla cid-u56wDcnw8j"
   id="gallery-5-u56wDcnw8j"
 >
@@ -2173,7 +2173,7 @@
                     <div class="item-wrapper">
                       <img
                         src="assets/images/photo-1579684288538-c76a2fab9617.jpeg"
-                       
+
                       />
                     </div>
                   </div>
@@ -2188,7 +2188,7 @@
                     <div class="item-wrapper">
                       <img
                         src="assets/images/photo-1517976487492-5750f3195933.jpeg"
-                       
+
                       />
                     </div>
                   </div>
@@ -2203,7 +2203,7 @@
                     <div class="item-wrapper">
                       <img
                         src="assets/images/photo-1453847668862-487637052f8a.jpeg"
-                       
+
                       />
                     </div>
                   </div>
@@ -2218,7 +2218,7 @@
                     <div class="item-wrapper">
                       <img
                         src="assets/images/photo-1532094349884-543bc11b234d.jpeg"
-                       
+
                       />
                     </div>
                   </div>
@@ -2233,7 +2233,7 @@
                     <div class="item-wrapper">
                       <img
                         src="assets/images/photo-1526666923127-b2970f64b422.jpeg"
-                       
+
                       />
                     </div>
                   </div>
@@ -2755,7 +2755,7 @@
                     </a>
                     <a class="iconfont-wrapper bg-tiktok m-2" href="#" target="_blank">
                         <span class="socicon-tiktok socicon"></span>
-                    </a>                   
+                    </a>
                 </div>
             </div>
         </div>
@@ -2795,7 +2795,7 @@
                 <div class="mbr-section-head mb-5">
                     <h3 class="mbr-section-title mbr-fonts-style align-center mb-0 display-2">
                         <strong>Get in Touch with Us</strong>
-                    </h3>                    
+                    </h3>
                 </div>
             </div>
         </div>
@@ -2906,7 +2906,7 @@
             Phone: <a href="">+1-800-SCIENCE</a>
             <br>Email: info@sciencefaculty.com
             <br>Address:  Sri Lanka
-            <br>Working Hours: Mon-Fri: 9am-5pm</p> 
+            <br>Working Hours: Mon-Fri: 9am-5pm</p>
         </div>
       </div>
       <div class="col-lg-8 side-features">
@@ -2989,7 +2989,7 @@
   <script src="assets/ytplayer/index.js"></script>
   <script src="assets/theme/js/script.js"></script>
   <script src="assets/formoid/formoid.min.js"></script>
-  
+
   <script>
 
     (function(){

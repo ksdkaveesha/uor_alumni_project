@@ -17,7 +17,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>About_us</title>
+      <title>Alumni_FOS</title>
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">
@@ -82,73 +82,70 @@
       </div>
       <!--header section end -->
 
+      <!-- Notices section start -->
+      <div class="services_section_news layout_padding">
+        <div class="container">
+           <div class="row">
+              <div class="col-sm-12">
+                <h1 class="client_taital">Notices</h1>
+            </div>
+           </div>
+           <div class="services_section_2">
+              <div class="row">
+                    @if($notice->count() >= 1)
+                        @foreach ($notice as $notice)
+                            <div class="col-lg-4 col-sm-12 col-md-4">
+                                <div class="box_main active">
+                                    <div class="house_icon">
+                                        <img src="images/icon1.png" class="image_1">
+                                        <img src="images/icon1.png" class="image_2">
+                                    </div>
 
-    <!-- popup -->
-        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content" style="display:flex; align-items:center; justify-content: center;">
-                <div class="modal-body">
-                    <!--login-->
-                                <div class="wrap-login100" style="display:flex; align-items:center; justify-content: center; width:100%">
-
-                                    <form action="<?=url('/login')?>" method="POST" class="login100-form validate-form" style="width: 100%; ">
-                                        @csrf
-                                        <span class="login100-form-title">
-                                            Member Login
-                                        </span>
-                                        @if (session('error'))
-                                            <div class="alert alert-danger">
-                                                {{ session('success') }}
-                                            </div>
-                                        @endif
-
-                                        <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                                            <input class="input100" type="text" name="email" placeholder="Email">
-                                            <span class="focus-input100"></span>
-                                            <span class="symbol-input100">
-                                                <i class="fa fa-envelope" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
-
-                                        <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                                            <input class="input100" type="password" name="pass" placeholder="Password">
-                                            <span class="focus-input100"></span>
-                                            <span class="symbol-input100">
-                                                <i class="fa fa-lock" aria-hidden="true"></i>
-                                            </span>
-                                        </div>
-
-                                        <div class="container-login100-form-btn">
-                                            <input type="submit" value="Login" class="login100-form-btn">
-                                        </div>
-
-                                        <div class="text-center p-t-12">
-                                            <span class="txt1">
-                                                Forgot
-                                            </span>
-                                            <a class="txt2" href="#">
-                                                Password?
-                                            </a>
-                                        </div>
-
-                                        <div class="text-center p-t-13">
-                                            <a class="txt2" href="#">
-                                                Create your Account
-                                                <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-                                            </a>
-                                        </div>
-                                    </form>
+                                        <h3 class="decorate_text">{{ $notice->topic }}</h3>
+                                        <p class="tation_text">{{ $notice->notice}}</p>
                                 </div>
-                        <!--end login-->
-                </div>
-                <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-            </div>
-            </div>
+                                <br>
+                            </div>
+                        @endforeach
+                    @else
+                                        <p class="tation_text" style="color: black">No any notices at this moment</p>
+                    @endif
+              </div>
+           </div>
         </div>
-    <!-- popup end -->
+     </div>
+    <!-- Notices section end -->
 
+      <!-- testimonial section start -->
+      <div class="client_section layout_padding" id="testimonial">
+         <div class="container">
+            <div class="row">
+               <div class="col-sm-12">
+                  <h1 class="client_taital">Testimonial</h1>
+                </div>
+            </div>
+         </div>
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="client_section_2">
+                <div class="container">
+                   <div class="row">
+                      <div class="col-md-12">
+                         <div class="testimonial_section_2">
+                            <h4 class="client_name_text">Monila <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                            <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
+                         </div>
+                      </div>
+                   </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </div>
+     <br>
+      <!-- testimonial section end -->
 
       <!-- footer section start -->
       <div class="footer_section layout_padding">

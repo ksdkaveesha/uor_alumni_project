@@ -53,7 +53,7 @@
                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
-                       <a class="nav-link" href="#testimonial">News & Events</a>
+                       <a class="nav-link" href="/news">News & Events</a>
                     </li>
                     <li class="nav-item">
                        <a class="nav-link" href="about">About Us</a>

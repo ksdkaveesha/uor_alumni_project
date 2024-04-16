@@ -82,28 +82,14 @@ class AdminController extends Controller
 
         return view('template/index', compact('lastThreeRecords'));
 
-        // Get each record individually
-        /*$record1 = $lastThreeRecords->get(0);
-        $record2 = $lastThreeRecords->get(1);
-        $record3 = $lastThreeRecords->get(2);
+    }
 
-        if($record1){
-            return view('template/index', compact('record1'));
-        }else{
-            return view('template/index');
-        }
+    public function display_notice_testamonials()
+    {
+        // Retrieve the all records from the database
+        $notice = Admin::all();
 
-        if($record2){
-            return view('template/index', compact('record2'));
-        }else{
-            return view('template/index');
-        }
-
-        if($record3){
-            return view('template/index', compact('record3'));
-        }else{
-            return view('template/index');
-        }*/
+        return view('template/news', compact('notice'));
 
     }
 }
