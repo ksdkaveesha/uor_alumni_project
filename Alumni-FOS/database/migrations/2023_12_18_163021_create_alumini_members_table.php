@@ -30,6 +30,8 @@ return new class extends Migration
             $table->string('sector')->nullable();
             $table->string('about')->nullable();
             $table->string('path')->nullable();
+            $table->unsignedBigInteger('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }

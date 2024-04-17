@@ -51,6 +51,13 @@ class AluminiMemberController extends Controller
             // Add other validation rules for your other fields here
         ]);
 
+        $user = new User();
+        $user->email = $request->input('email');
+        $user->password = Hash::make($request->input('password'));
+        $user->role = "alumni";
+        $user->save();
+
+        $user = User::where('email',$request->input('email'))->first();
 
         $alumini_member = new alumini_member();
         $alumini_member->name = $request->input('name');
@@ -60,15 +67,9 @@ class AluminiMemberController extends Controller
         $alumini_member->mobile = $request->input('mobile');
         $alumini_member->degree_type = $request->input('degree_type');
         $alumini_member->degree = $request->input('degree');
-
-        $user = new User();
-        $user->email = $request->input('email');
-        $user->password = Hash::make($request->input('password'));
-        $user->role = "alumni";
-        $user->alumini_member_id = $alumini_member->id;
-
+        $alumini_member->user_id = $user->id;
         $alumini_member->save();
-        $user->save();
+
         return redirect()->back()->with('success', 'Registered successfully!');
 
     }
