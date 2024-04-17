@@ -271,7 +271,7 @@
               </div>
               <br>
               <div class="row" style="display:flex; align-items:center; justify-content: center; width:100%">
-                <div class="learnmore_bt"><a href="#">Read More</a></div>
+                <div class="learnmore_bt"><a href="/news">Read More</a></div>
              </div>
            </div>
         </div>
