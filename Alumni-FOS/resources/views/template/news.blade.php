@@ -126,23 +126,30 @@
             </div>
          </div>
       <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="client_section_2">
-                <div class="container">
-                   <div class="row">
-                      <div class="col-md-12">
-                         <div class="testimonial_section_2">
-                            <h4 class="client_name_text">Monila <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
-                            <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
-                         </div>
-                      </div>
-                   </div>
+        @if($testamonials->count() >= 1)
+            @foreach ($testamonials as $testamonials)
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="client_section_2">
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="testimonial_section_2">
+
+                                                    <h4 class="client_name_text">{{ $testamonials->topic }} <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                                    <p class="customer_text">{{ $testamonials->testamonial }}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-          </div>
-        </div>
-      </div>
+            @endforeach
+        @else
+            <p class="customer_text">No records</p>
+        @endif
      </div>
      <br>
       <!-- testimonial section end -->

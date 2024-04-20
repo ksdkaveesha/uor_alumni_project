@@ -127,7 +127,7 @@
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Profile Update</span></a></li>
           <li><a href="#contact" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
-          <li><a href="#" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Testamonials</span></a></li>
+          <li><a href="#testamonials" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Testamonials</span></a></li>
           <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <li><a href="#" class="nav-link scrollto"><i class="bx bx-log-out"></i> <button type="submit"><span style="color: #6f7180">Logout</span></button></a></li>
@@ -813,12 +813,12 @@
       </div>
     </section> End Testimonials Section -->
 
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
+    <!-- ======= Testamonials Section ======= -->
+    <section id="testamonials" class="contact">
       <div class="container">
 
         <div class="section-title">
-          <h2>Contact</h2>
+          <h2>Add Testamonials</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -850,38 +850,32 @@
           </div>
 
           <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="form-group col-md-6">
-                  <label for="name">Your Name</label>
-                  <input type="text" name="name" class="form-control" id="name" required>
+            <form action="<?=url('/check_testamonials')?>" method="POST" style="width:100%">
+                @csrf
+                <div class="row" style="width:100%">
+                    <div class="form-group ">
+                        <label for="name">Your Name</label>
+                        <input type="text" name="name" class="form-control" id="name" style="width:100%" required>
+                    </div>
+
+                    <div class="form-group" style="width:100%">
+                        <label for="topic">Subject</label>
+                        <input type="text" class="form-control" name="topic" id="topic" style="width:100%" required>
+                    </div>
+                    <div class="form-group" style="width:100%">
+                        <label for="notice">Message</label>
+                        <textarea class="form-control" name="testamonial" rows="10" style="width:100%" required></textarea>
+                    </div>
                 </div>
-                <div class="form-group col-md-6">
-                  <label for="name">Your Email</label>
-                  <input type="email" class="form-control" name="email" id="email" required>
-                </div>
-              </div>
-              <div class="form-group">
-                <label for="name">Subject</label>
-                <input type="text" class="form-control" name="subject" id="subject" required>
-              </div>
-              <div class="form-group">
-                <label for="name">Message</label>
-                <textarea class="form-control" name="message" rows="10" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
+
+              <div class="text-center"><input type="submit" value="Add Testamonials"></input></div>
             </form>
           </div>
 
         </div>
 
       </div>
-    </section><!-- End Contact Section -->
+    </section><!-- End Testamonials Section -->
 
   </main><!-- End #main -->
 

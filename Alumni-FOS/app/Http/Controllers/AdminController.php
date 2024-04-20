@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\testamonials;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -71,7 +72,7 @@ class AdminController extends Controller
         $Admin->notice = $request->input('notice');
 
         $Admin->save();
-        return redirect()->back()->with('success', 'Notice submitted successfully!');
+        return redirect()->back()->with('status', 'Notice submitted successfully!');
 
     }
 
@@ -79,8 +80,9 @@ class AdminController extends Controller
     {
         // Retrieve the last three records from the database
         $lastThreeRecords = Admin::latest()->take(3)->get();
+        $lastThreeRecords_test = testamonials::latest()->take(3)->get();
 
-        return view('template/index', compact('lastThreeRecords'));
+        return view('template/index', compact('lastThreeRecords','lastThreeRecords_test'));
 
     }
 
@@ -88,8 +90,9 @@ class AdminController extends Controller
     {
         // Retrieve the all records from the database
         $notice = Admin::all();
+        $testamonials = testamonials::all();
 
-        return view('template/news', compact('notice'));
+        return view('template/news', compact('notice','testamonials'));
 
     }
 }
