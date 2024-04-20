@@ -303,8 +303,13 @@
                    <div class="row">
                       <div class="col-md-12">
                          <div class="testimonial_section_2">
-                            <h4 class="client_name_text">Monila <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
-                            <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
+                            @if($lastThreeRecords_test->count() >= 1)
+                                <h4 class="client_name_text">{{ $lastThreeRecords_test[0]->topic }} <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <p class="customer_text">{{ $lastThreeRecords_test[0]->testamonial }}</p>
+                            @else
+                                <h4 class="client_name_text">No Testamonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <p class="customer_text">No records</p>
+                            @endif
                          </div>
                       </div>
                    </div>
@@ -317,9 +322,14 @@
                    <div class="row">
                       <div class="col-md-12">
                          <div class="testimonial_section_2">
-                            <h4 class="client_name_text">Monila <span class="quick_icon"><img src="images/quick-icon.png"></span></h4>
-                            <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
-                         </div>
+                            @if($lastThreeRecords_test->count() >= 2)
+                                <h4 class="client_name_text">{{ $lastThreeRecords_test[1]->topic }} <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <p class="customer_text">{{ $lastThreeRecords_test[1]->testamonial }}</p>
+                            @else
+                                <h4 class="client_name_text">No Testamonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <p class="customer_text">No records</p>
+                            @endif
+                        </div>
                       </div>
                    </div>
                 </div>
@@ -331,9 +341,14 @@
                    <div class="row">
                       <div class="col-md-12">
                          <div class="testimonial_section_2">
-                            <h4 class="client_name_text">Monila <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
-                            <p class="customer_text">many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All themany variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some embarrassing hidden in the middle of text. All the</p>
-                         </div>
+                            @if($lastThreeRecords_test->count() >= 3)
+                                <h4 class="client_name_text">{{ $lastThreeRecords_test[2]->topic }} <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <p class="customer_text">{{ $lastThreeRecords_test[2]->testamonial }}</p>
+                            @else
+                                <h4 class="client_name_text">No Testamonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <p class="customer_text">No records</p>
+                            @endif
+                        </div>
                       </div>
                    </div>
                 </div>
@@ -341,6 +356,9 @@
           </div>
         </div>
       </div>
+        <div class="row" style="display:flex; align-items:center; justify-content: center; width:100%">
+            <div class="learnmore_bt"><a href="/news">Read More</a></div>
+        </div>
      </div>
      <br>
       <!-- testimonial section end -->

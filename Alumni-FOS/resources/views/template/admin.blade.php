@@ -126,8 +126,8 @@
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Profile Update</span></a></li>
-          <li><a href="#" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Edit Members</span></a></li>
           <li><a href="#notices" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Notices</span></a></li>
+          <li><a href="#check_testimonials" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Check Testamonials</span></a></li>
           <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <li><a href="#" class="nav-link scrollto"><i class="bx bx-log-out"></i> <button type="submit"><span style="color: #6f7180">Logout</span></button></a></li>
@@ -476,7 +476,7 @@
                     <option value="South Africa" {{ auth()->guard('webalumni')->user()->country === 'South Africa' ? 'selected' : '' }}>South Africa</option>
                     <option value="South Georgia and The South Sandwich Islands" {{ auth()->guard('webalumni')->user()->country === 'South Georgia and The South Sandwich Islands' ? 'selected' : '' }}>South Georgia and The South Sandwich Islands</option>
                     <option value="Spain" {{ auth()->guard('webalumni')->user()->country === 'Spain' ? 'selected' : '' }}>Spain</option>
-                    <option value="Sri Lanka" {{ auth()->guard('webalumni')->user()->country === 'Sri Lanka' ? 'selected' : '' }}>Sri Lanka</option
+                    <option value="Sri Lanka" {{ auth()->guard('webalumni')->user()->country === 'Sri Lanka' ? 'selected' : '' }}>Sri Lanka</option>
                     <option value="Sudan" {{ auth()->guard('webalumni')->user()->country === 'Sudan' ? 'selected' : '' }}>Sudan</option>
                     <option value="Suriname" {{ auth()->guard('webalumni')->user()->country === 'Suriname' ? 'selected' : '' }}>Suriname</option>
                     <option value="Svalbard and Jan Mayen" {{ auth()->guard('webalumni')->user()->country === 'Svalbard and Jan Mayen' ? 'selected' : '' }}>Svalbard and Jan Mayen</option>
@@ -627,6 +627,136 @@
 
       </div>
     </section><!-- End Notices Section -->
+
+    <!-- ======= Check Testimonials Section ======= -->
+    <section id="check_testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Check Testimonials</h2>
+          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+        </div>
+
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up">
+                @if($last_testamonials->count() >= 1)
+                    <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        {{ $last_testamonials[0]->testamonial }}
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                    <h2><b>{{ $last_testamonials[0]->topic }}</b></h2>
+                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
+                    <h5><a href="/check_testamonials_del/{{$last_testamonials[0]->id}}">Delete</a></h5>
+                @else
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            No More Records
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                @endif
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="1000">
+                @if($last_testamonials->count() >= 2)
+                    <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        {{ $last_testamonials[1]->testamonial }}
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                    <h2><b>{{ $last_testamonials[1]->topic }}</b></h2>
+                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
+                    <h5><a href="/check_testamonials_del/{{$last_testamonials[1]->id}}">Delete</a></h5>
+                @else
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            No More Records
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                @endif
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="2000">
+                @if($last_testamonials->count() >= 3)
+                    <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        {{ $last_testamonials[2]->testamonial }}
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                    <h2><b>{{ $last_testamonials[2]->topic }}</b></h2>
+                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
+                    <h5><a href="/check_testamonials_del/{{$last_testamonials[2]->id}}">Delete</a></h5>
+                @else
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            No More Records
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                @endif
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="3000">
+                @if($last_testamonials->count() >= 4)
+                    <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        {{ $last_testamonials[3]->testamonial }}
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                    <h2><b>{{ $last_testamonials[3]->topic }}</b></h2>
+                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
+                    <h5><a href="/check_testamonials_del/{{$last_testamonials[3]->id}}">Delete</a></h5>
+                @else
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            No More Records
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                @endif
+              </div>
+            </div>
+
+            <div class="swiper-slide">
+              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="4000">
+                @if($last_testamonials->count() >= 5)
+                    <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                        {{ $last_testamonials[4]->testamonial }}
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                    <h2><b>{{ $last_testamonials[4]->topic }}</b></h2>
+                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
+                    <h5><a href="/check_testamonials_del/{{$last_testamonials[4]->id}}">Delete</a></h5>
+                @else
+                    <p>
+                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                            No More Records
+                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                    </p>
+                @endif
+              </div>
+            </div>
+
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+
+      </div>
+    </section>
+    <!--End Testimonials Section -->
 
   </main><!-- End #main -->
 

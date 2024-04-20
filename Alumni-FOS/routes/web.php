@@ -4,6 +4,8 @@ use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AluminiMemberController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\TestamonialsController;
+use App\Http\Controllers\CheckTestamonialsController;
 use App\Http\Controllers\DepartmentController;
 
 
@@ -52,9 +54,7 @@ Route::get('/contact', function () {
     return view('template/contact');
 });
 
-Route::get('/admin', function () {
-    return view('template/admin');
-});
+Route::get('/admin', [CheckTestamonialsController::class,'display_check_testamonials']);
 
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
 Route::post('/login', [LoginController::class,'authenticate']);
@@ -62,3 +62,5 @@ Route::post('logout', [LoginController::class,'logout'])->name('logout');
 Route::post('/update', [AluminiMemberController::class,'update']);
 Route::post('/add_photo', [AluminiMemberController::class,'add_photo']);
 Route::post('/add_notice', [AdminController::class,'add_notice']);
+Route::post('/check_testamonials', [CheckTestamonialsController::class,'check_testamonials']);
+Route::get('/check_testamonials_del/{id}', [CheckTestamonialsController::class,'testamonials_del']);
