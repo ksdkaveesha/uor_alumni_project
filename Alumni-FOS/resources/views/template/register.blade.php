@@ -598,13 +598,7 @@
      </div>
 
      <!-- footer section end -->
-     <!-- copyright section start-->
-     <div class="copyright_section">
-        <div class="container">
-           <p class="copyright_text"><span style="color: white"> All Rights Reserved. Design by</span> <a href="https://html.design"><span style="color: white"> html  Templates</span></a></p>
-        </div>
-     </div>
-     <!--copyright section end -->
+     
      <!-- Javascript files-->
 
 
