@@ -54,6 +54,10 @@ Route::get('/contact', function () {
     return view('template/contact');
 });
 
+Route::get('/admin2', function () {
+    return view('template/admin2');
+});
+
 Route::get('/admin', [CheckTestamonialsController::class,'display_check_testamonials']);
 
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);

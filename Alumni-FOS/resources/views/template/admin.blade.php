@@ -125,7 +125,7 @@
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Edit User Admin</span></a></li>
+          <li><a href="/admin2" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Edit User Admin</span></a></li>
           <li><a href="#notices" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Notices</span></a></li>
           <li><a href="#check_testimonials" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Check Testamonials</span></a></li>
           <form method="POST" action="{{ route('logout') }}">
