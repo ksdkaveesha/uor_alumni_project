@@ -125,7 +125,7 @@
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Profile Update</span></a></li>
+          <li><a href="#" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Edit User Admin</span></a></li>
           <li><a href="#notices" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Notices</span></a></li>
           <li><a href="#check_testimonials" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Check Testamonials</span></a></li>
           <form method="POST" action="{{ route('logout') }}">
@@ -203,7 +203,7 @@
     </section>
     <!-- End About Section -->
 
-    <!-- ======= Update Section ======= -->
+    <!-- ======= Update Section =======
     <section id="update" class="contact">
         <div class="container">
 
@@ -217,8 +217,6 @@
                 <form action="forms/contact.php" method="post" role="form" class="php-email-form">
                     @csrf
                     <div class="col-lg-12" data-aos="fade-right">
-                        <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
-
                         <div>
                             <img src="https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAgvAAAAJDMzMWI1NzdiLTg1NjAtNGZhNS04MWRlLTRmNjY2NDY0M2Y3Zg.jpg" class="expert-img">
                         </div>
@@ -562,7 +560,7 @@
           </div>
 
         </div>
-      </section>
+      </section>  -->
 
     <!-- ======= Notices Section ======= -->
     <section id="notices" class="contact">
