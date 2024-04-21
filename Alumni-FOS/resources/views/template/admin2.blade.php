@@ -128,9 +128,9 @@
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-          <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Add members</span></a></li>
+          <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Add Users</span></a></li>
           <li><a href="#testamonials" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Testamonials</span></a></li>
-          <li><a href="/admin" class="nav-link scrollto"><i class="bx bx-log-out"></i> <button type="submit"><span style="color: #6f7180">Back</span></button></a></li>
+          <li><a href="/admin" class="nav-link scrollto"><i class="bx bx-arrow-back"></i> <button type="submit"><span style="color: #6f7180">Back</span></button></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -183,301 +183,406 @@
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="<?=url('/update')?>" method="post">
+              <form action="<?=url('')?>" method="post">
                 @csrf
-                <div class="form-group">
-                    <label for="address"><h4><b>Personal Details</b></h4></label>
-                </div>
-                <div class="form-group">
-                    <label for="name">Your Name</label>
-                    <input type="text" class="form-control" name="name" id="name" value="{{ auth()->guard('webalumni')->user()->name }}">
-                </div>
-                <div class="form-group">
-                    <label for="id_num">ID Number</label>
-                    <input type="text" class="form-control" name="id_num" id="id_num" value="{{ auth()->guard('webalumni')->user()->id_num}}">
-                </div>
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="graduation_year">Year of Graduation</label>
-                    <input type="text" name="graduation_year" class="form-control" id="graduation_year" value="{{ auth()->guard('webalumni')->user()->graduation_year}}">
-                  </div>
-                  <div class="form-group col-md-6">
-                    <label for="mobile">Phone Number</label>
-                    <input type="text" class="form-control" name="mobile" id="mobile" value="{{ auth()->guard('webalumni')->user()->mobile}}">
-                  </div>
-                </div>
-                <div class="form-group">
-                  <label for="country">Country</label>
-                  <select class="form-control" name="country" id="country" value="{{ auth()->guard('webalumni')->user()->country}}">
-                    <option value="" disabled selected>Select Country</option>
-                    <option value="Afghanistan" {{ auth()->guard('webalumni')->user()->country === 'Afghanistan' ? 'selected' : '' }}>Afghanistan</option>
-                    <option value="Åland Islands" {{ auth()->guard('webalumni')->user()->country === 'Åland Islands' ? 'selected' : '' }}>Åland Islands</option>
-                    <option value="Albania" {{ auth()->guard('webalumni')->user()->country === 'Albania' ? 'selected' : '' }}>Albania</option>
-                    <option value="Algeria" {{ auth()->guard('webalumni')->user()->country === 'Algeria' ? 'selected' : '' }}>Algeria</option>
-                    <option value="American Samoa" {{ auth()->guard('webalumni')->user()->country === 'American Samoa' ? 'selected' : '' }}>American Samoa</option>
-                    <option value="Andorra" {{ auth()->guard('webalumni')->user()->country === 'Andorra' ? 'selected' : '' }}>Andorra</option>
-                    <option value="Angola" {{ auth()->guard('webalumni')->user()->country === 'Angola' ? 'selected' : '' }}>Angola</option>
-                    <option value="Anguilla" {{ auth()->guard('webalumni')->user()->country === 'Anguilla' ? 'selected' : '' }}>Anguilla</option>
-                    <option value="Antarctica" {{ auth()->guard('webalumni')->user()->country === 'Antarctica' ? 'selected' : '' }}>Antarctica</option>
-                    <option value="Antigua and Barbuda" {{ auth()->guard('webalumni')->user()->country === 'Antigua and Barbuda' ? 'selected' : '' }}>Antigua and Barbuda</option>
-                    <option value="Argentina" {{ auth()->guard('webalumni')->user()->country === 'Argentina' ? 'selected' : '' }}>Argentina</option>
-                    <option value="Armenia" {{ auth()->guard('webalumni')->user()->country === 'Armenia' ? 'selected' : '' }}>Armenia</option>
-                    <option value="Aruba" {{ auth()->guard('webalumni')->user()->country === 'Aruba' ? 'selected' : '' }}>Aruba</option>
-                    <option value="Australia" {{ auth()->guard('webalumni')->user()->country === 'Australia' ? 'selected' : '' }}>Australia</option>
-                    <option value="Austria" {{ auth()->guard('webalumni')->user()->country === 'Austria' ? 'selected' : '' }}>Austria</option>
-                    <option value="Azerbaijan" {{ auth()->guard('webalumni')->user()->country === 'Azerbaijan' ? 'selected' : '' }}>Azerbaijan</option>
-                    <option value="Bahamas" {{ auth()->guard('webalumni')->user()->country === 'Bahamas' ? 'selected' : '' }}>Bahamas</option>
-                    <option value="Bahrain" {{ auth()->guard('webalumni')->user()->country === 'Bahrain' ? 'selected' : '' }}>Bahrain</option>
-                    <option value="Bangladesh" {{ auth()->guard('webalumni')->user()->country === 'Bangladesh' ? 'selected' : '' }}>Bangladesh</option>
-                    <option value="Barbados" {{ auth()->guard('webalumni')->user()->country === 'Barbados' ? 'selected' : '' }}>Barbados</option>
-                    <option value="Belarus" {{ auth()->guard('webalumni')->user()->country === 'Belarus' ? 'selected' : '' }}>Belarus</option>
-                    <option value="Belgium" {{ auth()->guard('webalumni')->user()->country === 'Belgium' ? 'selected' : '' }}>Belgium</option>
-                    <option value="Belize" {{ auth()->guard('webalumni')->user()->country === 'Belize' ? 'selected' : '' }}>Belize</option>
-                    <option value="Benin" {{ auth()->guard('webalumni')->user()->country === 'Benin' ? 'selected' : '' }}>Benin</option>
-                    <option value="Bermuda" {{ auth()->guard('webalumni')->user()->country === 'Bermuda' ? 'selected' : '' }}>Bermuda</option>
-                    <option value="Bhutan" {{ auth()->guard('webalumni')->user()->country === 'Bhutan' ? 'selected' : '' }}>Bhutan</option>
-                    <option value="Bolivia" {{ auth()->guard('webalumni')->user()->country === 'Bolivia' ? 'selected' : '' }}>Bolivia</option>
-                    <option value="Bosnia and Herzegovina" {{ auth()->guard('webalumni')->user()->country === 'Bosnia and Herzegovina' ? 'selected' : '' }}>Bosnia and Herzegovina</option>
-                    <option value="Botswana" {{ auth()->guard('webalumni')->user()->country === 'Botswana' ? 'selected' : '' }}>Botswana</option>
-                    <option value="Bouvet Island" {{ auth()->guard('webalumni')->user()->country === 'Bouvet Island' ? 'selected' : '' }}>Bouvet Island</option>
-                    <option value="Brazil" {{ auth()->guard('webalumni')->user()->country === 'Brazil' ? 'selected' : '' }}>Brazil</option>
-                    <option value="British Indian Ocean Territory" {{ auth()->guard('webalumni')->user()->country === 'British Indian Ocean Territory' ? 'selected' : '' }}>British Indian Ocean Territory</option>
-                    <option value="Brunei Darussalam" {{ auth()->guard('webalumni')->user()->country === 'Brunei Darussalam' ? 'selected' : '' }}>Brunei Darussalam</option>
-                    <option value="Bulgaria" {{ auth()->guard('webalumni')->user()->country === 'Bulgaria' ? 'selected' : '' }}>Bulgaria</option>
-                    <option value="Burkina Faso" {{ auth()->guard('webalumni')->user()->country === 'Burkina Faso' ? 'selected' : '' }}>Burkina Faso</option>
-                    <option value="Burundi" {{ auth()->guard('webalumni')->user()->country === 'Burundi' ? 'selected' : '' }}>Burundi</option>
-                    <option value="Cambodia" {{ auth()->guard('webalumni')->user()->country === 'Cambodia' ? 'selected' : '' }}>Cambodia</option>
-                    <option value="Cameroon" {{ auth()->guard('webalumni')->user()->country === 'Cameroon' ? 'selected' : '' }}>Cameroon</option>
-                    <option value="Canada" {{ auth()->guard('webalumni')->user()->country === 'Canada' ? 'selected' : '' }}>Canada</option>
-                    <option value="Cape Verde" {{ auth()->guard('webalumni')->user()->country === 'Cape Verde' ? 'selected' : '' }}>Cape Verde</option>
-                    <option value="Cayman Islands" {{ auth()->guard('webalumni')->user()->country === 'Cayman Islands' ? 'selected' : '' }}>Cayman Islands</option>
-                    <option value="Central African Republic" {{ auth()->guard('webalumni')->user()->country === 'Central African Republic' ? 'selected' : '' }}>Central African Republic</option>
-                    <option value="Chad" {{ auth()->guard('webalumni')->user()->country === 'Chad' ? 'selected' : '' }}>Chad</option>
-                    <option value="Chile" {{ auth()->guard('webalumni')->user()->country === 'Chile' ? 'selected' : '' }}>Chile</option>
-                    <option value="China" {{ auth()->guard('webalumni')->user()->country === 'China' ? 'selected' : '' }}>China</option>
-                    <option value="Christmas Island" {{ auth()->guard('webalumni')->user()->country === 'Christmas Island' ? 'selected' : '' }}>Christmas Island</option>
-                    <option value="Cocos (Keeling) Islands" {{ auth()->guard('webalumni')->user()->country === 'Cocos (Keeling) Islands' ? 'selected' : '' }}>Cocos (Keeling) Islands</option>
-                    <option value="Colombia" {{ auth()->guard('webalumni')->user()->country === 'Colombia' ? 'selected' : '' }}>Colombia</option>
-                    <option value="Comoros" {{ auth()->guard('webalumni')->user()->country === 'Comoros' ? 'selected' : '' }}>Comoros</option>
-                    <option value="Congo" {{ auth()->guard('webalumni')->user()->country === 'Congo' ? 'selected' : '' }}>Congo</option>
-                    <option value="Congo, The Democratic Republic of The" {{ auth()->guard('webalumni')->user()->country === 'Congo, The Democratic Republic of The' ? 'selected' : '' }}>Congo, The Democratic Republic of The</option>
-                    <option value="Cook Islands" {{ auth()->guard('webalumni')->user()->country === 'Cook Islands' ? 'selected' : '' }}>Cook Islands</option>
-                    <option value="Costa Rica" {{ auth()->guard('webalumni')->user()->country === 'Costa Rica' ? 'selected' : '' }}>Costa Rica</option>
-                    <option value="Cote D'ivoire" {{ auth()->guard('webalumni')->user()->country === "Cote D'ivoire" ? 'selected' : '' }}>Cote D'ivoire</option>
-                    <option value="Croatia" {{ auth()->guard('webalumni')->user()->country === 'Croatia' ? 'selected' : '' }}>Croatia</option>
-                    <option value="Cuba" {{ auth()->guard('webalumni')->user()->country === 'Cuba' ? 'selected' : '' }}>Cuba</option>
-                    <option value="Cyprus" {{ auth()->guard('webalumni')->user()->country === 'Cyprus' ? 'selected' : '' }}>Cyprus</option>
-                    <option value="Czech Republic" {{ auth()->guard('webalumni')->user()->country === 'Czech Republic' ? 'selected' : '' }}>Czech Republic</option>
-                    <option value="Denmark" {{ auth()->guard('webalumni')->user()->country === 'Denmark' ? 'selected' : '' }}>Denmark</option>
-                    <option value="Djibouti" {{ auth()->guard('webalumni')->user()->country === 'Djibouti' ? 'selected' : '' }}>Djibouti</option>
-                    <option value="Dominica" {{ auth()->guard('webalumni')->user()->country === 'Dominica' ? 'selected' : '' }}>Dominica</option>
-                    <option value="Dominican Republic" {{ auth()->guard('webalumni')->user()->country === 'Dominican Republic' ? 'selected' : '' }}>Dominican Republic</option>
-                    <option value="Ecuador" {{ auth()->guard('webalumni')->user()->country === 'Ecuador' ? 'selected' : '' }}>Ecuador</option>
-                    <option value="Egypt" {{ auth()->guard('webalumni')->user()->country === 'Egypt' ? 'selected' : '' }}>Egypt</option>
-                    <option value="El Salvador" {{ auth()->guard('webalumni')->user()->country === 'El Salvador' ? 'selected' : '' }}>El Salvador</option>
-                    <option value="Equatorial Guinea" {{ auth()->guard('webalumni')->user()->country === 'Equatorial Guinea' ? 'selected' : '' }}>Equatorial Guinea</option>
-                    <option value="Eritrea" {{ auth()->guard('webalumni')->user()->country === 'Eritrea' ? 'selected' : '' }}>Eritrea</option>
-                    <option value="Estonia" {{ auth()->guard('webalumni')->user()->country === 'Estonia' ? 'selected' : '' }}>Estonia</option>
-                    <option value="Ethiopia" {{ auth()->guard('webalumni')->user()->country === 'Ethiopia' ? 'selected' : '' }}>Ethiopia</option>
-                    <option value="Falkland Islands (Malvinas)" {{ auth()->guard('webalumni')->user()->country === 'Falkland Islands (Malvinas)' ? 'selected' : '' }}>Falkland Islands (Malvinas)</option>
-                    <option value="Faroe Islands" {{ auth()->guard('webalumni')->user()->country === 'Faroe Islands' ? 'selected' : '' }}>Faroe Islands</option>
-                    <option value="Fiji" {{ auth()->guard('webalumni')->user()->country === 'Fiji' ? 'selected' : '' }}>Fiji</option>
-                    <option value="Finland" {{ auth()->guard('webalumni')->user()->country === 'Finland' ? 'selected' : '' }}>Finland</option>
-                    <option value="France" {{ auth()->guard('webalumni')->user()->country === 'France' ? 'selected' : '' }}>France</option>
-                    <option value="French Guiana" {{ auth()->guard('webalumni')->user()->country === 'French Guiana' ? 'selected' : '' }}>French Guiana</option>
-                    <option value="French Polynesia" {{ auth()->guard('webalumni')->user()->country === 'French Polynesia' ? 'selected' : '' }}>French Polynesia</option>
-                    <option value="French Southern Territories" {{ auth()->guard('webalumni')->user()->country === 'French Southern Territories' ? 'selected' : '' }}>French Southern Territories</option>
-                    <option value="Gabon" {{ auth()->guard('webalumni')->user()->country === 'Gabon' ? 'selected' : '' }}>Gabon</option>
-                    <option value="Gambia" {{ auth()->guard('webalumni')->user()->country === 'Gambia' ? 'selected' : '' }}>Gambia</option>
-                    <option value="Georgia" {{ auth()->guard('webalumni')->user()->country === 'Georgia' ? 'selected' : '' }}>Georgia</option>
-                    <option value="Germany" {{ auth()->guard('webalumni')->user()->country === 'Germany' ? 'selected' : '' }}>Germany</option>
-                    <option value="Ghana" {{ auth()->guard('webalumni')->user()->country === 'Ghana' ? 'selected' : '' }}>Ghana</option>
-                    <option value="Gibraltar" {{ auth()->guard('webalumni')->user()->country === 'Gibraltar' ? 'selected' : '' }}>Gibraltar</option>
-                    <option value="Greece" {{ auth()->guard('webalumni')->user()->country === 'Greece' ? 'selected' : '' }}>Greece</option>
-                    <option value="Greenland" {{ auth()->guard('webalumni')->user()->country === 'Greenland' ? 'selected' : '' }}>Greenland</option>
-                    <option value="Grenada" {{ auth()->guard('webalumni')->user()->country === 'Grenada' ? 'selected' : '' }}>Grenada</option>
-                    <option value="Guadeloupe" {{ auth()->guard('webalumni')->user()->country === 'Guadeloupe' ? 'selected' : '' }}>Guadeloupe</option>
-                    <option value="Guam" {{ auth()->guard('webalumni')->user()->country === 'Guam' ? 'selected' : '' }}>Guam</option>
-                    <option value="Guatemala" {{ auth()->guard('webalumni')->user()->country === 'Guatemala' ? 'selected' : '' }}>Guatemala</option>
-                    <option value="Guernsey" {{ auth()->guard('webalumni')->user()->country === 'Guernsey' ? 'selected' : '' }}>Guernsey</option>
-                    <option value="Guinea" {{ auth()->guard('webalumni')->user()->country === 'Guinea' ? 'selected' : '' }}>Guinea</option>
-                    <option value="Guinea-bissau" {{ auth()->guard('webalumni')->user()->country === 'Guinea-bissau' ? 'selected' : '' }}>Guinea-bissau</option>
-                    <option value="Guyana" {{ auth()->guard('webalumni')->user()->country === 'Guyana' ? 'selected' : '' }}>Guyana</option>
-                    <option value="Haiti" {{ auth()->guard('webalumni')->user()->country === 'Haiti' ? 'selected' : '' }}>Haiti</option>
-                    <option value="Heard Island and Mcdonald Islands" {{ auth()->guard('webalumni')->user()->country === 'Heard Island and Mcdonald Islands' ? 'selected' : '' }}>Heard Island and Mcdonald Islands</option>
-                    <option value="Holy See (Vatican City State)" {{ auth()->guard('webalumni')->user()->country === 'Holy See (Vatican City State)' ? 'selected' : '' }}>Holy See (Vatican City State)</option>
-                    <option value="Honduras" {{ auth()->guard('webalumni')->user()->country === 'Honduras' ? 'selected' : '' }}>Honduras</option>
-                    <option value="Hong Kong" {{ auth()->guard('webalumni')->user()->country === 'Hong Kong' ? 'selected' : '' }}>Hong Kong</option>
-                    <option value="Hungary" {{ auth()->guard('webalumni')->user()->country === 'Hungary' ? 'selected' : '' }}>Hungary</option>
-                    <option value="Iceland" {{ auth()->guard('webalumni')->user()->country === 'Iceland' ? 'selected' : '' }}>Iceland</option>
-                    <option value="India" {{ auth()->guard('webalumni')->user()->country === 'India' ? 'selected' : '' }}>India</option>
-                    <option value="Indonesia" {{ auth()->guard('webalumni')->user()->country === 'Indonesia' ? 'selected' : '' }}>Indonesia</option>
-                    <option value="Iran, Islamic Republic of" {{ auth()->guard('webalumni')->user()->country === 'Iran, Islamic Republic of' ? 'selected' : '' }}>Iran, Islamic Republic of</option>
-                    <option value="Iraq" {{ auth()->guard('webalumni')->user()->country === 'Iraq' ? 'selected' : '' }}>Iraq</option>
-                    <option value="Ireland" {{ auth()->guard('webalumni')->user()->country === 'Ireland' ? 'selected' : '' }}>Ireland</option>
-                    <option value="Isle of Man" {{ auth()->guard('webalumni')->user()->country === 'Isle of Man' ? 'selected' : '' }}>Isle of Man</option>
-                    <option value="Israel" {{ auth()->guard('webalumni')->user()->country === 'Israel' ? 'selected' : '' }}>Israel</option>
-                    <option value="Italy" {{ auth()->guard('webalumni')->user()->country === 'Italy' ? 'selected' : '' }}>Italy</option>
-                    <option value="Jamaica" {{ auth()->guard('webalumni')->user()->country === 'Jamaica' ? 'selected' : '' }}>Jamaica</option>
-                    <option value="Japan" {{ auth()->guard('webalumni')->user()->country === 'Japan' ? 'selected' : '' }}>Japan</option>
-                    <option value="Jersey" {{ auth()->guard('webalumni')->user()->country === 'Jersey' ? 'selected' : '' }}>Jersey</option>
-                    <option value="Jordan" {{ auth()->guard('webalumni')->user()->country === 'Jordan' ? 'selected' : '' }}>Jordan</option>
-                    <option value="Kazakhstan" {{ auth()->guard('webalumni')->user()->country === 'Kazakhstan' ? 'selected' : '' }}>Kazakhstan</option>
-                    <option value="Kenya" {{ auth()->guard('webalumni')->user()->country === 'Kenya' ? 'selected' : '' }}>Kenya</option>
-                    <option value="Kiribati" {{ auth()->guard('webalumni')->user()->country === 'Kiribati' ? 'selected' : '' }}>Kiribati</option>
-                    <option value="Korea, Democratic People's Republic of" {{ auth()->guard('webalumni')->user()->country === "Korea, Democratic People's Republic of" ? 'selected' : '' }}>Korea, Democratic People's Republic of</option>
-                    <option value="Korea, Republic of" {{ auth()->guard('webalumni')->user()->country === 'Korea, Republic of' ? 'selected' : '' }}>Korea, Republic of</option>
-                    <option value="Kuwait" {{ auth()->guard('webalumni')->user()->country === 'Kuwait' ? 'selected' : '' }}>Kuwait</option>
-                    <option value="Kyrgyzstan" {{ auth()->guard('webalumni')->user()->country === 'Kyrgyzstan' ? 'selected' : '' }}>Kyrgyzstan</option>
-                    <option value="Lao People's Democratic Republic" {{ auth()->guard('webalumni')->user()->country === "Lao People's Democratic Republic" ? 'selected' : '' }}>Lao People's Democratic Republic</option>
-                    <option value="Latvia" {{ auth()->guard('webalumni')->user()->country === 'Latvia' ? 'selected' : '' }}>Latvia</option>
-                    <option value="Lebanon" {{ auth()->guard('webalumni')->user()->country === 'Lebanon' ? 'selected' : '' }}>Lebanon</option>
-                    <option value="Lesotho" {{ auth()->guard('webalumni')->user()->country === 'Lesotho' ? 'selected' : '' }}>Lesotho</option>
-                    <option value="Liberia" {{ auth()->guard('webalumni')->user()->country === 'Liberia' ? 'selected' : '' }}>Liberia</option>
-                    <option value="Libyan Arab Jamahiriya" {{ auth()->guard('webalumni')->user()->country === 'Libyan Arab Jamahiriya' ? 'selected' : '' }}>Libyan Arab Jamahiriya</option>
-                    <option value="Liechtenstein" {{ auth()->guard('webalumni')->user()->country === 'Liechtenstein' ? 'selected' : '' }}>Liechtenstein</option>
-                    <option value="Lithuania" {{ auth()->guard('webalumni')->user()->country === 'Lithuania' ? 'selected' : '' }}>Lithuania</option>
-                    <option value="Luxembourg" {{ auth()->guard('webalumni')->user()->country === 'Luxembourg' ? 'selected' : '' }}>Luxembourg</option>
-                    <option value="Macao" {{ auth()->guard('webalumni')->user()->country === 'Macao' ? 'selected' : '' }}>Macao</option>
-                    <option value="Macedonia, The Former Yugoslav Republic of" {{ auth()->guard('webalumni')->user()->country === 'Macedonia, The Former Yugoslav Republic of' ? 'selected' : '' }}>Macedonia, The Former Yugoslav Republic of</option>
-                    <option value="Madagascar" {{ auth()->guard('webalumni')->user()->country === 'Madagascar' ? 'selected' : '' }}>Madagascar</option>
-                    <option value="Malawi" {{ auth()->guard('webalumni')->user()->country === 'Malawi' ? 'selected' : '' }}>Malawi</option>
-                    <option value="Malaysia" {{ auth()->guard('webalumni')->user()->country === 'Malaysia' ? 'selected' : '' }}>Malaysia</option>
-                    <option value="Maldives" {{ auth()->guard('webalumni')->user()->country === 'Maldives' ? 'selected' : '' }}>Maldives</option>
-                    <option value="Mali" {{ auth()->guard('webalumni')->user()->country === 'Mali' ? 'selected' : '' }}>Mali</option>
-                    <option value="Malta" {{ auth()->guard('webalumni')->user()->country === 'Malta' ? 'selected' : '' }}>Malta</option>
-                    <option value="Marshall Islands" {{ auth()->guard('webalumni')->user()->country === 'Marshall Islands' ? 'selected' : '' }}>Marshall Islands</option>
-                    <option value="Martinique" {{ auth()->guard('webalumni')->user()->country === 'Martinique' ? 'selected' : '' }}>Martinique</option>
-                    <option value="Mauritania" {{ auth()->guard('webalumni')->user()->country === 'Mauritania' ? 'selected' : '' }}>Mauritania</option>
-                    <option value="Mauritius" {{ auth()->guard('webalumni')->user()->country === 'Mauritius' ? 'selected' : '' }}>Mauritius</option>
-                    <option value="Mayotte" {{ auth()->guard('webalumni')->user()->country === 'Mayotte' ? 'selected' : '' }}>Mayotte</option>
-                    <option value="Mexico" {{ auth()->guard('webalumni')->user()->country === 'Mexico' ? 'selected' : '' }}>Mexico</option>
-                    <option value="Micronesia, Federated States of" {{ auth()->guard('webalumni')->user()->country === 'Micronesia, Federated States of' ? 'selected' : '' }}>Micronesia, Federated States of</option>
-                    <option value="Moldova, Republic of" {{ auth()->guard('webalumni')->user()->country === 'Moldova, Republic of' ? 'selected' : '' }}>Moldova, Republic of</option>
-                    <option value="Monaco" {{ auth()->guard('webalumni')->user()->country === 'Monaco' ? 'selected' : '' }}>Monaco</option>
-                    <option value="Mongolia" {{ auth()->guard('webalumni')->user()->country === 'Mongolia' ? 'selected' : '' }}>Mongolia</option>
-                    <option value="Montenegro" {{ auth()->guard('webalumni')->user()->country === 'Montenegro' ? 'selected' : '' }}>Montenegro</option>
-                    <option value="Montserrat" {{ auth()->guard('webalumni')->user()->country === 'Montserrat' ? 'selected' : '' }}>Montserrat</option>
-                    <option value="Morocco" {{ auth()->guard('webalumni')->user()->country === 'Morocco' ? 'selected' : '' }}>Morocco</option>
-                    <option value="Mozambique" {{ auth()->guard('webalumni')->user()->country === 'Mozambique' ? 'selected' : '' }}>Mozambique</option>
-                    <option value="Myanmar" {{ auth()->guard('webalumni')->user()->country === 'Myanmar' ? 'selected' : '' }}>Myanmar</option>
-                    <option value="Namibia" {{ auth()->guard('webalumni')->user()->country === 'Namibia' ? 'selected' : '' }}>Namibia</option>
-                    <option value="Nauru" {{ auth()->guard('webalumni')->user()->country === 'Nauru' ? 'selected' : '' }}>Nauru</option>
-                    <option value="Nepal" {{ auth()->guard('webalumni')->user()->country === 'Nepal' ? 'selected' : '' }}>Nepal</option>
-                    <option value="Netherlands" {{ auth()->guard('webalumni')->user()->country === 'Netherlands' ? 'selected' : '' }}>Netherlands</option>
-                    <option value="Netherlands Antilles" {{ auth()->guard('webalumni')->user()->country === 'Netherlands Antilles' ? 'selected' : '' }}>Netherlands Antilles</option>
-                    <option value="New Caledonia" {{ auth()->guard('webalumni')->user()->country === 'New Caledonia' ? 'selected' : '' }}>New Caledonia</option>
-                    <option value="New Zealand" {{ auth()->guard('webalumni')->user()->country === 'New Zealand' ? 'selected' : '' }}>New Zealand</option>
-                    <option value="Nicaragua" {{ auth()->guard('webalumni')->user()->country === 'Nicaragua' ? 'selected' : '' }}>Nicaragua</option>
-                    <option value="Niger" {{ auth()->guard('webalumni')->user()->country === 'Niger' ? 'selected' : '' }}>Niger</option>
-                    <option value="Nigeria" {{ auth()->guard('webalumni')->user()->country === 'Nigeria' ? 'selected' : '' }}>Nigeria</option>
-                    <option value="Niue" {{ auth()->guard('webalumni')->user()->country === 'Niue' ? 'selected' : '' }}>Niue</option>
-                    <option value="Norfolk Island" {{ auth()->guard('webalumni')->user()->country === 'Norfolk Island' ? 'selected' : '' }}>Norfolk Island</option>
-                    <option value="Northern Mariana Islands" {{ auth()->guard('webalumni')->user()->country === 'Northern Mariana Islands' ? 'selected' : '' }}>Northern Mariana Islands</option>
-                    <option value="Norway" {{ auth()->guard('webalumni')->user()->country === 'Norway' ? 'selected' : '' }}>Norway</option>
-                    <option value="Oman" {{ auth()->guard('webalumni')->user()->country === 'Oman' ? 'selected' : '' }}>Oman</option>
-                    <option value="Pakistan" {{ auth()->guard('webalumni')->user()->country === 'Pakistan' ? 'selected' : '' }}>Pakistan</option>
-                    <option value="Palau" {{ auth()->guard('webalumni')->user()->country === 'Palau' ? 'selected' : '' }}>Palau</option>
-                    <option value="Palestinian Territory, Occupied" {{ auth()->guard('webalumni')->user()->country === 'Palestinian Territory, Occupied' ? 'selected' : '' }}>Palestinian Territory, Occupied</option>
-                    <option value="Panama" {{ auth()->guard('webalumni')->user()->country === 'Panama' ? 'selected' : '' }}>Panama</option>
-                    <option value="Papua New Guinea" {{ auth()->guard('webalumni')->user()->country === 'Papua New Guinea' ? 'selected' : '' }}>Papua New Guinea</option>
-                    <option value="Paraguay" {{ auth()->guard('webalumni')->user()->country === 'Paraguay' ? 'selected' : '' }}>Paraguay</option>
-                    <option value="Peru" {{ auth()->guard('webalumni')->user()->country === 'Peru' ? 'selected' : '' }}>Peru</option>
-                    <option value="Philippines" {{ auth()->guard('webalumni')->user()->country === 'Philippines' ? 'selected' : '' }}>Philippines</option>
-                    <option value="Pitcairn" {{ auth()->guard('webalumni')->user()->country === 'Pitcairn' ? 'selected' : '' }}>Pitcairn</option>
-                    <option value="Poland" {{ auth()->guard('webalumni')->user()->country === 'Poland' ? 'selected' : '' }}>Poland</option>
-                    <option value="Portugal" {{ auth()->guard('webalumni')->user()->country === 'Portugal' ? 'selected' : '' }}>Portugal</option>
-                    <option value="Puerto Rico" {{ auth()->guard('webalumni')->user()->country === 'Puerto Rico' ? 'selected' : '' }}>Puerto Rico</option>
-                    <option value="Qatar" {{ auth()->guard('webalumni')->user()->country === 'Qatar' ? 'selected' : '' }}>Qatar</option>
-                    <option value="Reunion" {{ auth()->guard('webalumni')->user()->country === 'Reunion' ? 'selected' : '' }}>Reunion</option>
-                    <option value="Romania" {{ auth()->guard('webalumni')->user()->country === 'Romania' ? 'selected' : '' }}>Romania</option>
-                    <option value="Russian Federation" {{ auth()->guard('webalumni')->user()->country === 'Russian Federation' ? 'selected' : '' }}>Russian Federation</option>
-                    <option value="Rwanda" {{ auth()->guard('webalumni')->user()->country === 'Rwanda' ? 'selected' : '' }}>Rwanda</option>
-                    <option value="Saint Helena" {{ auth()->guard('webalumni')->user()->country === 'Saint Helena' ? 'selected' : '' }}>Saint Helena</option>
-                    <option value="Saint Kitts and Nevis" {{ auth()->guard('webalumni')->user()->country === 'Saint Kitts and Nevis' ? 'selected' : '' }}>Saint Kitts and Nevis</option>
-                    <option value="Saint Lucia" {{ auth()->guard('webalumni')->user()->country === 'Saint Lucia' ? 'selected' : '' }}>Saint Lucia</option>
-                    <option value="Saint Pierre and Miquelon" {{ auth()->guard('webalumni')->user()->country === 'Saint Pierre and Miquelon' ? 'selected' : '' }}>Saint Pierre and Miquelon</option>
-                    <option value="Saint Vincent and The Grenadines" {{ auth()->guard('webalumni')->user()->country === 'Saint Vincent and The Grenadines' ? 'selected' : '' }}>Saint Vincent and The Grenadines</option>
-                    <option value="Samoa" {{ auth()->guard('webalumni')->user()->country === 'Samoa' ? 'selected' : '' }}>Samoa</option>
-                    <option value="San Marino" {{ auth()->guard('webalumni')->user()->country === 'San Marino' ? 'selected' : '' }}>San Marino</option>
-                    <option value="Sao Tome and Principe" {{ auth()->guard('webalumni')->user()->country === 'Sao Tome and Principe' ? 'selected' : '' }}>Sao Tome and Principe</option>
-                    <option value="Saudi Arabia" {{ auth()->guard('webalumni')->user()->country === 'Saudi Arabia' ? 'selected' : '' }}>Saudi Arabia</option>
-                    <option value="Senegal" {{ auth()->guard('webalumni')->user()->country === 'Senegal' ? 'selected' : '' }}>Senegal</option>
-                    <option value="Serbia" {{ auth()->guard('webalumni')->user()->country === 'Serbia' ? 'selected' : '' }}>Serbia</option>
-                    <option value="Seychelles" {{ auth()->guard('webalumni')->user()->country === 'Seychelles' ? 'selected' : '' }}>Seychelles</option>
-                    <option value="Sierra Leone" {{ auth()->guard('webalumni')->user()->country === 'Sierra Leone' ? 'selected' : '' }}>Sierra Leone</option>
-                    <option value="Singapore" {{ auth()->guard('webalumni')->user()->country === 'Singapore' ? 'selected' : '' }}>Singapore</option>
-                    <option value="Slovakia" {{ auth()->guard('webalumni')->user()->country === 'Slovakia' ? 'selected' : '' }}>Slovakia</option>
-                    <option value="Slovenia" {{ auth()->guard('webalumni')->user()->country === 'Slovenia' ? 'selected' : '' }}>Slovenia</option>
-                    <option value="Solomon Islands" {{ auth()->guard('webalumni')->user()->country === 'Solomon Islands' ? 'selected' : '' }}>Solomon Islands</option>
-                    <option value="Somalia" {{ auth()->guard('webalumni')->user()->country === 'Somalia' ? 'selected' : '' }}>Somalia</option>
-                    <option value="South Africa" {{ auth()->guard('webalumni')->user()->country === 'South Africa' ? 'selected' : '' }}>South Africa</option>
-                    <option value="South Georgia and The South Sandwich Islands" {{ auth()->guard('webalumni')->user()->country === 'South Georgia and The South Sandwich Islands' ? 'selected' : '' }}>South Georgia and The South Sandwich Islands</option>
-                    <option value="Spain" {{ auth()->guard('webalumni')->user()->country === 'Spain' ? 'selected' : '' }}>Spain</option>
-                    <option value="Sri Lanka" {{ auth()->guard('webalumni')->user()->country === 'Sri Lanka' ? 'selected' : '' }}>Sri Lanka</option
-                    <option value="Sudan" {{ auth()->guard('webalumni')->user()->country === 'Sudan' ? 'selected' : '' }}>Sudan</option>
-                    <option value="Suriname" {{ auth()->guard('webalumni')->user()->country === 'Suriname' ? 'selected' : '' }}>Suriname</option>
-                    <option value="Svalbard and Jan Mayen" {{ auth()->guard('webalumni')->user()->country === 'Svalbard and Jan Mayen' ? 'selected' : '' }}>Svalbard and Jan Mayen</option>
-                    <option value="Swaziland" {{ auth()->guard('webalumni')->user()->country === 'Swaziland' ? 'selected' : '' }}>Swaziland</option>
-                    <option value="Sweden" {{ auth()->guard('webalumni')->user()->country === 'Sweden' ? 'selected' : '' }}>Sweden</option>
-                    <option value="Switzerland" {{ auth()->guard('webalumni')->user()->country === 'Switzerland' ? 'selected' : '' }}>Switzerland</option>
-                    <option value="Syrian Arab Republic" {{ auth()->guard('webalumni')->user()->country === 'Syrian Arab Republic' ? 'selected' : '' }}>Syrian Arab Republic</option>
-                    <option value="Taiwan" {{ auth()->guard('webalumni')->user()->country === 'Taiwan' ? 'selected' : '' }}>Taiwan</option>
-                    <option value="Tajikistan" {{ auth()->guard('webalumni')->user()->country === 'Tajikistan' ? 'selected' : '' }}>Tajikistan</option>
-                    <option value="Tanzania, United Republic of" {{ auth()->guard('webalumni')->user()->country === 'Tanzania, United Republic of' ? 'selected' : '' }}>Tanzania, United Republic of</option>
-                    <option value="Thailand" {{ auth()->guard('webalumni')->user()->country === 'Thailand' ? 'selected' : '' }}>Thailand</option>
-                    <option value="Timor-leste" {{ auth()->guard('webalumni')->user()->country === 'Timor-leste' ? 'selected' : '' }}>Timor-leste</option>
-                    <option value="Togo" {{ auth()->guard('webalumni')->user()->country === 'Togo' ? 'selected' : '' }}>Togo</option>
-                    <option value="Tokelau" {{ auth()->guard('webalumni')->user()->country === 'Tokelau' ? 'selected' : '' }}>Tokelau</option>
-                    <option value="Tonga" {{ auth()->guard('webalumni')->user()->country === 'Tonga' ? 'selected' : '' }}>Tonga</option>
-                    <option value="Trinidad and Tobago" {{ auth()->guard('webalumni')->user()->country === 'Trinidad and Tobago' ? 'selected' : '' }}>Trinidad and Tobago</option>
-                    <option value="Tunisia" {{ auth()->guard('webalumni')->user()->country === 'Tunisia' ? 'selected' : '' }}>Tunisia</option>
-                    <option value="Turkey" {{ auth()->guard('webalumni')->user()->country === 'Turkey' ? 'selected' : '' }}>Turkey</option>
-                    <option value="Turkmenistan" {{ auth()->guard('webalumni')->user()->country === 'Turkmenistan' ? 'selected' : '' }}>Turkmenistan</option>
-                    <option value="Turks and Caicos Islands" {{ auth()->guard('webalumni')->user()->country === 'Turks and Caicos Islands' ? 'selected' : '' }}>Turks and Caicos Islands</option>
-                    <option value="Tuvalu" {{ auth()->guard('webalumni')->user()->country === 'Tuvalu' ? 'selected' : '' }}>Tuvalu</option>
-                    <option value="Uganda" {{ auth()->guard('webalumni')->user()->country === 'Uganda' ? 'selected' : '' }}>Uganda</option>
-                    <option value="Ukraine" {{ auth()->guard('webalumni')->user()->country === 'Ukraine' ? 'selected' : '' }}>Ukraine</option>
-                    <option value="United Arab Emirates" {{ auth()->guard('webalumni')->user()->country === 'United Arab Emirates' ? 'selected' : '' }}>United Arab Emirates</option>
-                    <option value="United Kingdom" {{ auth()->guard('webalumni')->user()->country === 'United Kingdom' ? 'selected' : '' }}>United Kingdom</option>
-                    <option value="United States" {{ auth()->guard('webalumni')->user()->country === 'United States' ? 'selected' : '' }}>United States</option>
-                    <option value="United States Minor Outlying Islands" {{ auth()->guard('webalumni')->user()->country === 'United States Minor Outlying Islands' ? 'selected' : '' }}>United States Minor Outlying Islands</option>
-                    <option value="Uruguay" {{ auth()->guard('webalumni')->user()->country === 'Uruguay' ? 'selected' : '' }}>Uruguay</option>
-                    <option value="Uzbekistan" {{ auth()->guard('webalumni')->user()->country === 'Uzbekistan' ? 'selected' : '' }}>Uzbekistan</option>
-                    <option value="Vanuatu" {{ auth()->guard('webalumni')->user()->country === 'Vanuatu' ? 'selected' : '' }}>Vanuatu</option>
-                    <option value="Venezuela" {{ auth()->guard('webalumni')->user()->country === 'Venezuela' ? 'selected' : '' }}>Venezuela</option>
-                    <option value="Viet Nam" {{ auth()->guard('webalumni')->user()->country === 'Viet Nam' ? 'selected' : '' }}>Viet Nam</option>
-                    <option value="Virgin Islands, British" {{ auth()->guard('webalumni')->user()->country === 'Virgin Islands, British' ? 'selected' : '' }}>Virgin Islands, British</option>
-                    <option value="Virgin Islands, U.S." {{ auth()->guard('webalumni')->user()->country === 'Virgin Islands, U.S.' ? 'selected' : '' }}>Virgin Islands, U.S.</option>
-                    <option value="Wallis and Futuna" {{ auth()->guard('webalumni')->user()->country === 'Wallis and Futuna' ? 'selected' : '' }}>Wallis and Futuna</option>
-                    <option value="Western Sahara" {{ auth()->guard('webalumni')->user()->country === 'Western Sahara' ? 'selected' : '' }}>Western Sahara</option>
-                    <option value="Yemen" {{ auth()->guard('webalumni')->user()->country === 'Yemen' ? 'selected' : '' }}>Yemen</option>
-                    <option value="Zambia" {{ auth()->guard('webalumni')->user()->country === 'Zambia' ? 'selected' : '' }}>Zambia</option>
-                    <option value="Zimbabwe" {{ auth()->guard('webalumni')->user()->country === 'Zimbabwe' ? 'selected' : '' }}>Zimbabwe</option>
 
-                  </select>
-                </div>
                 <div class="form-group">
-                    <label for="address">Residential Address</label>
-                    <input type="text" class="form-control" name="address" id="address" value="{{ auth()->guard('webalumni')->user()->address}}">
-                </div>
-                <br><br>
-                <div class="form-group">
-                    <label for="address"><h4><b>Occupation Details</b></h4></label>
-                </div>
-                <div class="form-group">
-                    <label for="sector">Sector</label>
-                    <select class="form-control" name="sector" id="sector" value="{{ auth()->guard('webalumni')->user()->sector}}">
-                        <option value="" disabled selected>Select Sector</option>
-                        <option value="public" {{ auth()->guard('webalumni')->user()->sector === 'public' ? 'selected' : '' }}>Public</option>
-                        <option value="private" {{ auth()->guard('webalumni')->user()->sector === 'privete' ? 'selected' : '' }}>Private</option>
-                        <option value="own" {{ auth()->guard('webalumni')->user()->sector === 'own' ? 'selected' : '' }}>Own Business</option>
+                    <label for="user_type">Select User Type</label>
+                    <select class="form-control" name="user_type" id="user_type" required>
+                        <option value="none" selected disabled>Select Type</option>
+                        <option value="alumni">Alumni Member</option>
+                        <option value="admin">Admin</option>
                     </select>
                 </div>
-                <div class="form-group">
-                    <label for="designation">Designation</label>
-                    <input type="text" class="form-control" name="designation" id="designation" value="{{ auth()->guard('webalumni')->user()->designation}}">
+
+                <div id="personal_details">
+                    <div class="form-group">
+                        <label for="address"><h4><b>Personal Details</b></h4></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Your Name</label>
+                        <input type="text" class="form-control" name="name" id="name" >
+                    </div>
+                    <div class="form-group">
+                        <label for="sc_number">SC Number</label>
+                        <input type="text" class="form-control" name="sc_number" id="sc_number" >
+                    </div>
+                    <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="m_code">Mobile Code</label>
+                        <select name="m_code" class="form-control" id="m_code" >
+                            <option value="" disabled selected>Country</option>
+                            <option value="93">Afghanistan +93</option>
+                            <option value="358">Aland Islands +358</option>
+                            <option value="355">Albania +355</option>
+                            <option value="213">Algeria +213</option>
+                            <option value="1684">American Samoa +1684</option>
+                            <option value="376">Andorra +376</option>
+                            <option value="244">Angola +244</option>
+                            <option value="1264">Anguilla +1264</option>
+                            <option value="672">Antarctica +672</option>
+                            <option value="1268">Antigua and Barbuda +1268</option>
+                            <option value="54">Argentina +54</option>
+                            <option value="374">Armenia +374</option>
+                            <option value="297">Aruba +297</option>
+                            <option value="61">Australia +61</option>
+                            <option value="43">Austria +43</option>
+                            <option value="994">Azerbaijan +994</option>
+                            <option value="1242">Bahamas +1242</option>
+                            <option value="973">Bahrain +973</option>
+                            <option value="880">Bangladesh +880</option>
+                            <option value="1246">Barbados +1246</option>
+                            <option value="375">Belarus +375</option>
+                            <option value="32">Belgium +32</option>
+                            <option value="501">Belize +501</option>
+                            <option value="229">Benin +229</option>
+                            <option value="1441">Bermuda +1441</option>
+                            <option value="975">Bhutan +975</option>
+                            <option value="591">Bolivia +591</option>
+                            <option value="599">Bonaire, Sint Eustatius and Saba +599</option>
+                            <option value="387">Bosnia and Herzegovina +387</option>
+                            <option value="267">Botswana +267</option>
+                            <option value="55">Bouvet Island +55</option>
+                            <option value="55">Brazil +55</option>
+                            <option value="246">British Indian Ocean Territory +246</option>
+                            <option value="673">Brunei Darussalam +673</option>
+                            <option value="359">Bulgaria +359</option>
+                            <option value="226">Burkina Faso +226</option>
+                            <option value="257">Burundi +257</option>
+                            <option value="855">Cambodia +855</option>
+                            <option value="237">Cameroon +237</option>
+                            <option value="1">Canada +1</option>
+                            <option value="238">Cape Verde +238</option>
+                            <option value="1345">Cayman Islands +1345</option>
+                            <option value="236">Central African Republic +236</option>
+                            <option value="235">Chad +235</option>
+                            <option value="56">Chile +56</option>
+                            <option value="86">China +86</option>
+                            <option value="61">Christmas Island +61</option>
+                            <option value="672">Cocos (Keeling) Islands +672</option>
+                            <option value="57">Colombia +57</option>
+                            <option value="269">Comoros +269</option>
+                            <option value="242">Congo +242</option>
+                            <option value="242">Congo, Democratic Republic of the Congo +242</option>
+                            <option value="682">Cook Islands +682</option>
+                            <option value="506">Costa Rica +506</option>
+                            <option value="225">Cote D Ivoire +225</option>
+                            <option value="385">Croatia +385</option>
+                            <option value="53">Cuba +53</option>
+                            <option value="599">Curacao +599</option>
+                            <option value="357">Cyprus +357</option>
+                            <option value="420">Czech Republic +420</option>
+                            <option value="45">Denmark +45</option>
+                            <option value="253">Djibouti +253</option>
+                            <option value="1767">Dominica +1767</option>
+                            <option value="1809">Dominican Republic +1809</option>
+                            <option value="593">Ecuador +593</option>
+                            <option value="20">Egypt +20</option>
+                            <option value="503">El Salvador +503</option>
+                            <option value="240">Equatorial Guinea +240</option>
+                            <option value="291">Eritrea +291</option>
+                            <option value="372">Estonia +372</option>
+                            <option value="251">Ethiopia +251</option>
+                            <option value="500">Falkland Islands (Malvinas) +500</option>
+                            <option value="298">Faroe Islands +298</option>
+                            <option value="679">Fiji +679</option>
+                            <option value="358">Finland +358</option>
+                            <option value="33">France +33</option>
+                            <option value="594">French Guiana +594</option>
+                            <option value="689">French Polynesia +689</option>
+                            <option value="262">French Southern Territories +262</option>
+                            <option value="241">Gabon +241</option>
+                            <option value="220">Gambia +220</option>
+                            <option value="995">Georgia +995</option>
+                            <option value="49">Germany +49</option>
+                            <option value="233">Ghana +233</option>
+                            <option value="350">Gibraltar +350</option>
+                            <option value="30">Greece +30</option>
+                            <option value="299">Greenland +299</option>
+                            <option value="1473">Grenada +1473</option>
+                            <option value="590">Guadeloupe +590</option>
+                            <option value="1671">Guam +1671</option>
+                            <option value="502">Guatemala +502</option>
+                            <option value="44">Guernsey +44</option>
+                            <option value="224">Guinea +224</option>
+                            <option value="245">Guinea-Bissau +245</option>
+                            <option value="592">Guyana +592</option>
+                            <option value="509">Haiti +509</option>
+                            <option value="39">Holy See (Vatican City State) +39</option>
+                            <option value="504">Honduras +504</option>
+                            <option value="852">Hong Kong +852</option>
+                            <option value="36">Hungary +36</option>
+                            <option value="354">Iceland +354</option>
+                            <option value="91">India +91</option>
+                            <option value="62">Indonesia +62</option>
+                            <option value="98">Iran, Islamic Republic of +98</option>
+                            <option value="964">Iraq +964</option>
+                            <option value="353">Ireland +353</option>
+                            <option value="44">Isle of Man +44</option>
+                            <option value="972">Israel +972</option>
+                            <option value="39">Italy +39</option>
+                            <option value="1876">Jamaica +1876</option>
+                            <option value="81">Japan +81</option>
+                            <option value="44">Jersey +44</option>
+                            <option value="962">Jordan +962</option>
+                            <option value="7">Kazakhstan +7</option>
+                            <option value="254">Kenya +254</option>
+                            <option value="686">Kiribati +686</option>
+                            <option value="850">Korea, Democratic Peoples Republic of +850</option>
+                            <option value="82">Korea, Republic of +82</option>
+                            <option value="383">Kosovo +383</option>
+                            <option value="965">Kuwait +965</option>
+                            <option value="996">Kyrgyzstan +996</option>
+                            <option value="856">Lao Peoples Democratic Republic +856</option>
+                            <option value="371">Latvia +371</option>
+                            <option value="961">Lebanon +961</option>
+                            <option value="266">Lesotho +266</option>
+                            <option value="231">Liberia +231</option>
+                            <option value="218">Libyan Arab Jamahiriya +218</option>
+                            <option value="423">Liechtenstein +423</option>
+                            <option value="370">Lithuania +370</option>
+                            <option value="352">Luxembourg +352</option>
+                            <option value="853">Macao +853</option>
+                            <option value="389">Macedonia, the Former Yugoslav Republic of +389</option>
+                            <option value="261">Madagascar +261</option>
+                            <option value="265">Malawi +265</option>
+                            <option value="60">Malaysia +60</option>
+                            <option value="960">Maldives +960</option>
+                            <option value="223">Mali +223</option>
+                            <option value="356">Malta +356</option>
+                            <option value="692">Marshall Islands +692</option>
+                            <option value="596">Martinique +596</option>
+                            <option value="222">Mauritania +222</option>
+                            <option value="230">Mauritius +230</option>
+                            <option value="262">Mayotte +262</option>
+                            <option value="52">Mexico +52</option>
+                            <option value="691">Micronesia, Federated States of +691</option>
+                            <option value="373">Moldova, Republic of +373</option>
+                            <option value="377">Monaco +377</option>
+                            <option value="976">Mongolia +976</option>
+                            <option value="382">Montenegro +382</option>
+                            <option value="1664">Montserrat +1664</option>
+                            <option value="212">Morocco +212</option>
+                            <option value="258">Mozambique +258</option>
+                            <option value="95">Myanmar +95</option>
+                            <option value="264">Namibia +264</option>
+                            <option value="674">Nauru +674</option>
+                            <option value="977">Nepal +977</option>
+                            <option value="31">Netherlands +31</option>
+                            <option value="599">Netherlands Antilles +599</option>
+                            <option value="687">New Caledonia +687</option>
+                            <option value="64">New Zealand +64</option>
+                            <option value="505">Nicaragua +505</option>
+                            <option value="227">Niger +227</option>
+                            <option value="234">Nigeria +234</option>
+                            <option value="683">Niue +683</option>
+                            <option value="672">Norfolk Island +672</option>
+                            <option value="1670">Northern Mariana Islands +1670</option>
+                            <option value="47">Norway +47</option>
+                            <option value="968">Oman +968</option>
+                            <option value="92">Pakistan +92</option>
+                            <option value="680">Palau +680</option>
+                            <option value="970">Palestinian Territory, Occupied +970</option>
+                            <option value="507">Panama +507</option>
+                            <option value="675">Papua New Guinea +675</option>
+                            <option value="595">Paraguay +595</option>
+                            <option value="51">Peru +51</option>
+                            <option value="63">Philippines +63</option>
+                            <option value="64">Pitcairn +64</option>
+                            <option value="48">Poland +48</option>
+                            <option value="351">Portugal +351</option>
+                            <option value="1787">Puerto Rico +1787</option>
+                            <option value="974">Qatar +974</option>
+                            <option value="262">Reunion +262</option>
+                            <option value="40">Romania +40</option>
+                            <option value="7">Russian Federation +7</option>
+                            <option value="250">Rwanda +250</option>
+                            <option value="590">Saint Barthelemy +590</option>
+                            <option value="290">Saint Helena +290</option>
+                            <option value="1869">Saint Kitts and Nevis +1869</option>
+                            <option value="1758">Saint Lucia +1758</option>
+                            <option value="590">Saint Martin +590</option>
+                            <option value="508">Saint Pierre and Miquelon +508</option>
+                            <option value="1784">Saint Vincent and the Grenadines +1784</option>
+                            <option value="684">Samoa +684</option>
+                            <option value="378">San Marino +378</option>
+                            <option value="239">Sao Tome and Principe +239</option>
+                            <option value="966">Saudi Arabia +966</option>
+                            <option value="221">Senegal +221</option>
+                            <option value="381">Serbia +381</option>
+                            <option value="381">Serbia and Montenegro +381</option>
+                            <option value="248">Seychelles +248</option>
+                            <option value="232">Sierra Leone +232</option>
+                            <option value="65">Singapore +65</option>
+                            <option value="721">Sint Maarten +721</option>
+                            <option value="421">Slovakia +421</option>
+                            <option value="386">Slovenia +386</option>
+                            <option value="677">Solomon Islands +677</option>
+                            <option value="252">Somalia +252</option>
+                            <option value="27">South Africa +27</option>
+                            <option value="500">South Georgia and the South Sandwich Islands +500</option>
+                            <option value="211">South Sudan +211</option>
+                            <option value="34">Spain +34</option>
+                            <option value="94">Sri Lanka +94</option>
+                            <option value="249">Sudan +249</option>
+                            <option value="597">Suriname +597</option>
+                            <option value="47">Svalbard and Jan Mayen +47</option>
+                            <option value="268">Swaziland +268</option>
+                            <option value="46">Sweden +46</option>
+                            <option value="41">Switzerland +41</option>
+                            <option value="963">Syrian Arab Republic +963</option>
+                            <option value="886">Taiwan, Province of China +886</option>
+                            <option value="992">Tajikistan +992</option>
+                            <option value="255">Tanzania, United Republic of +255</option>
+                            <option value="66">Thailand +66</option>
+                            <option value="670">Timor-Leste +670</option>
+                            <option value="228">Togo +228</option>
+                            <option value="690">Tokelau +690</option>
+                            <option value="676">Tonga +676</option>
+                            <option value="1868">Trinidad and Tobago +1868</option>
+                            <option value="216">Tunisia +216</option>
+                            <option value="90">Turkey +90</option>
+                            <option value="7370">Turkmenistan +7370</option>
+                            <option value="1649">Turks and Caicos Islands +1649</option>
+                            <option value="688">Tuvalu +688</option>
+                            <option value="256">Uganda +256</option>
+                            <option value="380">Ukraine +380</option>
+                            <option value="971">United Arab Emirates +971</option>
+                            <option value="44">United Kingdom +44</option>
+                            <option value="1">United States +1</option>
+                            <option value="1">United States Minor Outlying Islands +1</option>
+                            <option value="598">Uruguay +598</option>
+                            <option value="998">Uzbekistan +998</option>
+                            <option value="678">Vanuatu +678</option>
+                            <option value="58">Venezuela +58</option>
+                            <option value="84">Viet Nam +84</option>
+                            <option value="1284">Virgin Islands, British +1284</option>
+                            <option value="1340">Virgin Islands, U.s. +1340</option>
+                            <option value="681">Wallis and Futuna +681</option>
+                            <option value="212">Western Sahara +212</option>
+                            <option value="967">Yemen +967</option>
+                            <option value="260">Zambia +260</option>
+                            <option value="263">Zimbabwe +263</option>
+                        </select>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="mobile">Phone Number</label>
+                        <input type="text" class="form-control" name="mobile" id="mobile" >
+                    </div>
+                    </div>
+                    <div class="form-group">
+                    <label for="degree_type">Degree Type</label>
+                        <select name="degree_type" class="form-control" id="degree_type" >
+                            <option value="none" selected disabled>Degree Programe</option>
+                            <option value="General">General</option>
+                            <option value="Special">Special</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="special_degree_div">
+                        <label for="sp_degree">Select your Degree</label>
+                        <select name="degree" class="form-control" id="sp_degree" >
+                            <option value="" selected disabled>Select your Degree</option>
+                            <option value="BCS Special in Computer Science">BCS Special in Computer Science </option>
+                            <option value="BSc Special in Statistics">BSc Special in Statistics </option>
+                            <option value="BSc Special in Applied Mathematics">BSc Special in Applied Mathematics</option>
+                            <option value="BSc Special in Chemistry">BSc Special in Chemistry</option>
+                            <option value="BSc Special in Physics">BSc Special in Physics</option>
+                            <option value="BSc Special in Zoology">BSc Special in Zoology</option>
+                            <option value="BSc Special in Botany">BSc Special in Botany</option>
+                        </select>
+                    </div>
+                    <div class="form-group" id="General_degree_div">
+                        <label for="g_degree">Select your Degree</label>
+                        <select name="degree" class="form-control" id="g_degree" >
+                            <option value="" selected disabled>Select your Degree</option>
+                            <option value="BSc in physical sciences">BSc in physical sciences </option>
+                            <option value="BSc in Bio Sciences">BSc in Bio Sciences </option>
+                            <option value="BCS in Computer Science">BCS in Computer Science</option>
+                        </select>
+                    </div>
+                        <script>
+                            $(document).ready(function(){
+                                $("#special_degree_div").hide();
+                                $("#General_degree_div").hide();
+                                // When the value of the first select changes
+                                $("#degree_type").change(function(){
+
+                                    // If "Have a Job" is selected, show the second select; otherwise, hide it
+                                    if($(this).val() === "General"){
+                                        $("#special_degree_div").hide();
+                                        $("#General_degree_div").show();
+                                        var selectElement = document.getElementById('sp_degree');
+                                        selectElement.selectedIndex = -1;
+                                    } else if($(this).val() === "Special"){
+                                        $("#General_degree_div").hide();
+                                        $("#special_degree_div").show();
+                                        var selectElement = document.getElementById('g_degree');
+                                        selectElement.selectedIndex = -1;
+                                    }
+                                });
+                            });
+                        </script>
                 </div>
+
+                <br><br>
+
+                <div id="login_details">
+                    <div class="form-group">
+                        <label for="address"><h4><b>Login Details</b></h4></label>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" name="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="text" class="form-control" name="password" id="password" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password_confirmation">Confirm Password</label>
+                        <input type="text" class="form-control" name="password_confirmation" id="password_confirmation" required>
+                    </div>
+                    <script>
+                    function showPassword() {
+                        const passwordInput = document.getElementById('password');
+                        passwordInput.type = 'text';
+                    }
+
+                    function maskPassword() {
+                        const passwordInput = document.getElementById('password');
+                        passwordInput.type = 'password';
+                    }
+
+                    function showConfirmPassword() {
+                        const confirmPasswordInput = document.getElementById('confirmPassword');
+                        confirmPasswordInput.type = 'text';
+                    }
+
+                    function maskConfirmPassword() {
+                        const confirmPasswordInput = document.getElementById('confirmPassword');
+                        confirmPasswordInput.type = 'password';
+                    }
+                    </script>
+                </div>
+                    <script>
+                        $(document).ready(function(){
+                            $("#personal_details").hide();
+                            $("#login_details").hide();
+                            // When the value of the first select changes
+                            $("#user_type").change(function(){
+
+                                // If "Have a Job" is selected, show the second select; otherwise, hide it
+                                if($(this).val() === "admin"){
+                                    $("#personal_details").hide();
+                                    $("#login_details").show();
+                                } else if($(this).val() === "alumni"){
+                                    $("#login_details").show();
+                                    $("#personal_details").show();
+                                }
+                            });
+                        });
+                    </script>
+
                 <style>
                     .custom-button {
                         background-color: #211046; /* Dark purple color */
