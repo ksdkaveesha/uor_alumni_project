@@ -82,7 +82,7 @@ class AdminController extends Controller
 
             // Validate the request data
             $request->validate([
-                'sc_number' => 'scnumber|confirmed',
+                'sc_number' => 'scnumber',
                 'email' => 'email|unique:users|unique:alumini_members',
                 'password' => 'confirmed',
 
