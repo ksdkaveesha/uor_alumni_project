@@ -64,35 +64,5 @@ class AdminController extends Controller
         //
     }
 
-    function add_notice(Request $request){
 
-        $Admin = new Admin();
-        $Admin->name = $request->input('name');
-        $Admin->topic = $request->input('topic');
-        $Admin->notice = $request->input('notice');
-
-        $Admin->save();
-        return redirect()->back()->with('status', 'Notice submitted successfully!');
-
-    }
-
-    public function display_notice()
-    {
-        // Retrieve the last three records from the database
-        $lastThreeRecords = Admin::latest()->take(3)->get();
-        $lastThreeRecords_test = testamonials::latest()->take(3)->get();
-
-        return view('template/index', compact('lastThreeRecords','lastThreeRecords_test'));
-
-    }
-
-    public function display_notice_testamonials()
-    {
-        // Retrieve the all records from the database
-        $notice = Admin::all();
-        $testamonials = testamonials::all();
-
-        return view('template/news', compact('notice','testamonials'));
-
-    }
 }
