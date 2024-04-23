@@ -480,68 +480,6 @@
         </div>
       <!--contact section end -->
 
-      <!-- popup -->
-      <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-        <div class="modal-content" style="display:flex; align-items:center; justify-content: center;">
-            <div class="modal-body">
-                <!--login-->
-                            <div class="wrap-login100" style="display:flex; align-items:center; justify-content: center; width:100%">
-
-                                <form class="login100-form validate-form" style="width: 100%">
-                                    <span class="login100-form-title">
-                                        Member Login
-                                    </span>
-
-                                    <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                                        <input class="input100" type="text" name="email" placeholder="Email">
-                                        <span class="focus-input100"></span>
-                                        <span class="symbol-input100">
-                                            <i class="fa fa-envelope" aria-hidden="true"></i>
-                                        </span>
-                                    </div>
-
-                                    <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                                        <input class="input100" type="password" name="pass" placeholder="Password">
-                                        <span class="focus-input100"></span>
-                                        <span class="symbol-input100">
-                                            <i class="fa fa-lock" aria-hidden="true"></i>
-                                        </span>
-                                    </div>
-
-                                    <div class="container-login100-form-btn">
-                                        <button class="login100-form-btn">
-                                            Login
-                                        </button>
-                                    </div>
-
-                                    <div class="text-center p-t-12">
-                                        <span class="txt1">
-                                            Forgot
-                                        </span>
-                                        <a class="txt2" href="#">
-                                            Password?
-                                        </a>
-                                    </div>
-
-                                    <div class="text-center p-t-13">
-                                        <a class="txt2" href="#">
-                                            Create your Account
-                                            <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
-                                        </a>
-                                    </div>
-                                </form>
-                            </div>
-                    <!--end login-->
-            </div>
-            <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-        </div>
-        </div>
-    </div>
-    <!-- popup end -->
-
       <!-- footer section start -->
       <div class="footer_section layout_padding">
         <div class="container">
