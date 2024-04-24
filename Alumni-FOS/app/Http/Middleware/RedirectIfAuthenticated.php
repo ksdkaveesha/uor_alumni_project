@@ -17,12 +17,12 @@ class RedirectIfAuthenticated
      */
     public function handle(Request $request, Closure $next, string ...$guards): Response
     {
-        $guards = empty($guards) ? [null] : $guards;
+        if (Auth::guard('webalumni')->check()) {
+            return redirect('/user'); // Redirect to the user's dashboard if the user is logged in.
+        }
 
-        foreach ($guards as $guard) {
-            if (Auth::guard($guard)->check()) {
-                return redirect(RouteServiceProvider::HOME);
-            }
+        if (Auth::guard('webadmin')->check()) {
+            return redirect('/admin2'); // Redirect to the admin's dashboard if the admin is logged in.
         }
 
         return $next($request);

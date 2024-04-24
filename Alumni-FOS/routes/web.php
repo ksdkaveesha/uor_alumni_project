@@ -25,11 +25,11 @@ use App\Http\Controllers\DepartmentController;
 
 Route::get('/register', function () {
     return view('template/register');
-});
+})->middleware('guest');
 
 Route::get('/login', function () {
     return view('template/login');
-});
+})->middleware('guest')->name('login');
 
 Route::get('/test', function () {
     return view('test');
