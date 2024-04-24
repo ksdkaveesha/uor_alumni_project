@@ -37,7 +37,7 @@ Route::get('/test', function () {
 
 Route::get('/user', function () {
     return view('template/user');
-});
+})->middleware('auth:webalumni');
 
 Route::get('/about', function () {
     return view('template/about');
@@ -53,7 +53,7 @@ Route::get('/contact', function () {
 
 Route::get('/admin2', function () {
     return view('template/admin2');
-});
+})->middleware('auth:webadmin');
 
 
 Route::get('/', [NoticeController::class,'display_notice']);
