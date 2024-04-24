@@ -44,6 +44,10 @@ return [
             'driver' => 'session',
             'provider' => 'alumni',
         ],
+        'webadmin' => [
+            'driver' => 'session',
+            'provider' => 'admin',
+        ],
     ],
 
     /*
@@ -71,6 +75,10 @@ return [
         'alumni' => [
             'driver' => 'eloquent',
             'model' => App\Models\alumini_member::class,
+        ],
+        'admin' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\Admin::class,
         ],
 
         // 'users' => [
