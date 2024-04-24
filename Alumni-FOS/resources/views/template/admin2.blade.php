@@ -529,7 +529,7 @@
                         <div class="row">
                         <div class="form-group col-md-6">
                             <label for="m_code">Mobile Code</label>
-                            <select name="m_code" class="form-control" id="m_m_code" value="{{old('m_code')}}">
+                            <select name="m_code" class="form-control" id="m_m_code" value="{{old('m_code')}}" required>
                                 <option value="" disabled selected>Country</option>
                                 <option value="93">Afghanistan +93</option>
                                 <option value="358">Aland Islands +358</option>
@@ -791,7 +791,7 @@
                         </div>
                         <div class="form-group">
                         <label for="degree_type">Degree Type</label>
-                            <select name="degree_type" class="form-control" id="degree_type" >
+                            <select name="degree_type" class="form-control" id="degree_type" required>
                                 <option value="none" selected disabled>Degree Programe</option>
                                 <option value="General">General</option>
                                 <option value="Special">Special</option>
@@ -864,10 +864,13 @@
                         <div class="form-group">
                             <label for="m_password">Password</label>
                             <input type="text" class="form-control" name="password" id="m_password" onfocus="showmPassword()" onblur="maskmPassword()" required>
+                            @error('password')
+                                    <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror
                         </div>
                         <div class="form-group">
                             <label for="m_confirmPassword">Confirm Password</label>
-                            <input type="text" class="form-control" name="confirmPassword" id="m_confirmPassword" onfocus="showmConfirmPassword()" onblur="maskmConfirmPassword()" required>
+                            <input type="text" class="form-control" name="password_confirmation" id="m_confirmPassword" onfocus="showmConfirmPassword()" onblur="maskmConfirmPassword()" required>
                         </div>
                         <script>
                             function showmPassword() {

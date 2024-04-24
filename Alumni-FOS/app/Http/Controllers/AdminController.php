@@ -7,6 +7,7 @@ use App\Models\User;
 use App\Models\alumini_member;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
