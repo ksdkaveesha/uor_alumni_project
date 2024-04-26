@@ -53,7 +53,8 @@ Route::get('/contact', function () {
 
 Route::get('/admin2', function () {
     return view('template/admin2');
-})->middleware('auth:webadmin');
+});
+//->middleware('auth:webadmin');
 
 
 Route::get('/', [NoticeController::class,'display_notice']);
