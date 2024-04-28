@@ -25,11 +25,13 @@ use App\Http\Controllers\DepartmentController;
 
 Route::get('/register', function () {
     return view('template/register');
-})->middleware('guest');
+});
+//->middleware('guest');
 
 Route::get('/login', function () {
     return view('template/login');
-})->middleware('guest')->name('login');
+});
+//->middleware('guest')->name('login');
 
 Route::get('/test', function () {
     return view('test');
@@ -37,7 +39,8 @@ Route::get('/test', function () {
 
 Route::get('/user', function () {
     return view('template/user');
-})->middleware('auth:webalumni');
+});
+//->middleware('auth:webalumni');
 
 Route::get('/about', function () {
     return view('template/about');
@@ -73,3 +76,4 @@ Route::get('/admin', [CheckTestamonialsController::class,'display_check_testamon
 Route::get('/check_testamonials_del/{id}', [CheckTestamonialsController::class,'testamonials_del']);
 
 Route::post('/add_member_by_admin', [AdminController::class,'register_member_by_admin']);
+Route::post('/add_admin_by_admin', [AdminController::class,'register_admin_by_admin']);

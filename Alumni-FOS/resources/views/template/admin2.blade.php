@@ -160,7 +160,7 @@
 
             <div class="col-lg-6 d-flex align-items-stretch">
                 <div id="admin_personal_details">
-                    <form action="<?=url('/add_user')?>" method="post">
+                    <form action="<?=url('/add_admin_by_admin')?>" method="post">
                       @csrf
                         <div class="form-group">
                             <label for="address"><h2><b>Register Admin</b></h2></label>

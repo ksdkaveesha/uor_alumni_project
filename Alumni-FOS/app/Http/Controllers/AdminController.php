@@ -110,11 +110,11 @@ class AdminController extends Controller
             $alumini_member->user_id = $user->id;
             $alumini_member->save();
 
-            return redirect()->back()->with('status', 'Registered successfully!');
+            return redirect()->back()->with('status', 'User Registered successfully!');
     }
 
     function register_admin_by_admin(Request $request){
-            $user = new Admin();
+            $user = new User();
             $user->email = $request->input('email');
             $user->password = Hash::make($request->input('password'));
             $user->role = "admin";
@@ -124,13 +124,12 @@ class AdminController extends Controller
 
             $alumini_member = new Admin();
             $alumini_member->name = $request->input('name');
-            $alumini_member->email = $request->input('email');
             $alumini_member->m_code = $request->input('m_code');
             $alumini_member->mobile = $request->input('mobile');
             $alumini_member->user_id = $user->id;
             $alumini_member->save();
 
-            return redirect()->back()->with('status', 'Registered successfully!');
+            return redirect()->back()->with('status', 'Admin Registered successfully!');
     }
 
 
