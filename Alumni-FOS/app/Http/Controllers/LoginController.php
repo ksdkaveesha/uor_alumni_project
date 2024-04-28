@@ -6,6 +6,7 @@ use App\Models\login;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\alumini_member;
+use App\Models\Admin;
 use Illuminate\Support\Facades\Auth;
 class LoginController extends Controller
 {
@@ -82,8 +83,8 @@ class LoginController extends Controller
                 return redirect('/user');
             }
             elseif($user->role=="admin"){
-                $alumini_member = alumini_member::where('email',$email)->first();
-                Auth::guard('webalumni')->login($alumini_member);
+                $alumini_member = Admin::where('email',$email)->first();
+                Auth::guard('webadmin')->login($alumini_member);
                 return redirect('/admin');
             }
 

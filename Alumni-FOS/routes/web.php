@@ -77,3 +77,4 @@ Route::get('/check_testamonials_del/{id}', [CheckTestamonialsController::class,'
 
 Route::post('/add_member_by_admin', [AdminController::class,'register_member_by_admin']);
 Route::post('/add_admin_by_admin', [AdminController::class,'register_admin_by_admin']);
+Route::post('/search_alumni_member', [AdminController::class,'search_alumni_member']);

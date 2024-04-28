@@ -124,6 +124,7 @@ class AdminController extends Controller
 
             $alumini_member = new Admin();
             $alumini_member->name = $request->input('name');
+            $alumini_member->email = $request->input('email');
             $alumini_member->m_code = $request->input('m_code');
             $alumini_member->mobile = $request->input('mobile');
             $alumini_member->user_id = $user->id;
@@ -132,8 +133,14 @@ class AdminController extends Controller
             return redirect()->back()->with('status', 'Admin Registered successfully!');
     }
 
+    public function search_alumni_member(Request $request){
+        $search = $request->input('search_alumni_member');
+
+        $alumni_member = alumini_member::where('sc_num','Like',"%$search%")->orwhere('email','Like',"%$search%")->orwhere('mobile','Like',"%$search%")->orwhere('mobile','Like',"%$search%")->get();
 
 
+        return view('template/admin2',compact('alumni_member'));
+    }
 
 }
 

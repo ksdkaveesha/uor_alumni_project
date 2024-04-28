@@ -117,19 +117,19 @@
             </div>
         @endif
       <div class="profile">
-        @if (isset(auth()->guard('webalumni')->user()->path))
-            <img src="{{asset('storage/'.auth()->guard('webalumni')->user()->path)}}" alt="" class="img-fluid rounded-circle">
-            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4>
+        @if (isset(auth()->guard('webadmin')->user()->path))
+            <img src="{{asset('storage/'.auth()->guard('webadmin')->user()->path)}}" alt="" class="img-fluid rounded-circle">
+            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webadmin')->user()->name }}</h4>
         @else
             <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4>
+            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webadmin')->user()->name }}</h4>
         @endif
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
           <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Add Users</span></a></li>
-          <li><a href="#testamonials" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Testamonials</span></a></li>
+          <li><a href="#alumni_member" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Alumni Members</span></a></li>
           <li><a href="/admin" class="nav-link scrollto"><i class="bx bx-arrow-back"></i> <button type="submit"><span style="color: #6f7180">Back</span></button></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -137,10 +137,10 @@
   </header><!-- End Header -->
 
   <!-- ======= Hero Section =======
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background-image: {{asset('storage/'.auth()->guard('webalumni')->user()->path)}}">
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background-image: {{asset('storage/'.auth()->guard('webadmin')->user()->path)}}">
     <div class="hero-container" data-aos="fade-in">
 
-      <h1>Hi {{ auth()->guard('webalumni')->user()->name }}</h1>
+      <h1>Hi {{ auth()->guard('webadmin')->user()->name }}</h1>
       <p>Welcome to <span class="typed" data-typed-items="University of Ruhuna, Faculty of Science"></span></p>
     </div>
   </section>End Hero -->
@@ -1168,8 +1168,8 @@
       </div>
     </section> End Testimonials Section -->
 
-    <!-- ======= Testamonials Section ======= -->
-    <section id="testamonials" class="contact">
+    <!-- ======= Display Alumni Member Section ======= -->
+    <section id="alumni_member" class="contact">
       <div class="container">
 
         <div class="section-title">
@@ -1177,58 +1177,49 @@
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.409982521399!2d80.57355947387634!3d5.93809209404631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae1391b4a29e707%3A0xd54277175e326bc2!2sUniversity%20of%20Ruhuna!5e0!3m2!1sen!2slk!4v1706937224326!5m2!1sen!2slk" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="<?=url('/check_testamonials')?>" method="POST" style="width:100%">
-                @csrf
-                <div class="row" style="width:100%">
-                    <div class="form-group ">
-                        <label for="name">Your Name</label>
-                        <input type="text" name="name" class="form-control" id="name" style="width:100%" required>
-                    </div>
-
-                    <div class="form-group" style="width:100%">
-                        <label for="topic">Subject</label>
-                        <input type="text" class="form-control" name="topic" id="topic" style="width:100%" required>
-                    </div>
-                    <div class="form-group" style="width:100%">
-                        <label for="notice">Message</label>
-                        <textarea class="form-control" name="testamonial" rows="10" style="width:100%" required></textarea>
-                    </div>
+        <form action="<?=url('/search_alumni_member')?>" method="post">
+            @csrf
+                <div class="form-group">
+                    <label for="search_alumni_member"><h4><b>Search Alumni Member</b></h4></label>
+                    <input type="text" class="form-control" name="search_alumni_member" id="search_alumni_member">
                 </div>
+                <div class="text-center">
+                    <button type="submit" class="custom-button">Search</button>
+                </div>
+        </form>
 
-              <div class="text-center"><input type="submit" value="Add Testamonials"></input></div>
-            </form>
-          </div>
+        <br>
 
-        </div>
 
+
+                <table class="table" style="width: 100%">
+                    <thead>
+                      <tr>
+                        <th style="width: 22%" scope="col">Name</th>
+                        <th style="width: 22%" scope="col">Email</th>
+                        <th style="width: 22%" scope="col">Phone Number</th>
+                        <th style="width: 34%" scope="col">#</th>
+                      </tr>
+                    </thead>
+                    @if (isset($alumni_member) && $alumni_member->count() > 0)
+                        @foreach ($alumni_member as $alumni_member)
+                            <tbody>
+                            <tr>
+                                <td style="width: 22%">{{$alumni_member->name}}</td>
+                                <td style="width: 22%">{{$alumni_member->email}}</td>
+                                <td style="width: 22%">{{$alumni_member->m_code}}-{{$alumni_member->mobile}}</td>
+                                <td style="width: 34%">
+                                    <button type="button" class="btn btn-outline-info">Info</button>
+                                    <button type="button" class="btn btn-outline-secondary">Update</button>
+                                    <button type="button" class="btn btn-outline-danger">Delete</button>
+                                </td>
+                            </tr>
+                            </tbody>
+                        @endforeach
+                    @else
+                            <h4>Enter Certificate number</h4>
+                    @endif
+                  </table>
       </div>
     </section><!-- End Testamonials Section -->
 
