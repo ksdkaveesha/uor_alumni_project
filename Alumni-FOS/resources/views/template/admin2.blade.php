@@ -1195,29 +1195,40 @@
                 <table class="table" style="width: 100%">
                     <thead>
                       <tr>
-                        <th style="width: 22%" scope="col">Name</th>
-                        <th style="width: 22%" scope="col">Email</th>
-                        <th style="width: 22%" scope="col">Phone Number</th>
-                        <th style="width: 34%" scope="col">#</th>
+                        <th style="width: 25%" scope="col">Name</th>
+                        <th style="width: 20%" scope="col">Email</th>
+                        <th style="width: 15%" scope="col">Student Number</th>
+                        <th style="width: 15%" scope="col">Phone Number</th>
+                        <th style="width: 25%" scope="col"></th>
                       </tr>
                     </thead>
                     @if (isset($alumni_member) && $alumni_member->count() > 0)
                         @foreach ($alumni_member as $alumni_member)
                             <tbody>
                             <tr>
-                                <td style="width: 22%">{{$alumni_member->name}}</td>
-                                <td style="width: 22%">{{$alumni_member->email}}</td>
-                                <td style="width: 22%">{{$alumni_member->m_code}}-{{$alumni_member->mobile}}</td>
-                                <td style="width: 34%">
+                                <td style="width: 25%">{{$alumni_member->name}}</td>
+                                <td style="width: 20%">{{$alumni_member->email}}</td>
+                                <td style="width: 15%">{{$alumni_member->sc_num}}</td>
+                                <td style="width: 15%">{{$alumni_member->m_code}}-{{$alumni_member->mobile}}</td>
+                                <td style="width: 25%">
                                     <button type="button" class="btn btn-outline-info">Info</button>
                                     <button type="button" class="btn btn-outline-secondary">Update</button>
+                                    <br><br>
                                     <button type="button" class="btn btn-outline-danger">Delete</button>
                                 </td>
                             </tr>
                             </tbody>
                         @endforeach
                     @else
-                            <h4>Enter Certificate number</h4>
+                            <tbody>
+                                <tr>
+                                    <td style="width: 25%">No Results Found</td>
+                                    <td style="width: 20%">No Results Found</td>
+                                    <td style="width: 15%">No Results Found</td>
+                                    <td style="width: 15%">No Results Found</td>
+                                    <td style="width: 25%">No Results Found</td>
+                                </tr>
+                                </tbody>
                     @endif
                   </table>
       </div>
