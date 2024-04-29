@@ -98,7 +98,6 @@
   <!-- ======= Mobile nav toggle button ======= -->
   <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
     <div style="position: absolute">
-
         <img src="images/logo.png">
     </div>
 
@@ -136,15 +135,6 @@
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
-
-  <!-- ======= Hero Section =======
-  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background-image: {{asset('storage/'.auth()->guard('webadmin')->user()->path)}}">
-    <div class="hero-container" data-aos="fade-in">
-
-      <h1>Hi {{ auth()->guard('webadmin')->user()->name }}</h1>
-      <p>Welcome to <span class="typed" data-typed-items="University of Ruhuna, Faculty of Science"></span></p>
-    </div>
-  </section>End Hero -->
 
   <main id="main">
 
