@@ -54,8 +54,8 @@ Route::get('/contact', function () {
     return view('template/contact');
 });
 
-Route::get('/admin2', function () {
-    return view('template/admin2');
+Route::get('/admin', function () {
+    return view('template/admin');
 });
 //->middleware('auth:webadmin');
 
@@ -63,6 +63,8 @@ Route::get('/admin2', function () {
 Route::get('/', [NoticeController::class,'display_notice']);
 Route::post('/add_notice', [NoticeController::class,'add_notice']);
 Route::get('/news', [NoticeController::class,'display_notice_testamonials']);
+Route::get('/admin', [NoticeController::class,'display_notice_testamonials_adminpage']);
+Route::post('/search_notice', [NoticeController::class,'search_notice']);
 
 Route::post('/add_photo', [AluminiMemberController::class,'add_photo']);
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
@@ -72,7 +74,7 @@ Route::post('/login', [LoginController::class,'authenticate']);
 Route::post('logout', [LoginController::class,'logout'])->name('logout');
 
 Route::post('/check_testamonials', [CheckTestamonialsController::class,'check_testamonials']);
-Route::get('/admin', [CheckTestamonialsController::class,'display_check_testamonials']);
+Route::get('/admin2', [CheckTestamonialsController::class,'display_check_testamonials']);
 Route::get('/check_testamonials_del/{id}', [CheckTestamonialsController::class,'testamonials_del']);
 
 Route::post('/add_member_by_admin', [AdminController::class,'register_member_by_admin']);

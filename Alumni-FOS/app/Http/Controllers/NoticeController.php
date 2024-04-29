@@ -95,4 +95,22 @@ class NoticeController extends Controller
         return view('template/news', compact('notice','testamonials'));
 
     }
+
+    public function display_notice_testamonials_adminpage()
+    {
+        // Retrieve the all records from the database
+        $notice = notice::all();
+
+        return view('template/admin', compact('notice'));
+
+    }
+
+    public function search_notice(Request $request){
+        $search = $request->input('search_notice');
+
+        $notice = notice::where('created_at','Like',"%$search%")->get();
+
+
+        return view('template/admin',compact('notice'));
+    }
 }

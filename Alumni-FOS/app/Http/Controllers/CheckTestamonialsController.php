@@ -81,7 +81,7 @@ class CheckTestamonialsController extends Controller
         // Retrieve the last three records from the database
         $last_testamonials = check_testamonials::latest()->take(5)->get();
 
-        return view('template/admin', compact('last_testamonials'));
+        return view('template/admin2', compact('last_testamonials'));
 
     }
 

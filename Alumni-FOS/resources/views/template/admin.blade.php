@@ -127,7 +127,7 @@
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="/admin2" class="nav-link scrollto"><i class="bx bx-edit"></i> <span>Edit User Admin</span></a></li>
           <li><a href="#notices" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Notices</span></a></li>
-          <li><a href="#check_testimonials" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Check Testamonials</span></a></li>
+          <li><a href="#search_nortices" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Search Nortices</span></a></li>
           <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <li><a href="#" class="nav-link scrollto"><i class="bx bx-log-out"></i> <button type="submit"><span style="color: #6f7180">Logout</span></button></a></li>
@@ -613,135 +613,54 @@
       </div>
     </section><!-- End Notices Section -->
 
-    <!-- ======= Check Testimonials Section ======= -->
-    <section id="check_testimonials" class="testimonials section-bg">
+    <!-- ======= Check Nortices Section ======= -->
+    <section id="search_nortices" class="testimonials section-bg">
       <div class="container">
 
         <div class="section-title">
-          <h2>Check Testimonials</h2>
+          <h2>Search Nortices</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
+        <form action="<?=url('/search_notice')?>" method="post">
+            @csrf
+                <div class="form-group">
+                    <label for="search_notice"><h4><b>Search Notice</b></h4></label>
+                    <input type="date" class="form-control" name="search_notice" id="search_notice">
+                </div>
+                <div class="text-center">
+                    <button type="submit" class="custom-button">Search</button>
+                </div>
+        </form>
 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up">
-                @if($last_testamonials->count() >= 1)
-                    <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                        {{ $last_testamonials[0]->testamonial }}
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
-                    <h2><b>{{ $last_testamonials[0]->topic }}</b></h2>
-                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                    <h5><a href="/check_testamonials_del/{{$last_testamonials[0]->id}}">Delete</a></h5>
-                @else
-                    <p>
-                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            No More Records
-                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                @endif
-              </div>
-            </div>
+        <br>
 
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="1000">
-                @if($last_testamonials->count() >= 2)
-                    <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                        {{ $last_testamonials[1]->testamonial }}
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
-                    <h2><b>{{ $last_testamonials[1]->topic }}</b></h2>
-                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                    <h5><a href="/check_testamonials_del/{{$last_testamonials[1]->id}}">Delete</a></h5>
-                @else
-                    <p>
-                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            No More Records
-                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                @endif
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="2000">
-                @if($last_testamonials->count() >= 3)
-                    <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                        {{ $last_testamonials[2]->testamonial }}
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
-                    <h2><b>{{ $last_testamonials[2]->topic }}</b></h2>
-                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                    <h5><a href="/check_testamonials_del/{{$last_testamonials[2]->id}}">Delete</a></h5>
-                @else
-                    <p>
-                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            No More Records
-                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                @endif
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="3000">
-                @if($last_testamonials->count() >= 4)
-                    <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                        {{ $last_testamonials[3]->testamonial }}
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
-                    <h2><b>{{ $last_testamonials[3]->topic }}</b></h2>
-                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                    <h5><a href="/check_testamonials_del/{{$last_testamonials[3]->id}}">Delete</a></h5>
-                @else
-                    <p>
-                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            No More Records
-                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                @endif
-              </div>
-            </div>
-
-            <div class="swiper-slide">
-              <div class="testimonial-item" data-aos="fade-up" data-aos-delay="4000">
-                @if($last_testamonials->count() >= 5)
-                    <p>
-                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                        {{ $last_testamonials[4]->testamonial }}
-                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
-                    <h2><b>{{ $last_testamonials[4]->topic }}</b></h2>
-                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                    <h5><a href="/check_testamonials_del/{{$last_testamonials[4]->id}}">Delete</a></h5>
-                @else
-                    <p>
-                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                            No More Records
-                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                    </p>
-                @endif
-              </div>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
+        <table class="table" style="width: 100%">
+            <thead>
+              <tr>
+                <th style="width: 25%" scope="col">Name</th>
+                <th style="width: 20%" scope="col">Subject</th>
+                <th style="width: 15%" scope="col">Message</th>
+                <th style="width: 25%" scope="col"></th>
+              </tr>
+            </thead>
+            @foreach ($notice as $notice)
+                <tbody>
+                    <tr>
+                        <td style="width: 25%">{{$notice->name}}</td>
+                        <td style="width: 20%">{{$notice->topic}}</td>
+                        <td style="width: 15%">{{$notice->notice}}</td>
+                        <td style="width: 25%">
+                            <button type="button" class="btn btn-outline-danger">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            @endforeach
+        </table>
 
       </div>
     </section>
-    <!--End Testimonials Section -->
+    <!--End Nortices Section -->
 
   </main><!-- End #main -->
 

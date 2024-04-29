@@ -130,6 +130,7 @@
         <ul>
           <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Add Users</span></a></li>
           <li><a href="#alumni_member" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Alumni Members</span></a></li>
+          <li><a href="#check_testimonials" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Check Testamonials</span></a></li>
           <li><a href="/admin" class="nav-link scrollto"><i class="bx bx-arrow-back"></i> <button type="submit"><span style="color: #6f7180">Back</span></button></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -1173,7 +1174,7 @@
       <div class="container">
 
         <div class="section-title">
-          <h2>Add Testamonials</h2>
+          <h2>Alumni Members</h2>
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
@@ -1189,8 +1190,6 @@
         </form>
 
         <br>
-
-
 
                 <table class="table" style="width: 100%">
                     <thead>
@@ -1232,7 +1231,137 @@
                     @endif
                   </table>
       </div>
-    </section><!-- End Testamonials Section -->
+    </section><!-- End display alumni member Section -->
+
+    <!-- ======= Check Testimonials Section ======= -->
+    <section id="check_testimonials" class="testimonials section-bg">
+        <div class="container">
+
+          <div class="section-title">
+            <h2>Check Testimonials</h2>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          </div>
+
+          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up">
+                  @if(isset($last_testamonials) && $last_testamonials->count() >= 1)
+                      <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          {{ $last_testamonials[0]->testamonial }}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                      <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                      <h2><b>{{ $last_testamonials[0]->topic }}</b></h2>
+                      <h3 style="color: rgb(68, 68, 68)">Accept</h3>
+                      <h5><a href="/check_testamonials_del/{{$last_testamonials[0]->id}}">Delete</a></h5>
+                  @else
+                      <p>
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              No More Records
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  @endif
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="1000">
+                  @if(isset($last_testamonials) && $last_testamonials->count() >= 2)
+                      <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          {{ $last_testamonials[1]->testamonial }}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                      <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                      <h2><b>{{ $last_testamonials[1]->topic }}</b></h2>
+                      <h3 style="color: rgb(68, 68, 68)">Accept</h3>
+                      <h5><a href="/check_testamonials_del/{{$last_testamonials[1]->id}}">Delete</a></h5>
+                  @else
+                      <p>
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              No More Records
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  @endif
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="2000">
+                  @if(isset($last_testamonials) && $last_testamonials->count() >= 3)
+                      <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          {{ $last_testamonials[2]->testamonial }}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                      <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                      <h2><b>{{ $last_testamonials[2]->topic }}</b></h2>
+                      <h3 style="color: rgb(68, 68, 68)">Accept</h3>
+                      <h5><a href="/check_testamonials_del/{{$last_testamonials[2]->id}}">Delete</a></h5>
+                  @else
+                      <p>
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              No More Records
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  @endif
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="3000">
+                  @if(isset($last_testamonials) && $last_testamonials->count() >= 4)
+                      <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          {{ $last_testamonials[3]->testamonial }}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                      <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                      <h2><b>{{ $last_testamonials[3]->topic }}</b></h2>
+                      <h3 style="color: rgb(68, 68, 68)">Accept</h3>
+                      <h5><a href="/check_testamonials_del/{{$last_testamonials[3]->id}}">Delete</a></h5>
+                  @else
+                      <p>
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              No More Records
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  @endif
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="4000">
+                  @if(isset($last_testamonials) && $last_testamonials->count() >= 5)
+                      <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          {{ $last_testamonials[4]->testamonial }}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                      <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                      <h2><b>{{ $last_testamonials[4]->topic }}</b></h2>
+                      <h3 style="color: rgb(68, 68, 68)">Accept</h3>
+                      <h5><a href="/check_testamonials_del/{{$last_testamonials[4]->id}}">Delete</a></h5>
+                  @else
+                      <p>
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              No More Records
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  @endif
+                </div>
+              </div>
+
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+
+        </div>
+      </section>
+      <!--End Testimonials Section -->
 
   </main><!-- End #main -->
 
