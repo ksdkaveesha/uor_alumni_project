@@ -115,6 +115,19 @@
                 {{ session('status') }}
             </div>
         @endif
+
+        @if(session('succ_notice'))
+                    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                    <script>
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'success',
+                            text: '{{ session('succ_notice') }}',
+                        });
+                    </script>
+        @endif
+
+
       <div class="profile">
         @if (isset(auth()->guard('webadmin')->user()->path))
             <img src="{{asset('storage/'.auth()->guard('webadmin')->user()->path)}}" alt="" class="img-fluid rounded-circle">
@@ -1245,8 +1258,11 @@
                       </p>
                       <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
                       <h2><b>{{ $last_testamonials[0]->topic }}</b></h2>
-                      <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                      <h5><a href="/check_testamonials_del/{{$last_testamonials[0]->id}}">Delete</a></h5>
+                      <form method="POST" action="<?=url('/accept_testamonials/{{$last_testamonials[0]->id}}')?>}">
+                        @csrf
+                        <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
+                        <h5><a href="/check_testamonials_del/{{$last_testamonials[0]->id}}">Delete</a></h5>
+                      </form>
                   @else
                       <p>
                           <i class="bx bxs-quote-alt-left quote-icon-left"></i>

@@ -88,6 +88,6 @@ class CheckTestamonialsController extends Controller
     function testamonials_del($id){
         $check_testamonials = check_testamonials::find($id);
         $check_testamonials->delete();
-        return redirect()->back()->with('status', 'Testamonials deleted successfully.');
+        return redirect()->back()->with('succ_notice', 'Testamonials deleted successfully.');
     }
 }

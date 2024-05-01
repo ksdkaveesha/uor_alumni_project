@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\testamonials;
 use Illuminate\Http\Request;
+use App\Models\check_testamonials;
 
 class TestamonialsController extends Controller
 {
@@ -61,6 +62,19 @@ class TestamonialsController extends Controller
     public function destroy(testamonials $testamonials)
     {
         //
+    }
+
+    function accept_testamonials($id){
+
+        $check_testamonials = check_testamonials::find($id);
+        $accept_testamonials = new testamonials();
+        $accept_testamonials->name = $check_testamonials->name;
+        $accept_testamonials->topic = $check_testamonials->topic;
+        $accept_testamonials->testamonial = $check_testamonials->testamonial;
+
+        $accept_testamonials->save();
+        return redirect()->back()->with('succ_notice', 'Testamonial Approved');
+
     }
 
 }

@@ -657,6 +657,16 @@
                 </tbody>
             @endforeach
         </table>
+                @if(session('succ_notice'))
+                    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+                    <script>
+                        Swal.fire({
+                            icon: 'success',
+                            title: 'success',
+                            text: '{{ session('succ_notice') }}',
+                        });
+                    </script>
+                @endif
 
       </div>
     </section>

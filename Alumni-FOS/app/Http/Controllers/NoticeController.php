@@ -117,6 +117,6 @@ class NoticeController extends Controller
     function notice_del($id){
         $check_notice = notice::find($id);
         $check_notice->delete();
-        return redirect()->back()->with('status', 'Notice deleted successfully.');
+        return redirect()->back()->with('succ_notice', 'Notice deleted successfully.');
     }
 }
