@@ -65,6 +65,7 @@ Route::post('/add_notice', [NoticeController::class,'add_notice']);
 Route::get('/news', [NoticeController::class,'display_notice_testamonials']);
 Route::get('/admin', [NoticeController::class,'display_notice_testamonials_adminpage']);
 Route::post('/search_notice', [NoticeController::class,'search_notice']);
+Route::get('/notice_del/{id}', [NoticeController::class,'notice_del']);
 
 Route::post('/add_photo', [AluminiMemberController::class,'add_photo']);
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);

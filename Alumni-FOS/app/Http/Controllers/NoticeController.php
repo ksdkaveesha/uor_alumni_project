@@ -113,4 +113,10 @@ class NoticeController extends Controller
 
         return view('template/admin',compact('notice'));
     }
+
+    function notice_del($id){
+        $check_notice = notice::find($id);
+        $check_notice->delete();
+        return redirect()->back()->with('status', 'Notice deleted successfully.');
+    }
 }

@@ -651,7 +651,7 @@
                         <td style="width: 20%">{{$notice->topic}}</td>
                         <td style="width: 15%">{{$notice->notice}}</td>
                         <td style="width: 25%">
-                            <button type="button" class="btn btn-outline-danger">Delete</button>
+                            <a class="btn btn-outline-danger" href="/notice_del/{{$notice->id}}">Delete</a>
                         </td>
                     </tr>
                 </tbody>
