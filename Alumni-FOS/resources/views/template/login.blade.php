@@ -80,7 +80,7 @@
               </button>
               <div class="collapse navbar-collapse" id="navbarNav">
                  <ul class="navbar-nav ml-auto">
-                   <li class="nav-item active">
+                   <li class="nav-item">
                        <a class="nav-link" href="/">Home</a>
                     </li>
                     <li class="nav-item">
@@ -92,15 +92,12 @@
                     <li class="nav-item">
                        <a class="nav-link" href="directory">Alumni Directory</a>
                     </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="register">Register</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="contact">Contact Us</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link" href="login">Log In</a>
-                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="login">Log In</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="contact">Contact Us</a>
+                     </li>
                     <!--<li class="nav-item">
                        <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
                     </li>-->
@@ -168,6 +165,7 @@
 					</div>
 
 					<div class="text-center p-t-30">
+                        If you don't have account <br>
 						<a class="txt2" href="/register">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
@@ -236,7 +234,7 @@
      </div>
 
      <!-- footer section end -->
-    
+
      <!-- Javascript files-->
 
 
