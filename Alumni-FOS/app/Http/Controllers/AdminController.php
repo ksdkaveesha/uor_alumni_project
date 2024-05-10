@@ -142,5 +142,14 @@ class AdminController extends Controller
         return view('template/admin2',compact('alumni_member'));
     }
 
+    public function display_admin2()
+    {
+        // Retrieve the last three records from the database
+        //$last_testamonials = check_testamonials::latest()->take(5)->get();
+
+        return view('template/admin2');
+
+    }
+
 }
 

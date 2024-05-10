@@ -125,9 +125,9 @@
         <ul>
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
-          <li><a href="/admin2" class="nav-link scrollto"><i class="bx bx-edit"></i> <span>Edit User Admin</span></a></li>
-          <li><a href="#notices" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Notices</span></a></li>
-          <li><a href="#search_nortices" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Search Nortices</span></a></li>
+          <li><a href="/admin2" class="nav-link scrollto"><i class="bx bx-edit"></i> <span>User privileges</span></a></li>
+          <li><a href="/admin3" class="nav-link scrollto"><i class="bx bx-edit"></i> <span>Admin privileges</span></a></li>
+
           <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <li><a href="#" class="nav-link scrollto"><i class="bx bx-log-out"></i> <button type="submit"><span style="color: #6f7180">Logout</span></button></a></li>
@@ -549,128 +549,7 @@
         </div>
       </section>  -->
 
-    <!-- ======= Notices Section ======= -->
-    <section id="notices" class="contact">
-      <div class="container">
 
-        <div class="section-title">
-          <h2>Add Notices</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <div class="row" data-aos="fade-in">
-
-          <div class="col-lg-5 d-flex align-items-stretch">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>A108 Adam Street, New York, NY 535022</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>info@example.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
-              </div>
-
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.409982521399!2d80.57355947387634!3d5.93809209404631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae1391b4a29e707%3A0xd54277175e326bc2!2sUniversity%20of%20Ruhuna!5e0!3m2!1sen!2slk!4v1706937224326!5m2!1sen!2slk" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-            </div>
-
-          </div>
-
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-            <form action="<?=url('/add_notice')?>" method="POST" style="width:100%">
-                @csrf
-                <div class="row" style="width:100%">
-                    <div class="form-group ">
-                        <label for="name">Your Name</label>
-                        <input type="text" name="name" class="form-control" id="name" style="width:100%" required>
-                    </div>
-
-                    <div class="form-group" style="width:100%">
-                        <label for="topic">Subject</label>
-                        <input type="text" class="form-control" name="topic" id="topic" style="width:100%" required>
-                    </div>
-                    <div class="form-group" style="width:100%">
-                        <label for="notice">Message</label>
-                        <textarea class="form-control" name="notice" rows="10" style="width:100%" required></textarea>
-                    </div>
-                </div>
-
-              <div class="text-center"><input type="submit" value="Add Notice"></input></div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Notices Section -->
-
-    <!-- ======= Check Nortices Section ======= -->
-    <section id="search_nortices" class="testimonials section-bg">
-      <div class="container">
-
-        <div class="section-title">
-          <h2>Search Nortices</h2>
-          <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
-        </div>
-
-        <form action="<?=url('/search_notice')?>" method="post">
-            @csrf
-                <div class="form-group">
-                    <label for="search_notice"><h4><b>Search Notice</b></h4></label>
-                    <input type="date" class="form-control" name="search_notice" id="search_notice">
-                </div>
-                <div class="text-center">
-                    <button type="submit" class="custom-button">Search</button>
-                </div>
-        </form>
-
-        <br>
-
-        <table class="table" style="width: 100%">
-            <thead>
-              <tr>
-                <th style="width: 25%" scope="col">Name</th>
-                <th style="width: 20%" scope="col">Subject</th>
-                <th style="width: 15%" scope="col">Message</th>
-                <th style="width: 25%" scope="col"></th>
-              </tr>
-            </thead>
-            @foreach ($notice as $notice)
-                <tbody>
-                    <tr>
-                        <td style="width: 25%">{{$notice->name}}</td>
-                        <td style="width: 20%">{{$notice->topic}}</td>
-                        <td style="width: 15%">{{$notice->notice}}</td>
-                        <td style="width: 25%">
-                            <a class="btn btn-outline-danger" href="/notice_del/{{$notice->id}}">Delete</a>
-                        </td>
-                    </tr>
-                </tbody>
-            @endforeach
-        </table>
-                @if(session('succ_notice'))
-                    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-                    <script>
-                        Swal.fire({
-                            icon: 'success',
-                            title: 'success',
-                            text: '{{ session('succ_notice') }}',
-                        });
-                    </script>
-                @endif
-
-      </div>
-    </section>
-    <!--End Nortices Section -->
 
   </main><!-- End #main -->
 

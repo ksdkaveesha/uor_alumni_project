@@ -76,15 +76,6 @@ class CheckTestamonialsController extends Controller
 
     }
 
-    public function display_check_testamonials()
-    {
-        // Retrieve the last three records from the database
-        $last_testamonials = check_testamonials::latest()->take(5)->get();
-
-        return view('template/admin2', compact('last_testamonials'));
-
-    }
-
     function testamonials_del($id){
         $check_testamonials = check_testamonials::find($id);
         $check_testamonials->delete();
