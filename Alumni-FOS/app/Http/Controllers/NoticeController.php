@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\notice;
 use App\Models\testamonials;
+use App\Models\check_testamonials;
 use Illuminate\Http\Request;
 
 class NoticeController extends Controller
@@ -101,7 +102,9 @@ class NoticeController extends Controller
         // Retrieve the all records from the database
         $notice = notice::all();
 
-        return view('template/admin', compact('notice'));
+        $last_testamonials = check_testamonials::latest()->take(5)->get();
+
+        return view('template/admin3', compact('notice','last_testamonials'));
 
     }
 
@@ -111,7 +114,7 @@ class NoticeController extends Controller
         $notice = notice::where('created_at','Like',"%$search%")->get();
 
 
-        return view('template/admin',compact('notice'));
+        return view('template/admin3',compact('notice'));
     }
 
     function notice_del($id){

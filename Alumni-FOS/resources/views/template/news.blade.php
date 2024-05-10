@@ -51,10 +51,10 @@
                </button>
                <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav ml-auto">
-                     <li class="nav-item active">
+                     <li class="nav-item">
                         <a class="nav-link" href="/">Home</a>
                      </li>
-                     <li class="nav-item">
+                     <li class="nav-item active">
                         <a class="nav-link" href="/news">News & Events</a>
                      </li>
                      <li class="nav-item">
@@ -64,13 +64,10 @@
                         <a class="nav-link" href="directory">Alumni Directory</a>
                      </li>
                      <li class="nav-item">
-                        <a class="nav-link" href="register">Register</a>
+                        <a class="nav-link" href="login">Log In</a>
                      </li>
                      <li class="nav-item">
                         <a class="nav-link" href="contact">Contact Us</a>
-                     </li>
-                     <li class="nav-item">
-                        <a class="nav-link" href="login">Log In</a>
                      </li>
                      <!--<li class="nav-item">
                         <a class="nav-link" href="#"><i class="fa fa-search" aria-hidden="true"></i></a>
@@ -210,7 +207,7 @@
       </div>
 
       <!-- footer section end -->
-      
+
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
       <script src="js/popper.min.js"></script>

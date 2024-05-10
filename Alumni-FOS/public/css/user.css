@@ -154,6 +154,7 @@ body {
 
     .container,
     .container-fluid {
+        padding-top: 15%;
       padding-left: 12px;
       padding-right: 12px;
     }
