@@ -172,4 +172,17 @@ class AluminiMemberController extends Controller
 
     }
 
+    public function display_user()
+    {
+        $scnum = auth()->guard('webalumni')->user()->sc_num;
+                // Extract the code from the pattern
+        $parts = explode('/', $scnum); // Split the pattern by '/'
+        $code = $parts[1]; // Get the code part
+
+        $friend = alumini_member::where('sc_num','Like',"%/$code/%")->get();
+
+        return view('template/user',compact('friend','code'));
+
+    }
+
 }

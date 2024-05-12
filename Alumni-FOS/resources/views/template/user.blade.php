@@ -131,8 +131,8 @@
           <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Profile Update</span></a></li>
-          <li><a href="#testamonials" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
           <li><a href="#testamonials" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Testamonials</span></a></li>
+          <li><a href="#find_friends" class="nav-link scrollto"><i class="bx bx-group"></i> <span>Friends</span></a></li>
           <form method="POST" action="{{ route('logout') }}">
                 @csrf
                 <li><a href="#" class="nav-link scrollto"><i class="bx bx-log-out"></i> <button type="submit"><span style="color: #6f7180">Logout</span></button></a></li>
@@ -827,7 +827,7 @@
           <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
         </div>
 
-        <div class="row" data-aos="fade-in">
+        <!--<div class="row" data-aos="fade-in">
 
           <div class="col-lg-5 d-flex align-items-stretch">
             <div class="info">
@@ -852,9 +852,9 @@
               <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.409982521399!2d80.57355947387634!3d5.93809209404631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae1391b4a29e707%3A0xd54277175e326bc2!2sUniversity%20of%20Ruhuna!5e0!3m2!1sen!2slk!4v1706937224326!5m2!1sen!2slk" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
             </div>
 
-          </div>
+          </div>-->
 
-          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+          <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch" >
             <form action="<?=url('/check_testamonials')?>" method="POST" style="width:100%">
                 @csrf
                 <div class="row" style="width:100%">
@@ -864,7 +864,7 @@
                     </div>
 
                     <div class="form-group" style="width:100%">
-                        <label for="topic">Subject</label>
+                        <label for="topic">Title</label>
                         <input type="text" class="form-control" name="topic" id="topic" style="width:100%" required>
                     </div>
                     <div class="form-group" style="width:100%">
@@ -882,6 +882,62 @@
       </div>
     </section><!-- End Testamonials Section -->
 
+    <!-- ======= Display friend Section ======= -->
+    <section id="find_friends" class="contact">
+        <div class="container">
+
+          <div class="section-title">
+            <h2>Friends</h2>
+            <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+          </div>
+
+          <form action="<?=url('/search_alumni_member')?>" method="post">
+              @csrf
+                  <div class="form-group">
+                      <label for="search_alumni_member"><h4><b>Search Index Number</b></h4></label>
+                      <input type="text" class="form-control" name="search_alumni_member" id="search_alumni_member">
+                  </div>
+                  <div class="text-center">
+                      <button type="submit" class="custom-button">Search</button>
+                  </div>
+          </form>
+
+          <br>
+
+                  <table class="table" style="width: 100%">
+                      <thead>
+                        <tr>
+                          <th style="width: 25%" scope="col">Name</th>
+                          <th style="width: 20%" scope="col">Email</th>
+                          <th style="width: 15%" scope="col">Student Number</th>
+                          <th style="width: 15%" scope="col">Phone Number</th>
+                        </tr>
+                      </thead>
+                      @if (isset($friend) && $friend->count() > 0)
+                          @foreach ($friend as $friend)
+                              <tbody>
+                              <tr>
+                                  <td style="width: 25%">{{$friend->name}}</td>
+                                  <td style="width: 20%">{{$friend->email}}</td>
+                                  <td style="width: 15%">{{$friend->sc_num}}</td>
+                                  <td style="width: 15%">{{$friend->m_code}}-{{$friend->mobile}}-{{$code}}</td>
+                              </tr>
+                              </tbody>
+                          @endforeach
+                      @else
+                              <tbody>
+                                  <tr>
+                                      <td style="width: 25%">No Results Found</td>
+                                      <td style="width: 20%">No Results Found</td>
+                                      <td style="width: 15%">No Results Found</td>
+                                      <td style="width: 15%">No Results Found</td>
+                                      <td style="width: 25%">No Results Found</td>
+                                  </tr>
+                                  </tbody>
+                      @endif
+                    </table>
+        </div>
+      </section><!-- End display friend -->
   </main><!-- End #main -->
 
   <!-- footer section start -->
