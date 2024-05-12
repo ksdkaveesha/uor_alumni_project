@@ -37,11 +37,6 @@ Route::get('/test', function () {
     return view('test');
 });
 
-Route::get('/user', function () {
-    return view('template/user');
-});
-//->middleware('auth:webalumni');
-
 Route::get('/about', function () {
     return view('template/about');
 });
@@ -70,6 +65,7 @@ Route::get('/notice_del/{id}', [NoticeController::class,'notice_del']);
 Route::post('/add_photo', [AluminiMemberController::class,'add_photo']);
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
 Route::post('/update', [AluminiMemberController::class,'update']);
+Route::get('/user', [AluminiMemberController::class,'display_user']);//->middleware('auth:webalumni');
 
 Route::post('/login', [LoginController::class,'authenticate']);
 Route::post('logout', [LoginController::class,'logout'])->name('logout');

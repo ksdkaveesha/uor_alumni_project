@@ -151,7 +151,7 @@
 
   <main id="main">
 
-    <!-- ======= Update Section ======= -->
+    <!-- ======= user register Section ======= -->
     <section id="update" class="contact">
         <div class="container">
 
@@ -530,7 +530,7 @@
 
         </div>
       </section>
-    <!-- End Update Section -->
+    <!-- End user register Section -->
 
 
       <!-- ======= Portfolio Section =======
