@@ -535,6 +535,14 @@ img.image {
     margin-top: 40px;
 }
 
+.contact{
+    color:white;
+}
+
+.contact:hover{
+    color:black;
+}
+
 .seemore_bt a:hover {
     background-color: #f76d37;
     color: #ffffff;

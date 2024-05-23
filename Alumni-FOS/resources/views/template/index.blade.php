@@ -359,49 +359,9 @@
         <div class="row" style="display:flex; align-items:center; justify-content: center; width:100%">
             <div class="learnmore_bt"><a href="/news">Read More</a></div>
         </div>
+        <br>
      </div>
-     <br>
       <!-- testimonial section end -->
-
-      <!-- contact section start-->
-      <div class="contact_section layout_padding">
-         <div class="container">
-            <h1 class="contact_text">Comment</h1>
-         </div>
-      </div>
-      <div class="contact_section_1 layout_padding">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-md-5 padding_0">
-                  <div class="mail_section">
-                     <div class="email_text">
-                        <div class="form-group">
-                           <input type="text" class="email-bt" placeholder="Name" name="Email">
-                        </div>
-                        <div class="form-group">
-                           <input type="text" class="email-bt" placeholder="Email" name="Email">
-                        </div>
-                        <div class="form-group">
-                           <input type="text" class="email-bt" placeholder="Phone Numbar" name="Email">
-                        </div>
-                        <div class="form-group">
-                           <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="Massage"></textarea>
-                        </div>
-                        <div class="send_btn">
-                           <div type="text" class="main_bt"><a href="#">SEND</a></div>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-               <div class="col-md-7 padding_0">
-                  <div class="map-responsive">
-                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.409982521399!2d80.57355947387634!3d5.93809209404631!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae1391b4a29e707%3A0xd54277175e326bc2!2sUniversity%20of%20Ruhuna!5e0!3m2!1sen!2slk!4v1706937224326!5m2!1sen!2slk" width="600" height="508" frameborder="0" style="border:0; width: 100%;" allowfullscreen></iframe>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!--contact section end -->
 
 
       <!-- footer section start -->

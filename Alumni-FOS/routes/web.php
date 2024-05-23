@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\TestamonialsController;
 use App\Http\Controllers\CheckTestamonialsController;
 use App\Http\Controllers\DepartmentController;
+use App\Http\Controllers\CommentController;
 
 
 /*
@@ -80,3 +81,5 @@ Route::post('/add_member_by_admin', [AdminController::class,'register_member_by_
 Route::post('/add_admin_by_admin', [AdminController::class,'register_admin_by_admin']);
 Route::post('/search_alumni_member', [AdminController::class,'search_alumni_member']);
 Route::get('/admin2', [AdminController::class,'display_admin2']);
+
+Route::post('/comment', [CommentController::class,'comment']);
