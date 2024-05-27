@@ -144,6 +144,7 @@
           <li><a href="#check_testimonials" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Check Testamonials</span></a></li>
           <li><a href="#notices" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Notices</span></a></li>
           <li><a href="#search_nortices" class="nav-link scrollto"><i class="bx bx-envelope"></i> <span>Search Nortices</span></a></li>
+          <li><a href="#add_images" class="nav-link scrollto"><i class="bx bx-image-add"></i> <span>Add Images</span></a></li>
           <li><a href="/admin" class="nav-link scrollto"><i class="bx bx-arrow-back"></i> <button type="submit"><span style="color: #6f7180">Back</span></button></a></li>
         </ul>
       </nav><!-- .nav-menu -->
@@ -1103,6 +1104,37 @@
         </div>
       </section>
       <!--End Nortices Section -->
+
+      <!--Add Images-->
+      <section id="add_images" class="contact">
+        <div class="container">
+
+          <div class="section-title">
+            <h2>Add Image to gallery</h2>
+          </div>
+
+          <div class="row" data-aos="fade-in">
+
+
+            <div>
+                <div>
+                <form action="<?=url('/add_gallery')?>" method="POST" enctype="multipart/form-data" >
+                    @csrf
+                        <div class="mb-3">
+                            <h4>Add a photo</h4>
+                          <input class="form-control" type="file" id="photo" name="photo" required>
+                        </div>
+                    <br>
+                    <div class="photo_upload"><input type="submit" value="Add Photo"></div>
+                </form>
+                </div>
+                <br>
+            </div>
+          </div>
+
+        </div>
+      </section>
+      <!--end add images-->
 
   </main><!-- End #main -->
 

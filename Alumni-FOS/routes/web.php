@@ -9,6 +9,7 @@ use App\Http\Controllers\TestamonialsController;
 use App\Http\Controllers\CheckTestamonialsController;
 use App\Http\Controllers\DepartmentController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\GalleryController;
 
 
 /*
@@ -40,6 +41,10 @@ Route::get('/test', function () {
 
 Route::get('/about', function () {
     return view('template/about');
+});
+
+Route::get('/gallery', function () {
+    return view('template/gallery');
 });
 
 Route::get('/directory', function () {
@@ -83,3 +88,5 @@ Route::post('/search_alumni_member', [AdminController::class,'search_alumni_memb
 Route::get('/admin2', [AdminController::class,'display_admin2']);
 
 Route::post('/comment', [CommentController::class,'comment']);
+
+Route::post('/add_gallery', [GalleryController::class,'add_gallery']);

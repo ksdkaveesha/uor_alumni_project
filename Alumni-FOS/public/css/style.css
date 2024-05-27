@@ -530,7 +530,7 @@ img.image {
     text-align: center;
     font-size: 18px;
     color: #ffffff;
-    background-color: #252525;
+    background-color: #390A40;
     padding: 10px 0px;
     margin-top: 40px;
 }
@@ -544,8 +544,8 @@ img.image {
 }
 
 .seemore_bt a:hover {
-    background-color: #f76d37;
-    color: #ffffff;
+    background-color: #ffffff;
+    color: #3f78bd;
 }
 
 a:hover {

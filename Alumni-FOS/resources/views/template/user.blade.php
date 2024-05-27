@@ -482,7 +482,7 @@
                     <option value="South Africa" {{ auth()->guard('webalumni')->user()->country === 'South Africa' ? 'selected' : '' }}>South Africa</option>
                     <option value="South Georgia and The South Sandwich Islands" {{ auth()->guard('webalumni')->user()->country === 'South Georgia and The South Sandwich Islands' ? 'selected' : '' }}>South Georgia and The South Sandwich Islands</option>
                     <option value="Spain" {{ auth()->guard('webalumni')->user()->country === 'Spain' ? 'selected' : '' }}>Spain</option>
-                    <option value="Sri Lanka" {{ auth()->guard('webalumni')->user()->country === 'Sri Lanka' ? 'selected' : '' }}>Sri Lanka</option
+                    <option value="Sri Lanka" {{ auth()->guard('webalumni')->user()->country === 'Sri Lanka' ? 'selected' : '' }}>Sri Lanka</option>
                     <option value="Sudan" {{ auth()->guard('webalumni')->user()->country === 'Sudan' ? 'selected' : '' }}>Sudan</option>
                     <option value="Suriname" {{ auth()->guard('webalumni')->user()->country === 'Suriname' ? 'selected' : '' }}>Suriname</option>
                     <option value="Svalbard and Jan Mayen" {{ auth()->guard('webalumni')->user()->country === 'Svalbard and Jan Mayen' ? 'selected' : '' }}>Svalbard and Jan Mayen</option>
