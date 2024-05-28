@@ -305,9 +305,11 @@
                          <div class="testimonial_section_2">
                             @if($lastThreeRecords_test->count() >= 1)
                                 <h4 class="client_name_text">{{ $lastThreeRecords_test[0]->topic }} <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h5 class="customer_text"><b>{{ $lastThreeRecords_test[0]->name }}</b></h5>
                                 <p class="customer_text">{{ $lastThreeRecords_test[0]->testamonial }}</p>
                             @else
                                 <h4 class="client_name_text">No Testamonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h5 class="customer_text"><b>Name</b></h5>
                                 <p class="customer_text">No records</p>
                             @endif
                          </div>
@@ -324,9 +326,11 @@
                          <div class="testimonial_section_2">
                             @if($lastThreeRecords_test->count() >= 2)
                                 <h4 class="client_name_text">{{ $lastThreeRecords_test[1]->topic }} <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h5 class="customer_text"><b>{{ $lastThreeRecords_test[1]->name }}</b></h5>
                                 <p class="customer_text">{{ $lastThreeRecords_test[1]->testamonial }}</p>
                             @else
                                 <h4 class="client_name_text">No Testamonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h5 class="customer_text"><b>Name</b></h5>
                                 <p class="customer_text">No records</p>
                             @endif
                         </div>
@@ -343,9 +347,11 @@
                          <div class="testimonial_section_2">
                             @if($lastThreeRecords_test->count() >= 3)
                                 <h4 class="client_name_text">{{ $lastThreeRecords_test[2]->topic }} <span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h5 class="customer_text"><b>{{ $lastThreeRecords_test[2]->name }}</b></h5>
                                 <p class="customer_text">{{ $lastThreeRecords_test[2]->testamonial }}</p>
                             @else
                                 <h4 class="client_name_text">No Testamonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h5 class="customer_text"><b>Name</b></h5>
                                 <p class="customer_text">No records</p>
                             @endif
                         </div>
