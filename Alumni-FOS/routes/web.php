@@ -43,10 +43,6 @@ Route::get('/about', function () {
     return view('template/about');
 });
 
-Route::get('/gallery', function () {
-    return view('template/gallery');
-});
-
 Route::get('/directory', function () {
     return view('template/directory');
 });
@@ -90,3 +86,4 @@ Route::get('/admin2', [AdminController::class,'display_admin2']);
 Route::post('/comment', [CommentController::class,'comment']);
 
 Route::post('/add_gallery', [GalleryController::class,'add_gallery']);
+Route::get('/gallery', [GalleryController::class,'show_gallery']);

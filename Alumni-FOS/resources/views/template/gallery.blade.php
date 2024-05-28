@@ -112,7 +112,7 @@
            <div class="">
               <div class="gallery_section_2">
                  <div class="row">
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="padding-bottom: 2%">
                        <div class="container_main">
                           <img src="images/img-7.jpg" alt="Avatar" class="image">
                           <div class="overlay">
@@ -120,7 +120,7 @@
                           </div>
                        </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="padding-bottom: 2%">
                        <div class="container_main">
                           <img src="images/img-8.png" alt="Avatar" class="image">
                           <div class="overlay">
@@ -128,7 +128,7 @@
                           </div>
                        </div>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4" style="padding-bottom: 2%">
                        <div class="container_main">
                           <img src="images/img-9.png" alt="Avatar" class="image">
                           <div class="overlay">
@@ -136,6 +136,16 @@
                           </div>
                        </div>
                     </div>
+                    @foreach ($gallery as $gallery)
+                        <div class="col-md-4" style="padding-bottom: 2%">
+                            <div class="container_main">
+                            <img src="{{asset('storage/'.$gallery->img_path)}}" alt="Avatar" class="image">
+                            <div class="overlay">
+                                <div class="text"><a href="#"><i class="fa fa-searcha" aria-hidden="true"></i></a></div>
+                            </div>
+                            </div>
+                        </div>
+                    @endforeach
                  </div>
               </div>
            </div>
