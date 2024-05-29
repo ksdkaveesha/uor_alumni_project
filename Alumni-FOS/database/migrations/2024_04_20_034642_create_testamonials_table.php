@@ -14,6 +14,7 @@ return new class extends Migration
         Schema::create('testamonials', function (Blueprint $table) {
             $table->id();
             $table->String('name');
+            $table->String('img');
             $table->String('topic');
             $table->String('testamonial');
             $table->timestamps();
