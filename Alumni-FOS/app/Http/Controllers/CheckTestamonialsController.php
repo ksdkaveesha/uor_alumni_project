@@ -67,7 +67,8 @@ class CheckTestamonialsController extends Controller
     function check_testamonials(Request $request){
 
         $check_testamonials = new check_testamonials();
-        $check_testamonials->name = $request->input('name');
+        $check_testamonials->name = auth()->guard('webalumni')->user()->name;
+        $check_testamonials->img = auth()->guard('webalumni')->user()->path ?? 'assets/img/profile-img.jpg';
         $check_testamonials->topic = $request->input('topic');
         $check_testamonials->testamonial = $request->input('testamonial');
 
