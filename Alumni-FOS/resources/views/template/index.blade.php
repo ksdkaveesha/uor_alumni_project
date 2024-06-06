@@ -133,8 +133,10 @@
                <div class="col-md-6">
                   <div class="about_taital_main">
                      <div class="about_taital"><span style="color:black">About Us</span></div>
-                     <p class="about_text">University of Ruhuna.</p>
-                     <p class="about_text">The University of Ruhuna is a public university in Matara, Sri Lanka. It is the only university in the southern region of Sri Lanka. It was established by a special presidential decree on 1 September 1978 as Ruhuna University College and upgraded to a full-fledged university on 1 February 1984 by a university order. <br><br></p>
+
+                     <p class="about_text">The Alumni Association of the University of Ruhuna, Faculty of Science is the apex body of the alumni of various departments of the faculty, forming a link between its membership and the faculty. Today, the Association continues its role of fostering close ties between the student body, faculty and its alumni.
+                        <br><br>The Alumni Association of the Faculty of Science views its role as “connectors” and thought leaders very seriously and to this end, not only conducts various programs and initiatives targeting the development and welfare of undergraduates and its members but also conducts public forums to create awareness and discussion in matters of public importance.
+                         <br><br></p>
                      <div class="learnmore_bt"><a href="about">Read More</a></div>
                   </div>
                </div>
@@ -215,7 +217,7 @@
            <div class="row">
               <div class="col-sm-12">
                  <h1 class="services_taital">Notices</h1>
-                 <p class="services_text">Typesetting industry lorem Ipsum is simply dummy text of the </p>
+                 <!--<p class="services_text">Typesetting industry lorem Ipsum is simply dummy text of the </p>-->
               </div>
            </div>
            <div class="services_section_2">
@@ -284,7 +286,7 @@
             <div class="row">
                <div class="col-sm-12">
                   <h1 class="client_taital">Testimonial</h1>
-                  <p class="client_text">Eeven slightly believable. If you are going to use a passage of Lorem Ipsum, you need to</p>
+                  <!--<p class="client_text">Eeven slightly believable. If you are going to use a passage of Lorem Ipsum, you need to</p>-->
                </div>
             </div>
          </div>
