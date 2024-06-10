@@ -23,7 +23,8 @@
   <link href="{{asset('vendor/boxicons/css/boxicons.min.css')}}" rel="stylesheet">
   <link href="{{asset('vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
   <link href="{{asset('vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
-
+  <!--Bootstrap CDN-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- Template Main CSS File -->
   <link rel="stylesheet" type="text/css" href="{{asset('css/user.css')}}">
 
@@ -127,15 +128,44 @@
           <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
           <li><a href="/admin2" class="nav-link scrollto"><i class="bx bx-edit"></i> <span>User privileges</span></a></li>
           <li><a href="/admin3" class="nav-link scrollto"><i class="bx bx-edit"></i> <span>Admin privileges</span></a></li>
-
-          <form method="POST" action="{{ route('logout') }}">
-                @csrf
-                <li><a href="#" class="nav-link scrollto"><i class="bx bx-log-out"></i> <button type="submit"><span style="color: #6f7180">Logout</span></button></a></li>
-          </form>
+          <form id="logoutForm" method="POST" action="{{ route('logout') }}">
+            @csrf
+            <!-- Logout button or link -->
+            <li>
+              <a href="#" class="nav-link scrollto" onclick="showLogoutModal()">
+                  <i class="bx bx-log-out"></i>
+                  <span
+                      style="background:none;border:none;padding:0;color: #6f7180; cursor:pointer;">Logout</span>
+              </a>
+          </li>
+        </form>
+          
+          
         </ul>
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
+
+
+  <!-- Logout Confirmation Modal -->
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Logout Confirmation</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p>Are you sure you want to logout?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+          <button type="button" class="btn btn-primary" onclick="logout()">Logout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background-image: {{asset('assets/img/profile-img.jpg')}}">
@@ -597,7 +627,23 @@
             }
         }
     </script>
-
+<script>
+  function showLogoutModal() {
+      // Show the modal
+      $('#staticBackdrop').modal('show');
+  }
+  
+  function logout() {
+      // Correctly target the logout form by ID and submit it
+      var logoutForm = document.getElementById('logoutForm');
+      if (logoutForm) {
+          logoutForm.action = '{{ route('logout') }}'; // Ensure this line is directly in the Blade file
+          logoutForm.submit();
+      } else {
+          console.error('Logout form not found');
+      }
+  }
+</script>
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
@@ -612,7 +658,7 @@
   <script src="{{asset('vendor/typed.js/typed.umd.js')}}"></script>
   <script src="{{asset('vendor/waypoints/noframework.waypoints.js')}}"></script>
   <script src="{{asset('vendor/php-email-form/validate.js')}}"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <!-- Template Main JS File -->
   <script src="{{asset('js/user.js')}}"></script>
 
