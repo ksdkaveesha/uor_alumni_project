@@ -816,7 +816,7 @@
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="<?=url('/check_testamonials')?>" method="POST" style="width:100%">
+              <form action="<?=url('/check_testamonials_admin')?>" method="POST" style="width:100%">
                   @csrf
                   <div class="row" style="width:100%">
                       <div class="form-group ">
