@@ -24,6 +24,9 @@
   <link href="{{asset('vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
   <link href="{{asset('vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
+  <!--Bootstrap CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <!-- Template Main CSS File -->
   <link rel="stylesheet" type="text/css" href="{{asset('css/user.css')}}">
 
@@ -151,6 +154,28 @@
 
   <main id="main">
 
+
+     <!--General Confirmation Modal -->
+     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h1 class="modal-title fs-5" id="staticBackdropLabel"> </h1>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal"
+                     aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+                 <p id="staticBackdropLabe2"></p>
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                 <button type="button" class="btn btn-primary" id="confirmBtn"></button>
+             </div>
+         </div>
+     </div>
+ </div>
+
     <!-- ======= user register Section ======= -->
     <section id="update" class="contact">
         <div class="container">
@@ -164,7 +189,7 @@
 
             <div class="col-lg-12 mt-5 mt-lg-0 d-flex align-items-stretch" style="padding-left: 5%">
                 <div id="alumni_personal_details">
-                    <form action="<?=url('/add_member_by_admin')?>" method="post">
+                    <form id="addAlumni"  action="<?=url('/add_member_by_admin')?>" method="POST">
                         @csrf
                         <div class="form-group">
                             <label for="address"><h2><b>Register Alumni Member</b></h2></label>
@@ -183,6 +208,15 @@
                                     <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" id="email" name="email" value="{{old('email')}}" required/>
+                            @error('email')
+                                <div class="alert alert-danger">{{ $message }}</div>
+                            @enderror                    
+                        </div>
+
                         <div class="row">
                         <div class="form-group col-md-6">
                             <label for="m_code">Mobile Code</label>
@@ -505,7 +539,9 @@
                                 </select>
                             </div>
 
-                            <div class="text-center"><input type="submit" value="Add Member"></input></div>
+                            <div class="text-center">
+                                <button type="button" class="custom-button" id="addAlumni_btn">Add Member</button>
+                            </div>
                     <style>
                         .custom-button {
                             background-color: #211046; /* Dark purple color */
@@ -537,8 +573,7 @@
         <div class="container">
 
           <div class="section-title">
-            <h2>Add Testamonials</h2>
-            <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+            <h2>Add Testamonials</h2>            
           </div>
 
           <div class="row" data-aos="fade-in">
@@ -569,7 +604,7 @@
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="<?=url('/check_testamonials')?>" method="POST" style="width:100%">
+              <form id="adminTestamonial" action="<?=url('/check_testamonials')?>" method="POST" style="width:100%">
                   @csrf
                   <div class="row" style="width:100%">
                       <div class="form-group ">
@@ -587,7 +622,10 @@
                       </div>
                   </div>
 
-                <div class="text-center"><input type="submit" value="Add Testamonials"></input></div>
+                <div class="text-center">
+                   
+                    <button type="button" class="custom-button" id="addTestamonial_btn">Add Testamonials</button>
+                </div>
               </form>
             </div>
 
@@ -602,7 +640,7 @@
 
         <div class="section-title">
           <h2>Alumni Members</h2>
-         <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+       
         </div>
 
         <form action="<?=url('/search_alumni_member')?>" method="post">
@@ -690,6 +728,71 @@
 
 
 
+    <!--User Add Modal script-->
+    <script>
+        function showAddUserModal(actionFunction) {
+            // Set the onclick event of the confirmation button to the passed function
+            document.getElementById('confirmBtn').onclick = actionFunction;
+            // Show the modal
+            $('#staticBackdrop').modal('show');
+            var paragraph1 = document.getElementById('staticBackdropLabel');
+            paragraph1.innerHTML = 'Add Alumni Member Confirmation';
+            var paragraph2 = document.getElementById('staticBackdropLabe2');
+            paragraph2.innerHTML = 'Are you sure you want to add the user?';
+            var button2 = document.getElementById('confirmBtn');
+            button2.innerHTML = 'Confirm';
+        }
+
+        function addUser() {
+
+            var updateForm = document.getElementById('addAlumni');
+            if (updateForm) {
+                updateForm.action = '<?=url('/add_member_by_admin')?>'; // Ensure this line is directly in the Blade file
+                updateForm.submit();
+            } else {
+                console.error('Add form not found');
+            }
+
+        }
+  
+        // Triggering the modal with different actions
+        document.getElementById('addAlumni_btn').addEventListener('click', function() {
+            showAddUserModal(addUser);
+        });
+
+    </script>
+<!-- Add Testamonials Modal script-->
+<script>
+    function showTestamonialModal(actionFunction) {
+        // Set the onclick event of the confirmation button to the passed function
+        document.getElementById('confirmBtn').onclick = actionFunction;
+        // Show the modal
+        $('#staticBackdrop').modal('show');
+        var paragraph1 = document.getElementById('staticBackdropLabel');
+        paragraph1.innerHTML = 'Add Testamonial Confirmation';
+        var paragraph2 = document.getElementById('staticBackdropLabe2');
+        paragraph2.innerHTML = 'Are you sure you want to add this?';
+        var button2 = document.getElementById('confirmBtn');
+        button2.innerHTML = 'Yes';
+    }
+
+    function addTestamonial() {
+        // Correctly target the logout form by ID and submit it
+        var testamonialForm = document.getElementById('adminTestamonial');
+        if (testamonialForm) {
+            testamonialForm.action =
+            '<?=url('/check_testamonials')?>'; // Ensure this line is directly in the Blade file
+            testamonialForm.submit();
+        } else {
+            console.error('testamonialForm not found');
+        }
+
+    }
+    // Triggering the modal with different actions
+    document.getElementById('addTestamonial_btn').addEventListener('click', function() {
+        showTestamonialModal(addTestamonial);
+    });
+</script>
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
