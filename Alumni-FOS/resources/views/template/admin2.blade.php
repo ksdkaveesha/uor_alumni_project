@@ -604,7 +604,7 @@
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form id="adminTestamonial" action="<?=url('/check_testamonials')?>" method="POST" style="width:100%">
+              <form id="adminTestamonial" action="<?=url('/check_testamonials_admin')?>" method="POST" style="width:100%">
                   @csrf
                   <div class="row" style="width:100%">
                       <div class="form-group ">
@@ -781,7 +781,7 @@
         var testamonialForm = document.getElementById('adminTestamonial');
         if (testamonialForm) {
             testamonialForm.action =
-            '<?=url('/check_testamonials')?>'; // Ensure this line is directly in the Blade file
+            '<?=url('/check_testamonials_admin')?>'; // Ensure this line is directly in the Blade file
             testamonialForm.submit();
         } else {
             console.error('testamonialForm not found');
