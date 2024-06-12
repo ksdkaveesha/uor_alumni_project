@@ -73,6 +73,7 @@ Route::post('/login', [LoginController::class,'authenticate']);
 Route::post('logout', [LoginController::class,'logout'])->name('logout');
 
 Route::post('/check_testamonials', [CheckTestamonialsController::class,'check_testamonials']);
+Route::post('/check_testamonials_admin', [CheckTestamonialsController::class,'check_testamonials_admin']);
 //Route::get('/admin3', [CheckTestamonialsController::class,'display_check_testamonials']);
 Route::get('/check_testamonials_del/{id}', [CheckTestamonialsController::class,'testamonials_del']);
 

@@ -77,6 +77,19 @@ class CheckTestamonialsController extends Controller
 
     }
 
+    function check_testamonials_admin(Request $request){
+
+        $check_testamonials = new check_testamonials();
+        $check_testamonials->name = auth()->guard('webadmin')->user()->name;
+        $check_testamonials->img = auth()->guard('webadmin')->user()->path ?? 'assets/img/profile-img.jpg';
+        $check_testamonials->topic = $request->input('topic');
+        $check_testamonials->testamonial = $request->input('testamonial');
+
+        $check_testamonials->save();
+        return redirect()->back()->with('status', 'Testamonial submitted successfully!');
+
+    }
+
     function testamonials_del($id){
         $check_testamonials = check_testamonials::find($id);
         $check_testamonials->delete();
