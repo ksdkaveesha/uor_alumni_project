@@ -80,6 +80,7 @@ class AluminiMemberController extends Controller
         $alumini_member = alumini_member::find(auth()->guard('webalumni')->user()->id);
         $alumini_member->name = $request->input('name');
         $alumini_member->mobile = $request->input('mobile');
+        $alumini_member->m_code = $request->input('m_code');
         $alumini_member->graduation_year = $request->input('graduation_year');
         $alumini_member->id_num = $request->input('id_num');
         $alumini_member->country = $request->input('country');
