@@ -24,6 +24,8 @@
   <link href="{{asset('vendor/glightbox/css/glightbox.min.css')}}" rel="stylesheet">
   <link href="{{asset('vendor/swiper/swiper-bundle.min.css')}}" rel="stylesheet">
 
+  <!--Bootstrap CDN-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
   <!-- Template Main CSS File -->
   <link rel="stylesheet" type="text/css" href="{{asset('css/user.css')}}">
 
@@ -153,6 +155,27 @@
 
   <main id="main">
 
+     <!--General Confirmation Modal -->
+     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h1 class="modal-title fs-5" id="staticBackdropLabel"> </h1>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal"
+                     aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+                 <p id="staticBackdropLabe2"></p>
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                 <button type="button" class="btn btn-primary" id="confirmBtn"></button>
+             </div>
+         </div>
+     </div>
+ </div>
+
     <!-- ======= Update Section ======= -->
     <section id="update" class="contact">
         <div class="container">
@@ -166,7 +189,7 @@
 
             <div class="col-lg-12 d-flex align-items-stretch" style="padding-left: 5%">
                 <div id="admin_personal_details" >
-                    <form action="<?=url('/add_admin_by_admin')?>" method="post">
+                    <form id="addAdminForm" action="<?=url('/add_admin_by_admin')?>" method="POST">
                       @csrf
                         <div class="form-group">
                             <label for="address"><h2><b>Register Admin</b></h2></label>
@@ -506,7 +529,9 @@
                               background-color: #007bff; /* Blue color on hover */
                           }
                       </style>
-                      <div class="text-center"><button type="submit" class="custom-button">Submit</button></div>
+                      <div class="text-center">
+                        <button type="button" class="custom-button" id="addAdmin_btn">Submit</button>
+                      </div>
                     </form>
                   </div>
             </div>
@@ -1019,7 +1044,7 @@
             </div>
 
             <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
-              <form action="<?=url('/add_notice')?>" method="POST" style="width:100%">
+              <form id="addNoticeForm" action="<?=url('/add_notice')?>" method="POST" style="width:100%">
                   @csrf
                   <div class="row" style="width:100%">
                       <div class="form-group ">
@@ -1037,7 +1062,10 @@
                       </div>
                   </div>
 
-                <div class="text-center"><input type="submit" value="Add Notice"></input></div>
+                <div class="text-center">
+                  
+                  <button type="button" class="custom-button" id="addNotice_btn">Add Notice</button>
+                </div>
               </form>
             </div>
 
@@ -1163,8 +1191,73 @@
 
     <!-- footer section end -->
 
+ <!--User Add Modal script-->
+ <script>
+  function showAddAdminModal(actionFunction) {
+      // Set the onclick event of the confirmation button to the passed function
+      document.getElementById('confirmBtn').onclick = actionFunction;
+      // Show the modal
+      $('#staticBackdrop').modal('show');
+      var paragraph1 = document.getElementById('staticBackdropLabel');
+      paragraph1.innerHTML = 'Add Admin member Confirmation';
+      var paragraph2 = document.getElementById('staticBackdropLabe2');
+      paragraph2.innerHTML = 'Are you sure you want to add the admin?';
+      var button2 = document.getElementById('confirmBtn');
+      button2.innerHTML = 'Confirm';
+  }
 
+  function addAdmin() {
 
+      var updateForm = document.getElementById('addAdminForm');
+      if (updateForm) {
+          updateForm.action = '<?=url('/add_admin_by_admin')?>'; // Ensure this line is directly in the Blade file
+          updateForm.submit();
+      } else {
+          console.error('Add form not found');
+      }
+
+  }
+
+  // Triggering the modal with different actions
+  document.getElementById('addAdmin_btn').addEventListener('click', function() {
+    showAddAdminModal(addAdmin);
+  });
+
+</script>
+
+ <!--Add Notice Modal script-->
+ <script>
+  function showNoticeModal(actionFunction) {
+      // Set the onclick event of the confirmation button to the passed function
+      document.getElementById('confirmBtn').onclick = actionFunction;
+      // Show the modal
+      $('#staticBackdrop').modal('show');
+      var paragraph1 = document.getElementById('staticBackdropLabel');
+      paragraph1.innerHTML = 'Add Notice Confirmation';
+      var paragraph2 = document.getElementById('staticBackdropLabe2');
+      paragraph2.innerHTML = 'Are you sure you want to add the notice?';
+      var button2 = document.getElementById('confirmBtn');
+      button2.innerHTML = 'Yes';
+  }
+
+  function addNotice() {
+
+      var updateForm = document.getElementById('addNoticeForm');
+      if (updateForm) {
+          updateForm.action = '<?=url('/add_notice')?>'; // Ensure this line is directly in the Blade file
+          updateForm.submit();
+      } else {
+          console.error('Add form not found');
+      }
+
+  }
+
+  // Triggering the modal with different actions
+  document.getElementById('addNotice_btn').addEventListener('click', function() {
+    showNoticeModal(addNotice);
+  });
+
+</script>
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
