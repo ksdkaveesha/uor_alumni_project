@@ -74,11 +74,15 @@ class TestamonialsController extends Controller
 
         // Transfer the data
         $accept_testamonials->name = $check_testamonials->name;
+        $accept_testamonials->img = $check_testamonials->img;
         $accept_testamonials->topic = $check_testamonials->topic;
         $accept_testamonials->testamonial = $check_testamonials->testamonial;
 
         // Save the new record to the testamonials table
         $accept_testamonials->save();
+
+        // Delete the record from the check_testamonials table
+        $check_testamonials->delete();
 
         return redirect()->back()->with('succ_notice', 'Testamonial Approved');
     }
