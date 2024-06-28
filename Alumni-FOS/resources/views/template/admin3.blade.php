@@ -911,87 +911,134 @@
         <section id="check_testimonials" class="testimonials section-bg">
             <div class="container">
 
-                <div class="section-title">
-                    <h2>Check Testimonials</h2>
-                    <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+          <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up">
+                  @if(isset($last_testamonials) && $last_testamonials->count() >= 1)
+                      <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          {{ $last_testamonials[0]->testamonial }}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                      <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                      <h2><b>{{ $last_testamonials[0]->topic }}</b></h2>
+                      <form method="GET" action="<?= url('/accept_testamonials/' . $last_testamonials[0]->id) ?>">
+                        @csrf
+                        <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
+                        <h5><a href="/check_testamonials_del/{{$last_testamonials[0]->id}}">Delete</a></h5>
+                      </form>
+                  @else
+                      <p>
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              No More Records
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  @endif
                 </div>
+              </div>
 
-                <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-                    <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="1000">
+                  @if(isset($last_testamonials) && $last_testamonials->count() >= 2)
+                      <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          {{ $last_testamonials[1]->testamonial }}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                      <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                      <h2><b>{{ $last_testamonials[1]->topic }}</b></h2>
+                      <form method="GET" action="<?=url('/accept_testamonials/' . $last_testamonials[1]->id)?>}">
+                        @csrf
+                        <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
+                        <h5><a href="/check_testamonials_del/{{$last_testamonials[1]->id}}">Delete</a></h5>
+                      </form>
+                  @else
+                      <p>
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              No More Records
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  @endif
+                </div>
+              </div>
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item" data-aos="fade-up">
-                                @if (isset($last_testamonials) && $last_testamonials->count() >= 1)
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        {{ $last_testamonials[0]->testamonial }}
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
-                                    <h2><b>{{ $last_testamonials[0]->topic }}</b></h2>
-                                    <form method="POST"
-                                        action="<?= url('/accept_testamonials/{{ $last_testamonials[0]->id }}') ?>}">
-                                        @csrf
-                                        <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
-                                        <h5><a
-                                                href="/check_testamonials_del/{{ $last_testamonials[0]->id }}">Delete</a>
-                                        </h5>
-                                    </form>
-                                @else
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        No More Records
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                @endif
-                            </div>
-                        </div>
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="2000">
+                  @if(isset($last_testamonials) && $last_testamonials->count() >= 3)
+                      <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          {{ $last_testamonials[2]->testamonial }}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                      <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                      <h2><b>{{ $last_testamonials[2]->topic }}</b></h2>
+                      <form method="GET" action="<?=url('/accept_testamonials/' . $last_testamonials[2]->id)?>}">
+                        @csrf
+                        <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
+                        <h5><a href="/check_testamonials_del/{{$last_testamonials[2]->id}}">Delete</a></h5>
+                      </form>
+                  @else
+                      <p>
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              No More Records
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  @endif
+                </div>
+              </div>
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item" data-aos="fade-up" data-aos-delay="1000">
-                                @if (isset($last_testamonials) && $last_testamonials->count() >= 2)
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        {{ $last_testamonials[1]->testamonial }}
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
-                                    <h2><b>{{ $last_testamonials[1]->topic }}</b></h2>
-                                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                                    <h5><a href="/check_testamonials_del/{{ $last_testamonials[1]->id }}">Delete</a>
-                                    </h5>
-                                @else
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        No More Records
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                @endif
-                            </div>
-                        </div>
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="3000">
+                  @if(isset($last_testamonials) && $last_testamonials->count() >= 4)
+                      <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          {{ $last_testamonials[3]->testamonial }}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                      <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                      <h2><b>{{ $last_testamonials[3]->topic }}</b></h2>
+                      <form method="GET" action="<?=url('/accept_testamonials/' . $last_testamonials[3]->id)?>}">
+                        @csrf
+                        <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
+                        <h5><a href="/check_testamonials_del/{{$last_testamonials[3]->id}}">Delete</a></h5>
+                      </form>
+                  @else
+                      <p>
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              No More Records
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  @endif
+                </div>
+              </div>
 
-                        <div class="swiper-slide">
-                            <div class="testimonial-item" data-aos="fade-up" data-aos-delay="2000">
-                                @if (isset($last_testamonials) && $last_testamonials->count() >= 3)
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        {{ $last_testamonials[2]->testamonial }}
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                    <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
-                                    <h2><b>{{ $last_testamonials[2]->topic }}</b></h2>
-                                    <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                                    <h5><a href="/check_testamonials_del/{{ $last_testamonials[2]->id }}">Delete</a>
-                                    </h5>
-                                @else
-                                    <p>
-                                        <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                                        No More Records
-                                        <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                                    </p>
-                                @endif
-                            </div>
-                        </div>
+              <div class="swiper-slide">
+                <div class="testimonial-item" data-aos="fade-up" data-aos-delay="4000">
+                  @if(isset($last_testamonials) && $last_testamonials->count() >= 5)
+                      <p>
+                      <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                          {{ $last_testamonials[4]->testamonial }}
+                      <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                      <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
+                      <h2><b>{{ $last_testamonials[4]->topic }}</b></h2>
+                      <form method="GET" action="<?=url('/accept_testamonials/' . $last_testamonials[4]->id)?>}">
+                        @csrf
+                        <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
+                        <h5><a href="/check_testamonials_del/{{$last_testamonials[4]->id}}">Delete</a></h5>
+                      </form>
+                  @else
+                      <p>
+                          <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                              No More Records
+                          <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                      </p>
+                  @endif
+                </div>
+              </div>
+
 
                         <div class="swiper-slide">
                             <div class="testimonial-item" data-aos="fade-up" data-aos-delay="3000">
@@ -1123,9 +1170,11 @@
         <section id="search_nortices" class="testimonials section-bg">
             <div class="container">
 
-                <div class="section-title">
-                    <h2>Search Nortices</h2>
-                    <!-- <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+
+                <div class="text-center">
+
+                  <button type="button" class="custom-button" id="addNotice_btn">Add Notice</button>
+
                 </div>
 
                 <form action="<?= url('/search_notice') ?>" method="post">

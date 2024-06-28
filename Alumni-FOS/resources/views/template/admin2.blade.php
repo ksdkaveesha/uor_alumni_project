@@ -483,7 +483,7 @@
                         <div class="form-group">
                         <label for="degree_type">Degree Type</label>
                             <select name="degree_type" class="form-control" id="degree_type" required>
-                                <option value="none" selected disabled>Degree Programe</option>
+                                <option value="none" selected disabled>Degree Program</option>
                                 <option value="General">General</option>
                                 <option value="Special">Special</option>
                             </select>
@@ -573,7 +573,12 @@
         <div class="container">
 
           <div class="section-title">
+<<<<<<< Updated upstream
             <h2>Add Testamonials</h2>            
+=======
+            <h2>Add Testimonials</h2>
+            <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+>>>>>>> Stashed changes
           </div>
 
           <div class="row" data-aos="fade-in">
@@ -620,14 +625,18 @@
                       </div>
                       <div class="form-group" style="width:100%">
                           <label for="notice">Message</label>
-                          <textarea class="form-control" name="testamonial" rows="10" style="width:100%" required></textarea>
+                          <textarea class="form-control" name="testimonial" rows="10" style="width:100%" required></textarea>
                       </div>
                   </div>
 
+<<<<<<< Updated upstream
                 <div class="text-center">
                    
                     <button type="button" class="custom-button" id="addTestamonial_btn">Add Testamonials</button>
                 </div>
+=======
+                <div class="text-center"><input type="submit" value="Add Testimonials"></input></div>
+>>>>>>> Stashed changes
               </form>
             </div>
 

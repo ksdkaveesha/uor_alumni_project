@@ -116,12 +116,64 @@
             <div class="profile2">
                 <img src="images/logo.png">
             </div>
+
             @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status') }}
                 </div>
             @endif
-            <div class="profile">
+
+      <div class="profile">
+        @if (isset(auth()->guard('webalumni')->user()->path))
+            <img src="{{asset('storage/'.auth()->guard('webalumni')->user()->path)}}" alt="" class="img-fluid rounded-circle">
+            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4>
+        @else
+            <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4>
+        @endif
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Profile Update</span></a></li>
+          <li><a href="#testamonials" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Testimonials</span></a></li>
+          <li><a href="#find_friends" class="nav-link scrollto"><i class="bx bx-group"></i> <span>Friends</span></a></li>
+          <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <li><a href="#" class="nav-link scrollto"><i class="bx bx-log-out"></i> <button type="submit"><span style="color: #6f7180">Logout</span></button></a></li>
+          </form>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background-image: {{asset('storage/'.auth()->guard('webalumni')->user()->path)}}">
+    <div class="hero-container" data-aos="fade-in">
+
+      <h1>Hi {{ auth()->guard('webalumni')->user()->name }}</h1>
+      <p>Welcome to <span class="typed" data-typed-items="University of Ruhuna, Faculty of Science"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
+            <div>
+
                 @if (isset(auth()->guard('webalumni')->user()->path))
                     <img src="{{ asset('storage/' . auth()->guard('webalumni')->user()->path) }}" alt=""
                         class="img-fluid rounded-circle">
@@ -179,105 +231,6 @@
             </div>
         </div>
     </header><!-- End Header -->
-
-    <!-- ======= Hero Section ======= -->
-    <section id="hero" class="d-flex flex-column justify-content-center align-items-center"
-        style="background-image: {{ asset('storage/' . auth()->guard('webalumni')->user()->path) }}">
-        <div class="hero-container" data-aos="fade-in">
-
-            <h1>Hi {{ auth()->guard('webalumni')->user()->name }}</h1>
-            <p>Welcome to <span class="typed" data-typed-items="University of Ruhuna, Faculty of Science"></span></p>
-        </div>
-    </section><!-- End Hero -->
-
-    <main id="main">
-
-        <!-- ======= About Section ======= -->
-        <section id="about" class="about">
-            <div class="container">
-
-                <div class="section-title">
-                    <h2>About</h2>
-                    <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-4" data-aos="fade-right">
-                        <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
-                        <div>
-                            @if (isset(auth()->guard('webalumni')->user()->path))
-                                <img src="{{ asset('storage/' . auth()->guard('webalumni')->user()->path) }}"
-                                    class="img-fluid" alt="" />
-                            @else
-                                <img src="assets/img/profile-img.jpg" class="img-fluid" alt="">
-                            @endif
-                        </div>
-                        <!--<br><br>
-            <h3 style="text-align: center"><b> {{ auth()->guard('webalumni')->user()->name }} </b></h3>-->
-                    </div>
-                    <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-                        <h3>{{ auth()->guard('webalumni')->user()->name . "'s Profile" }}</h3>
-                        <!--<p class="fst-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-            </p>-->
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong>
-                                        <span>{{ auth()->guard('webalumni')->user()->name }}</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Student No:</strong>
-                                        <span>{{ auth()->guard('webalumni')->user()->sc_num }}</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong>
-                                        <span>{{ auth()->guard('webalumni')->user()->email }}</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong>
-                                        <span>+{{ auth()->guard('webalumni')->user()->m_code }}-{{ auth()->guard('webalumni')->user()->mobile }}</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Degree Type:</strong>
-                                        <span>{{ auth()->guard('webalumni')->user()->degree_type }}</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong>
-                                        <span>{{ auth()->guard('webalumni')->user()->degree }}</span>
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <div class="col-lg-6">
-                                <ul>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Id Number: </strong>
-                                        <span>{{ auth()->guard('webalumni')->user()->id_num }}</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Graduation Year:</strong>
-                                        <span>{{ auth()->guard('webalumni')->user()->graduation_year }}</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Country:</strong>
-                                        <span>{{ auth()->guard('webalumni')->user()->country }}</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong>
-                                        <span>{{ auth()->guard('webalumni')->user()->address }}</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Sector:</strong>
-                                        <span>{{ auth()->guard('webalumni')->user()->sector }}</span>
-                                    </li>
-                                    <li><i class="bi bi-chevron-right"></i> <strong>Designation:</strong>
-                                        <span>{{ auth()->guard('webalumni')->user()->designation }}</span>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <!--<p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-            </p>-->
-                    </div>
-                </div>
-
-            </div>
-        </section>
-        <!-- End About Section -->
 
         <!-- ======= Update Section ======= -->
         <section id="update" class="contact">
@@ -2144,10 +2097,10 @@
         <section id="testamonials" class="contact">
             <div class="container">
 
-                <div class="section-title">
-                    <h2>Add Testamonials</h2>
-                    <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
-                </div>
+        <div class="section-title">
+          <h2>Add Testimonials</h2>
+          <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+        </div>
 
                 <!--<div class="row" data-aos="fade-in">
 
@@ -2194,18 +2147,13 @@
                             </div>
                             <div class="form-group" style="width:100%">
                                 <label for="notice">Message</label>
-                                <textarea class="form-control" name="testamonial" rows="10" style="width:100%" required></textarea>
+                                <textarea class="form-control" name="testamonial" maxlength="350" rows="10" style="width:100%" required></textarea>
                             </div>
                         </div>
+              <div class="text-center"><input type="submit" value="Add Testimonials"></input></div>
+            </form>
+          </div>
 
-                        <div class="text-center">
-                            <button type="button" class="custom-button" id="addTesta_btn">Add
-                                Testamonial</button>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
 
             </div>
         </section><!-- End Testamonials Section -->
