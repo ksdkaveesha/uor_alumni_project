@@ -76,7 +76,6 @@ Route::post('/check_testamonials', [CheckTestamonialsController::class,'check_te
 Route::post('/check_testamonials_admin', [CheckTestamonialsController::class,'check_testamonials_admin']);
 //Route::get('/admin3', [CheckTestamonialsController::class,'display_check_testamonials']);
 Route::get('/check_testamonials_del/{id}', [CheckTestamonialsController::class,'testamonials_del']);
-
 Route::post('/accept_testamonials/{id}', [TestamonialsController::class,'accept_testamonials']);
 
 Route::post('/add_member_by_admin', [AdminController::class,'register_member_by_admin']);

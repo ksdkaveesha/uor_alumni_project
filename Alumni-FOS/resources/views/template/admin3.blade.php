@@ -896,8 +896,11 @@
                       </p>
                       <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
                       <h2><b>{{ $last_testamonials[1]->topic }}</b></h2>
-                      <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                      <h5><a href="/check_testamonials_del/{{$last_testamonials[1]->id}}">Delete</a></h5>
+                      <form method="POST" action="<?=url('/accept_testamonials/{{$last_testamonials[1]->id}}')?>}">
+                        @csrf
+                        <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
+                        <h5><a href="/check_testamonials_del/{{$last_testamonials[1]->id}}">Delete</a></h5>
+                      </form>
                   @else
                       <p>
                           <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -918,8 +921,11 @@
                       </p>
                       <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
                       <h2><b>{{ $last_testamonials[2]->topic }}</b></h2>
-                      <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                      <h5><a href="/check_testamonials_del/{{$last_testamonials[2]->id}}">Delete</a></h5>
+                      <form method="POST" action="<?=url('/accept_testamonials/{{$last_testamonials[2]->id}}')?>}">
+                        @csrf
+                        <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
+                        <h5><a href="/check_testamonials_del/{{$last_testamonials[2]->id}}">Delete</a></h5>
+                      </form>
                   @else
                       <p>
                           <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -940,8 +946,11 @@
                       </p>
                       <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
                       <h2><b>{{ $last_testamonials[3]->topic }}</b></h2>
-                      <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                      <h5><a href="/check_testamonials_del/{{$last_testamonials[3]->id}}">Delete</a></h5>
+                      <form method="POST" action="<?=url('/accept_testamonials/{{$last_testamonials[3]->id}}')?>}">
+                        @csrf
+                        <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
+                        <h5><a href="/check_testamonials_del/{{$last_testamonials[3]->id}}">Delete</a></h5>
+                      </form>
                   @else
                       <p>
                           <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -962,8 +971,11 @@
                       </p>
                       <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
                       <h2><b>{{ $last_testamonials[4]->topic }}</b></h2>
-                      <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                      <h5><a href="/check_testamonials_del/{{$last_testamonials[4]->id}}">Delete</a></h5>
+                      <form method="POST" action="<?=url('/accept_testamonials/{{$last_testamonials[4]->id}}')?>}">
+                        @csrf
+                        <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
+                        <h5><a href="/check_testamonials_del/{{$last_testamonials[4]->id}}">Delete</a></h5>
+                      </form>
                   @else
                       <p>
                           <i class="bx bxs-quote-alt-left quote-icon-left"></i>
