@@ -182,10 +182,10 @@
     <div class="footer_section layout_padding">
         <div class="container">
            <div class="row">
-              <div class="col-lg-3 col-sm-6">
+              {{-- <div class="col-lg-3 col-sm-6">
                  <h3 class="useful_text">About</h3>
                  <p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
-              </div>
+              </div> --}}
               <div class="col-lg-2 col-sm-6">
                  <h3 class="useful_text">Menu</h3>
                  <div class="footer_menu">
@@ -207,7 +207,7 @@
                    </ul>
                  </div>
               </div>
-              <div class="col-lg-4 col-sm-6">
+              <div class="col-lg-7 col-sm-6">
                  <h1 class="useful_text">Contact Us</h1>
                  <div class="location_text">
                     <ul>
