@@ -64,17 +64,23 @@ class TestamonialsController extends Controller
         //
     }
 
-    function accept_testamonials($id){
-
+    public function accept_testamonials($id)
+    {
+        // Fetch the record from the check_testamonials table
         $check_testamonials = check_testamonials::find($id);
+
+        // Create a new instance of the Testamonials model
         $accept_testamonials = new testamonials();
+
+        // Transfer the data
         $accept_testamonials->name = $check_testamonials->name;
         $accept_testamonials->topic = $check_testamonials->topic;
         $accept_testamonials->testamonial = $check_testamonials->testamonial;
 
+        // Save the new record to the testamonials table
         $accept_testamonials->save();
-        return redirect()->back()->with('succ_notice', 'Testamonial Approved');
 
+        return redirect()->back()->with('succ_notice', 'Testamonial Approved');
     }
 
 }
