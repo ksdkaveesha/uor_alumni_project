@@ -2147,7 +2147,7 @@
                             </div>
                             <div class="form-group" style="width:100%">
                                 <label for="notice">Message</label>
-                                <textarea class="form-control" name="testamonial" rows="10" style="width:100%" required></textarea>
+                                <textarea class="form-control" name="testamonial" maxlength="350" rows="10" style="width:100%" required></textarea>
                             </div>
                         </div>
               <div class="text-center"><input type="submit" value="Add Testimonials"></input></div>
