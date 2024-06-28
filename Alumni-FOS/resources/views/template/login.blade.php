@@ -165,7 +165,7 @@
 					</div>
 
 					<div class="text-center p-t-30">
-                        If you don't have account <br>
+                        If you don't have an account <br>
 						<a class="txt2" href="/register">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>

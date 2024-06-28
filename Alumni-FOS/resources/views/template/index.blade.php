@@ -134,7 +134,7 @@
                   <div class="about_taital_main">
                      <div class="about_taital"><span style="color:black">About Us</span></div>
 
-                     <p class="about_text">The Alumni Association of the University of Ruhuna, Faculty of Science is the apex body of the alumni of various departments of the faculty, forming a link between its membership and the faculty. Today, the Association continues its role of fostering close ties between the student body, faculty and its alumni.
+                     <p class="about_text">The Alumni Association of the University of Ruhuna, Faculty of Science is the apex body of the alumni of various faculty departments, forming a link between its membership and the faculty. Today, the Association continues fostering close ties between the student body, faculty, and its alumni.
                         <br><br>The Alumni Association of the Faculty of Science views its role as “connectors” and thought leaders very seriously and to this end, not only conducts various programs and initiatives targeting the development and welfare of undergraduates and its members but also conducts public forums to create awareness and discussion in matters of public importance.
                          <br><br></p>
                      <div class="learnmore_bt"><a href="about">Read More</a></div>
@@ -152,7 +152,7 @@
 
                 <div class="col-md-6">
                     <div class="about_taital_main">
-                        <div class="about_taital"><span style="color:black">This isn't a Good Bye.<br>It's a Welcome.</span></div>
+                        <div class="about_taital"><span style="color:black">This isn't a GoodBye.<br>It's Welcome.</span></div>
                         <p class="about_text">Full cleaning and housekeeping services for companies and households.</p>
                         <p class="about_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply <br><br></p>
                         <div class="learnmore_bt"><a href="register">Join us</a></div>
@@ -310,7 +310,7 @@
                                 <h5 class="customer_text"><b>{{ $lastThreeRecords_test[0]->name }}</b></h5>
                                 <p class="customer_text">{{ $lastThreeRecords_test[0]->testamonial }}</p>
                             @else
-                                <h4 class="client_name_text">No Testamonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h4 class="client_name_text">No Testimonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
                                 <h5 class="customer_text"><b>Name</b></h5>
                                 <p class="customer_text">No records</p>
                             @endif
@@ -331,7 +331,7 @@
                                 <h5 class="customer_text"><b>{{ $lastThreeRecords_test[1]->name }}</b></h5>
                                 <p class="customer_text">{{ $lastThreeRecords_test[1]->testamonial }}</p>
                             @else
-                                <h4 class="client_name_text">No Testamonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h4 class="client_name_text">No Testimonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
                                 <h5 class="customer_text"><b>Name</b></h5>
                                 <p class="customer_text">No records</p>
                             @endif
@@ -352,7 +352,7 @@
                                 <h5 class="customer_text"><b>{{ $lastThreeRecords_test[2]->name }}</b></h5>
                                 <p class="customer_text">{{ $lastThreeRecords_test[2]->testamonial }}</p>
                             @else
-                                <h4 class="client_name_text">No Testamonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h4 class="client_name_text">No Testimonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
                                 <h5 class="customer_text"><b>Name</b></h5>
                                 <p class="customer_text">No records</p>
                             @endif

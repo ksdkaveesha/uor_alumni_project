@@ -116,12 +116,66 @@
             <div class="profile2">
                 <img src="images/logo.png">
             </div>
+<<<<<<< Updated upstream
             @if (session('status'))
                 <div class="alert alert-success">
                     {{ session('status') }}
                 </div>
             @endif
             <div class="profile">
+=======
+        @endif
+      <div class="profile">
+        @if (isset(auth()->guard('webalumni')->user()->path))
+            <img src="{{asset('storage/'.auth()->guard('webalumni')->user()->path)}}" alt="" class="img-fluid rounded-circle">
+            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4>
+        @else
+            <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4>
+        @endif
+      </div>
+
+      <nav id="navbar" class="nav-menu navbar">
+        <ul>
+          <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i> <span>Home</span></a></li>
+          <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a></li>
+          <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Profile Update</span></a></li>
+          <li><a href="#testamonials" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Testimonials</span></a></li>
+          <li><a href="#find_friends" class="nav-link scrollto"><i class="bx bx-group"></i> <span>Friends</span></a></li>
+          <form method="POST" action="{{ route('logout') }}">
+                @csrf
+                <li><a href="#" class="nav-link scrollto"><i class="bx bx-log-out"></i> <button type="submit"><span style="color: #6f7180">Logout</span></button></a></li>
+          </form>
+        </ul>
+      </nav><!-- .nav-menu -->
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex flex-column justify-content-center align-items-center" style="background-image: {{asset('storage/'.auth()->guard('webalumni')->user()->path)}}">
+    <div class="hero-container" data-aos="fade-in">
+
+      <h1>Hi {{ auth()->guard('webalumni')->user()->name }}</h1>
+      <p>Welcome to <span class="typed" data-typed-items="University of Ruhuna, Faculty of Science"></span></p>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>About</h2>
+          <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4" data-aos="fade-right">
+            <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
+            <div>
+>>>>>>> Stashed changes
                 @if (isset(auth()->guard('webalumni')->user()->path))
                     <img src="{{ asset('storage/' . auth()->guard('webalumni')->user()->path) }}" alt=""
                         class="img-fluid rounded-circle">
@@ -2144,10 +2198,17 @@
         <section id="testamonials" class="contact">
             <div class="container">
 
+<<<<<<< Updated upstream
                 <div class="section-title">
                     <h2>Add Testamonials</h2>
                     <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
                 </div>
+=======
+        <div class="section-title">
+          <h2>Add Testimonials</h2>
+          <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+        </div>
+>>>>>>> Stashed changes
 
                 <!--<div class="row" data-aos="fade-in">
 
@@ -2205,7 +2266,13 @@
                     </form>
                 </div>
 
+<<<<<<< Updated upstream
             </div>
+=======
+              <div class="text-center"><input type="submit" value="Add Testimonials"></input></div>
+            </form>
+          </div>
+>>>>>>> Stashed changes
 
             </div>
         </section><!-- End Testamonials Section -->
