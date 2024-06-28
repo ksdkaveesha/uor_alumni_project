@@ -896,7 +896,7 @@
                       </p>
                       <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
                       <h2><b>{{ $last_testamonials[0]->topic }}</b></h2>
-                      <form method="GET" action="<?=url('/accept_testamonials/{{$last_testamonials[0]->id}}')?>}">
+                      <form method="GET" action="<?= url('/accept_testamonials/' . $last_testamonials[0]->id) ?>">
                         @csrf
                         <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
                         <h5><a href="/check_testamonials_del/{{$last_testamonials[0]->id}}">Delete</a></h5>
