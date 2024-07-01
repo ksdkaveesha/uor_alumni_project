@@ -54,6 +54,14 @@ Route::get('/contact', function () {
 Route::get('/admin', function () {
     return view('template/admin');
 });
+
+Route::get('/pwdreset', function () {
+    return view('template/pwdreset');
+});
+
+Route::get('/pwdchange', function () {
+    return view('template/pwdchange');
+});
 //->middleware('auth:webadmin');
 
 
