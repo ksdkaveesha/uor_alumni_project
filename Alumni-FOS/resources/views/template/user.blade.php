@@ -183,6 +183,16 @@
                     </h4>
                 @endif
             </div>
+            <div class="row">
+                <div class="col-lg-6">
+                  <ul>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>{{ auth()->guard('webadmin')->user()->name }}</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{ auth()->guard('webadmin')->user()->email }}</span></li>
+                    <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span>+{{ auth()->guard('webadmin')->user()->m_code }}-{{ auth()->guard('webadmin')->user()->mobile }}</span></li>
+                  </ul>
+                </div>
+
+              </div>
         </div>
 
         <!--General Confirmation Modal -->
