@@ -95,6 +95,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
         media="screen">
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
 </head>
 
 <body>
@@ -188,7 +189,15 @@
                 <div class="row">
                   <div class="col-lg-6">
                     <ul>
+                      <li><i class="bi bi-chevron-right"></i> <strong>SC Number:</strong> <span>{{ auth()->guard('webalumni')->user()->sc_num }}</span></li>
                       <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>{{ auth()->guard('webalumni')->user()->name }}</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{ auth()->guard('webalumni')->user()->email }}</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span>+{{ auth()->guard('webalumni')->user()->m_code }}-{{ auth()->guard('webalumni')->user()->mobile }}</span></li>
+                    </ul>
+                  </div>
+                  <div class="col-lg-6">
+                    <ul>
+                      <li><i class="bi bi-chevron-right"></i> <strong>ID Number:</strong> <span>{{ auth()->guard('webalumni')->user()->id_num }}</span></li>
                       <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{ auth()->guard('webalumni')->user()->name }}</span></li>
                       <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span>+{{ auth()->guard('webalumni')->user()->name }}-{{ auth()->guard('webalumni')->user()->name }}</span></li>
                     </ul>
