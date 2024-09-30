@@ -214,7 +214,7 @@
                             <input type="text" class="form-control" id="email" name="email" value="{{old('email')}}" required/>
                             @error('email')
                                 <div class="alert alert-danger">{{ $message }}</div>
-                            @enderror                    
+                            @enderror
                         </div>
 
                         <div class="row">
@@ -566,19 +566,15 @@
 
         </div>
       </section>
-   
+
 
     <!-- ======= Testamonials Section ======= -->
     <section id="testamonials" class="contact">
         <div class="container">
 
           <div class="section-title">
-<<<<<<< Updated upstream
-            <h2>Add Testamonials</h2>            
-=======
             <h2>Add Testimonials</h2>
             <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
->>>>>>> Stashed changes
           </div>
 
           <div class="row" data-aos="fade-in">
@@ -628,15 +624,9 @@
                           <textarea class="form-control" name="testimonial" rows="10" style="width:100%" required></textarea>
                       </div>
                   </div>
-
-<<<<<<< Updated upstream
                 <div class="text-center">
-                   
                     <button type="button" class="custom-button" id="addTestamonial_btn">Add Testamonials</button>
                 </div>
-=======
-                <div class="text-center"><input type="submit" value="Add Testimonials"></input></div>
->>>>>>> Stashed changes
               </form>
             </div>
 
@@ -651,7 +641,7 @@
 
         <div class="section-title">
           <h2>Alumni Members</h2>
-       
+
         </div>
 
         <form action="<?=url('/search_alumni_member')?>" method="post">
@@ -765,7 +755,7 @@
             }
 
         }
-  
+
         // Triggering the modal with different actions
         document.getElementById('addAlumni_btn').addEventListener('click', function() {
             showAddUserModal(addUser);

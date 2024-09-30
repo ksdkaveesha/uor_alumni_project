@@ -186,6 +186,7 @@
             </div>
             <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
                 <h3>{{ auth()->guard('webalumni')->user()->name }}</h3>
+                <br>
                 <div class="row">
                   <div class="col-lg-6">
                     <ul>
