@@ -198,8 +198,8 @@
                   <div class="col-lg-6">
                     <ul>
                       <li><i class="bi bi-chevron-right"></i> <strong>ID Number:</strong> <span>{{ auth()->guard('webalumni')->user()->id_num }}</span></li>
-                      <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{ auth()->guard('webalumni')->user()->name }}</span></li>
-                      <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span>+{{ auth()->guard('webalumni')->user()->name }}-{{ auth()->guard('webalumni')->user()->name }}</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span>{{ auth()->guard('webalumni')->user()->address }}</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Country:</strong> <span>{{ auth()->guard('webalumni')->user()->country }}</span></li>
                     </ul>
                   </div>
                 </div>
