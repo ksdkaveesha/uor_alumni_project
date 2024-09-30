@@ -168,31 +168,30 @@
         </div>
 
         <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-            <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
-            <div>
-
-                @if (isset(auth()->guard('webalumni')->user()->path))
-                    <img src="{{ asset('storage/' . auth()->guard('webalumni')->user()->path) }}" alt=""
-                        class="img-fluid rounded-circle">
-                    <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}
-                    </h4>
-                @else
-                    <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-                    <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}
-                    </h4>
-                @endif
-            </div>
-            <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>{{ auth()->guard('webadmin')->user()->name }}</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{ auth()->guard('webadmin')->user()->email }}</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span>+{{ auth()->guard('webadmin')->user()->m_code }}-{{ auth()->guard('webadmin')->user()->mobile }}</span></li>
-                  </ul>
+            <div class="col-lg-4" data-aos="fade-right">
+                <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
+                <div>
+                    @if (isset(auth()->guard('webalumni')->user()->path))
+                        <img src="{{ asset('storage/' . auth()->guard('webalumni')->user()->path) }}" alt=""
+                            class="img-fluid rounded-circle">
+                        <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}
+                        </h4>
+                    @else
+                        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+                        <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}
+                        </h4>
+                    @endif
                 </div>
-
-              </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-6">
+              <ul>
+                <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span>{{ auth()->guard('webalumni')->user()->name }}</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>{{ auth()->guard('webalumni')->user()->name }}</span></li>
+                <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span>+{{ auth()->guard('webalumni')->user()->name }}-{{ auth()->guard('webalumni')->user()->name }}</span></li>
+              </ul>
+            </div>
         </div>
 
         <!--General Confirmation Modal -->

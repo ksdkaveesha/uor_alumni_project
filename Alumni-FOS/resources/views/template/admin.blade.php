@@ -139,8 +139,8 @@
               </a>
           </li>
         </form>
-          
-          
+
+
         </ul>
       </nav><!-- .nav-menu -->
     </div>
@@ -207,7 +207,6 @@
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span>+{{ auth()->guard('webadmin')->user()->m_code }}-{{ auth()->guard('webadmin')->user()->mobile }}</span></li>
                 </ul>
               </div>
-
             </div>
             <!--<p>
               Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
@@ -632,7 +631,7 @@
       // Show the modal
       $('#staticBackdrop').modal('show');
   }
-  
+
   function logout() {
       // Correctly target the logout form by ID and submit it
       var logoutForm = document.getElementById('logoutForm');
