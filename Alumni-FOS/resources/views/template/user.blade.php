@@ -200,6 +200,7 @@
                       <li><i class="bi bi-chevron-right"></i> <strong>ID Number:</strong> <span>{{ auth()->guard('webalumni')->user()->id_num }}</span></li>
                       <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span>{{ auth()->guard('webalumni')->user()->address }}</span></li>
                       <li><i class="bi bi-chevron-right"></i> <strong>Country:</strong> <span>{{ auth()->guard('webalumni')->user()->country }}</span></li>
+                      <li><i class="bi bi-chevron-right"></i> <strong>Graduation Year:</strong> <span>{{ auth()->guard('webalumni')->user()->graduation_year }}</span></li>
                     </ul>
                   </div>
                 </div>
