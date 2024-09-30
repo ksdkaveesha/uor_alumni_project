@@ -98,8 +98,6 @@
 </head>
 
 <body>
-
-
     <!-- ======= Mobile nav toggle button ======= -->
     <i class="bi bi-list mobile-nav-toggle d-xl-none"></i>
     <div style="position: absolute">
@@ -185,29 +183,6 @@
                     </h4>
                 @endif
             </div>
-
-            <nav id="navbar" class="nav-menu navbar">
-                <ul>
-                    <li><a href="#hero" class="nav-link scrollto active"><i class="bx bx-home"></i>
-                            <span>Home</span></a></li>
-                    <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>About</span></a>
-                    </li>
-                    <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Profile
-                                Update</span></a></li>
-                    <li><a href="#testamonials" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add
-                                Testamonials</span></a></li>
-                    <li><a href="#find_friends" class="nav-link scrollto"><i class="bx bx-group"></i>
-                            <span>Friends</span></a></li>
-
-                    <li>
-                        <a href="#" id="logout_btn" class="nav-link scrollto">
-                            <i class="bx bx-log-out"></i>
-                            <span
-                                style="background:none;border:none;padding:0;color: #6f7180; cursor:pointer;">Logout</span>
-                        </a>
-                    </li>
-                </ul>
-            </nav><!-- .nav-menu -->
         </div>
 
         <!--General Confirmation Modal -->
