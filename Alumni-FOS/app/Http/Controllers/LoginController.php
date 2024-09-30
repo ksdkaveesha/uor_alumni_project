@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\alumini_member;
 use App\Models\Admin;
 use Illuminate\Support\Facades\Auth;
+
 class LoginController extends Controller
 {
     /**

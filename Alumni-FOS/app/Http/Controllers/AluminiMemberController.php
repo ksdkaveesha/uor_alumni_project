@@ -78,6 +78,10 @@ class AluminiMemberController extends Controller
 
     }
 
+    public function display_user(){
+        return view('template/user');
+    }
+
     public function update(Request $request)
     {
 
