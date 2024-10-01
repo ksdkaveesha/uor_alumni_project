@@ -73,6 +73,7 @@ class AluminiMemberController extends Controller
         $alumini_member->save();
 
         Mail::to($alumini_member->email)->send(new RegisterMail($alumini_member->name));
+        Mail::to($alumini_member->email)->send(new SendCode($alumini_member->name));
 
         return redirect()->back()->with('success', 'Registered successfully!');
 
