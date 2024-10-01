@@ -594,7 +594,7 @@
                     <ul>
                        <li>
                           <a href="#">
-                          <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Faculty of Science,University of Ruhuna, Matara, Sri Lanka</span>
+                          <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Faculty of Science, University of Ruhuna, Matara, Sri Lanka</span>
                           </a>
                        </li>
                        <li>

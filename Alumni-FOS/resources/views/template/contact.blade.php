@@ -107,10 +107,10 @@
                                 <input type="text" class="email-bt" placeholder="Email" name="email" required>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="email-bt" placeholder="Phone Numbar" name="phone_number" required>
+                                <input type="text" class="email-bt" placeholder="Phone Number" name="phone_number" required>
                             </div>
                             <div class="form-group">
-                                <textarea class="massage-bt" placeholder="Massage" rows="5" id="comment" name="massage" required></textarea>
+                                <textarea class="massage-bt" placeholder="Message" rows="5" id="comment" name="massage" required></textarea>
                             </div>
                             <div class="send_btn">
                                 <button type="submit" class="main_bt contact"><a>SEND</a></button>
@@ -232,17 +232,17 @@
                      <ul>
                         <li>
                            <a href="#">
-                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Faculty of Science,University of Ruhuna, Matara, Sri Lanka</span>
+                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address: Faculty of Science, University of Ruhuna, Matara, Sri Lanka.</span>
                            </a>
                         </li>
                         <li>
                            <a href="#">
-                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +01 1234567890</span>
+                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call: +01 1234567890</span>
                            </a>
                         </li>
                         <li>
                            <a href="#">
-                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : ruhuna@gmail.com</span>
+                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email: ruhuna@gmail.com</span>
                            </a>
                         </li>
                      </ul>

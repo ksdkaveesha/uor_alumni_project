@@ -903,7 +903,7 @@
   <div class="column" style="background-color:#FFFAE9;">
 
 						<img src="images/about/history2.jpg">
-					
+
   </div>
 </div>
 <!-- End History-->
@@ -1336,7 +1336,7 @@
 <style>
 * {
   box-sizing: border-box;
-  
+
 }
 
 /* Create two equal columns that floats next to each other */
@@ -1365,17 +1365,15 @@
 <div class="row">
   <div class="column" style="background-color:#F9DDB5;;">
 <img src="images/about/dean.jpeg"  >
- 
+
   </div>
   <div class="column" style="background-color:#F9DDB5;;">
     <h2><span style="font-size:50px">&nbsp Dean's Message</span></h2>
-    <p>Welcome to the web page of the Faculty of Science, University of Ruhuna.  We are located in the beautiful coastal city of Matara in the southern province of Sri Lanka.
-
-<br>First, we prioritize teaching students through our continuously accredited degree programs.
-
-<br>we are innovation and excellence in teaching, research and services to communities. We graduated students who worked and hold key positions in Sri Lanka and around the globe. We produced research results that are nationally and internationally recognized.
-
-<br>We hope you will browse through our website, and contact us if you have any questions or comments.</p>
+    <p>Welcome to the webpage of the Faculty of Science, University of Ruhuna. We are located in the beautiful coastal city of Matara in the southern province of Sri Lanka.
+    <br>First, we prioritize teaching students through our continuously accredited degree programs.
+    <br>We are committed to innovation and excellence in teaching, research, and services to communities. We have graduated students who now work and hold key positions in Sri Lanka and around the globe. Our research results are nationally and internationally recognized.
+    <br>We hope you will browse through our website and contact us if you have any questions or comments.
+    </p>
   </div>
 </div>
 <!-- End History-->
@@ -1954,7 +1952,7 @@
                   </div>
                </div>
                <div class="col-lg-3 col-sm-6">
-                  <h1 class="useful_text">Useful Link</h1>
+                  <h1 class="useful_text">Useful Links</h1>
                   <div class="dummy_text">
                     <ul>
                         <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
@@ -1968,17 +1966,17 @@
                      <ul>
                         <li>
                            <a href="#">
-                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Faculty of Science,University of Ruhuna, Matara, Sri Lanka</span>
+                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address: Faculty of Science, University of Ruhuna, Matara, Sri Lanka.</span>
                            </a>
                         </li>
                         <li>
                            <a href="#">
-                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +01 1234567890</span>
+                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call: +01 1234567890</span>
                            </a>
                         </li>
                         <li>
                            <a href="#">
-                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : ruhuna@gmail.com</span>
+                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email: ruhuna@gmail.com</span>
                            </a>
                         </li>
                      </ul>

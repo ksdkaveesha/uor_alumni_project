@@ -146,14 +146,34 @@
         </div>
     <!-- popup end -->
 
+        <!--body section-->
+        <br><br>
+        <p><br><br><br>
+            Welcome to the Alumni Directory of the University of Ruhuna! This platform is designed to connect our esteemed alumni, fostering a sense of community and collaboration that extends beyond graduation.
+            <br><br>
+            Our directory provides a comprehensive database of alumni, showcasing their diverse career paths, achievements, and contributions to society. By exploring profiles, you can discover how your fellow graduates have made an impact in various fields, from academia and research to industry and entrepreneurship.
+            <br><br>
+            <b>Why Join the Alumni Directory?</b>
+            <br><br>
+            <b>Networking Opportunities:</b> Reconnect with former classmates and build new professional relationships. Our directory makes it easy to find and connect with alumni in your field or region.
+            <br>
+            <b>Mentorship Programs:</b> Seeking guidance or support? Our alumni community offers valuable mentorship opportunities where experienced professionals can share their insights and advice with recent graduates.
+            <br>
+            <b>Stay Informed:</b> Keep up with the latest news, events, and initiatives from the University of Ruhuna. Our directory will keep you informed about alumni gatherings, workshops, and seminars that can enhance your career and personal development.
+            <br>
+            <b>Celebrate Achievements:</b> We take pride in the accomplishments of our alumni. Share your successes and milestones, and celebrate the contributions of your peers to the community and beyond.
+            <br><br>
+            Join us in creating a vibrant alumni network that continues to grow and thrive. By registering in the Alumni Directory, you become part of a dynamic community dedicated to supporting each other and the future of the University of Ruhuna.
 
+            Reconnect, network, and inspire!
+        </p>
       <!-- footer section start -->
       <div class="footer_section layout_padding">
          <div class="container">
             <div class="row">
                <div class="col-lg-3 col-sm-6">
                   <h3 class="useful_text">About</h3>
-                  <p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
+                  <p class="footer_text">Reconnect with fellow graduates through our Alumni Directory. Stay updated, network, and engage with the University of Ruhuna community. Join today!</p>
                </div>
                <div class="col-lg-2 col-sm-6">
                   <h3 class="useful_text">Menu</h3>
@@ -168,7 +188,7 @@
                   </div>
                </div>
                <div class="col-lg-3 col-sm-6">
-                  <h1 class="useful_text">Useful Link</h1>
+                  <h1 class="useful_text">Useful Links</h1>
                   <div class="dummy_text">
                     <ul>
                         <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
@@ -182,17 +202,17 @@
                      <ul>
                         <li>
                            <a href="#">
-                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Faculty of Science,University of Ruhuna, Matara, Sri Lanka</span>
+                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address: Faculty of Science, University of Ruhuna, Matara, Sri Lanka.</span>
                            </a>
                         </li>
                         <li>
                            <a href="#">
-                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +01 1234567890</span>
+                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call: +01 1234567890</span>
                            </a>
                         </li>
                         <li>
                            <a href="#">
-                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : ruhuna@gmail.com</span>
+                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email: ruhuna@gmail.com</span>
                            </a>
                         </li>
                      </ul>
