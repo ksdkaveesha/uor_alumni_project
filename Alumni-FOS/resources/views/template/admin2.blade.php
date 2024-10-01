@@ -674,9 +674,7 @@
                                 <td style="width: 15%">{{$alumni_member->sc_num}}</td>
                                 <td style="width: 15%">{{$alumni_member->m_code}}-{{$alumni_member->mobile}}</td>
                                 <td style="width: 25%">
-                                    <button type="button" class="btn btn-outline-info">Info</button>
-                                    <button type="button" class="btn btn-outline-secondary">Update</button>
-                                    <br><br>
+                                    <button type="button" class="btn btn-outline-primary"><a href="/admin_userinfo/{{$alumni_member->id}}" style="color:black">Info/Update</a></button>
                                     <button type="button" class="btn btn-outline-danger">Delete</button>
                                 </td>
                             </tr>

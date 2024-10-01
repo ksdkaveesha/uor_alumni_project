@@ -169,7 +169,6 @@
 
         <div class="row">
             <div class="col-lg-4" data-aos="fade-right">
-                <!--<img src="assets/img/profile-img.jpg" class="img-fluid" alt="">-->
                 <div>
                     @if (isset(auth()->guard('webalumni')->user()->path))
                         <img src="{{ asset('storage/' . auth()->guard('webalumni')->user()->path) }}" alt=""
@@ -207,6 +206,7 @@
               </div>
             </div>
         </div>
+    </section>
 
 
         <!--General Confirmation Modal -->
@@ -229,7 +229,7 @@
                 </div>
             </div>
         </div>
-    </header><!-- End Header -->
+        <!-- End General Confirmation Modal -->
 
         <!-- ======= Update Section ======= -->
         <section id="update" class="contact">

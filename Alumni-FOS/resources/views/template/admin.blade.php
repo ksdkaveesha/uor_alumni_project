@@ -172,7 +172,8 @@
       <h1>Hi {{ auth()->guard('webadmin')->user()->name }}</h1>
       <p>Welcome to <span class="typed" data-typed-items="University of Ruhuna, Faculty of Science"></span></p>
     </div>
-  </section><!-- End Hero -->
+  </section>
+  <!-- End Hero -->
 
   <main id="main">
 
