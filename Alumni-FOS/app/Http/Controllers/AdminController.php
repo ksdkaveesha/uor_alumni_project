@@ -110,7 +110,7 @@ class AdminController extends Controller
             $alumini_member->user_id = $user->id;
             $alumini_member->save();
 
-            return redirect()->back()->with('status', 'User Registered successfully!');
+            return redirect('/admin2')->with('status', 'User Registered successfully!');
     }
 
     function register_admin_by_admin(Request $request){

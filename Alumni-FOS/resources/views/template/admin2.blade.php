@@ -619,7 +619,7 @@
                       </div>
                       <div class="form-group" style="width:100%">
                           <label for="notice">Message</label>
-                          <textarea class="form-control" name="testimonial" rows="10" style="width:100%" required></textarea>
+                          <textarea class="form-control" name="testamonial" rows="10" style="width:100%" required></textarea>
                       </div>
                   </div>
                 <div class="text-center">
