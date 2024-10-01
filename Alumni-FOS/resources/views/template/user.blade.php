@@ -301,9 +301,8 @@
                             </div>
                             <div class="row">
                                 <div class="form-group col-md-6">
-                                    <label for="country_code">Country Code</label>
-                                    <select class="form-control" name="m_code" id="m_code"
-                                        value="{{ auth()->guard('webalumni')->user()->m_code }}">
+                                    <label for="country_code">Mobile Region Code</label>
+                                    <select class="form-control" name="m_code" id="m_code" value="{{ auth()->guard('webalumni')->user()->m_code }}">
                                         <option value="" disabled selected>Select Country Code</option>
                                         <option value="93"
                                             {{ auth()->guard('webalumni')->user()->m_code === '93' ? 'selected' : '' }}>
