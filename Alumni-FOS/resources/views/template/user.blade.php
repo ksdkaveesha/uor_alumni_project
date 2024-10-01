@@ -1864,7 +1864,6 @@
                                         <input type="text" name="name" class="form-control" id="name"
                                             style="width:100%" required>
                                     </div>
-
                                     <div class="form-group" style="width:100%">
                                         <label for="topic">Title</label>
                                         <input type="text" class="form-control" name="topic" id="topic"
@@ -1875,7 +1874,7 @@
                                         <textarea class="form-control" name="testamonial" maxlength="350" rows="10" style="width:100%" required></textarea>
                                     </div>
                                 </div>
-                    <div class="text-center"><input type="submit" value="Add Testimonials"></input></div>
+                                <div class="text-center"><input type="submit" value="Add Testimonials"></input></div>
                     </form>
                 </div>
             </div>

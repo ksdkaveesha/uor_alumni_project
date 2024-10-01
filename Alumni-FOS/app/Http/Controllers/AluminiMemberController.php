@@ -105,7 +105,7 @@ class AluminiMemberController extends Controller
         $alumini_member->designation = $request->input('designation');
 
         $alumini_member->update();
-        return redirect()->back()->with('status','User Updated Successfully');
+        return redirect('/user')->with('status','User Updated Successfully');
     }
 
     function add_photo(Request $request)

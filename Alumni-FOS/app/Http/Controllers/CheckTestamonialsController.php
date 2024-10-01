@@ -73,7 +73,7 @@ class CheckTestamonialsController extends Controller
         $check_testamonials->testamonial = $request->input('testamonial');
 
         $check_testamonials->save();
-        return redirect()->back()->with('status', 'Testamonial submitted successfully!');
+        return redirect('/user')->with('status', 'Testamonial submitted successfully!');
 
     }
 
