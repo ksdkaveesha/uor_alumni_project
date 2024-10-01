@@ -74,6 +74,7 @@ Route::get('/notice_del/{id}', [NoticeController::class,'notice_del']);
 
 Route::post('/add_photo', [AluminiMemberController::class,'add_photo']);
 Route::post('/register_form', [AluminiMemberController::class,'register_alumini_member']);
+Route::post('/search_friend', [AluminiMemberController::class,'search_alumni_member']);
 Route::post('/update', [AluminiMemberController::class,'update']);
 Route::get('/user', [AluminiMemberController::class,'display_user']);//->middleware('auth:webalumni');
 

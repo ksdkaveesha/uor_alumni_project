@@ -76,8 +76,6 @@
     <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <!-- style css -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- fevicon -->
@@ -574,13 +572,12 @@
 
   </main><!-- End #main -->
 
-  <!-- footer section start -->
+  <!-- footer section start
     <div class="footer_section layout_padding">
         <div class="container">
         <div class="row" style="display:flex; align-items:right; justify-content:right;">
             <div class="col-lg-5 col-sm-6">
                 <h3 class="useful_text">About</h3>
-                <!--<p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>-->
             </div>
 
             <div class="col-lg-4 col-sm-6">
@@ -596,8 +593,7 @@
         </div>
         </div>
     </div>
-
-    <!-- footer section end -->
+     footer section end -->
 
     <script>
         function previewImage(event) {

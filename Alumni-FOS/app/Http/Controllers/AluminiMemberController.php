@@ -82,6 +82,15 @@ class AluminiMemberController extends Controller
         return view('template/user');
     }
 
+    public function search_alumni_member(Request $request){
+        $search = $request->input('search_alumni_member');
+
+        $friend = alumini_member::where('sc_num','Like',"%$search%")->orwhere('email','Like',"%$search%")->orwhere('mobile','Like',"%$search%")->orwhere('name','Like',"%$search%")->get();
+
+
+        return view('template/user',compact('friend'));
+    }
+
     public function update(Request $request)
     {
 

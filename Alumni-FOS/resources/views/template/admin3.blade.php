@@ -80,8 +80,6 @@
     <!-- bootstrap css -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <!-- style css -->
-    <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- Responsive-->
     <link rel="stylesheet" href="css/responsive.css">
     <!-- fevicon -->
@@ -1142,7 +1140,7 @@
                                     <label for="name">Your Name</label>
                                     <input type="text" name="name" class="form-control" id="name"
                                         style="width:100%" required>
-                                </div>                             
+                                </div>
                                 <div class="form-group" style="width:100%">
                                     <label for="topic">Subject</label>
                                     <input type="text" class="form-control" name="topic" id="topic"
@@ -1263,31 +1261,6 @@
         <!--end add images-->
 
     </main><!-- End #main -->
-
-    <!-- footer section start -->
-    <div class="footer_section layout_padding">
-        <div class="container">
-            <div class="row" style="display:flex; align-items:right; justify-content:right;">
-                <div class="col-lg-5 col-sm-6">
-                    <h3 class="useful_text">About</h3>
-                    <!--<p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>-->
-                </div>
-
-                <div class="col-lg-4 col-sm-6">
-                    <h1 class="useful_text">Useful Link</h1>
-                    <div class="dummy_text">
-                        <ul>
-                            <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
-                            <li><a href="https://www.ruh.ac.lk/index.php/en/">University of Ruhuna</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-    <!-- footer section end -->
 
     <!--User Add Modal script-->
     <script>
