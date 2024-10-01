@@ -159,7 +159,7 @@
            <div class="row">
               <div class="col-lg-3 col-sm-6">
                  <h3 class="useful_text">About</h3>
-                 <p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
+                 <p class="footer_text">Discover moments from campus life, events, and academic achievements. Explore the gallery and see the University of Ruhuna in action!</p>
               </div>
               <div class="col-lg-2 col-sm-6">
                  <h3 class="useful_text">Menu</h3>
@@ -174,7 +174,7 @@
                  </div>
               </div>
               <div class="col-lg-3 col-sm-6">
-                 <h1 class="useful_text">Useful Link</h1>
+                 <h1 class="useful_text">Useful Links</h1>
                  <div class="dummy_text">
                    <ul>
                        <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
@@ -188,17 +188,17 @@
                     <ul>
                        <li>
                           <a href="#">
-                          <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Faculty of Science,University of Ruhuna, Matara, Sri Lanka</span>
+                          <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address: Faculty of Science, University of Ruhuna, Matara, Sri Lanka.</span>
                           </a>
                        </li>
                        <li>
                           <a href="#">
-                          <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +01 1234567890</span>
+                          <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call: +01 1234567890</span>
                           </a>
                        </li>
                        <li>
                           <a href="#">
-                          <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : ruhuna@gmail.com</span>
+                          <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email: ruhuna@gmail.com</span>
                           </a>
                        </li>
                     </ul>

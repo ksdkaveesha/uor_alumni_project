@@ -1,4 +1,4 @@
-<?php 
+<?php
 /*
 $token = $_GET["token"];
 
@@ -27,7 +27,7 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
     die("token has expired");
 }
 */
-?> 
+?>
 
 
 <!DOCTYPE html>
@@ -152,7 +152,7 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
 			<div class="wrap-login100" >
 
 				<form action="<?=url('/login')?>" method="POST" class="login100-form validate-form" style="width: 100%" action="process-reset-pwd.php">
-                 
+
                     @csrf
                     @if (session('error'))
                             <div class="alert alert-danger">
@@ -215,7 +215,7 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
 
 					<div class="text-center p-t-12">
 						<span class="txt1">
-							Remembered your password?
+							Remember your password?
 						</span>
 						<a href="login" class="txt2" href="#">
 							 Login here
@@ -249,7 +249,7 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
                  </div>
               </div>
               <div class="col-lg-3 col-sm-6">
-                 <h1 class="useful_text">Useful Link</h1>
+                 <h1 class="useful_text">Useful Links</h1>
                  <div class="dummy_text">
                    <ul>
                        <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
@@ -263,17 +263,17 @@ if (strtotime($user["reset_token_expires_at"]) <= time()) {
                     <ul>
                        <li>
                           <a href="#">
-                          <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Faculty of Science,University of Ruhuna, Matara, Sri Lanka</span>
+                          <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address: Faculty of Science, University of Ruhuna, Matara, Sri Lanka.</span>
                           </a>
                        </li>
                        <li>
                           <a href="#">
-                          <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +01 1234567890</span>
+                          <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call: +01 1234567890</span>
                           </a>
                        </li>
                        <li>
                           <a href="#">
-                          <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : ruhuna@gmail.com</span>
+                          <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email: ruhuna@gmail.com</span>
                           </a>
                        </li>
                     </ul>

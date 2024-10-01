@@ -218,7 +218,7 @@
                   </div>
                </div>
                <div class="col-lg-3 col-sm-6">
-                  <h1 class="useful_text">Useful Link</h1>
+                  <h1 class="useful_text">Useful Links</h1>
                   <div class="dummy_text">
                     <ul>
                         <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>

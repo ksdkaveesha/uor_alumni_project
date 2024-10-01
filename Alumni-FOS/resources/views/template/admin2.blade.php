@@ -623,7 +623,7 @@
                       </div>
                   </div>
                 <div class="text-center">
-                    <button type="button" class="custom-button" id="addTestamonial_btn">Add Testamonials</button>
+                    <button type="button" class="custom-button" id="addTestamonial_btn">Add Testimonials</button>
                 </div>
               </form>
             </div>
