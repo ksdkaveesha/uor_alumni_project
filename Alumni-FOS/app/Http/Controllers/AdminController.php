@@ -151,5 +151,60 @@ class AdminController extends Controller
 
     }
 
+    public function admin_userinfo_update(Request $request, $id)
+    {
+        // Validate incoming request
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|email|max:255',
+            'sc_num' => 'required|string|max:255',
+            'mobile' => 'required|string|max:15',
+            'm_code' => 'required|string|max:5',
+            'degree_type' => 'nullable|string|max:255',
+            'degree' => 'nullable|string|max:255',
+            'id_num' => 'nullable|string|max:255',
+            'country' => 'nullable|string|max:255',
+            'address' => 'nullable|string|max:255',
+            'graduation_year' => 'nullable|integer',
+            'designation' => 'nullable|string|max:255',
+            'sector' => 'nullable|string|max:255',
+            'path' => 'nullable|image|mimes:jpeg,png,jpg,gif|max:2048', // Validate image
+        ]);
+
+        // Fetch the alumni_member based on the id
+        $alumni_member = alumini_member::find($id);
+
+        if (!$alumni_member) {
+            return redirect('/admin2')->with('error', 'Alumni member not found.');
+        }
+
+        // Update alumni member details
+        $alumni_member->name = $request->input('name');
+        $alumni_member->email = $request->input('email');
+        $alumni_member->sc_num = $request->input('sc_num');
+        $alumni_member->m_code = $request->input('m_code');
+        $alumni_member->mobile = $request->input('mobile');
+        $alumni_member->degree_type = $request->input('degree_type');
+        $alumni_member->degree = $request->input('degree');
+        $alumni_member->id_num = $request->input('id_num');
+        $alumni_member->country = $request->input('country');
+        $alumni_member->address = $request->input('address');
+        $alumni_member->graduation_year = $request->input('graduation_year');
+        $alumni_member->designation = $request->input('designation');
+        $alumni_member->sector = $request->input('sector');
+
+        // Handle profile picture upload
+        if ($request->hasFile('path')) {
+            // Store the new file
+            $path = $request->file('path')->store('profile_pictures', 'public');
+            $alumni_member->path = $path; // Update path in the database
+        }
+
+        $alumni_member->save();
+
+        return redirect('/admin2')->with('success', 'Alumni member updated successfully.');
+    }
+
+
 }
 

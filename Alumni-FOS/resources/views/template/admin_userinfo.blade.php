@@ -130,75 +130,124 @@
 
 
       <div class="profile">
-        @if (isset(auth()->guard('webadmin')->user()->path))
-            <img src="{{asset('storage/'.auth()->guard('webadmin')->user()->path)}}" alt="" class="img-fluid rounded-circle">
-            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webadmin')->user()->name }}</h4>
+        @if (isset($admin->path))
+            <img src="{{asset('storage/'.$admin->path)}}" alt="" class="img-fluid rounded-circle">
+            <h4 style="text-align: center" class="text-light">{{ $admin->name }}</h4>
         @else
             <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webadmin')->user()->name }}</h4>
+            <h4 style="text-align: center" class="text-light">{{ $admin->name }}</h4>
         @endif
       </div>
 
       <nav id="navbar" class="nav-menu navbar">
         <ul>
-            <li><a href="#about" class="nav-link scrollto"><i class="bx bx-user"></i> <span>User Info</span></a></li>
-            <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Update User</span></a></li>
-            <li><a href="/admin2" class="nav-link scrollto"><i class="bx bx-arrow-back"></i> <button type="submit"><span style="color: #6f7180">Back</span></button></a></li>
+          <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Add Users</span></a></li>
+          <li><a href="#testamonials" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add Testamonials</span></a></li>
+          <li><a href="#alumni_member" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Alumni Members</span></a></li>
+          <li><a href="/admin" class="nav-link scrollto"><i class="bx bx-arrow-back"></i> <button type="submit"><span style="color: #6f7180">Back</span></button></a></li>
         </ul>
       </nav><!-- .nav-menu -->
     </div>
   </header><!-- End Header -->
 
-  <!-- ======= About Section ======= -->
-  <section id="about" class="about">
-    <div class="container">
+  <main id="main">
 
-      <div class="section-title">
-        <h2>About</h2>
-        <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
-      </div>
 
-      <div class="row">
-          <div class="col-lg-4" data-aos="fade-right">
-              <div>
-                  @if (isset(auth()->guard('webalumni')->user()->path))
-                      <img src="{{ asset('storage/' . auth()->guard('webalumni')->user()->path) }}" alt=""
-                          class="img-fluid rounded-circle">
-                      <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}
-                      </h4>
-                  @else
-                      <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-                      <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}
-                      </h4>
-                  @endif
-              </div>
-          </div>
-          <div class="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-              <h3>{{ auth()->guard('webalumni')->user()->name }}</h3>
-              <br>
-              <div class="row">
-                <div class="col-lg-6">
-                  <ul>
-                    <li><i class="bi bi-chevron-right"></i> <strong>SC Number:</strong> <span>{{  }}</span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Name:</strong> <span></span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span></span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Phone No:</strong> <span></span></li>
-                  </ul>
-                </div>
-                <div class="col-lg-6">
-                  <ul>
-                    <li><i class="bi bi-chevron-right"></i> <strong>ID Number:</strong> <span></span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Address:</strong> <span></span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Country:</strong> <span></span></li>
-                    <li><i class="bi bi-chevron-right"></i> <strong>Graduation Year:</strong> <span></span></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-      </div>
-  </section>
+     <!--General Confirmation Modal -->
+     <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false"
+     tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+     <div class="modal-dialog">
+         <div class="modal-content">
+             <div class="modal-header">
+                 <h1 class="modal-title fs-5" id="staticBackdropLabel"> </h1>
+                 <button type="button" class="btn-close" data-bs-dismiss="modal"
+                     aria-label="Close"></button>
+             </div>
+             <div class="modal-body">
+                 <p id="staticBackdropLabe2"></p>
+             </div>
+             <div class="modal-footer">
+                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+                 <button type="button" class="btn btn-primary" id="confirmBtn"></button>
+             </div>
+         </div>
+     </div>
+ </div>
 
+
+
+
+  </main><!-- End #main -->
+
+
+
+
+
+    <!--User Add Modal script-->
+    <script>
+        function showAddUserModal(actionFunction) {
+            // Set the onclick event of the confirmation button to the passed function
+            document.getElementById('confirmBtn').onclick = actionFunction;
+            // Show the modal
+            $('#staticBackdrop').modal('show');
+            var paragraph1 = document.getElementById('staticBackdropLabel');
+            paragraph1.innerHTML = 'Add Alumni Member Confirmation';
+            var paragraph2 = document.getElementById('staticBackdropLabe2');
+            paragraph2.innerHTML = 'Are you sure you want to add the user?';
+            var button2 = document.getElementById('confirmBtn');
+            button2.innerHTML = 'Confirm';
+        }
+
+        function addUser() {
+
+            var updateForm = document.getElementById('addAlumni');
+            if (updateForm) {
+                updateForm.action = '<?=url('/add_member_by_admin')?>'; // Ensure this line is directly in the Blade file
+                updateForm.submit();
+            } else {
+                console.error('Add form not found');
+            }
+
+        }
+
+        // Triggering the modal with different actions
+        document.getElementById('addAlumni_btn').addEventListener('click', function() {
+            showAddUserModal(addUser);
+        });
+
+    </script>
+<!-- Add Testamonials Modal script-->
+<script>
+    function showTestamonialModal(actionFunction) {
+        // Set the onclick event of the confirmation button to the passed function
+        document.getElementById('confirmBtn').onclick = actionFunction;
+        // Show the modal
+        $('#staticBackdrop').modal('show');
+        var paragraph1 = document.getElementById('staticBackdropLabel');
+        paragraph1.innerHTML = 'Add Testamonial Confirmation';
+        var paragraph2 = document.getElementById('staticBackdropLabe2');
+        paragraph2.innerHTML = 'Are you sure you want to add this?';
+        var button2 = document.getElementById('confirmBtn');
+        button2.innerHTML = 'Yes';
+    }
+
+    function addTestamonial() {
+        // Correctly target the logout form by ID and submit it
+        var testamonialForm = document.getElementById('adminTestamonial');
+        if (testamonialForm) {
+            testamonialForm.action =
+            '<?=url('/check_testamonials_admin')?>'; // Ensure this line is directly in the Blade file
+            testamonialForm.submit();
+        } else {
+            console.error('testamonialForm not found');
+        }
+
+    }
+    // Triggering the modal with different actions
+    document.getElementById('addTestamonial_btn').addEventListener('click', function() {
+        showTestamonialModal(addTestamonial);
+    });
+</script>
 
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>

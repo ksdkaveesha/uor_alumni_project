@@ -655,44 +655,119 @@
 
         <br>
 
-                <table class="table" style="width: 100%">
-                    <thead>
-                      <tr>
-                        <th style="width: 25%" scope="col">Name</th>
-                        <th style="width: 20%" scope="col">Email</th>
-                        <th style="width: 15%" scope="col">Student Number</th>
-                        <th style="width: 15%" scope="col">Phone Number</th>
-                        <th style="width: 25%" scope="col"></th>
-                      </tr>
-                    </thead>
-                    @if (isset($alumni_member) && $alumni_member->count() > 0)
-                        @foreach ($alumni_member as $alumni_member)
-                            <tbody>
-                            <tr>
-                                <td style="width: 25%">{{$alumni_member->name}}</td>
-                                <td style="width: 20%">{{$alumni_member->email}}</td>
-                                <td style="width: 15%">{{$alumni_member->sc_num}}</td>
-                                <td style="width: 15%">{{$alumni_member->m_code}}-{{$alumni_member->mobile}}</td>
-                                <td style="width: 25%">
-                                    <button type="button" class="btn btn-outline-primary"><a href="/admin_userinfo/{{$alumni_member->id}}" style="color:black">Info/Update</a></button>
-                                    <button type="button" class="btn btn-outline-danger">Delete</button>
-                                </td>
-                            </tr>
-                            </tbody>
-                        @endforeach
-                    @else
-                            <tbody>
-                                <tr>
-                                    <td style="width: 25%">No Results Found</td>
-                                    <td style="width: 20%">No Results Found</td>
-                                    <td style="width: 15%">No Results Found</td>
-                                    <td style="width: 15%">No Results Found</td>
-                                    <td style="width: 25%">No Results Found</td>
-                                </tr>
-                                </tbody>
-                    @endif
-                  </table>
-      </div>
+        <table class="table" style="width: 100%">
+            <thead>
+                <tr>
+                    <th style="width: 25%" scope="col">Name</th>
+                    <th style="width: 20%" scope="col">Email</th>
+                    <th style="width: 15%" scope="col">Student Number</th>
+                    <th style="width: 15%" scope="col">Phone Number</th>
+                    <th style="width: 25%" scope="col"></th>
+                </tr>
+            </thead>
+            @if (isset($alumni_member) && $alumni_member->count() > 0)
+                @foreach ($alumni_member as $alumni_member)
+                    <tbody>
+                        <tr>
+                            <td style="width: 25%">{{ $alumni_member->name }}</td>
+                            <td style="width: 20%">{{ $alumni_member->email }}</td>
+                            <td style="width: 15%">{{ $alumni_member->sc_num }}</td>
+                            <td style="width: 15%">{{ $alumni_member->m_code }}-{{ $alumni_member->mobile }}</td>
+                            <td style="width: 25%">
+                                <!-- Button to trigger the modal -->
+                                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#updateModal{{ $alumni_member->id }}">
+                                    Info/Update
+                                </button>
+                                <button type="button" class="btn btn-outline-danger">Delete</button>
+                            </td>
+                        </tr>
+                    </tbody>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="updateModal{{ $alumni_member->id }}" tabindex="-1" aria-labelledby="updateModalLabel{{ $alumni_member->id }}" aria-hidden="true">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="updateModalLabel{{ $alumni_member->id }}">Update Details</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <form method="POST" action="{{ url('admin_userinfo_update', $alumni_member->id) }}" enctype="multipart/form-data">
+                                        @csrf
+                                        <!-- Input fields for updating alumni details -->
+                                        <div class="mb-3">
+                                            <label for="name" class="form-label">Name</label>
+                                            <input type="text" class="form-control" id="name" name="name" value="{{ $alumni_member->name }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="email" class="form-label">Email</label>
+                                            <input type="email" class="form-control" id="email" name="email" value="{{ $alumni_member->email }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="sc_num" class="form-label">Student Number</label>
+                                            <input type="text" class="form-control" id="sc_num" name="sc_num" value="{{ $alumni_member->sc_num }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="mobile" class="form-label">Phone Number</label>
+                                            <input type="text" class="form-control" id="mobile" name="mobile" value="{{ $alumni_member->mobile }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="m_code" class="form-label">Mobile Region Code</label>
+                                            <input type="text" class="form-control" id="m_code" name="m_code" value="{{ $alumni_member->m_code }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="degree_type" class="form-label">Degree Type</label>
+                                            <input type="text" class="form-control" id="degree_type" name="degree_type" value="{{ $alumni_member->degree_type }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="degree" class="form-label">Degree</label>
+                                            <input type="text" class="form-control" id="degree" name="degree" value="{{ $alumni_member->degree }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="id_num" class="form-label">ID Number</label>
+                                            <input type="text" class="form-control" id="id_num" name="id_num" value="{{ $alumni_member->id_num }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="country" class="form-label">Country</label>
+                                            <input type="text" class="form-control" id="country" name="country" value="{{ $alumni_member->country }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="address" class="form-label">Address</label>
+                                            <input type="text" class="form-control" id="address" name="address" value="{{ $alumni_member->address }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="graduation_year" class="form-label">Graduation Year</label>
+                                            <input type="text" class="form-control" id="graduation_year" name="graduation_year" value="{{ $alumni_member->graduation_year }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="designation" class="form-label">Designation</label>
+                                            <input type="text" class="form-control" id="designation" name="designation" value="{{ $alumni_member->designation }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="sector" class="form-label">Sector</label>
+                                            <input type="text" class="form-control" id="sector" name="sector" value="{{ $alumni_member->sector }}">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="path" class="form-label">Profile Picture</label>
+                                            <input type="file" class="form-control" id="path" name="path">
+                                            <small>Current: {{ $alumni_member->path }}</small>
+                                        </div>
+                                        <button type="submit" class="btn btn-primary">Save changes</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            @else
+                <tbody>
+                    <tr>
+                        <td colspan="5" style="text-align: center;">No Results Found</td>
+                    </tr>
+                </tbody>
+            @endif
+        </table>
+    </div>
     </section><!-- End display alumni member Section -->
 
 
