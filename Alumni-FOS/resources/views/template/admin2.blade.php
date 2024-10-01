@@ -918,8 +918,12 @@
                                             <input type="text" class="form-control" id="mobile" name="mobile" value="{{ $alumni_member->mobile }}">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="degree_type" class="form-label">Degree Type</label>
-                                            <input type="text" class="form-control" id="degree_type" name="degree_type" value="{{ $alumni_member->degree_type }}">
+                                            <label for="degree_type" class="form-label">Degree Programe</label>
+                                            <select name="degree_type" id="degree_type" class="form-control" value="{{ $alumni_member->degree_type }}">
+                                                <option value="none" selected disabled>Degree Programe</option>
+                                                <option value="General">General</option>
+                                                <option value="Special">Special</option>
+                                            </select>
                                         </div>
                                         <div class="mb-3">
                                             <label for="degree" class="form-label">Degree</label>
