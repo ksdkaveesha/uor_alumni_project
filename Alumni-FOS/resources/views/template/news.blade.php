@@ -60,9 +60,9 @@
                      <li class="nav-item">
                         <a class="nav-link" href="about">About Us</a>
                      </li>
-                     <li class="nav-item">
+                     <!--<li class="nav-item">
                         <a class="nav-link" href="directory">Alumni Directory</a>
-                     </li>
+                     </li>-->
                      <li class="nav-item">
                         <a class="nav-link" href="login">Log In</a>
                      </li>
