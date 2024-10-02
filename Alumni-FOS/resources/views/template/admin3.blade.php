@@ -150,11 +150,11 @@
                     <li><a href="#update" class="nav-link scrollto"><i class="bx bx-user-plus"></i> <span>Add
                                 Admin</span></a></li>
                     <li><a href="#check_testimonials" class="nav-link scrollto"><i class="bx bx-envelope"></i>
-                            <span>Check Testamonials</span></a></li>
+                            <span>Check Testimonials</span></a></li>
                     <li><a href="#notices" class="nav-link scrollto"><i class="bx bx-book-add"></i> <span>Add
                                 Notices</span></a></li>
                     <li><a href="#search_nortices" class="nav-link scrollto"><i class="bx bx-envelope"></i>
-                            <span>Search Nortices</span></a></li>
+                            <span>Search Notices</span></a></li>
                     <li><a href="#add_images" class="nav-link scrollto"><i class="bx bx-image-add"></i> <span>Add
                                 Images</span></a></li>
                     <li><a href="/admin" class="nav-link scrollto"><i class="bx bx-arrow-back"></i> <button

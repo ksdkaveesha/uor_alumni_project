@@ -153,8 +153,8 @@
                 <div class="col-md-6">
                     <div class="about_taital_main">
                         <div class="about_taital"><span style="color:black">This isn't a GoodBye.<br>It's Welcome.</span></div>
-                        <p class="about_text">Full cleaning and housekeeping services for companies and households.</p>
-                        <p class="about_text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text.Lorem Ipsum is simply <br><br></p>
+                        <p class="about_text">It's not a goodbye; it's a welcome back!</p>
+                        <p class="about_text">The Alumni Association of the University of Ruhuna, Faculty of Science, warmly invites all past members to reconnect and stay involved with the university community. As alumni, you remain a vital part of our ongoing journey, contributing to the growth and success of future generations. Join us in fostering lasting relationships and making a positive impact together! <br><br></p>
                         <div class="learnmore_bt"><a href="register">Join us</a></div>
                     </div>
                 </div>
@@ -233,7 +233,7 @@
                             <p class="tation_text">{{ $lastThreeRecords[0]->notice}}</p>
                         @else
                             <h3 class="decorate_text">1st Notice</h3>
-                            <p class="tation_text">No any notices at this moment</p>
+                            <p class="tation_text">No notices at this moment</p>
                         @endif
 
                     </div>
@@ -249,7 +249,7 @@
                             <p class="tation_text">{{ $lastThreeRecords[1]->notice}}</p>
                         @else
                             <h3 class="decorate_text">2nd Notice</h3>
-                            <p class="tation_text">No any notices at this moment</p>
+                            <p class="tation_text">No notices at this moment</p>
                         @endif
 
                     </div>
@@ -265,7 +265,7 @@
                             <p class="tation_text">{{ $lastThreeRecords[2]->notice}}</p>
                         @else
                             <h3 class="decorate_text">3rd Notice</h3>
-                            <p class="tation_text">No any notices at this moment</p>
+                            <p class="tation_text">No notices at this moment</p>
                         @endif
 
                     </div>
@@ -310,7 +310,7 @@
                                 <h5 class="customer_text"><b>{{ $lastThreeRecords_test[0]->name }}</b></h5>
                                 <p class="customer_text">{{ $lastThreeRecords_test[0]->testamonial }}</p>
                             @else
-                                <h4 class="client_name_text">No Testimonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h4 class="client_name_text">No Testimonials available<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
                                 <h5 class="customer_text"><b>Name</b></h5>
                                 <p class="customer_text">No records</p>
                             @endif
@@ -331,7 +331,7 @@
                                 <h5 class="customer_text"><b>{{ $lastThreeRecords_test[1]->name }}</b></h5>
                                 <p class="customer_text">{{ $lastThreeRecords_test[1]->testamonial }}</p>
                             @else
-                                <h4 class="client_name_text">No Testimonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h4 class="client_name_text">No Testimonials available<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
                                 <h5 class="customer_text"><b>Name</b></h5>
                                 <p class="customer_text">No records</p>
                             @endif
@@ -352,7 +352,7 @@
                                 <h5 class="customer_text"><b>{{ $lastThreeRecords_test[2]->name }}</b></h5>
                                 <p class="customer_text">{{ $lastThreeRecords_test[2]->testamonial }}</p>
                             @else
-                                <h4 class="client_name_text">No Testimonials<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
+                                <h4 class="client_name_text">No Testimonials available<span class="quick_icon" ><img src="images/quick-icon.png"></span></h4>
                                 <h5 class="customer_text"><b>Name</b></h5>
                                 <p class="customer_text">No records</p>
                             @endif
@@ -393,7 +393,7 @@
                   </div>
                </div>
                <div class="col-lg-3 col-sm-6">
-                  <h1 class="useful_text">Useful Link</h1>
+                  <h1 class="useful_text">Useful Links</h1>
                   <div class="dummy_text">
                     <ul>
                         <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
@@ -407,17 +407,17 @@
                      <ul>
                         <li>
                            <a href="#">
-                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address : Faculty of Science,University of Ruhuna, Matara, Sri Lanka</span>
+                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address: Faculty of Science, University of Ruhuna, Matara, Sri Lanka.</span>
                            </a>
                         </li>
                         <li>
                            <a href="#">
-                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call : +01 1234567890</span>
+                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call: +01 1234567890</span>
                            </a>
                         </li>
                         <li>
                            <a href="#">
-                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email : ruhuna@gmail.com</span>
+                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email: ruhuna@gmail.com</span>
                            </a>
                         </li>
                      </ul>
