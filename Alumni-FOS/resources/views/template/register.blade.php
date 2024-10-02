@@ -113,7 +113,7 @@
 
                         <div class="form-row">
                           <div class="form-group col">
-                            <input type="text" id="sc_number" name="sc_number" class="email-bt" placeholder="Student Number" value="{{old('sc_number')}}" onfocus="showsc_number()" onblur="masksc_number()" required/>
+                            <input type="text" id="sc_number" name="sc_number" class="email-bt" placeholder="Student Number(SC/xxxx/xxxxx)" value="{{old('sc_number')}}" onfocus="showsc_number()" onblur="masksc_number()" required/>
                             @error('sc_number')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -489,11 +489,11 @@
                  <h3 class="useful_text">Menu</h3>
                  <div class="footer_menu">
                     <ul>
-                       <li><a href="index.html">Home</a></li>
-                       <li><a href="about.html">About Us</a></li>
-                       <li><a href="gallery.html">Gallery</a></li>
-                       <li><a href="services.html">Services</a></li>
-                       <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/about">About Us</a></li>
+                        <li><a href="/gallery">Gallery</a></li>
+                        <li><a href="/news">News and Events</a></li>
+                        <li><a href="/contact">Contact Us</a></li>
                     </ul>
                  </div>
               </div>
