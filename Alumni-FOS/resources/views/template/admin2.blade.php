@@ -678,7 +678,12 @@
                                 <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#updateModal{{ $alumni_member->id }}">
                                     Info/Update
                                 </button>
-                                <button type="button" class="btn btn-outline-danger">Delete</button>
+                                <!-- Delete Button -->
+                                <form action="{{ url('admin_userinfo_delete', $alumni_member->id) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-outline-danger" onclick="return confirm('Are you sure you want to delete this record?')">Delete</button>
+                                </form>
                             </td>
                         </tr>
                     </tbody>

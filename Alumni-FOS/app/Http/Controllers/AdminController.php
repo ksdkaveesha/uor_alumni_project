@@ -205,6 +205,20 @@ class AdminController extends Controller
         return redirect('/admin2')->with('success', 'Alumni member updated successfully.');
     }
 
+    public function admin_userinfo_delete($id)
+    {
+        // Find the alumni member by ID
+        $alumni_member = alumini_member::find($id);
+
+        if (!$alumni_member) {
+            return redirect('/admin2')->with('error', 'Alumni member not found.');
+        }
+
+        // Delete the alumni member
+        $alumni_member->delete();
+
+        return redirect('/admin2')->with('succ_notice', 'Alumni member deleted successfully.');
+    }
 
 }
 

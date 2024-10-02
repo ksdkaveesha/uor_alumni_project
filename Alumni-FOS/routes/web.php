@@ -92,6 +92,8 @@ Route::post('/add_admin_by_admin', [AdminController::class,'register_admin_by_ad
 Route::post('/search_alumni_member', [AdminController::class,'search_alumni_member']);
 Route::get('/admin2', [AdminController::class,'display_admin2']);
 Route::post('/admin_userinfo_update/{id}', [AdminController::class, 'admin_userinfo_update']);
+Route::delete('/admin_userinfo_delete/{id}', [AdminController::class, 'admin_userinfo_delete']);
+
 
 Route::post('/comment', [CommentController::class,'comment']);
 

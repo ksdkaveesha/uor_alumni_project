@@ -60,9 +60,9 @@
                      <li class="nav-item active">
                         <a class="nav-link" href="about">About Us</a>
                      </li>
-                     <li class="nav-item">
+                     <!--<li class="nav-item">
                         <a class="nav-link" href="directory">Alumni Directory</a>
-                     </li>
+                     </li>-->
                      <li class="nav-item">
                         <a class="nav-link" href="login">Log In</a>
                      </li>
@@ -898,7 +898,7 @@
 <div class="row">
   <div class="column" style="background-color: #FFFAE9;">
     <h2><span style="font-size:50px">&nbsp Our History</span></h2>
-    <p>&nbsp The University of Ruhuna, established by a Special Presidential Decree in 1978 and elevated to a fully-fledged university in 1984, is Sri Lanka's sixth oldest University. It is the only University in the country's southern region, with ten faculties spread across three prominent locations. The central campus, which is located in Wellamadama, houses the faculties of Science, Humanities and Social Sciences, Management and Finance, and Fisheries and Marine Sciences & Technology. Agriculture and Technology faculties are located in Kamburupitiya, while Engineering, Medicine, and Allied Health Science faculties are located in Galle. Over the past 43 years, the University of Ruhuna has witnessed tremendous progress and development in the academic, research, and outreach spheres and significant improvements in intellectual and infrastructure resources, emerging as a leader in higher education in Sri Lanka.</p>
+    <p>&nbsp The University of Ruhuna, established by a Special Presidential Decree in 1978 and elevated to a fully-fledged university in 1984, is Sri Lanka's sixth oldest University. Over the past 43 years, the University of Ruhuna has witnessed tremendous progress and development in the academic, research, and outreach spheres and significant improvements in intellectual and infrastructure resources, emerging as a leader in higher education in Sri Lanka.</p>
   </div>
   <div class="column" style="background-color:#FFFAE9;">
 
@@ -1218,44 +1218,44 @@
 			<div class="item features-image col-12 col-md-6 col-lg-3 active">
 				<div class="item-wrapper">
 					<div class="item-img mb-3">
-						<img src="images/about/photo-1705727210721-961cc64a6895.jpeg">
+						<img src="images/about/event1.jpg">
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-							<strong><a class="text-black fw-bold" href="#">Stella Star</a></strong>
+							<strong><a class="text-black fw-bold" href="#">Mathematics of machine Learning</a></strong>
 						</h6>
 						<p class="mbr-text mbr-fonts-style mb-3 display-7">2022-01-15</p>
-						<p class="mbr-text mbr-fonts-style mb-3 display-7">Discovered New Planet, Named After Her</p>
-						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">More</a></div>
+						<!--<p class="mbr-text mbr-fonts-style mb-3 display-7">Discovered New Planet, Named After Her</p>-->
+						<div class="mbr-section-btn item-footer"><a href="https://www.sci.ruh.ac.lk/FacultyofScience/index.php/talk-on-mathematics/" class="btn item-btn btn-primary display-7">More</a></div>
 					</div>
 				</div>
 			</div>
 			<div class="item features-image col-12 col-md-6 col-lg-3">
 				<div class="item-wrapper">
 					<div class="item-img mb-3">
-						<img src="images/about/photo-1608910312185-7ba962b00d6f.jpeg" data-slide-to="1" data-bs-slide-to="1">
+						<img src="images/about/event2.jpg" data-slide-to="1" data-bs-slide-to="1">
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style mb-3 display-5">
-							<strong><a class="text-black fw-bold" href="#">Max Impact</a></strong>
+							<strong><a class="text-black fw-bold" href="#">Mini Symposium-2024</a></strong>
 						</h6>
 						<p class="mbr-text mbr-fonts-style mb-3 display-7">2021-11-30</p>
-						<p class="mbr-text mbr-fonts-style mb-3 display-7">Invented Sustainable Energy Source</p>
-						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">More</a></div>
+						<!--<p class="mbr-text mbr-fonts-style mb-3 display-7">Mini Symposium-2024</p>-->
+						<div class="mbr-section-btn item-footer"><a href="https://www.sci.ruh.ac.lk/FacultyofScience/index.php/mini-symposium-2024/" class="btn item-btn btn-primary display-7">More</a></div>
 					</div>
 				</div>
 			</div>
 			<div class="item features-image col-12 col-md-6 col-lg-3">
 				<div class="item-wrapper">
 					<div class="item-img mb-3">
-						<img src="images/about/photo-1518152006812-edab29b069ac.jpeg" data-slide-to="2" data-bs-slide-to="2">
+						<img src="images/about/event1.jpg" data-slide-to="2" data-bs-slide-to="2">
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
-							<strong><a class="text-black fw-bold" href="#">Luna Light</a></strong>
+							<strong><a class="text-black fw-bold" href="#">Mathematics of machine Learning</a></strong>
 						</h6>
 						<p class="mbr-text mbr-fonts-style mb-3 display-7">2021-09-20</p>
-						<p class="mbr-text mbr-fonts-style mb-3 display-7">Awarded Nobel Prize in Physics</p>
+						<!--<p class="mbr-text mbr-fonts-style mb-3 display-7">Awarded Nobel Prize in Physics</p>-->
 						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">More</a></div>
 					</div>
 				</div>
@@ -1263,14 +1263,14 @@
 			<div class="item features-image col-12 col-md-6 col-lg-3">
 				<div class="item-wrapper">
 					<div class="item-img mb-3">
-						<img src="images/about/photo-1491299461284-6aa083937f71.jpeg" data-slide-to="3" data-bs-slide-to="3">
+						<img src="images/about/event2.jpg" data-slide-to="3" data-bs-slide-to="3">
 					</div>
 					<div class="item-content align-left">
 						<h6 class="item-subtitle mbr-fonts-style mt-0 mb-3 display-5">
-							<strong><a class="text-black fw-bold" href="#">Alex Tech</a></strong>
+							<strong><a class="text-black fw-bold" href="#">Symposium-2024</a></strong>
 						</h6>
 						<p class="mbr-text mbr-fonts-style mb-3 display-7">2021-07-05</p>
-						<p class="mbr-text mbr-fonts-style mb-3 display-7">Revolutionized AI in Healthcare</p>
+						<!--<p class="mbr-text mbr-fonts-style mb-3 display-7">Revolutionized AI in Healthcare</p>-->
 						<div class="mbr-section-btn item-footer"><a href="#" class="btn item-btn btn-primary display-7">More</a></div>
 					</div>
 				</div>
@@ -1364,16 +1364,14 @@
 </style>
 <div class="row">
   <div class="column" style="background-color:#F9DDB5;;">
-<img src="images/about/dean.jpeg"  >
 
+<img src="images/about/dean.jpg"  >
+<p><b><a href="https://www.sci.ruh.ac.lk/zoology/academic_staff_profile.php?id=832">Prof. (Mrs.) D.H.N. Munasinghe</a></b></p>
   </div>
   <div class="column" style="background-color:#F9DDB5;;">
-    <h2><span style="font-size:50px">&nbsp Dean's Message</span></h2>
-    <p>Welcome to the webpage of the Faculty of Science, University of Ruhuna. We are located in the beautiful coastal city of Matara in the southern province of Sri Lanka.
-    <br>First, we prioritize teaching students through our continuously accredited degree programs.
-    <br>We are committed to innovation and excellence in teaching, research, and services to communities. We have graduated students who now work and hold key positions in Sri Lanka and around the globe. Our research results are nationally and internationally recognized.
-    <br>We hope you will browse through our website and contact us if you have any questions or comments.
-    </p>
+    <h3><span style="font-size:50px">&nbsp Dean's Message</span></h3>
+    <div><p>Faculty of Science is one of the pioneering faculties at the University of Ruhuna, which was founded in 1978 and has made an immense contribution for the country’s tertiary education throughout the last 44 years. The Faculty of Science offers learning and research opportunities for undergraduate and postgraduate students in the fields of Biological Science, Physical Science and Computer Science.</p><p><br><a href="https://www.sci.ruh.ac.lk/FacultyofScience/index.php/message-from-the-dean/">Read more…</a></p></div>
+
   </div>
 </div>
 <!-- End History-->
