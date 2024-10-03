@@ -85,7 +85,6 @@ class AdminController extends Controller
             $request->validate([
                 'sc_number' => 'scnumber',
                 'email' => 'email|unique:users|unique:alumini_members',
-                'password' => 'confirmed',
 
                 // Using the custom scnumber rule
                 // Add other validation rules for your other fields here
@@ -209,6 +208,8 @@ class AdminController extends Controller
     {
         // Find the alumni member by ID
         $alumni_member = alumini_member::find($id);
+        $find_user = $alumni_member->email;
+        $user = User::where('email','Like',"%$find_user%");
 
         if (!$alumni_member) {
             return redirect('/admin2')->with('error', 'Alumni member not found.');
@@ -216,6 +217,7 @@ class AdminController extends Controller
 
         // Delete the alumni member
         $alumni_member->delete();
+        $user->delete();
 
         return redirect('/admin2')->with('succ_notice', 'Alumni member deleted successfully.');
     }

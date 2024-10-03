@@ -537,6 +537,11 @@
                                 </select>
                             </div>
 
+                            <div class="form-group">
+                                <label for="password">Password</label>
+                                <input type="password" class="form-control" name="password" id="password">
+                            </div>
+
                             <div class="text-center">
                                 <button type="button" class="custom-button" id="addAlumni_btn">Add Member</button>
                             </div>
@@ -702,19 +707,19 @@
                                         <!-- Input fields for updating alumni details -->
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Name</label>
-                                            <input type="text" class="form-control" id="name" name="name" value="{{ $alumni_member->name }}">
+                                            <input type="text" class="form-control" id="name" name="name" value="{{ $alumni_member->name }}" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="email" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="email" name="email" value="{{ $alumni_member->email }}">
+                                            <input type="email" class="form-control" id="email" name="email" value="{{ $alumni_member->email }}" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="sc_num" class="form-label">Student Number</label>
-                                            <input type="text" class="form-control" id="sc_num" name="sc_num" value="{{ $alumni_member->sc_num }}">
+                                            <input type="text" class="form-control" id="sc_num" name="sc_num" value="{{ $alumni_member->sc_num }}" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="m_code" class="form-label">Mobile Region Code</label>
-                                            <select class="form-control" name="m_code" id="m_code" value="{{ $alumni_member->m_code }}">
+                                            <select class="form-control" name="m_code" id="m_code" value="{{ $alumni_member->m_code }}" required>
                                                 <option value="" disabled selected>Select Country Code</option>
                                                 <option value="93" {{ $alumni_member->m_code === '93' ? 'selected' : '' }}>Afghanistan +93</option>
                                                 <option value="358" {{ $alumni_member->m_code === '358' ? 'selected' : '' }}>Aland Islands +358</option>
@@ -920,11 +925,11 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="mobile" class="form-label">Phone Number</label>
-                                            <input type="text" class="form-control" id="mobile" name="mobile" value="{{ $alumni_member->mobile }}">
+                                            <input type="text" class="form-control" id="mobile" name="mobile" value="{{ $alumni_member->mobile }}" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="degree_type" class="form-label">Degree Programe</label>
-                                            <select name="degree_type" id="degree_type" class="form-control" value="{{ $alumni_member->degree_type }}">
+                                            <select name="degree_type" id="degree_type" class="form-control" value="{{ $alumni_member->degree_type }}" required>
                                                 <option value="none" selected disabled>Degree Programe</option>
                                                 <option value="General">General</option>
                                                 <option value="Special">Special</option>
@@ -932,31 +937,31 @@
                                         </div>
                                         <div class="mb-3">
                                             <label for="degree" class="form-label">Degree</label>
-                                            <input type="text" class="form-control" id="degree" name="degree" value="{{ $alumni_member->degree }}">
+                                            <input type="text" class="form-control" id="degree" name="degree" value="{{ $alumni_member->degree }}" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="id_num" class="form-label">ID Number</label>
-                                            <input type="text" class="form-control" id="id_num" name="id_num" value="{{ $alumni_member->id_num }}">
+                                            <input type="text" class="form-control" id="id_num" name="id_num" value="{{ $alumni_member->id_num }}" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="country" class="form-label">Country</label>
-                                            <input type="text" class="form-control" id="country" name="country" value="{{ $alumni_member->country }}">
+                                            <input type="text" class="form-control" id="country" name="country" value="{{ $alumni_member->country }}" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="address" class="form-label">Address</label>
-                                            <input type="text" class="form-control" id="address" name="address" value="{{ $alumni_member->address }}">
+                                            <input type="text" class="form-control" id="address" name="address" value="{{ $alumni_member->address }}" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="graduation_year" class="form-label">Graduation Year</label>
-                                            <input type="text" class="form-control" id="graduation_year" name="graduation_year" value="{{ $alumni_member->graduation_year }}">
+                                            <input type="text" class="form-control" id="graduation_year" name="graduation_year" required value="{{ $alumni_member->graduation_year }}">
                                         </div>
                                         <div class="mb-3">
                                             <label for="designation" class="form-label">Designation</label>
-                                            <input type="text" class="form-control" id="designation" name="designation" value="{{ $alumni_member->designation }}">
+                                            <input type="text" class="form-control" id="designation" name="designation" value="{{ $alumni_member->designation }}" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="sector" class="form-label">Sector</label>
-                                            <input type="text" class="form-control" id="sector" name="sector" value="{{ $alumni_member->sector }}">
+                                            <input type="text" class="form-control" id="sector" name="sector" value="{{ $alumni_member->sector }}" required>
                                         </div>
                                         <div class="mb-3">
                                             <label for="path" class="form-label">Profile Picture</label>
