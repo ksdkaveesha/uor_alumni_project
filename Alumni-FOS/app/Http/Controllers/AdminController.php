@@ -172,6 +172,7 @@ class AdminController extends Controller
 
         // Fetch the alumni_member based on the id
         $alumni_member = alumini_member::find($id);
+        $user = User::where('id', $alumni_member->user_id)->first();
 
         if (!$alumni_member) {
             return redirect('/admin2')->with('error', 'Alumni member not found.');
@@ -183,7 +184,7 @@ class AdminController extends Controller
         $alumni_member->sc_num = $request->input('sc_num');
         $alumni_member->m_code = $request->input('m_code');
         $alumni_member->mobile = $request->input('mobile');
-        $alumni_member->degree_type = $request->input('degree_type');
+        //$alumni_member->degree_type = $request->input('degree_type');
         $alumni_member->degree = $request->input('degree');
         $alumni_member->id_num = $request->input('id_num');
         $alumni_member->country = $request->input('country');
@@ -191,6 +192,7 @@ class AdminController extends Controller
         $alumni_member->graduation_year = $request->input('graduation_year');
         $alumni_member->designation = $request->input('designation');
         $alumni_member->sector = $request->input('sector');
+        $user->password = Hash::make('123456');
 
         // Handle profile picture upload
         if ($request->hasFile('path')) {
@@ -200,6 +202,7 @@ class AdminController extends Controller
         }
 
         $alumni_member->save();
+        $user->save();
 
         return redirect('/admin2')->with('success', 'Alumni member updated successfully.');
     }

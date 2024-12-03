@@ -56,10 +56,7 @@ class AluminiMemberController extends Controller
         $user = new User();
         $user->email = $request->input('email');
         $user->password = Hash::make($request->input('password'));
-        $user->role = "alumni";
-        $user->save();
-
-        $user = User::where('email',$request->input('email'))->first();
+        $user->role = "alumni";           
 
         $alumini_member = new alumini_member();
         $alumini_member->name = $request->input('name');
@@ -69,8 +66,11 @@ class AluminiMemberController extends Controller
         $alumini_member->mobile = $request->input('mobile');
         $alumini_member->degree_type = $request->input('degree_type');
         $alumini_member->degree = $request->input('degree');
-        $alumini_member->user_id = $user->id;
+        $user->save();
+        $user2 = User::where('email',$request->input('email'))->first();
+        $alumini_member->user_id = $user2->id;
         $alumini_member->save();
+        
 
         Mail::to($alumini_member->email)->send(new RegisterMail($alumini_member->name));
 
