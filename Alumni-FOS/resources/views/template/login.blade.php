@@ -120,7 +120,7 @@
 					@csrf
                     @if (session('error'))
                             <div class="alert alert-danger">
-                                {{ session('success') }}
+                                {{ session('error') }}
                             </div>
                     @endif
                     <span class="login100-form-title">
