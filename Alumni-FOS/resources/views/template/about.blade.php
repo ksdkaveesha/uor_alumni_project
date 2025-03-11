@@ -94,7 +94,7 @@
 <!--header section end -->
 
 <!-- Banner Start -->
-<section class="banner_section layout_padding" id="hero-15-u56wDcjjj0" style="background-image: url('images/about/g6.jpg'); background-size: cover; background-position: center; height: 600px; position: relative;">
+<section class="banner_section layout_padding" id="hero-15-u56wDcjjj0" style="background-image: url('images/about/banner.jpg'); background-size: cover; background-position: center; height: 600px; position: relative;">
     <div class="mbr-overlay" style="opacity: 0.3; background-color: rgb(0, 0, 0); position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 1;">
     </div>
 </section>
@@ -165,7 +165,7 @@
             <!-- Event 1 -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
                 <div class="card h-100">
-                    <img src="images/about/g3.jpg" alt="Mathematics of Machine Learning" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
+                    <img src="images/about/event1.jpg" alt="Mathematics of Machine Learning" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
                     <div class="card-body p-2 d-flex flex-column justify-content-between">
                         <h6 class="card-title fw-bold">
                             <a href="#" class="text-dark text-decoration-none">31st General Convocation-2024</a>
@@ -183,11 +183,11 @@
                     <img src="images/about/event2.jpg" alt="Mini Symposium-2024" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
                     <div class="card-body p-2 d-flex flex-column justify-content-between">
                         <h6 class="card-title fw-bold">
-                            <a href="#" class="text-dark text-decoration-none">Mini Symposium-2024</a>
+                            <a href="#" class="text-dark text-decoration-none">Prana Swara-2025</a>
                         </h6>
                         <div class="d-flex justify-content-between align-items-center">
-                            <p class="card-text text-muted small mb-0">2021-11-30</p>
-                            <a href="https://www.sci.ruh.ac.lk/FacultyofScience/index.php/mini-symposium-2024/" class="btn btn-primary btn-sm" style="background-color: #390A40; border:none">More</a>
+                            <p class="card-text text-muted small mb-0">2025</p>
+                            <a href="https://www.sci.ruh.ac.lk/FacultyofScience/index.php/prana-swara/" class="btn btn-primary btn-sm" style="background-color: #390A40; border:none">More</a>
                         </div>
                     </div>
                 </div>
@@ -195,14 +195,14 @@
             <!-- Event 3 -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
                 <div class="card h-100">
-                    <img src="images/about/event1.jpg" alt="Mathematics of Machine Learning" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
+                    <img src="images/about/event3.jpg" alt="Mathematics of Machine Learning" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
                     <div class="card-body p-2 d-flex flex-column justify-content-between">
                         <h6 class="card-title fw-bold">
                             <a href="#" class="text-dark text-decoration-none">Mathematics of Machine Learning</a>
                         </h6>
                         <div class="d-flex justify-content-between align-items-center">
                             <p class="card-text text-muted small mb-0">2021-09-20</p>
-                            <a href="#" class="btn btn-primary btn-sm" style="background-color: #390A40; border:none">More</a>
+                            <a href="https://www.sci.ruh.ac.lk/FacultyofScience/index.php/talk-on-mathematics/" class="btn btn-primary btn-sm" style="background-color: #390A40; border:none">More</a>
                         </div>
                     </div>
                 </div>
@@ -210,14 +210,14 @@
             <!-- Event 4 -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
                 <div class="card h-100">
-                    <img src="images/about/event2.jpg" alt="Symposium-2024" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
+                    <img src="images/about/event4.jpg" alt="Theertha-2024" class="card-img-top img-fluid" style="height: 200px; object-fit: cover;">
                     <div class="card-body p-2 d-flex flex-column justify-content-between">
                         <h6 class="card-title fw-bold">
-                            <a href="#" class="text-dark text-decoration-none">Symposium-2024</a>
+                            <a href="#" class="text-dark text-decoration-none">Theertha-2024</a>
                         </h6>
                         <div class="d-flex justify-content-between align-items-center">
-                            <p class="card-text text-muted small mb-0">2021-07-05</p>
-                            <a href="#" class="btn btn-primary btn-sm" style="background-color: #390A40; border:none">More</a>
+                            <p class="card-text text-muted small mb-0">2024</p>
+                            <a href="https://www.sci.ruh.ac.lk/FacultyofScience/index.php/talent-show-2024/" class="btn btn-primary btn-sm" style="background-color: #390A40; border:none">More</a>
                         </div>
                     </div>
                 </div>
@@ -270,7 +270,7 @@
             <!-- Team Member 1 -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
                 <div class="card h-100 border-0">
-                    <img src="images/about/OIP.jpeg" alt="Adam Bright - President" class="card-img-top img-fluid rounded" style="object-fit: cover;">
+                    <img src="images/about/member1.jpeg" alt="member1 - President" class="card-img-top img-fluid rounded" style="object-fit: cover;">
                     <div class="card-body text-center p-3">
                         <h6 class="fw-bold">John Doe</h6>
                         <p class="text-muted small mb-0">President</p>
@@ -280,7 +280,7 @@
             <!-- Team Member 2 -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
                 <div class="card h-100 border-0">
-                    <img src="images/about/OIP.jpeg" alt="Eve Spark - Secretary" class="card-img-top img-fluid rounded" style="object-fit: cover;">
+                    <img src="images/about/member2.jpeg" alt="member2 - Secretary" class="card-img-top img-fluid rounded" style="object-fit: cover;">
                     <div class="card-body text-center p-3">
                         <h6 class="fw-bold">John Doe</h6>
                         <p class="text-muted small mb-0">Secretary</p>
@@ -290,7 +290,7 @@
             <!-- Team Member 3 -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
                 <div class="card h-100 border-0">
-                    <img src="images/about/OIP.jpeg" alt="Leo Swift - Treasurer" class="card-img-top img-fluid rounded" style="object-fit: cover;">
+                    <img src="images/about/member3.jpeg" alt="member3 - Treasurer" class="card-img-top img-fluid rounded" style="object-fit: cover;">
                     <div class="card-body text-center p-3">
                         <h6 class="fw-bold">John Doe</h6>
                         <p class="text-muted small mb-0">Treasurer</p>
@@ -300,7 +300,7 @@
             <!-- Team Member 4 -->
             <div class="col-12 col-md-6 col-lg-3 mb-4">
                 <div class="card h-100 border-0">
-                    <img src="images/about/OIP.jpeg" alt="Ava Blaze - Event Coordinator" class="card-img-top img-fluid rounded" style="object-fit: cover;">
+                    <img src="images/about/member4.jpeg" alt="member4 - Event Coordinator" class="card-img-top img-fluid rounded" style="object-fit: cover;">
                     <div class="card-body text-center p-3">
                         <h6 class="fw-bold">John Doe</h6>
                         <p class="text-muted small mb-0">Event Coordinator</p>
@@ -336,61 +336,57 @@
   </script>
 
       <!-- footer section start -->
-      <div class="footer_section layout_padding">
-         <div class="container">
-            <div class="row">
-               {{-- <div class="col-lg-3 col-sm-6">
-                  <h3 class="useful_text">About</h3>
-                  <p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
-               </div> --}}
-               <div class="col-lg-2 col-sm-6">
-                  <h3 class="useful_text">Menu</h3>
-                  <div class="footer_menu">
-                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/gallery">Gallery</a></li>
-                        <li><a href="/news">News and Events</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h1 class="useful_text">Useful Links</h1>
-                  <div class="dummy_text">
-                    <ul>
-                        <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
-                        <li><a href="https://www.ruh.ac.lk/index.php/en/">University of Ruhuna</a></li>
-                    </ul>
-                  </div>
-               </div>
-               <div class="col-lg-7 col-sm-6">
-                  <h1 class="useful_text">Contact Us</h1>
-                  <div class="location_text">
-                     <ul>
-                        <li>
-                           <a href="#">
-                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address: Faculty of Science, University of Ruhuna, Matara, Sri Lanka.</span>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call: +01 1234567890</span>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email: ruhuna@gmail.com</span>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+<div class="footer_section layout_padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-4 col-sm-12">
+            <h3 class="useful_text">Menu</h3>
+            <div class="footer_menu">
+               <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="/gallery">Gallery</a></li>
+                  <li><a href="/news">News and Events</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-lg-4 col-sm-12">
+            <h3 class="useful_text">Useful Links</h3>
+            <div class="dummy_text">
+               <ul>
+                  <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
+                  <li><a href="https://www.ruh.ac.lk/index.php/en/">University of Ruhuna</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-lg-4 col-sm-12">
+            <h3 class="useful_text">Contact Us</h3>
+            <div class="location_text">
+               <ul>
+                  <li>
+                     <a href="#">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address: Faculty of Science, University of Ruhuna, Matara, Sri Lanka.</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call: +01 1234567890</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email: ruhuna@gmail.com</span>
+                     </a>
+                  </li>
+               </ul>
             </div>
          </div>
       </div>
+   </div>
+</div>
+<!-- footer section end -->
 
-      <!-- footer section end -->
 
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>
