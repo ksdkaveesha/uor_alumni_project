@@ -401,49 +401,174 @@
                           </div>
                         </div>
 
+                        <!-- Add this after the phone number field -->
                         <div class="form-row">
                           <div class="form-group col">
-                              <select name="degree_type" id="degree_type" class="select-bt">
-                                  <option value="none" selected disabled>Degree Program</option>
-                                  <option value="General">General</option>
-                                  <option value="Special">Special</option>
+                              <select name="membership_category" id="membership_category" class="select-bt" required>
+                                  <option value="" selected disabled>Membership Category</option>
+                                  <option value="full">Full Member</option>
+                                  <option value="associate">Associate Member</option>
                               </select>
                           </div>
                         </div>
 
-                        <div class="form-row" id="special_degree_div" >
-                          <div class="form-group col">
-                              <select name="degree" id="sp_degree" class="select-bt">
-                                  <option value="" selected disabled>Select your Degree</option>
-                                  <option value="BCS Special in Computer Science">BCS Special in Computer Science </option>
-                                  <option value="BSc Special in Statistics">BSc Special in Statistics </option>
-                                  <option value="BSc Special in Applied Mathematics">BSc Special in Applied Mathematics</option>
-                                  <option value="BSc Special in Chemistry">BSc Special in Chemistry</option>
-                                  <option value="BSc Special in Physics">BSc Special in Physics</option>
-                                  <option value="BSc Special in Zoology">BSc Special in Zoology</option>
-                                  <option value="BSc Special in Botany">BSc Special in Botany</option>
-                              </select>
+                        <!-- Membership Details Modal -->
+                        <div class="modal fade" id="membershipModal" tabindex="-1" role="dialog" aria-labelledby="membershipModalLabel" aria-hidden="true">
+                          <div class="modal-dialog" role="document">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h5 class="modal-title" id="membershipModalLabel">Membership Details</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body" id="membershipDetails">
+                                      <!-- Dynamic content will be inserted here -->
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  </div>
+                              </div>
                           </div>
                         </div>
 
-                        <div class="form-row" id="General_degree_div">
-                          <div class="form-group col">
-                              <select name="degree" id="g_degree" class="select-bt">
-                                  <option value="" selected disabled>Select your Degree</option>
-                                  <option value="BSc in physical sciences">BSc in physical sciences </option>
-                                  <option value="BSc in Bio Sciences">BSc in Bio Sciences </option>
-                                  <option value="BCS in Computer Science">BCS in Computer Science</option>
+                        <!-- Associate Member Field (initially hidden) -->
+                        <div id="associateFields" style="display: none;">
+                          <div class="form-row">
+                            <div class="form-group col">
+                              <select name="degree_type" id="degree_type_ass" class="select-bt" required>
+                                  <option value="" selected disabled>Affiliation Type</option>
+                                  <option value="Degree Programme Associate">Degree Programme</option>
+                                  <option value="Traineeship">Traineeship</option>
+                                  <option value="Internship">Internship</option>
+                                  <option value="Research Affiliation">Research Affiliation</option>
+                                  <option value="Support Staff Member">Support Staff Member</option>
                               </select>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col">
+                              <input type="text" name="degree" id="degree_ass" class="email-bt" placeholder="Enter Programme Name" required></input>
+                            </div>
                           </div>
                         </div>
 
-
-
-                        {{--  <div class="form-row">
-                          <div class="form-group col">
-                            <input type="text" class="email-bt" placeholder="User Name" id="username" name="username" value="{{old('username')}}" required/>
+                        <!-- Existing degree fields (wrap in container) -->
+                        <div id="fullMemberFields">
+                          <div class="form-row">
+                            <div class="form-group col">
+                                <select name="degree_type" id="degree_type" class="select-bt">
+                                    <option value="none" selected disabled>Degree Program</option>
+                                    <option value="General">General</option>
+                                    <option value="Special">Special</option>
+                                </select>
+                            </div>
                           </div>
-                        </div>  --}}
+  
+                          <div class="form-row" id="special_degree_div" >
+                            <div class="form-group col">
+                                <select name="degree" id="sp_degree" class="select-bt">
+                                    <option value="" selected disabled>Select your Degree</option>
+                                    <option value="BCS Special in Computer Science">BCS Special in Computer Science </option>
+                                    <option value="BSc Special in Statistics">BSc Special in Statistics </option>
+                                    <option value="BSc Special in Applied Mathematics">BSc Special in Applied Mathematics</option>
+                                    <option value="BSc Special in Chemistry">BSc Special in Chemistry</option>
+                                    <option value="BSc Special in Physics">BSc Special in Physics</option>
+                                    <option value="BSc Special in Zoology">BSc Special in Zoology</option>
+                                    <option value="BSc Special in Botany">BSc Special in Botany</option>
+                                </select>
+                            </div>
+                          </div>
+  
+                          <div class="form-row" id="General_degree_div">
+                            <div class="form-group col">
+                                <select name="degree" id="g_degree" class="select-bt">
+                                    <option value="" selected disabled>Select your Degree</option>
+                                    <option value="BSc in physical sciences">BSc in physical sciences </option>
+                                    <option value="BSc in Bio Sciences">BSc in Bio Sciences </option>
+                                    <option value="BCS in Computer Science">BCS in Computer Science</option>
+                                </select>
+                            </div>
+                          </div>
+                        </div>
+
+                        <script>
+                        $(document).ready(function() {
+                          // Membership category change handler
+                          $('#membership_category').change(function() {
+                              const membership = $(this).val();
+                              const modalContent = $('#membershipDetails');
+                              
+                              // Show modal with membership details
+                              if(membership === 'full') {
+                                  modalContent.html(`
+                                      <h3>Full Membership</h3>
+                                      <p>Full membership is available for:</p>
+                                      <ul>
+                                          <li>
+                                              Any individual who has graduated from the Faculty of Science, UoR receiving a 
+                                              Bachelor's degree at any level (General/Special), internal or external.
+                                          </li><br>
+                                          <li>
+                                              Any individual who has earned a postgraduate qualification at any level 
+                                              (Certificate/Diploma/Masters/MPhil/PhD) from the University of Ruhuna, and was affiliated 
+                                              during the degree program to any Department of the Faculty of Science.
+                                          </li><br>
+                                          <li>
+                                              Any individual who was a registered student at the Faculty of Science for a particular 
+                                              period of the degree program, duly transferred to continue the study program at 
+                                              another university in Sri Lanka and completed the degree there.  
+                                              <br><strong>Note:</strong> This applies to those who were selected for the Special degree 
+                                              program after two/three years at the Faculty of Science and later transferred and 
+                                              graduated from the University of Kelaniya.
+                                          </li><br>
+                                          <li>
+                                              Any individual who was a registered student at the Faculty of Science for a particular 
+                                              degree program for three or four academic years, but could not receive the degree 
+                                              within the stipulated period.
+                                          </li>
+                                      </ul>
+                                  `);
+                                  $('#fullMemberFields').show();
+                                  $('#associateFields').hide();
+                                  $('#associateFields textarea').removeAttr('required');
+                                  $('#degree_type').prop('required', true);
+                              } else if(membership === 'associate') {
+                                  modalContent.html(`
+                                      <h6>Associate Membership Benefits:</h6>
+                                      <ul>
+                                          <li>Access to networking events</li>
+                                          <li>Professional development resources</li>
+                                          <li>Community engagement opportunities</li>
+                                      </ul>
+                                      <p><strong>Note:</strong> Please explain your interest in becoming an associate member</p>
+                                  `);
+                                  $('#fullMemberFields').hide();
+                                  $('#associateFields').show();
+                                  $('#associateFields textarea').prop('required', true);
+                                  $('#degree_type').removeAttr('required');
+                              }
+                              
+                              $('#membershipModal').modal('show');
+                          });
+
+                          // Existing degree type handling
+                          $("#degree_type").change(function(){
+                              if($(this).val() === "General"){
+                                  $("#special_degree_div").hide();
+                                  $("#General_degree_div").show();
+                                  $('#sp_degree').val('');
+                              } else if($(this).val() === "Special"){
+                                  $("#General_degree_div").hide();
+                                  $("#special_degree_div").show();
+                                  $('#g_degree').val('');
+                              }
+                          });
+                        });
+
+                        // Initialize full member fields visibility
+                        $('#fullMemberFields').hide();
+                        </script>                        
 
                         <div class="form-row">
                           <div class="form-group col">
