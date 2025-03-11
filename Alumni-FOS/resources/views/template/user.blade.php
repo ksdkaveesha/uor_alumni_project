@@ -172,11 +172,14 @@
                 <div>
                     @if (isset(auth()->guard('webalumni')->user()->path))
                         <img src="{{ asset('storage/' . auth()->guard('webalumni')->user()->path) }}" alt=""
-                            class="img-fluid rounded-circle">
+                            class="img-fluid rounded-circle"
+                            style="width: 250px; height: 250px; object-fit: cover;">
                         <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}
                         </h4>
+
                     @else
-                        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
+                        <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle"
+                        style="width: 250px; height: 250px; object-fit: cover;">
                         <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}
                         </h4>
                     @endif
@@ -244,34 +247,31 @@
 
                     <div class="col-lg-5 d-flex align-items-stretch">
                         <div>
-                            <form id="update_image" action="<?= url('/add_photo') ?>" method="POST"
-                                enctype="multipart/form-data">
+                            <form id="update_image" action="<?= url('/add_photo') ?>" method="POST" enctype="multipart/form-data">
                                 @csrf
-                                <div class="mb-3">
+                                <div class="mb-3 text-center">
                                     <div>
                                         @if (isset(auth()->guard('webalumni')->user()->path))
                                             <img src="{{ asset('storage/' . auth()->guard('webalumni')->user()->path) }}"
-                                                style="width: 100%" />
+                                                style="width: 80%; max-height: 250px; object-fit: cover; border-radius: 10px;" />
                                         @else
-                                            <img src="assets/img/profile-img.jpg" style="width: 100%">
+                                            <img src="assets/img/profile-img.jpg"
+                                                style="width: 80%; max-height: 250px; object-fit: cover; border-radius: 10px;">
                                         @endif
                                     </div>
-                                    <br><br><br>
+                                    <br>
                                     <h4>Update a photo</h4>
-                                    <input class="form-control" type="file" id="photo" name="photo"
-                                        required>
+                                    <input class="form-control" type="file" id="photo" name="photo" required>
                                 </div>
                                 <br>
-                                <div class="photo_upload">
-
-                                    <button type="button" class="custom-button" id="updateImg_btn">Add
-                                        Photo</button>
+                                <div class="photo_upload text-center">
+                                    <button type="button" class="custom-button" id="updateImg_btn">Add Photo</button>
                                 </div>
                             </form>
                         </div>
                         <br>
-
                     </div>
+
 
                     <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
                         <form id="updateForm" action="<?= url('/update') ?>" method="POST">
@@ -1870,14 +1870,14 @@
                                     </div>
                                     <div class="form-group" style="width:100%">
                                         <label for="notice">Message</label>
-                                        <textarea class="form-control" name="testamonial" maxlength="350" rows="10" style="width:100%" required></textarea>
+                                        <textarea class="form-control" name="testimonial" maxlength="350" rows="10" style="width:100%" required></textarea>
                                     </div>
                                 </div>
                                 <div class="text-center"><input type="submit" value="Add Testimonials"></input></div>
                     </form>
                 </div>
             </div>
-        </section><!-- End Testamonials Section -->
+        </section><!-- End Testimonials Section -->
 
         <!-- ======= Display friend Section ======= -->
         <section id="find_friends" class="contact">
@@ -2063,7 +2063,7 @@
         });
     </script>
 
-    <!-- Add Testamonials Modal script-->
+    <!-- Add Testimonials Modal script-->
     <script>
         function showTestamonialModal(actionFunction) {
             // Set the onclick event of the confirmation button to the passed function
