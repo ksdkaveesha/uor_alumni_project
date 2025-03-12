@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('id_num')->nullable();
             $table->string('country')->nullable();
             $table->string('address')->nullable();
+            $table->string('membership_category')->nullable();
             $table->string('agreement')->nullable();
             $table->string('graduation_year')->nullable();
             $table->string('designation')->nullable();

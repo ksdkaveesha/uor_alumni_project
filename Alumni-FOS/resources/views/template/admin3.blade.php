@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Update Profile</title>
+    <title>Admin</title>
     <meta content="" name="description">
     <meta content="" name="keywords">
 
@@ -214,12 +214,12 @@
                                 </div>
                                 <div class="form-group">
                                     <label for="name">Your Name</label>
-                                    <input type="text" class="form-control" name="name" id="name">
+                                    <input type="text" class="form-control" name="name" id="name" required>
                                 </div>
                                 <div class="row">
                                     <div class="form-group col-md-6">
                                         <label for="m_code">Mobile Code</label>
-                                        <select name="m_code" class="form-control" id="m_code">
+                                        <select name="m_code" class="form-control" id="m_code" required>
                                             <option value="" disabled selected>Country</option>
                                             <option value="93">Afghanistan +93</option>
                                             <option value="358">Aland Islands +358</option>
@@ -479,13 +479,12 @@
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="mobile">Phone Number</label>
-                                        <input type="text" class="form-control" name="mobile" id="mobile">
+                                        <input type="text" class="form-control" name="mobile" id="mobile" required>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="user_type">Select User Type</label>
-                                    <select class="form-control" name="role" id="role"
-                                        value="{{ old('role') }}" required disabled>
+                                    <select class="form-control" name="role" id="role" value="{{ old('role') }}" required disabled>
                                         <option value="admin" selected>Admin</option>
                                     </select>
                                 </div>
@@ -500,13 +499,11 @@
                                     </div>
                                     <div class="form-group">
                                         <label for="email">Email</label>
-                                        <input type="text" class="form-control" name="email" id="email"
-                                            required>
+                                        <input type="text" class="form-control" name="email" id="email" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="password">Password</label>
-                                        <input type="text" class="form-control" name="password" id="a_password"
-                                            onfocus="showaPassword()" onblur="maskaPassword()" required>
+                                        <input type="text" class="form-control" name="password" id="a_password" onfocus="showaPassword()" onblur="maskaPassword()" required>
                                     </div>
                                     <div class="form-group">
                                         <label for="a_confirmPassword">Confirm Password</label>
@@ -602,7 +599,7 @@
             <div class="swiper-wrapper">
 
               <div class="swiper-slide">
-                <div class="testimonial-item" data-aos="fade-up">
+                <div class="testimonial-item" data-aos="fade-up" style="word-wrap: break-word;">
                   @if(isset($last_testamonials) && $last_testamonials->count() >= 1)
                       <p>
                       <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -837,7 +834,7 @@
                                 </div>
                                 <div class="form-group" style="width:100%">
                                     <label for="notice">Message</label>
-                                    <textarea class="form-control" name="notice" rows="10" style="width:100%" required></textarea>
+                                    <textarea class="form-control" name="notice" rows="10" maxlength="600" style="width:100%" required></textarea>
                                 </div>
                             </div>
 
@@ -856,14 +853,6 @@
         <!-- ======= Check Nortices Section ======= -->
         <section id="search_nortices" class="testimonials section-bg">
             <div class="container">
-
-
-                <div class="text-center">
-
-                  <button type="button" class="custom-button" id="addNotice_btn">Add Notice</button>
-
-                </div>
-
                 <form action="<?= url('/search_notice') ?>" method="post">
                     @csrf
                     <div class="form-group">

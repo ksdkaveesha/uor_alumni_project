@@ -197,11 +197,11 @@
                         </div>
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" class="form-control" name="name" id="m_name" value="{{old('name')}}">
+                            <input type="text" class="form-control" name="name" id="m_name" value="{{old('name')}}" required>
                         </div>
                         <div class="form-group">
                             <label for="sc_number">SC Number</label>
-                            <input type="text" class="form-control" name="sc_number" id="sc_number" value="{{old('sc_number')}}">
+                            <input type="text" class="form-control" name="sc_number" id="sc_number" value="{{old('sc_number')}}" required>
                             @error('sc_number')
                                     <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
@@ -218,7 +218,7 @@
                         <div class="row">
                         <div class="form-group col-md-6">
                             <label for="m_code">Mobile Code</label>
-                            <select name="m_code" class="form-control" id="m_m_code" value="{{old('m_code')}}" required>
+                            <select name="m_code" class="form-control" id="m_code" value="{{old('m_code')}}" required>
                                 <option value="" disabled selected>Country</option>
                                 <option value="93">Afghanistan +93</option>
                                 <option value="358">Aland Islands +358</option>
@@ -475,7 +475,7 @@
                         </div>
                         <div class="form-group col-md-6">
                             <label for="mobile">Phone Number</label>
-                            <input type="text" class="form-control" name="mobile" id="m_mobile" value="{{old('mobile')}}">
+                            <input type="text" class="form-control" name="mobile" id="m_mobile" value="{{old('mobile')}}" required>
                         </div>
                         </div>
                         <div class="form-group">
@@ -539,7 +539,7 @@
 
                             <div class="form-group">
                                 <label for="password">Password</label>
-                                <input type="password" class="form-control" name="password" id="password">
+                                <input type="password" class="form-control" name="password" id="password" required>
                             </div>
 
                             <div class="text-center">
@@ -624,7 +624,7 @@
                       </div>
                       <div class="form-group" style="width:100%">
                           <label for="notice">Message</label>
-                          <textarea class="form-control" name="testamonial" rows="10" style="width:100%" required></textarea>
+                          <textarea class="form-control" name="testamonial" rows="10" maxlength="350" style="width:100%" required></textarea>
                       </div>
                   </div>
                 <div class="text-center">

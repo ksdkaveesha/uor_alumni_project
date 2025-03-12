@@ -573,29 +573,6 @@
 
   </main><!-- End #main -->
 
-  <!-- footer section start
-    <div class="footer_section layout_padding">
-        <div class="container">
-        <div class="row" style="display:flex; align-items:right; justify-content:right;">
-            <div class="col-lg-5 col-sm-6">
-                <h3 class="useful_text">About</h3>
-            </div>
-
-            <div class="col-lg-4 col-sm-6">
-                <h1 class="useful_text">Useful Link</h1>
-                <div class="dummy_text">
-                <ul>
-                    <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
-                    <li><a href="https://www.ruh.ac.lk/index.php/en/">University of Ruhuna</a></li>
-                </ul>
-                </div>
-            </div>
-
-        </div>
-        </div>
-    </div>
-     footer section end -->
-
     <script>
         function previewImage(event) {
             var input = event.target;
