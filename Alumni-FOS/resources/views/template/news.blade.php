@@ -131,7 +131,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="testimonial_section_2">
+                                        <div class="testimonial_section_2" style="word-wrap: break-word;">
                                                     <h4 class="client_name_text"><img style="max-width: 5%; border-radius: 50%;" src="{{asset('storage/'.$testamonials->img)}}" class="image_1"><span class="quick_icon" ><img src="images/quick-icon.png"></span>&nbsp;&nbsp;&nbsp;{{ $testamonials->topic }}</h4>
                                                     <h5 class="customer_text"><b>{{ $testamonials->name }}</b></h5>
                                                     <p class="customer_text">{{ $testamonials->testamonial }}</p>

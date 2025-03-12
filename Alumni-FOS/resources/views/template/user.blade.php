@@ -123,10 +123,10 @@
       <div class="profile">
         @if (isset(auth()->guard('webalumni')->user()->path))
             <img src="{{asset('storage/'.auth()->guard('webalumni')->user()->path)}}" alt="" class="img-fluid rounded-circle">
-            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4>
+            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4><h5 style="text-align: center; color:white">{{ auth()->guard('webalumni')->user()->membership_category }} Membership</h5>
         @else
             <img src="assets/img/profile-img.jpg" alt="" class="img-fluid rounded-circle">
-            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4>
+            <h4 style="text-align: center" class="text-light">{{ auth()->guard('webalumni')->user()->name }}</h4><h5 style="text-align: center; color:white">{{ auth()->guard('webalumni')->user()->membership_category }} Membership</h5>
         @endif
       </div>
 
@@ -1870,7 +1870,7 @@
                                     </div>
                                     <div class="form-group" style="width:100%">
                                         <label for="notice">Message</label>
-                                        <textarea class="form-control" name="testimonial" maxlength="350" rows="10" style="width:100%" required></textarea>
+                                        <textarea class="form-control" name="testamonial" maxlength="350" rows="10" style="width:100%" required></textarea>
                                     </div>
                                 </div>
                                 <div class="text-center"><input type="submit" value="Add Testimonials"></input></div>
@@ -1932,7 +1932,6 @@
                                 <td style="width: 20%">No Results Found</td>
                                 <td style="width: 15%">No Results Found</td>
                                 <td style="width: 15%">No Results Found</td>
-                                <td style="width: 25%">No Results Found</td>
                             </tr>
                         </tbody>
                     @endif
