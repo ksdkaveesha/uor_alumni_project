@@ -1932,7 +1932,6 @@
                                 <td style="width: 20%">No Results Found</td>
                                 <td style="width: 15%">No Results Found</td>
                                 <td style="width: 15%">No Results Found</td>
-                                <td style="width: 25%">No Results Found</td>
                             </tr>
                         </tbody>
                     @endif
