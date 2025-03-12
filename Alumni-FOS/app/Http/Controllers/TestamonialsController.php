@@ -84,7 +84,7 @@ class TestamonialsController extends Controller
         // Delete the record from the check_testamonials table
         $check_testamonials->delete();
 
-        return redirect()->back()->with('succ_notice', 'Testamonial Approved');
+        return redirect()->back()->with('succ_notice', 'Testimonial Approved');
     }
 
 }
