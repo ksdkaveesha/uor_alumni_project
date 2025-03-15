@@ -481,6 +481,7 @@
                                         <label for="mobile">Phone Number</label>
                                         <input type="text" class="form-control" name="mobile" id="mobile" required>
                                     </div>
+
                                 </div>
                                 <div class="form-group">
                                     <label for="user_type">Select User Type</label>
@@ -592,8 +593,15 @@
 
 
         <!-- ======= Check Testimonials Section ======= -->
+
+
         <section id="check_testimonials" class="testimonials section-bg">
             <div class="container">
+
+                <div class="section-title">
+                    <h2>Check Testimonials</h2>
+                    <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+                </div>
 
           <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
             <div class="swiper-wrapper">
@@ -851,6 +859,11 @@
         <!-- ======= Check Nortices Section ======= -->
         <section id="search_nortices" class="testimonials section-bg">
             <div class="container">
+                <div class="section-title">
+                    <h2>Search Notices</h2>
+                    <!--<p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>-->
+                </div>
+
                 <form action="<?= url('/search_notice') ?>" method="post">
                     @csrf
                     <div class="form-group">

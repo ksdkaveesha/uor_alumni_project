@@ -66,6 +66,7 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins%3A400%2C600%2C700"/>
   <link rel="stylesheet" href="{{asset('css/login.css')}}"/>
 
+  <!--
   <style>
         .countdown {
             font-size: 18px;
@@ -73,6 +74,7 @@
             text-align: center;
         }
     </style>
+    -->
 
 </head>
 
@@ -157,7 +159,7 @@
 						<input type="submit" value="Send Password Reset code" class="login100-form-btn">
                     </div>
 
-                    <div class="countdown" id="countdown">01:00</div> <!-- Initial time set to 1 minutes -->
+                    <!-- <div class="countdown" id="countdown">01:00</div>  Initial time set to 1 minutes -->
 
 				</form>
 			</div>
