@@ -131,7 +131,7 @@
                             <div class="container">
                                 <div class="row">
                                     <div class="col-md-12">
-                                        <div class="testimonial_section_2">
+                                        <div class="testimonial_section_2" style="word-wrap: break-word;">
                                                     <h4 class="client_name_text"><img style="max-width: 5%; border-radius: 50%;" src="{{asset('storage/'.$testamonials->img)}}" class="image_1"><span class="quick_icon" ><img src="images/quick-icon.png"></span>&nbsp;&nbsp;&nbsp;{{ $testamonials->topic }}</h4>
                                                     <h5 class="customer_text"><b>{{ $testamonials->name }}</b></h5>
                                                     <p class="customer_text">{{ $testamonials->testamonial }}</p>
@@ -152,62 +152,58 @@
      <br>
       <!-- testimonial section end -->
 
-      <!-- footer section start -->
-      <div class="footer_section layout_padding">
-         <div class="container">
-            <div class="row">
-               {{-- <div class="col-lg-3 col-sm-6">
-                  <h3 class="useful_text">About</h3>
-                  <p class="footer_text">consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation u</p>
-               </div> --}}
-               <div class="col-lg-2 col-sm-6">
-                  <h3 class="useful_text">Menu</h3>
-                  <div class="footer_menu">
-                     <ul>
-                        <li><a href="/">Home</a></li>
-                        <li><a href="/about">About Us</a></li>
-                        <li><a href="/gallery">Gallery</a></li>
-                        <li><a href="/news">News and Events</a></li>
-                        <li><a href="/contact">Contact Us</a></li>
-                     </ul>
-                  </div>
-               </div>
-               <div class="col-lg-3 col-sm-6">
-                  <h1 class="useful_text">Useful Links</h1>
-                  <div class="dummy_text">
-                    <ul>
-                        <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
-                        <li><a href="https://www.ruh.ac.lk/index.php/en/">University of Ruhuna</a></li>
-                    </ul>
-                  </div>
-               </div>
-               <div class="col-lg-6 col-sm-6">
-                  <h1 class="useful_text">Contact Us</h1>
-                  <div class="location_text">
-                     <ul>
-                        <li>
-                           <a href="#">
-                           <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address: Faculty of Science, University of Ruhuna, Matara, Sri Lanka.</span>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call: +01 1234567890</span>
-                           </a>
-                        </li>
-                        <li>
-                           <a href="#">
-                           <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email: ruhuna@gmail.com</span>
-                           </a>
-                        </li>
-                     </ul>
-                  </div>
-               </div>
+   <!-- footer section start -->
+<div class="footer_section layout_padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-4 col-sm-12">
+            <h3 class="useful_text">Menu</h3>
+            <div class="footer_menu">
+               <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/about">About Us</a></li>
+                  <li><a href="/gallery">Gallery</a></li>
+                  <li><a href="/news">News and Events</a></li>
+                  <li><a href="/contact">Contact Us</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-lg-4 col-sm-12">
+            <h3 class="useful_text">Useful Links</h3>
+            <div class="dummy_text">
+               <ul>
+                  <li><a href="https://www.sci.ruh.ac.lk/FacultyofScience/">Faculty of Science</a></li>
+                  <li><a href="https://www.ruh.ac.lk/index.php/en/">University of Ruhuna</a></li>
+               </ul>
+            </div>
+         </div>
+         <div class="col-lg-4 col-sm-12">
+            <h3 class="useful_text">Contact Us</h3>
+            <div class="location_text">
+               <ul>
+                  <li>
+                     <a href="#">
+                        <i class="fa fa-map-marker" aria-hidden="true"></i><span class="padding_left_10">Address: Faculty of Science, University of Ruhuna, Matara, Sri Lanka.</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <i class="fa fa-phone" aria-hidden="true"></i><span class="padding_left_10">Call: +01 1234567890</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="#">
+                        <i class="fa fa-envelope" aria-hidden="true"></i><span class="padding_left_10">Email: ruhuna@gmail.com</span>
+                     </a>
+                  </li>
+               </ul>
             </div>
          </div>
       </div>
+   </div>
+</div>
+<!-- footer section end -->
 
-      <!-- footer section end -->
 
       <!-- Javascript files-->
       <script src="js/jquery.min.js"></script>

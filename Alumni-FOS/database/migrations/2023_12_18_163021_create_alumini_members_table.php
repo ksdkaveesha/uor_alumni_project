@@ -20,10 +20,11 @@ return new class extends Migration
             $table->integer('m_code');
             $table->integer('mobile');
             $table->string('degree_type');
-            $table->string('degree');
+            $table->string('degree')->nullable();
             $table->string('id_num')->nullable();
             $table->string('country')->nullable();
             $table->string('address')->nullable();
+            $table->string('membership_category')->nullable();
             $table->string('agreement')->nullable();
             $table->string('graduation_year')->nullable();
             $table->string('designation')->nullable();

@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->String('name');
             $table->String('img');
-            $table->String('topic',350);
-            $table->String('testamonial');
+            $table->String('topic',100);
+            $table->longText('testamonial');
             $table->timestamps();
         });
     }
