@@ -111,15 +111,30 @@
                           </div>
                         </div>
 
-                        <div class="form-row">
-                          <div class="form-group col">
-                            <input type="text" id="sc_number" name="sc_number" class="email-bt" placeholder="Student Number(SC/xxxx/xxxxx)" value="{{old('sc_number')}}" onfocus="showsc_number()" onblur="masksc_number()" required/>
+                      <div class="form-row">
+                        <div class="form-group col">
+                            <input type="text" id="sc_number" name="sc_number" class="email-bt"
+                                  placeholder="Enter Your Student Number" value="{{ old('sc_number') }}" onfocus="showsc_number()" onblur="masksc_number()" required/>
+
+                            <!-- Message box -->
+                            <small id="scNumberMsg" class="text-muted" style="display: none; color: red;">
+                              Enter your Student Number in the format: (Registered Year)/(Register Number)<br>Example: 2024/123456
+                            </small>
+
                             @error('sc_number')
                                 <div class="alert alert-danger">{{ $message }}</div>
                             @enderror
                         </div>
+                      </div>
+                      <script>
+                        document.getElementById('sc_number').addEventListener('focus', function () {
+                            document.getElementById('scNumberMsg').style.display = 'block';
+                        });
 
-                        </div>
+                        document.getElementById('sc_number').addEventListener('blur', function () {
+                            document.getElementById('scNumberMsg').style.display = 'none';
+                        });
+                      </script>
 
                         <div class="form-row">
                           <div class="form-group col">

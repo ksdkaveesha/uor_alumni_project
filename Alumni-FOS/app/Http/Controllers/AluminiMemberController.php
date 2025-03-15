@@ -33,14 +33,14 @@ class AluminiMemberController extends Controller
         //dd("test");
            // Custom validation rule for sc_num
         Validator::extend('scnumber', function ($attribute, $value, $parameters, $validator) {
-            $pattern = '/^SC\/\d{4}\/\d{4,5}$/';
+            $pattern = '/^\d{4}\/\d{3,6}$/';
 
             return preg_match($pattern, $value) === 1;
         });
 
         // Custom error message for the scnumber rule
         Validator::replacer('scnumber', function ($message, $attribute, $rule, $parameters) {
-            return str_replace(':attribute', $attribute, 'Invalid Format SC/YYYY/NNNNNN');
+            return str_replace(':attribute', $attribute, 'Invalid Format YYYY/XXXXXX');
         });
 
         // Validate the request data
