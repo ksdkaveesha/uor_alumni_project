@@ -73,7 +73,7 @@ class CheckTestamonialsController extends Controller
         $check_testamonials->testamonial = $request->input('testamonial');
 
         $check_testamonials->save();
-        return redirect('/user')->with('status', 'Testamonial submitted successfully!');
+        return redirect('/user')->with('status', 'Testimonial submitted successfully!');
 
     }
 
@@ -86,13 +86,13 @@ class CheckTestamonialsController extends Controller
         $check_testamonials->testamonial = $request->input('testamonial');
 
         $check_testamonials->save();
-        return redirect('/admin2')->with('status', 'Testamonial submitted successfully!');
+        return redirect('/admin2')->with('status', 'Testimonial submitted successfully!');
 
     }
 
     function testamonials_del($id){
         $check_testamonials = check_testamonials::find($id);
         $check_testamonials->delete();
-        return redirect()->back()->with('succ_notice', 'Testamonials deleted successfully.');
+        return redirect()->back()->with('succ_notice', 'Testimonial deleted successfully.');
     }
 }

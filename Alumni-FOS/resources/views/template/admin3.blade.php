@@ -611,7 +611,7 @@
                       <form method="GET" action="<?= url('/accept_testamonials/' . $last_testamonials[0]->id) ?>">
                         @csrf
                         <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
-                        <h5><a href="/check_testamonials_del/{{$last_testamonials[0]->id}}">Delete</a></h5>
+                        <h5><a href="javascript:void(0)" onclick="showDeleteTestimonialModal({{$last_testamonials[0]->id}})">Delete</a></h5>
                       </form>
                   @else
                       <p>
@@ -636,7 +636,7 @@
                       <form method="GET" action="<?=url('/accept_testamonials/' . $last_testamonials[1]->id)?>}">
                         @csrf
                         <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
-                        <h5><a href="/check_testamonials_del/{{$last_testamonials[1]->id}}">Delete</a></h5>
+                        <h5><a href="javascript:void(0)" onclick="showDeleteTestimonialModal({{$last_testamonials[0]->id}})">Delete</a></h5>
                       </form>
                   @else
                       <p>
@@ -661,7 +661,7 @@
                       <form method="GET" action="<?=url('/accept_testamonials/' . $last_testamonials[2]->id)?>}">
                         @csrf
                         <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
-                        <h5><a href="/check_testamonials_del/{{$last_testamonials[2]->id}}">Delete</a></h5>
+                        <h5><a href="javascript:void(0)" onclick="showDeleteTestimonialModal({{$last_testamonials[0]->id}})">Delete</a></h5>
                       </form>
                   @else
                       <p>
@@ -686,7 +686,7 @@
                       <form method="GET" action="<?=url('/accept_testamonials/' . $last_testamonials[3]->id)?>}">
                         @csrf
                         <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
-                        <h5><a href="/check_testamonials_del/{{$last_testamonials[3]->id}}">Delete</a></h5>
+                        <h5><a href="javascript:void(0)" onclick="showDeleteTestimonialModal({{$last_testamonials[0]->id}})">Delete</a></h5>
                       </form>
                   @else
                       <p>
@@ -711,7 +711,7 @@
                       <form method="GET" action="<?=url('/accept_testamonials/' . $last_testamonials[4]->id)?>}">
                         @csrf
                         <h3 style="color: rgb(68, 68, 68)"><input type=submit value="Accept"></a></h3>
-                        <h5><a href="/check_testamonials_del/{{$last_testamonials[4]->id}}">Delete</a></h5>
+                        <h5><a href="javascript:void(0)" onclick="showDeleteTestimonialModal({{$last_testamonials[0]->id}})">Delete</a></h5>
                       </form>
                   @else
                       <p>
@@ -735,8 +735,7 @@
                                     <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
                                     <h2><b>{{ $last_testamonials[3]->topic }}</b></h2>
                                     <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                                    <h5><a href="/check_testamonials_del/{{ $last_testamonials[3]->id }}">Delete</a>
-                                    </h5>
+                                    <h5><a href="javascript:void(0)" onclick="showDeleteTestimonialModal({{$last_testamonials[0]->id}})">Delete</a></h5>
                                 @else
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -758,8 +757,7 @@
                                     <!--<img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">-->
                                     <h2><b>{{ $last_testamonials[4]->topic }}</b></h2>
                                     <h3 style="color: rgb(68, 68, 68)">Accept</h3>
-                                    <h5><a href="/check_testamonials_del/{{ $last_testamonials[4]->id }}">Delete</a>
-                                    </h5>
+                                    <h5><a href="javascript:void(0)" onclick="showDeleteTestimonialModal({{$last_testamonials[0]->id}})">Delete</a></h5>
                                 @else
                                     <p>
                                         <i class="bx bxs-quote-alt-left quote-icon-left"></i>
@@ -1006,6 +1004,28 @@
         });
     </script>
 
+    <!--Delete Testimonial Modal script-->
+    <script>
+        function showDeleteTestimonialModal(testimonialId) {
+            // Set the onclick event of the confirmation button to delete the testimonial
+            document.getElementById('confirmBtn').onclick = function() {
+                window.location.href = '/check_testamonials_del/' + testimonialId;
+            };
+            
+            // Show the modal
+            $('#staticBackdrop').modal('show');
+            
+            // Set modal content
+            var paragraph1 = document.getElementById('staticBackdropLabel');
+            paragraph1.innerHTML = 'Delete Testimonial';
+            
+            var paragraph2 = document.getElementById('staticBackdropLabe2');
+            paragraph2.innerHTML = 'Are you sure you want to delete this testimonial?';
+            
+            var button2 = document.getElementById('confirmBtn');
+            button2.innerHTML = 'Delete';
+        }
+    </script>
 
     <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
             class="bi bi-arrow-up-short"></i></a>
