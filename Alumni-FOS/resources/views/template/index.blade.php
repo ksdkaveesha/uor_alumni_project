@@ -17,7 +17,8 @@
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="viewport" content="initial-scale=1, maximum-scale=1">
       <!-- site metas -->
-      <title>Alumni_FOS</title>
+      <title>RUHSAA - Ruhuna Science Alumni</title>
+      <link rel="icon" type="image/png" href="images/reg-img.png">
       <meta name="keywords" content="">
       <meta name="description" content="">
       <meta name="author" content="">

@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <title>Admin</title>
+    <title>RUHSAA - Ruhuna Science Alumni</title>
+    <link rel="icon" type="image/png" href="images/reg-img.png">
     <meta content="" name="description">
     <meta content="" name="keywords">
 
