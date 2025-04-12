@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\alumini_member;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
 use App\Rules\scnum;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\File;
-use Illuminate\Support\Facades\Mail;
 use App\Mail\RegisterMail;
 
 class AluminiMemberController extends Controller
@@ -29,67 +30,70 @@ class AluminiMemberController extends Controller
         //
     }
 
-    function register_alumini_member(Request $request){
-        //dd("test");
-           // Custom validation rule for sc_num
+    public function register_alumini_member(Request $request)
+    {
+        // Extend Validator with custom SC number format
         Validator::extend('scnumber', function ($attribute, $value, $parameters, $validator) {
-            $pattern = '/^\d{4}\/\d{3,6}$/';
-
-            return preg_match($pattern, $value) === 1;
+            return preg_match('/^\d{4}\/\d{3,6}$/', $value);
         });
 
-        // Custom error message for the scnumber rule
         Validator::replacer('scnumber', function ($message, $attribute, $rule, $parameters) {
-            return str_replace(':attribute', $attribute, 'Invalid Format YYYY/XXXXXX');
+            return 'Invalid Format. Expected: YYYY/XXXXXX';
         });
 
-        // Validate the request data
+        // Validate all required fields
         $request->validate([
-            'sc_number' => 'scnumber|confirmed',
-            'email' => 'email|unique:users|unique:alumini_members',
-            'password' => 'confirmed',
-
-             // Using the custom scnumber rule
-            // Add other validation rules for your other fields here
+            'name' => 'required|string|max:255',
+            'sc_number' => 'required|scnumber|confirmed',
+            'email' => 'required|email|unique:users,email|unique:alumini_members,email',
+            'password' => 'required|confirmed|min:6',
+            'm_code' => 'required|string',
+            'membership_category' => 'required|string',
+            'mobile' => 'required|string',
+            'degree_type' => 'required|string',
+            'degree' => 'required|string',
         ]);
 
-        $user = new User();
-        $user->email = $request->input('email');
-        $user->password = Hash::make($request->input('password'));
-        $user->role = "alumni";           
+        try {
+            // Start transaction
+            DB::beginTransaction();
 
-        $alumini_member = new alumini_member();
-        $alumini_member->name = $request->input('name');
-        $alumini_member->sc_num = $request->input('sc_number');
-        $alumini_member->email = $request->input('email');
-        $alumini_member->m_code = $request->input('m_code');
-        $alumini_member->membership_category = $request->input('membership_category');
-        $alumini_member->mobile = $request->input('mobile');
-        $alumini_member->degree_type = $request->input('degree_type');
-        $alumini_member->degree = $request->input('degree');
-        $user->save();
-        $user2 = User::where('email',$request->input('email'))->first();
-        $alumini_member->user_id = $user2->id;
-        $alumini_member->save();
-        
+            // Create user
+            $user = new User();
+            $user->email = $request->input('email');
+            $user->password = Hash::make($request->input('password'));
+            $user->role = "alumni";
+            $user->save();
 
-        Mail::to($alumini_member->email)->send(new RegisterMail($alumini_member->name));
+            // Create alumini member
+            $alumini_member = new alumini_member();
+            $alumini_member->name = $request->input('name');
+            $alumini_member->sc_num = $request->input('sc_number');
+            $alumini_member->email = $request->input('email');
+            $alumini_member->m_code = $request->input('m_code');
+            $alumini_member->membership_category = $request->input('membership_category');
+            $alumini_member->mobile = $request->input('mobile');
+            $alumini_member->degree_type = $request->input('degree_type');
+            $alumini_member->degree = $request->input('degree');
+            $alumini_member->user_id = $user->id;
+            $alumini_member->save();
 
-        return redirect()->back()->with('success', 'Registered successfully!');
+            // Send confirmation email
+            Mail::to($alumini_member->email)->send(new RegisterMail($alumini_member->name));
 
-    }
+            // Commit transaction
+            DB::commit();
 
-    public function display_user(){
-        return view('template/user');
-    }
+            return redirect()->back()->with('success', 'Registered successfully!');
 
-    public function search_alumni_member(Request $request){
-        $search = $request->input('search_alumni_member');
+        } catch (\Exception $e) {
+            // Rollback on error
+            DB::rollBack();
 
-        $friend = alumini_member::where('sc_num','Like',"%$search%")->orwhere('email','Like',"%$search%")->orwhere('mobile','Like',"%$search%")->orwhere('name','Like',"%$search%")->get();
+            // Optionally log error: Log::error($e);
 
-
-        return view('template/user',compact('friend'));
+            return redirect()->back()->with('error', 'Registration failed. Please try again.');
+        }
     }
 
     public function update(Request $request)

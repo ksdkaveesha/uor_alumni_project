@@ -32,7 +32,7 @@ Route::get('/register', function () {
 
 Route::get('/login', function () {
     return view('template/login');
-});
+})->name('login');
 //->middleware('guest')->name('login');
 
 Route::get('/test', function () {
@@ -41,7 +41,7 @@ Route::get('/test', function () {
 
 Route::get('/about', function () {
     return view('template/about');
-});
+})->name('about');
 
 Route::get('/directory', function () {
     return view('template/directory');
@@ -49,6 +49,10 @@ Route::get('/directory', function () {
 
 Route::get('/contact', function () {
     return view('template/contact');
+})->name('contact');
+
+Route::get('/reg2', function () {
+    return view('template/register2');
 });
 
 Route::get('/admin', function () {
@@ -65,9 +69,9 @@ Route::get('/pwdchange', function () {
 //->middleware('auth:webadmin');
 
 
-Route::get('/', [NoticeController::class,'display_notice']);
+Route::get('/', [NoticeController::class,'display_notice'])->name('home');
 Route::post('/add_notice', [NoticeController::class,'add_notice']);
-Route::get('/news', [NoticeController::class,'display_notice_testamonials']);
+Route::get('/news', [NoticeController::class,'display_notice_testamonials'])->name('news');
 Route::get('/admin3', [NoticeController::class,'display_notice_testamonials_adminpage']);
 Route::post('/search_notice', [NoticeController::class,'search_notice']);
 Route::get('/notice_del/{id}', [NoticeController::class,'notice_del']);
