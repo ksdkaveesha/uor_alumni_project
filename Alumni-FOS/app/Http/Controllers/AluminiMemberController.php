@@ -147,4 +147,11 @@ class AluminiMemberController extends Controller
         return $filename;
     }
 
+    public function display_user()
+    {
+        $user = alumini_member::find(auth()->guard('webalumni')->user()->id);
+        return view('template/user', compact('user')); // Create this view accordingly
+    }
+
+
 }
