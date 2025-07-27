@@ -37,6 +37,7 @@ class AluminiMemberController extends Controller
             return preg_match('/^\d{4}\/\d{3,6}$/', $value);
         });
 
+        // Custom error message for SC number validation
         Validator::replacer('scnumber', function ($message, $attribute, $rule, $parameters) {
             return 'Invalid Format. Expected: YYYY/XXXXXX';
         });
@@ -77,6 +78,7 @@ class AluminiMemberController extends Controller
             $alumini_member->degree = $request->input('degree');
             $alumini_member->user_id = $user->id;
             $alumini_member->save();
+            
 
             // Send confirmation email
             Mail::to($alumini_member->email)->send(new RegisterMail($alumini_member->name));
